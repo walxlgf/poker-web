@@ -27,9 +27,9 @@ export const SeriesIndexTemplate = ({
         {series4Banner.map((series) => (
           <article key={v4()} className="message">
             <div className="message-body">
-              {series.relatedSeries}
+              {series.author}
               <br />
-              <cite> – {series.relatedSeries}</cite>
+              <cite> – {series.quote}</cite>
             </div>
           </article>
         ))}
@@ -70,7 +70,8 @@ export const productPageQuery = graphql`
       frontmatter {
         title
         series4Banner {
-          relatedSeries
+          author
+          quote
         }
       }
     }

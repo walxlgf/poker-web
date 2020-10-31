@@ -64,18 +64,19 @@ collections:
               label: Series4Banner,
               name: series4Banner,
               widget: list,
-              fields:
-                [
-                  {
-                    label: "Related Series",
-                    name: relatedSeries,
-                    widget: "relation",
-                    collection: "series",
-                    search_fields: ["title"],
-                    value_field: "title",
-                    display_fields: ["title", "description"],
-                  },
-                ],
+              fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]
+              # fields:
+              #   [
+              #     {
+              #       label: "Related Series",
+              #       name: relatedSeries,
+              #       widget: "relation",
+              #       collection: "series",
+              #       search_fields: ["title"],
+              #       value_field: "title",
+              #       display_fields: ["title", "description"],
+              #     },
+              #   ],
             }
       - file: "src/pages/about/index.md"
         label: "About"
