@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { SeriesDetailsTemplate } from '../../templates/blog-post'
+import { SeriesDetailsTemplate } from '../../templates/series-details'
 
 const SeriesDetailsPreview = ({ entry, widgetFor }) => {
   return (
