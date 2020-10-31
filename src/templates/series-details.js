@@ -33,7 +33,7 @@ SeriesDetailsTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const BlogPost = ({ data }) => {
+const SeriesDetails = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
@@ -55,13 +55,13 @@ const BlogPost = ({ data }) => {
   )
 }
 
-BlogPost.propTypes = {
+SeriesDetails.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default BlogPost
+export default SeriesDetails
 
 export const pageQuery = graphql`
   query SeriesDetailsByID($id: String!) {
