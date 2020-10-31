@@ -26,7 +26,17 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-
+  
+  - name: "series"
+    label: "Series"
+    folder: "src/pages/series"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "series-details"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Start Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
   - name: "pages"
     label: "Pages"
     files:
