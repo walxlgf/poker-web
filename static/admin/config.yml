@@ -53,6 +53,30 @@ collections:
           - {label: Description, name: description, widget: string}
           - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
           - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+      
+      - file: "src/pages/series-index.md"
+        label: "SeriesIndex"
+        name: "seriesIndex"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "series-index"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {
+              label: Series4Banner,
+              name: series4Banner,
+              widget: list,
+              fields:
+                [
+                  {
+                    label: "Related Series",
+                    name: relatedSeries,
+                    widget: "relation",
+                    collection: "series",
+                    search_fields: ["title"],
+                    value_field: "title",
+                    display_fields: ["title", "description"],
+                  },
+                ],
+            }
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
