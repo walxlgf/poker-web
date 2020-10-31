@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 
 export const SeriesIndexTemplate = ({
   title,
-  seriesBanner,
+  // seriesBanner,
 }) => (
     <div className="content">
       <div
@@ -23,7 +23,7 @@ export const SeriesIndexTemplate = ({
           {title}
         </h2>
       </div>
-      <div>
+      {/* <div>
         {seriesBanner.map((series) => (
           <article key={v4()} className="message">
             <div className="message-body">
@@ -33,13 +33,13 @@ export const SeriesIndexTemplate = ({
             </div>
           </article>
         ))}
-      </div>
+      </div> */}
     </div>
   )
 
 SeriesIndexTemplate.propTypes = {
   title: PropTypes.string,
-  seriesBanner: PropTypes.array,
+  // seriesBanner: PropTypes.array,
 }
 
 const SeriesIndex = ({ data }) => {
@@ -48,7 +48,7 @@ const SeriesIndex = ({ data }) => {
     <Layout>
       <SeriesIndexTemplate
         title={frontmatter.title}
-        seriesBanner={frontmatter.seriesBanner}
+        // seriesBanner={frontmatter.seriesBanner}
       />
     </Layout>
   )
@@ -69,10 +69,6 @@ export const seriesIndexQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        seriesBanner {
-          author
-          quote
-        }
       }
     }
   }

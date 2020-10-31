@@ -59,7 +59,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "series-index"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: SeriesBanner, name: seriesBanner, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+          # - {label: SeriesBanner, name: seriesBanner, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
