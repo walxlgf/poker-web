@@ -6,7 +6,7 @@ const SeriesIndexPreview = ({ entry, getAsset }) => {
   return (
     <SeriesIndexTemplate
       title={entry.getIn(['data', 'title'])}
-      series4Banner={entry.getIn(['data', 'series4Banner'])}
+      seriesBanner={entry.getIn(['data', 'seriesBanner'])}
     />
   )
 }

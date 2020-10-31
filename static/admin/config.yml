@@ -61,8 +61,8 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "series-index"}
           - {label: "Title", name: "title", widget: "string"}
           - {
-              label: Series4Banner,
-              name: series4Banner,
+              label: SeriesBanner,
+              name: seriesBanner,
               widget: list,
               fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]
               # fields:
