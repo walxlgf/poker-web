@@ -64,7 +64,7 @@ SeriesIndex.propTypes = {
 
 export default SeriesIndex
 
-export const seriesIndexQuery = graphql`
+export const seriesindexQuery = graphql`
   query SeriesIndex($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
