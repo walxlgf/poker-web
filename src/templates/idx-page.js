@@ -52,6 +52,7 @@ const IdxPage = ({ data }) => {
       <IdxPageTemplate
         title={frontmatter.title}
         seriesBanner={frontmatter.seriesBanner}
+        relatedSeries={frontmatter.relatedSeries}
       />
     </Layout>
   )
