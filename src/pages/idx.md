@@ -8,5 +8,5 @@ seriesBanner:
     quote: quote2
   - quote: 来或
     author: "lfdfl "
-relatedSeries: APPT MANILA 2020
+relatedSeries: 2020-11-01-appt-manila-2020
 ---
