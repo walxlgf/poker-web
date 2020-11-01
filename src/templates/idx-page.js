@@ -69,7 +69,10 @@ export const seriesQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "idx-page" } }) {
       frontmatter {
         title
-        seriesBanner
+        seriesBanner {
+          author
+          quote
+        }
       }
     }
   }
