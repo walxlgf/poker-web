@@ -1,4 +1,4 @@
 ---
 templateKey: idx-page
-title: TITLE
+title: TITLE NEW
 ---
