@@ -68,7 +68,7 @@ collections:
             }
           - {
               label: "Related Series",
-              name: relatedSeries,
+              name: "relatedSeries",
               widget: "relation",
               collection: "series",
               search_fields: ["title"],
