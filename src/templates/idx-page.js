@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 export const IdxPageTemplate = ({
   title,
   seriesBanner,
+  relatedSeries
 }) => (
     <div className="content">
       <div
@@ -23,6 +24,7 @@ export const IdxPageTemplate = ({
           {title}
         </h2>
       </div>
+      <div>{relatedSeries}</div>
       <div>
         {seriesBanner.map((series) => (
           <article key={series.author} className="message">
@@ -41,6 +43,7 @@ export const IdxPageTemplate = ({
 IdxPageTemplate.propTypes = {
   title: PropTypes.string,
   seriesBanner: PropTypes.array,
+  relatedSeries: PropTypes.string,
 }
 
 const IdxPage = ({ data }) => {
