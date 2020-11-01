@@ -41,7 +41,7 @@ export const IdxPageTemplate = ({
 IdxPageTemplate.propTypes = {
   title: PropTypes.string,
   seriesBanner: PropTypes.array,
-  relatedSeries: PropTypes.string,
+  relatedSeries: PropTypes.node,
 }
 
 const IdxPage = ({ data }) => {
