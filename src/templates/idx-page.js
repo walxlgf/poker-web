@@ -65,7 +65,7 @@ IdxPage.propTypes = {
 export default IdxPage
 
 export const seriesQuery = graphql`
-  query IdxPageTemplate() {
+  query IdxPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "idx-page" } }) {
       frontmatter {
         title
