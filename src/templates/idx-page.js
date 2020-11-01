@@ -21,8 +21,7 @@ export const IdxPageTemplate = ({
             padding: '1rem',
           }}
         >
-          {title} 
-          {relatedSeries}
+          {title}-{relatedSeries}
         </h2>
       </div>
       <div>
