@@ -64,6 +64,15 @@ collections:
                 [
                   { label: Quote, name: quote, widget: string },
                   { label: Author, name: author, widget: string },
+                  {
+                    label: "Related Series List",
+                    name: "relatedSeriesList",
+                    widget: "relation",
+                    collection: "series",
+                    searchFields: ["title"],
+                    valueField: "{{slug}}",
+                    displayFields: ["title", "description"],
+                  } 
                 ],
             }
           - {
