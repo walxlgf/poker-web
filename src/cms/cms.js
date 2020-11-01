@@ -19,4 +19,6 @@ CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
 // CMS.registerPreviewTemplate('series', BlogPostPreview)
 
+console.log(`cms:1`)
 CMS.registerPreviewTemplate('series', SeriesPreview)
+console.log(`cms:2`)
