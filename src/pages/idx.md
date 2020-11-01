@@ -1,6 +1,6 @@
 ---
 templateKey: idx-page
-title: TITLE
+title: TITLE NEW
 seriesBanner:
   - author: author1
     quote: >-
