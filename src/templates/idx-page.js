@@ -74,7 +74,9 @@ export const seriesQuery = graphql`
           author
           quote
         }
-        relatedSeries
+        relatedSeries {
+          value
+        }
       }
     }
   }
