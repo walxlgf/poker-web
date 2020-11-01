@@ -1,21 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { SeriesTemplate } from '../../templates/series-page'
+import { IdxPageTemplate } from '../../templates/idx-page'
 
-const SeriesPreview = ({ entry, getAsset }) => {
+const IdxPagePreview = ({ entry, getAsset }) => {
   return (
-    <SeriesTemplate
+    <IdxPageTemplate
       title={entry.getIn(['data', 'title'])}
       // seriesBanner={entry.getIn(['data', 'seriesBanner'])}
     />
   )
 }
 
-SeriesPreview.propTypes = {
+IdxPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 }
 
-export default SeriesPreview
+export default IdxPagePreview

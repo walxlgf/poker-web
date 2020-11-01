@@ -7,7 +7,7 @@ import BlogPostPreview from './preview-templates/BlogPostPreview'
 import ProductPagePreview from './preview-templates/ProductPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 
-import SeriesPreview from './preview-templates/SeriesPreview'
+import IdxPagePreview from './preview-templates/IdxPagePreview'
 // import SeriesDetailsPreview from './preview-templates/SeriesDetailsPreview'
 
 CMS.registerMediaLibrary(uploadcare)
@@ -20,5 +20,5 @@ CMS.registerPreviewTemplate('blog', BlogPostPreview)
 // CMS.registerPreviewTemplate('series', BlogPostPreview)
 
 console.log(`cms:1`)
-CMS.registerPreviewTemplate('series', SeriesPreview)
+CMS.registerPreviewTemplate('idx', IdxPagePreview)
 console.log(`cms:2`)
