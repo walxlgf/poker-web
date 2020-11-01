@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
-export const SeriesIndexTemplate = ({
+export const SeriesTemplate = ({
   title,
   // seriesBanner,
 }) => (
@@ -37,16 +37,16 @@ export const SeriesIndexTemplate = ({
     </div>
   )
 
-SeriesIndexTemplate.propTypes = {
+SeriesTemplate.propTypes = {
   title: PropTypes.string,
   // seriesBanner: PropTypes.array,
 }
 
-const SeriesIndex = ({ data }) => {
+const Series = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   return (
     <Layout>
-      <SeriesIndexTemplate
+      <SeriesTemplate
         title={frontmatter.title}
         // seriesBanner={frontmatter.seriesBanner}
       />
@@ -54,7 +54,7 @@ const SeriesIndex = ({ data }) => {
   )
 }
 
-SeriesIndex.propTypes = {
+Series.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -62,10 +62,10 @@ SeriesIndex.propTypes = {
   }),
 }
 
-export default SeriesIndex
+export default Series
 
-export const seriesindexQuery = graphql`
-  query SeriesIndex($id: String!) {
+export const seriesQuery = graphql`
+  query Series($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
