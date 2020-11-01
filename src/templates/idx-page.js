@@ -21,7 +21,7 @@ export const IdxPageTemplate = ({
             padding: '1rem',
           }}
         >
-          {title}-{relatedSeries}
+          {title}-{relatedSeries.map(series => `${series} | `)}
         </h2>
       </div>
       <div>
@@ -42,7 +42,7 @@ export const IdxPageTemplate = ({
 IdxPageTemplate.propTypes = {
   title: PropTypes.string,
   seriesBanner: PropTypes.array,
-  relatedSeries: PropTypes.string,
+  relatedSeries: PropTypes.array,
 }
 
 const IdxPage = ({ data }) => {

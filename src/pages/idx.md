@@ -11,5 +11,5 @@ seriesBanner:
   - quote: 来或
     author: "lfdfl "
     relatedSeriesList: 2020-11-01-appt-manila-2020
-relatedSeries: 2020-11-01-appt-manila-2020
+relatedSeries: ["2020-11-01-appt-manila-2020"]
 ---

@@ -82,6 +82,7 @@ collections:
               collection: "series",
               searchFields: ["title"],
               valueField: "{{slug}}",
+              multiple: true,
               displayFields: ["title", "description"],
             } 
 
