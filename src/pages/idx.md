@@ -8,4 +8,5 @@ seriesBanner:
     quote: quote2
   - quote: 来或
     author: "lfdfl "
+relatedSeries: "RED DRAGON 2020"
 ---
