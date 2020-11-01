@@ -25,7 +25,7 @@ export const IdxPageTemplate = ({
       </div>
       <div>
         {seriesBanner.map((series) => (
-          <article key={v4()} className="message">
+          <article key={series.author} className="message">
             <div className="message-body">
               {series.author}
               <br />
