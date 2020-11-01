@@ -73,8 +73,8 @@ export const seriesQuery = graphql`
         seriesBanner {
           author
           quote
-          relatedSeries
         }
+        relatedSeries
       }
     }
   }
