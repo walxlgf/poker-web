@@ -6,7 +6,7 @@ const IdxPagePreview = ({ entry, getAsset }) => {
   return (
     <IdxPageTemplate
       title={entry.getIn(['data', 'title'])}
-      // seriesBanner={entry.getIn(['data', 'seriesBanner'])}
+      seriesBanner={entry.getIn(['data', 'seriesBanner'])}
     />
   )
 }

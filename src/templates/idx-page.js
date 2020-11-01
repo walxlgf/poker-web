@@ -23,7 +23,7 @@ export const IdxPageTemplate = ({
           {title}
         </h2>
       </div>
-      {/* <div>
+      <div>
         {seriesBanner.map((series) => (
           <article key={v4()} className="message">
             <div className="message-body">
@@ -33,13 +33,13 @@ export const IdxPageTemplate = ({
             </div>
           </article>
         ))}
-      </div> */}
+      </div>
     </div>
   )
 
 IdxPageTemplate.propTypes = {
   title: PropTypes.string,
-  // seriesBanner: PropTypes.array,
+  seriesBanner: PropTypes.array,
 }
 
 const IdxPage = ({ data }) => {
@@ -48,7 +48,7 @@ const IdxPage = ({ data }) => {
     <Layout>
       <IdxPageTemplate
         title={frontmatter.title}
-        // seriesBanner={frontmatter.seriesBanner}
+        seriesBanner={frontmatter.seriesBanner}
       />
     </Layout>
   )
@@ -69,6 +69,7 @@ export const seriesQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "idx-page" } }) {
       frontmatter {
         title
+        seriesBanner
       }
     }
   }
