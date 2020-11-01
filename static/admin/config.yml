@@ -59,7 +59,17 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "idx-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "SeriesBanner", name: "seriesBanner", widget: "list", fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+          - {label: "SeriesBanner", name: "seriesBanner", widget: "list", 
+            fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string},{
+                    label: "Related Series",
+                    name: relatedSeries,
+                    widget: "relation",
+                    collection: "series",
+                    search_fields: ["title"],
+                    value_field: "title",
+                    display_fields: ["title", "description"],
+                  }]
+            }
 
       - file: "src/pages/about/index.md"
         label: "About"

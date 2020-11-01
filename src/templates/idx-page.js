@@ -30,6 +30,7 @@ export const IdxPageTemplate = ({
               {series.author}
               <br />
               <cite> – {series.quote}</cite>
+              <cite> – {series.relatedSeries}</cite>
             </div>
           </article>
         ))}
@@ -72,6 +73,7 @@ export const seriesQuery = graphql`
         seriesBanner {
           author
           quote
+          relatedSeries
         }
       }
     }
