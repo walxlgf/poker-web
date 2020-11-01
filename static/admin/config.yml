@@ -71,9 +71,9 @@ collections:
               name: "relatedSeries",
               widget: "relation",
               collection: "series",
-              search_fields: ["title"],
-              value_field: "title",
-              display_fields: ["title", "description"],
+              searchFields: ["title"],
+              valueField: "title",
+              displayFields: ["title", "description"],
             } 
 
       - file: "src/pages/about/index.md"
