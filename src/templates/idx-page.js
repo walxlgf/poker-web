@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 
 export const IdxPageTemplate = ({
   title,
-  // seriesBanner,
+  seriesBanner,
 }) => (
     <div className="content">
       <div
