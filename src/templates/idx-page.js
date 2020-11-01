@@ -41,6 +41,7 @@ export const IdxPageTemplate = ({
 IdxPageTemplate.propTypes = {
   title: PropTypes.string,
   seriesBanner: PropTypes.array,
+  relatedSeries: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 
 const IdxPage = ({ data }) => {
@@ -74,6 +75,7 @@ export const seriesQuery = graphql`
           author
           quote
         }
+        relatedSeries
       }
     }
   }
