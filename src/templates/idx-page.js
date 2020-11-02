@@ -21,7 +21,7 @@ export const IdxPageTemplate = ({
             padding: '1rem',
           }}
         >
-          {title}-{relatedSeries.map(series => `${series} | `)}
+          {title}
         </h2>
       </div>
       {relatedSeries && relatedSeries.map(series => <Banner4Series slug={series} />)}
