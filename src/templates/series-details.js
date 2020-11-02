@@ -12,6 +12,8 @@ export const SeriesDetailsTemplate = ({
   bannerImage,
   helmet,
 }) => {
+  console.log(`SeriesDetailsTemplate:bannerImage:${JSON.stringify(bannerImage)}`)
+  console.log(`SeriesDetailsTemplate:typeof bannerImage:${typeof bannerImage}`)
   return (
     <section className="section">
       {helmet || ''}
