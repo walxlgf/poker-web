@@ -25,9 +25,10 @@ export const SeriesDetailsTemplate = ({
             </h1>
             <p>{description}</p>
           </div>
-          <Img fluid={bannerImage.childImageSharp.fluid} />
         </div>
       </div>
+      
+      <Img fluid={bannerImage.childImageSharp.fluid} />
     </section>
   )
 }
