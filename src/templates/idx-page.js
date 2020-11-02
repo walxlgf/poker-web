@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-
+import Banner4Series from '../components/Banner4Series'
 export const IdxPageTemplate = ({
   title,
   seriesBanner,
@@ -24,6 +24,7 @@ export const IdxPageTemplate = ({
           {title}-{relatedSeries.map(series => `${series} | `)}
         </h2>
       </div>
+      {relatedSeries && relatedSeries.map(series => <Banner4Series slug={series} />)}
       <div>
         {seriesBanner.map((series) => (
           <article key={series.author} className="message">
