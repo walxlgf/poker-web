@@ -131,9 +131,9 @@ const Banner4Series = ({ slug }) => {
   //   "extensions": {}
   // }
 
-  console.log(`Banner4Series:edges:${JSON.stringify(data.allMarkdownRemark.edges)}`);
+  // console.log(`Banner4Series:edges:${JSON.stringify(data.allMarkdownRemark.edges)}`);
   const match = data.allMarkdownRemark.edges.find(item => item.node.fields.slug === slug);
-  console.log(`Banner4Series:match:${JSON.stringify(match)}`);
+  console.log(`Banner4Series:slug:${slug} match:${JSON.stringify(match)}`);
   // const { title, description } = safeGet(match, 'node.frontmatter')
   const { title, description } = match ? match.node.frontmatter : {};
   return <div>{title} - {description}</div>
