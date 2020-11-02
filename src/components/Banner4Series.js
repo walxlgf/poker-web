@@ -66,7 +66,7 @@ const Banner4Series = ({ slug }) => {
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: {frontmatter: {templateKey: {eq: "series-details"}}}
     ) {
-         {
+      edges {
         node {
           excerpt(pruneLength: 20)
           fields {
