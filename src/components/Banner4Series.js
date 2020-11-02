@@ -33,7 +33,7 @@ Banner.propTypes = {
 export default ({ slug }) => (
   <StaticQuery
     query={graphql`
-      query SeriesQuery() {
+      query SeriesQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] },
           filter: {fields: {slug: {eq: "/series/2020-11-01-appt-2020/"}}}
