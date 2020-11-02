@@ -24,14 +24,14 @@ Banner.propTypes = {
     }),
   }),
 }
-
+// query BlogPostByID($id: String!)
 export default ({ slug }) => (
   <StaticQuery
     query={graphql`
-      query SeriesQuery {
+      query SeriesQuery($slug: String! = "${slug}") {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: ${slug}} }
+          filter: { frontmatter: { templateKey: { eq: $slug} }
         ) {
           edges {
             node {
