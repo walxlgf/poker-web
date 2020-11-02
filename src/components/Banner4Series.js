@@ -85,7 +85,7 @@ const Banner4Series = ({ slug }) => {
 
   const match = useMemo(() => (
     data.allMarkdownRemark.edges.find(item => item.node.fields.slug === `/series/${slug}/`)
-  ), [data, src])
+  ), [data, slug])
   // const match = data.allMarkdownRemark.edges.find(item => item.node.fields.slug === `/series/${slug}/`);
   // console.log(`Banner4Series:slug:${slug} match:${JSON.stringify(match)}`);
   const { title, date, description } = safeGet(match, 'node.frontmatter')
