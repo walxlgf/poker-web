@@ -132,7 +132,9 @@ const Banner4Series = ({ slug }) => {
   // }
 
   // console.log(`Banner4Series:edges:${JSON.stringify(data.allMarkdownRemark.edges)}`);
-  const match = data.allMarkdownRemark.edges.find(item => item.node.fields.slug === `/series/${slug}`);
+
+  // "/series/2020-11-01-appt-2020/"
+  const match = data.allMarkdownRemark.edges.find(item => item.node.fields.slug === `/series/${slug}/`);
   console.log(`Banner4Series:slug:${slug} match:${JSON.stringify(match)}`);
   // const { title, description } = safeGet(match, 'node.frontmatter')
   const { title, description } = match ? match.node.frontmatter : {};
