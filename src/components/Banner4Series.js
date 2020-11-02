@@ -86,7 +86,7 @@ const Banner4Series = ({ slug }) => {
   //   data.allMarkdownRemark.edges.find(({ node: { fields: { slug: seriesSlug } } }) => seriesSlug === slug)
   // ), [data, slug])
 
-  const match = data.allMarkdownRemark.edges.find(item => item.fields.slug === slug);
+  const match = data.allMarkdownRemark.edges.find(item => item.node.fields.slug === slug);
   // const { title, description } = safeGet(match, 'node.frontmatter')
   const { title, description } = match ? match.node.frontmatter : {};
   return <div>{title} - {description}</div>
