@@ -35,7 +35,7 @@ export default ({ slug }) => (
     query={graphql`
       query SeriesQuery() {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: { order: DESC, fields: [frontmatter___date] },
           filter: {fields: {slug: {eq: "/series/2020-11-01-appt-2020/"}}}
         ) {
           edges {
