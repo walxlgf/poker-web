@@ -4,6 +4,7 @@ import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
+import Img from 'gatsby-image'
 
 export const SeriesDetailsTemplate = ({
   description,
@@ -75,7 +76,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title 
         description
-        bannerImage{
+        bannerImage {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
