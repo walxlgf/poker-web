@@ -86,8 +86,8 @@ const Banner4Series = ({ slug }) => {
     data.allMarkdownRemark.edges.find(({ node: { fields: { slug: seriesSlug } } }) => seriesSlug === slug)
   ), [data, slug])
 
-  const { date, title, description } = safeGet(match, 'node.frontmatter')
-  return <div>{title} - {date} - {description}</div>
+  const { title, description } = safeGet(match, 'node.frontmatter')
+  return <div>{title} - {description}</div>
 }
 
 export default Banner4Series
