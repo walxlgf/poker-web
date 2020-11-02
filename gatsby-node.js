@@ -35,10 +35,11 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
       const slug = edge.node.slug
       const templateKey = edge.node.frontmatter.templateKey
+      let context = {id};
+      
       //判断是不是idx，如果是idx,准备传参给Banner4Series
-      if(templateKey === 'idx-page'){
-
-      }
+      if(templateKey === 'idx-page')
+        context.relatedSeries = edge.node.frontmatter.relatedSeries;
 
     
       createPage({
@@ -48,10 +49,7 @@ exports.createPages = ({ actions, graphql }) => {
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
-        context: {
-          id,
-          slug,
-        },
+        context
       })
     })
 

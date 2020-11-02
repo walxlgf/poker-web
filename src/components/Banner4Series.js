@@ -10,7 +10,7 @@ class Banner extends React.Component {
     return (
       <div className="columns is-multiline">
         {list && list.map(series => <div>
-          title:{series.frontmatter.title} date:{series.frontmatter.date} description:{series.frontmatter.description}
+          title:{series.node.frontmatter.title} date:{series.node.frontmatter.date} description:{series.node.frontmatter.description}
         </div>)}
       </div>
     )
