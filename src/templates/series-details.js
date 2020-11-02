@@ -8,6 +8,7 @@ import Layout from '../components/Layout'
 export const SeriesDetailsTemplate = ({
   description,
   title,
+  bannerImage,
   helmet,
 }) => {
   return (
@@ -21,6 +22,7 @@ export const SeriesDetailsTemplate = ({
             </h1>
             <p>{description}</p>
           </div>
+          <Img fluid={bannerImage.childImageSharp.fluid} />
         </div>
       </div>
     </section>
@@ -28,14 +30,15 @@ export const SeriesDetailsTemplate = ({
 }
 
 SeriesDetailsTemplate.propTypes = {
+  helmet: PropTypes.object,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
+  bannerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 
 const SeriesDetails = ({ data }) => {
   const { markdownRemark: post } = data
-
+  console.log('');
   return (
     <Layout>
       <SeriesDetailsTemplate
@@ -50,6 +53,7 @@ const SeriesDetails = ({ data }) => {
           </Helmet>
         }
         title={post.frontmatter.title}
+        bannerImage={post.frontmatter.bannerImage}
       />
     </Layout>
   )
@@ -69,8 +73,15 @@ export const pageQuery = graphql`
       id
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        title
+        title 
         description
+        bannerImage{
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
