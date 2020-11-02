@@ -58,6 +58,7 @@
 import safeGet from 'lodash.get'
 import React, { useMemo } from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { Link } from 'gatsby'
 
 const Banner4Series = ({ slug }) => {
   const data = useStaticQuery(graphql`
@@ -90,7 +91,12 @@ const Banner4Series = ({ slug }) => {
   // console.log(`Banner4Series:slug:${slug} match:${JSON.stringify(match)}`);
   const { title, date, description } = safeGet(match, 'node.frontmatter')
   // const { title,date, description } = match ? match.node.frontmatter : {};
-  return <div>{title} - {date} - {description}</div>
+  return <div>
+    <Link className="btn" to={match.node.fields.slug}>
+      {title}
+    </Link>
+    <div>{date} - {description}</div>
+  </div>
 }
 
 export default Banner4Series
