@@ -66,7 +66,7 @@ const Banner4Series = ({ slug }) => {
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: {frontmatter: {templateKey: {eq: "series-details"}}}
     ) {
-      edges {
+         {
         node {
           excerpt(pruneLength: 20)
           fields {
@@ -86,7 +86,54 @@ const Banner4Series = ({ slug }) => {
   //   data.allMarkdownRemark.edges.find(({ node: { fields: { slug: seriesSlug } } }) => seriesSlug === slug)
   // ), [data, slug])
 
+
+
+  //   {
+  //   "data": {
+  //     "allMarkdownRemark": {
+  //       "edges": [
+  //         {
+  //           "node": {
+  //             "id": "70819f71-b2bc-5f25-a398-86cd33446cd3",
+  //             "fields": {
+  //               "slug": "/series/2020-10-31-red-dragon-2020/"
+  //             },
+  //             "frontmatter": {
+  //               "title": "RED DRAGON 2020"
+  //             }
+  //           }
+  //         },
+  //         {
+  //           "node": {
+  //             "id": "c3ac4b3f-375a-586c-a2ad-cdfced4e374b",
+  //             "fields": {
+  //               "slug": "/series/2020-11-01-appt-2020/"
+  //             },
+  //             "frontmatter": {
+  //               "title": "APPT 2020"
+  //             }
+  //           }
+  //         },
+  //         {
+  //           "node": {
+  //             "id": "4b465004-2c1c-5c26-b68f-5b745af01b33",
+  //             "fields": {
+  //               "slug": "/series/2020-11-01-appt-manila-2020/"
+  //             },
+  //             "frontmatter": {
+  //               "title": "APPT MANILA 2020"
+  //             }
+  //           }
+  //         }
+  //       ]
+  //     }
+  //   },
+  //   "extensions": {}
+  // }
+
+  console.log(`Banner4Series:edges:${JSON.stringify(data.allMarkdownRemark.edges)}`);
   const match = data.allMarkdownRemark.edges.find(item => item.node.fields.slug === slug);
+  console.log(`Banner4Series:match:${JSON.stringify(match)}`);
   // const { title, description } = safeGet(match, 'node.frontmatter')
   const { title, description } = match ? match.node.frontmatter : {};
   return <div>{title} - {description}</div>
