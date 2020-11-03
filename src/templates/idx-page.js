@@ -8,7 +8,7 @@ export const IdxPageTemplate = ({
   seriesBanner,
   relatedSeries
 }) => (
-    <div className="content">
+    <div  className="container is-max-desktop">
       <div
         className="full-width-image-container margin-top-0"
       >

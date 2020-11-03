@@ -15,7 +15,7 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => (
-  <div>
+  <div className="container is-max-desktop">
     <div
       className="full-width-image margin-top-0"
       style={{
