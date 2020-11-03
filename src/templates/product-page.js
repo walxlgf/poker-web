@@ -40,7 +40,7 @@ export const ProductPageTemplate = ({
       </h2>
     </div>
     <section className="section section--gradient">
-      <div className="container">
+      <div className="container is-max-desktop">
         <div className="section">
           <div className="columns">
             <div className="column is-7 is-offset-1">

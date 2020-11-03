@@ -7,7 +7,7 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <section className="section">
-          <div className="container">
+          <div className="container is-max-desktop">
             <div className="content">
               <h1>Hi people</h1>
               <p>

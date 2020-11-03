@@ -44,7 +44,7 @@ export default class Contact extends React.Component {
     return (
       <Layout>
         <section className="section">
-          <div className="container">
+          <div className="container is-max-desktop">
             <div className="content">
               <h1>File Upload</h1>
               <form
