@@ -37,7 +37,7 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <section className="section">
-          <div className="container is-max-desktop">
+          <div className="container">
             <div className="content">
               <h1>Contact</h1>
               <form
@@ -104,6 +104,11 @@ export default class Index extends React.Component {
                   <button className="button is-link" type="submit">
                     Send
                   </button>
+                </div>
+                <div className="field">
+                  <span className="icon has-text-info">
+                    <i className="fas fa-info-circle"></i>
+                  </span>
                 </div>
               </form>
             </div>

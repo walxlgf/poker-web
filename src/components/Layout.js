@@ -6,10 +6,12 @@ import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
+import Gallery from './gallery/gallery'
+
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div className="container is-max-desktop">
+    <div >
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -52,6 +54,7 @@ const TemplateWrapper = ({ children }) => {
       <div>{children}</div>
       <Footer />
     </div>
+
   )
 }
 
