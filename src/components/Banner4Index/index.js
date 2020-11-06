@@ -40,7 +40,8 @@ export default function Banner({ slugs }) {
     data.allMarkdownRemark.edges.filter(item => slugs.findIndex(slug => `/series/${slug}/` === item.node.fields.slug) != -1)
   ), [data, slugs])
 
-  return (<BannerAnim
+  return (
+  <BannerAnim
     autoPlay
     autoPlaySpeed={5000}
     autoPlayEffect={false}

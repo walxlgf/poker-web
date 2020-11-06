@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import Banner4Index from "../components/Banner4Index/index"
 import Series4Index from "../components/Series4Index"
 import Event4Index from "../components/Event4Index"
-import Gallery from "../components/gallery/gallery"
+import Gallery from "../components/Gallery"
 export const IdxPageTemplate = ({
   title,
   seriesBanner,
@@ -16,6 +16,7 @@ export const IdxPageTemplate = ({
 
       <Series4Index slugs={relatedSeries} />
       <Event4Index />
+      <Gallery></Gallery>
       {/* <div>
         {seriesBanner.map((series) => (
           <article key={series.author} className="message">
