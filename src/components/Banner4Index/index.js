@@ -41,6 +41,7 @@ export default function Banner({ slugs }) {
   ), [data, slugs])
 
   return (
+    
   <BannerAnim
     autoPlay
     autoPlaySpeed={5000}
