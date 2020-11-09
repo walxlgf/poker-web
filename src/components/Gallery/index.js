@@ -155,9 +155,6 @@ export default () => {
             <div className="title" style={{ border: "1px dotted orange" }}>专辑</div>
         </div>
         <div className="container is-max-desktop" style={{ width: "100vw", border: "1px dotted blue" }}>
-            {/* <Gallery images={IMAGES}
-                enableLightbox={false}
-                enableImageSelection={false}></Gallery> */}
             <Gallery photos={photos} />
         </div>
     </div>)
