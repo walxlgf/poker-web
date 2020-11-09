@@ -4,35 +4,38 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 export default function Banner({ slugs }) {
+  console.log(`Series4Index:slugs:${JSON.stringify(slugs)}`)
   const data = useStaticQuery(graphql`
-  query TileSeriesQuery {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: {frontmatter: {templateKey: {eq: "series-details"}}}
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 20)
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-            bannerImage {
-                childImageSharp {
-                  fluid(maxHeight: 600, quality: 100) {
-                    ...GatsbyImageSharpFluid
+    query TileSeriesQuery {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] },
+        filter: {frontmatter: {templateKey: {eq: "series-details"}}}
+      ) {
+        edges {
+          node {
+            excerpt(pruneLength: 20)
+            fields {
+              slug
+            }
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              title
+              description
+              bannerImage {
+                  childImageSharp {
+                    fluid(maxHeight: 600, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
                   }
-                }
+              }
             }
           }
         }
       }
     }
-  }
-`)
+  `)
+
+  console.log(`Series4Index:${JSON.stringify(data)}`)
   const list = useMemo(() => (
     data.allMarkdownRemark.edges.filter(item => slugs.findIndex(slug => `/series/${slug}/` === item.node.fields.slug) != -1)
   ), [data, slugs])
