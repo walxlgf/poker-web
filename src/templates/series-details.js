@@ -4,32 +4,46 @@ import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
+import Schedule from '../components/Series/Schedule'
+import Summary from '../components/Series/Summary'
 import Img from 'gatsby-image'
+import { Tabs, Badge } from 'antd';
+const { TabPane } = Tabs;
+import { AppleOutlined, AndroidOutlined } from '@ant-design/icons';
 
+const expandable = { expandedRowRender: record => <p>{record.title}</p> };
 export const SeriesDetailsTemplate = ({
   description,
   title,
   bannerImage,
+  events,
   helmet,
 }) => {
-  console.log(`SeriesDetailsTemplate:bannerImage:${JSON.stringify(bannerImage)}`)
-  console.log(`SeriesDetailsTemplate:typeof bannerImage:${typeof bannerImage}`)
   return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-          </div>
-        </div>
-      </div>
-      
-      <Img fluid={bannerImage.childImageSharp.fluid} />
-    </section>
+    <div className="container is-max-desktop">
+      <Tabs defaultActiveKey="1" centered>
+        <TabPane
+          tab={<span><AppleOutlined />赛事简介</span>}
+          key="1"
+        >
+          <Summary events={events}
+            description={description}
+            title={title}
+            bannerImage={bannerImage} />
+        </TabPane>
+        <TabPane
+          tab={<span><AppleOutlined />赛程表</span>}
+          key="2"
+        >
+          <Schedule events={events} />
+        </TabPane>
+        <TabPane
+          tab={<span><AppleOutlined />赛事结果</span>}
+          key="3">
+          Content of Tab Pane 3
+        </TabPane>
+      </Tabs>
+    </div>
   )
 }
 
@@ -38,6 +52,7 @@ SeriesDetailsTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   bannerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  events: PropTypes.array,
 }
 
 const SeriesDetails = ({ data }) => {
@@ -58,6 +73,7 @@ const SeriesDetails = ({ data }) => {
         }
         title={post.frontmatter.title}
         bannerImage={post.frontmatter.bannerImage}
+        events={post.frontmatter.events}
       />
     </Layout>
   )
@@ -79,7 +95,22 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title 
         description
+        events{
+          no
+          title
+          buyin
+          startChips
+          startTime(formatString: "MMMM DD, YYYY")
+          remark  
+          reEntry
+          startBlind
+          stopLevel
+          duration
+          survivor
+          isMain
+        }
         bannerImage {
+          relativePath
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid

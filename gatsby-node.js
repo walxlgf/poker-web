@@ -37,10 +37,9 @@ exports.createPages = ({ actions, graphql }) => {
       const templateKey = edge.node.frontmatter.templateKey
       let context = {id};
       
-      //判断是不是idx，如果是idx,准备传参给Banner4Series
-      if(templateKey === 'idx-page')
+      //判断是不是index，如果是index,准备传参给Banner4Series
+      if(templateKey === 'index-page')
         context.relatedSeries = edge.node.frontmatter.relatedSeries;
-
     
       createPage({
         path: edge.node.fields.slug,
@@ -67,7 +66,6 @@ exports.createPages = ({ actions, graphql }) => {
     // Make tag pages
     tags.forEach((tag) => {
       const tagPath = `/tags/${_.kebabCase(tag)}/`
-
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tags.js`),

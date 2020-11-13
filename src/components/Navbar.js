@@ -44,7 +44,7 @@ const Navbar = class extends React.Component {
         <div className="container is-max-desktop" style={{ border: "1px dotted red" }}>
           <nav className="level is-mobile" style={{ border: "1px dotted green", margin: "0px", height: "3rem" }}  >
             <div className="level-left" >
-              <Link to="/idx" className="level-item" title="Home">
+              <Link to="/" className="level-item" title="Home">
                 <img src={logo} alt="Poker Web" style={{ width: '88px' }} />
               </Link>
             </div>
