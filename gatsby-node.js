@@ -52,6 +52,11 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
+    createPage({
+      path: '/offline',
+      component: path.resolve(`src/templates/offline-page.js`),
+    })
+
     // Tag pages:
     let tags = []
     // Iterate through each post, putting all found tags into `tags`

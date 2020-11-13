@@ -33,6 +33,16 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - {
+          label: "Category",
+          name: "category",
+          widget: "relation",
+          collection: "category",
+          searchFields: ["title"],
+          valueField: "key",
+          multiple: false,
+          displayFields: ["title"],
+        } 
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "series-page"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Start Date", name: "date", widget: "datetime"}

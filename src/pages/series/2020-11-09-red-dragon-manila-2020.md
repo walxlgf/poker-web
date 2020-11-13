@@ -74,4 +74,5 @@ events:
     duration: '20分钟'
     survivor: '仅12%的参选选手' 
     isMain: true
+category: rd-jeju
 ---
