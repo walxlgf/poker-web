@@ -15,7 +15,7 @@ export default function Banner({ slugs }) {
   query BannerSeriesQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: {frontmatter: {templateKey: {eq: "series-details"}}}
+      filter: {frontmatter: {templateKey: {eq: "series-page"}}}
     ) {
       edges {
         node {

@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { SeriesDetailsTemplate } from '../../templates/series-details'
+import { SereisPageTemplate } from '../../templates/series-page'
 
-const SeriesDetailsPreview = ({ entry, widgetFor }) => {
+const SereisPagePreview = ({ entry, widgetFor }) => {
   return (
-    <SeriesDetailsTemplate
+    <SereisPageTemplate
       content={widgetFor('body')}
       description={entry.getIn(['data', 'description'])}
       title={entry.getIn(['data', 'title'])}
@@ -13,11 +13,11 @@ const SeriesDetailsPreview = ({ entry, widgetFor }) => {
   )
 }
 
-SeriesDetailsPreview.propTypes = {
+SereisPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 }
 
-export default SeriesDetailsPreview
+export default SereisPagePreview

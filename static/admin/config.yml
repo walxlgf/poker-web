@@ -33,11 +33,21 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "series-details"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "series-page"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Start Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Banner Image", name: "bannerImage", widget: "image"}
+  - name: "category"
+    label: "Category"
+    folder: "src/pages/category"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "category-page"}
+      - {label: "Key", name: "key", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Address", name: "address", widget: "string"}
   - name: "pages"
     label: "Pages"
     files:

@@ -1,18 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Schedule from '../components/Series/Schedule'
 import Summary from '../components/Series/Summary'
-import Img from 'gatsby-image'
-import { Tabs, Badge } from 'antd';
+import { Tabs } from 'antd';
 const { TabPane } = Tabs;
 import { AppleOutlined, AndroidOutlined } from '@ant-design/icons';
 
-const expandable = { expandedRowRender: record => <p>{record.title}</p> };
-export const SeriesDetailsTemplate = ({
+export const SeriesPageTemplate = ({
   description,
   title,
   bannerImage,
@@ -32,7 +29,7 @@ export const SeriesDetailsTemplate = ({
             bannerImage={bannerImage} />
         </TabPane>
         <TabPane
-          tab={<span><AppleOutlined />赛程表</span>}
+          tab={<span><AndroidOutlined />赛程表</span>}
           key="2"
         >
           <Schedule events={events} />
@@ -47,7 +44,7 @@ export const SeriesDetailsTemplate = ({
   )
 }
 
-SeriesDetailsTemplate.propTypes = {
+SeriesPageTemplate.propTypes = {
   helmet: PropTypes.object,
   description: PropTypes.string,
   title: PropTypes.string,
@@ -55,12 +52,12 @@ SeriesDetailsTemplate.propTypes = {
   events: PropTypes.array,
 }
 
-const SeriesDetails = ({ data }) => {
+const SeriesPage = ({ data }) => {
   const { markdownRemark: post } = data
   console.log('');
   return (
     <Layout>
-      <SeriesDetailsTemplate
+      <SeriesPageTemplate
         description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
@@ -79,16 +76,16 @@ const SeriesDetails = ({ data }) => {
   )
 }
 
-SeriesDetails.propTypes = {
+SeriesPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default SeriesDetails
+export default SeriesPage
 
 export const pageQuery = graphql`
-  query SeriesDetailsByID($id: String!) {
+  query SeriesPageByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       frontmatter {
