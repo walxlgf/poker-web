@@ -63,7 +63,7 @@ import { AppleOutlined, AndroidOutlined } from '@ant-design/icons';
 export default ({ category, latestSeries }) => {
     const { events, bannerImage } = latestSeries ? latestSeries : {};
     const { title, address, addressEN, phone } = category ? category : {};
-    console.log(`Summary:title:${JSON.stringify(title)}`);
+    console.log(`Summary:title:${title}`);
     // let filterEvents = events ? events.filter(event => event.isMain) : [];
     let filterEvents = [];
     if (events) {
