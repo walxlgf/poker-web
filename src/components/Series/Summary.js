@@ -138,7 +138,7 @@ export default ({ category, latestSeries }) => {
                     justifyContent: "center",
                     alignItems: "center",
                     border: "1px dotted blue",
-                    backgroundImage: `url(${require(`../../../static/img/${bannerImage.relativePath}`)})`,
+                    backgroundImage: `url(${require(`../../../static/img/${bannerImage && bannerImage.relativePath}`)})`,
                 }}>
                 <h1 className="title">RDPT专题</h1>
                 <h1 className="title">关注获取最新消息</h1>
