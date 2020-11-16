@@ -60,18 +60,19 @@ import twitter from '../../img/social/twitter.svg'
 import vimeo from '../../img/social/vimeo.svg'
 import { AppleOutlined, AndroidOutlined } from '@ant-design/icons';
 
-
 export default ({ category, latestSeries }) => {
     const { events, bannerImage } = latestSeries ? latestSeries : {};
     const { title, address, addressEN, phone } = category ? category : {};
     console.log(`Summary:title:${JSON.stringify(title)}`);
     // let filterEvents = events ? events.filter(event => event.isMain) : [];
     let filterEvents = [];
-    let index = 0;
-    for (let i = 0; i < events.length; i++) {
-        const event = events[i];
-        if (event.isMain)
-            filterEvents.push({ ...event, key: index++ });
+    if (events) {
+        let index = 0;
+        for (let i = 0; i < events.length; i++) {
+            const event = events[i];
+            if (event.isMain)
+                filterEvents.push({ ...event, key: index++ });
+        }
     }
 
     //先按日期排序
