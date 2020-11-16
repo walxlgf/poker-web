@@ -15,7 +15,7 @@ events:
     startBlind: "100"
     duration: 20分钟
     survivor: 仅12%的参选选手
-    title: APPT National Day 1A
+    title: MDM National Day 1A
     reEntry: "1"
   - remark: ""
     no: 1B
@@ -26,7 +26,7 @@ events:
     startBlind: "100"
     duration: 20分钟
     survivor: 仅12%的参选选手
-    title: APPT National Day 1B
+    title: MDM National Day 1B
     reEntry: "1"
   - remark: ""
     no: "1"
@@ -37,7 +37,7 @@ events:
     startBlind: "100"
     duration: 20分钟
     survivor: 仅12%的参选选手
-    title: APPT National Day 2
+    title: MDM National Day 2
     reEntry: "1"
   - remark: ""
     no: 2A
@@ -49,7 +49,7 @@ events:
     startBlind: "100"
     duration: 20分钟
     survivor: 仅12%的参选选手
-    title: APPT National Day 1A
+    title: MDM National Day 1A
     reEntry: "1"
   - remark: ""
     no: 2B
@@ -60,7 +60,7 @@ events:
     startBlind: "100"
     duration: 20分钟
     survivor: 仅12%的参选选手
-    title: APPT National Day 1B
+    title: MDM National Day 1B
     reEntry: "1"
   - remark: ""
     no: "2"
@@ -72,7 +72,7 @@ events:
     startBlind: "100"
     duration: 20分钟
     survivor: 仅12%的参选选手
-    title: APPT National Day 2
+    title: MDM National Day 2
     reEntry: "1"
 category: rd-manila
 ---

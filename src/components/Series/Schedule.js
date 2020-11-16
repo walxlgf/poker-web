@@ -98,13 +98,8 @@ const expandedRowRender = (record) => {
 };
 export default ({ seriess, categories, category }) => {
     const [currentCategory, setCategory] = useState(category);
-    let categorySeriess = [];
-    if (category && seriess) {
-        categorySeriess = seriess.filter(series => series.category === category.key);
-    }
-    // const [currentSeries, setSeries] = useState(categorySeriess ? categorySeriess[0] : undefined);
-    const currentSeries = categorySeriess ? categorySeriess[0] : undefined;
-
+    const [categorySeriess, setCategorySeriess] = useState(category && seriess ? seriess.filter(series => series.category === category.key) : []);
+    const [currentSeries, setSeries] = useState(categorySeriess ? categorySeriess[0] : undefined);
     let { events } = currentSeries ? currentSeries : {};
     //先按日期排序
     events && events.sort((a, b) => {
@@ -120,6 +115,7 @@ export default ({ seriess, categories, category }) => {
         return result;
     });
 
+    // console.log(`Schedule:categorySeriess:${JSON.stringify(categorySeriess)}`);
 
     //分组
     let groups = [];
@@ -138,19 +134,38 @@ export default ({ seriess, categories, category }) => {
             }
         }
     }
+
+
     return (
         <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center", border: "1px dotted green" }}>
 
-            <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", border: "1px dotted blue" }}>
-
-                {categories && <Select defaultValue={category.key} style={{ width: 240 }} >
-                    {categories.map(item => <Option value={item.key}>{item.title}</Option>)}
-                </Select>}
-
-                {categorySeriess && <Select defaultValue={currentSeries && currentSeries.no} style={{ width: 240 }} >
-                    {categorySeriess.map(item => <Option value={item.no}>{item.title}</Option>)}
-                </Select>}
-
+            <div style={{ display: "flex", width: "100%", padding: "2rem", flexDirection: "row", alignItems: "center", justifyContent: "center", border: "1px dotted blue" }}>
+                {categories &&
+                    <Select
+                        defaultValue={currentCategory.key}
+                        style={{ width: 240 }}
+                        onChange={value => {
+                            let category = categories.find(item => item.key === value);
+                            let categorySeriess = category && seriess ? seriess.filter(series => series.category === category.key) : []
+                            let currentSeries = categorySeriess ? categorySeriess[0] : undefined;
+                            setCategory(category);
+                            setCategorySeriess(categorySeriess);
+                            setSeries(currentSeries);
+                        }}
+                    >
+                        {categories.map(item => <Option key={item.key} value={item.key}>{item.title}</Option>)}
+                    </Select>}
+                {categorySeriess &&
+                    <Select
+                        defaultValue={currentSeries && currentSeries.title}
+                        style={{ width: 240 }}
+                        onChange={value => {
+                            let currentSeries = categorySeriess.find(item => item.title === value);
+                            setSeries(currentSeries);
+                        }}
+                    >
+                        {categorySeriess.map(item => <Option key={item.title} value={item.title}>{item.title}</Option>)}
+                    </Select>}
             </div>
             {groups &&
                 <Collapse accordion defaultActiveKey={groups[0].label}>

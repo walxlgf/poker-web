@@ -124,7 +124,7 @@ export default ({ category, latestSeries }) => {
             />
             <div className="container is-max-desktop" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
                 <Link to={"/"}>
-                    <button class="button is-primary is-inverted is-outlined">查看更多赛事</button>
+                    <button className="button is-primary is-inverted is-outlined">查看更多赛事</button>
                 </Link>
             </div>
 

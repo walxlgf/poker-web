@@ -10,7 +10,6 @@ import logo from '../../img/logo.svg'
 const { Element } = BannerAnim;
 const BgElement = Element.BgElement;
 export default function Banner({ slugs }) {
-  console.log(`Banner4Index:slugs:${JSON.stringify(slugs)}`)
   const data = useStaticQuery(graphql`
   query BannerSeriesQuery {
     allMarkdownRemark(
@@ -38,7 +37,6 @@ export default function Banner({ slugs }) {
   }
 `)
 
-  console.log(`Banner4Index:${JSON.stringify(data)}`)
   const list = useMemo(() => (
     data.allMarkdownRemark.edges.filter(item => slugs.findIndex(slug => `/series/${slug}/` === item.node.fields.slug) != -1)
   ), [data, slugs])
@@ -52,7 +50,6 @@ export default function Banner({ slugs }) {
       style={{ border: "1px dotted red" }}
     >
       {list && list.map(edge => (
-
         <Element key={edge.node.fields.slug}
           prefixCls="banner-user-elem"
         >

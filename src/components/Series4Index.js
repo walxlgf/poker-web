@@ -46,7 +46,7 @@ export default function Banner({ slugs }) {
       </div>
       <div className="container is-max-desktop" style={{ width: "100vw", border: "1px dotted blue" }}>
         {list && list.map(edge => (
-          <div className="columns" style={{ margin: "1rem", border: "1px dotted green" }}>
+          <div key={edge.node.fields.slug} className="columns" style={{ margin: "1rem", border: "1px dotted green" }}>
             <div className="column is-4"
               style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "flex-start", border: "1px dotted orange" }}>
               <div className="title">
