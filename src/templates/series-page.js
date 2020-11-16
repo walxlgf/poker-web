@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
-import Schedule from '../components/Series/Schedule'
-import Summary from '../components/Series/Summary'
+// import Schedule from '../components/Series/Schedule'
+// import Summary from '../components/Series/Summary'
 import { Tabs } from 'antd';
 const { TabPane } = Tabs;
 import { AppleOutlined, AndroidOutlined } from '@ant-design/icons';
@@ -19,7 +19,7 @@ export const SeriesPageTemplate = ({
   return (
     <div className="container is-max-desktop">
       <Tabs defaultActiveKey="1" centered>
-        <TabPane
+        {/* <TabPane
           tab={<span><AppleOutlined />赛事简介</span>}
           key="1"
         >
@@ -38,7 +38,7 @@ export const SeriesPageTemplate = ({
           tab={<span><AppleOutlined />赛事结果</span>}
           key="3">
           Content of Tab Pane 3
-        </TabPane>
+        </TabPane> */}
       </Tabs>
     </div>
   )
