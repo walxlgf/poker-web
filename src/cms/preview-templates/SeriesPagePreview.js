@@ -13,6 +13,7 @@ const SereisPagePreview = ({ entry, widgetFor }) => {
   )
 }
 
+
 SereisPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
