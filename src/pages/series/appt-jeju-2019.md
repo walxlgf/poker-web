@@ -1,8 +1,8 @@
 ---
 templateKey: series-page
-title: APPT 2020
-date: 2020-11-01T08:22:30.251Z
-description: APPT 2020 description
+title: APPT JEJU 2019
+date: 2019-11-01T08:22:30.251Z
+description: APPT 2019 description
 bannerImage: /img/color-4.jpg
 events:
   - remark: ""
@@ -10,7 +10,7 @@ events:
     stopLevel: "8"
     startChips: "6000"
     buyin: ₩ 1,350,000
-    startTime: 2020-11-01T12:00:00.728Z
+    startTime: 2019-11-01T12:00:00.728Z
     startBlind: "100"
     duration: 20分钟
     survivor: 仅12%的参选选手
@@ -21,7 +21,7 @@ events:
     stopLevel: "8"
     startChips: "6000"
     buyin: ₩ 1,350,000
-    startTime: 2020-11-01T13:00:00.728Z
+    startTime: 2019-11-01T13:00:00.728Z
     startBlind: "100"
     duration: 20分钟
     survivor: 仅12%的参选选手
@@ -32,7 +32,7 @@ events:
     stopLevel: "8"
     startChips: "6000"
     buyin: ₩ 1,350,000
-    startTime: 2020-11-02T13:00:00.728Z
+    startTime: 2019-11-02T13:00:00.728Z
     startBlind: "100"
     duration: 20分钟
     survivor: 仅12%的参选选手
@@ -43,7 +43,7 @@ events:
     stopLevel: "8"
     startChips: "6000"
     buyin: ₩ 1,350,000
-    startTime: 2020-11-03T12:00:00.728Z
+    startTime: 2019-11-03T12:00:00.728Z
     startBlind: "100"
     duration: 20分钟
     survivor: 仅12%的参选选手
@@ -54,7 +54,7 @@ events:
     stopLevel: "8"
     startChips: "6000"
     buyin: ₩ 1,350,000
-    startTime: 2020-11-04T13:00:00.728Z
+    startTime: 2019-11-04T13:00:00.728Z
     startBlind: "100"
     duration: 20分钟
     survivor: 仅12%的参选选手
@@ -65,7 +65,7 @@ events:
     stopLevel: "8"
     startChips: "6000"
     buyin: ₩ 1,350,000
-    startTime: 2020-11-04T15:00:00.728Z
+    startTime: 2019-11-04T15:00:00.728Z
     startBlind: "100"
     duration: 20分钟
     survivor: 仅12%的参选选手

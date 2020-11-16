@@ -61,8 +61,10 @@ import vimeo from '../../img/social/vimeo.svg'
 import { AppleOutlined, AndroidOutlined } from '@ant-design/icons';
 
 
-export default ({ events, description, title, bannerImage }) => {
-    console.log(`Summary:events:${JSON.stringify(events)}`);
+export default ({ category, latestSeries }) => {
+    const { events, bannerImage } = latestSeries ? latestSeries : {};
+    const { title, address, addressEN, phone } = category ? category : {};
+    console.log(`Summary:title:${JSON.stringify(title)}`);
     // let filterEvents = events ? events.filter(event => event.isMain) : [];
     let filterEvents = [];
     let index = 0;
@@ -99,10 +101,13 @@ export default ({ events, description, title, bannerImage }) => {
                         {title}
                     </div>
                     <div className="subtitle">
-                        {description}
+                        {address}
                     </div>
                     <div className="subtitle">
-
+                        {addressEN}
+                    </div>
+                    <div className="subtitle">
+                        {phone}
                     </div>
                 </div>
                 <div className="column is-8">

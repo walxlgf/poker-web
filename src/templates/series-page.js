@@ -82,12 +82,14 @@ SeriesPage.propTypes = {
   }),
 }
 
+
+
+
 export default SeriesPage
 
 export const pageQuery = graphql`
   query SeriesPageByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      id
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title 

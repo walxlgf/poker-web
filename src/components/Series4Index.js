@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 export default function Banner({ slugs }) {
-  console.log(`Series4Index:slugs:${JSON.stringify(slugs)}`)
   const data = useStaticQuery(graphql`
     query TileSeriesQuery {
       allMarkdownRemark(
@@ -35,7 +34,6 @@ export default function Banner({ slugs }) {
     }
   `)
 
-  console.log(`Series4Index:${JSON.stringify(data)}`)
   const list = useMemo(() => (
     data.allMarkdownRemark.edges.filter(item => slugs.findIndex(slug => `/series/${slug}/` === item.node.fields.slug) != -1)
   ), [data, slugs])
@@ -61,7 +59,7 @@ export default function Banner({ slugs }) {
                 {edge.node.frontmatter.date}
               </div>
               <Link to={edge.node.fields.slug}>
-                <button class="button is-primary is-inverted is-outlined">查看详情</button>
+                <button className="button is-primary is-inverted is-outlined">查看详情</button>
               </Link>
             </div>
             <div className="column is-8">

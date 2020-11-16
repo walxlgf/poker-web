@@ -23,7 +23,7 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then((result) => { 
+  `).then((result) => {
     if (result.errors) {
       result.errors.forEach((e) => console.error(e.toString()))
       return Promise.reject(result.errors)
@@ -35,12 +35,12 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
       const slug = edge.node.slug
       const templateKey = edge.node.frontmatter.templateKey
-      let context = {id};
-      
+      let context = { id };
+
       //判断是不是index，如果是index,准备传参给Banner4Series
-      if(templateKey === 'index-page')
+      if (templateKey === 'index-page')
         context.relatedSeries = edge.node.frontmatter.relatedSeries;
-    
+
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,

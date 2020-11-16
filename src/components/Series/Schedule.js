@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import moment from "moment"
-import { Collapse, Table, } from 'antd';
+import { Collapse, Table, Select } from 'antd';
+const { Option } = Select;
 const { Panel } = Collapse;
 const columns = [
     {
@@ -95,7 +96,16 @@ const expandedRowRender = (record) => {
 
     return <Table columns={columns1} dataSource={[record]} pagination={false} />;
 };
-export default ({ events }) => {
+export default ({ seriess, categories, category }) => {
+    const [currentCategory, setCategory] = useState(category);
+    let categorySeriess = [];
+    if (category && seriess) {
+        categorySeriess = seriess.filter(series => series.category === category.key);
+    }
+    // const [currentSeries, setSeries] = useState(categorySeriess ? categorySeriess[0] : undefined);
+    const currentSeries = categorySeriess ? categorySeriess[0] : undefined;
+
+    let { events } = currentSeries ? currentSeries : {};
     //先按日期排序
     events && events.sort((a, b) => {
         let aday = moment(a.startTime);
@@ -129,7 +139,19 @@ export default ({ events }) => {
         }
     }
     return (
-        <div>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center", border: "1px dotted green" }}>
+
+            <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", border: "1px dotted blue" }}>
+
+                {categories && <Select defaultValue={category.key} style={{ width: 240 }} >
+                    {categories.map(item => <Option value={item.key}>{item.title}</Option>)}
+                </Select>}
+
+                {categorySeriess && <Select defaultValue={currentSeries && currentSeries.no} style={{ width: 240 }} >
+                    {categorySeriess.map(item => <Option value={item.no}>{item.title}</Option>)}
+                </Select>}
+
+            </div>
             {groups &&
                 <Collapse accordion defaultActiveKey={groups[0].label}>
                     {groups.map(group => (

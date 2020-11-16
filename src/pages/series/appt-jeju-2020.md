@@ -1,9 +1,9 @@
 ---
 templateKey: series-page
-title: RED DRAGON MANILA 2020  sfs
-date: 2020-11-09T07:38:54.744Z
-description: "RED DRAGON MANILA 2020 RED DRAGON MANILA 2020 "
-bannerImage: /img/jumbotron.jpg
+title: APPT JEJU 2020
+date: 2020-11-01T08:23:18.728Z
+description: APPT JEJU 2020
+bannerImage: /img/products-grid2.jpg
 events:
   - remark: ""
     no: 1A
@@ -74,5 +74,5 @@ events:
     survivor: 仅12%的参选选手
     title: APPT National Day 2
     reEntry: "1"
-category: rd-jeju
+category: appt-jeju
 ---

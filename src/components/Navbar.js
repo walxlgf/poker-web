@@ -115,9 +115,9 @@ const Navbar = class extends React.Component {
                   <div className="navbar-item has-dropdown is-hoverable">
                     <div className="navbar-link is-arrowless" >线下赛事</div>
                     <div className="navbar-dropdown is-boxed">
-                      <Link className="navbar-item" to="/offline">红龙杯济州站</Link>
-                      <Link className="navbar-item" to="/offline">红龙杯马尼拉站</Link>
-                      <Link className="navbar-item" to="/offline">APPT济州站</Link>
+                      <Link className="navbar-item" to="/offline" state={{ categoryKey: "rd-jeju" }}>红龙杯济州站</Link>
+                      <Link className="navbar-item" to="/offline" state={{ categoryKey: "rd-manila" }}>红龙杯马尼拉站</Link>
+                      <Link className="navbar-item" to="/offline" state={{ categoryKey: "appt-jeju" }}>APPT济州站</Link>
                     </div>
                   </div>
                   <Link className="navbar-item" to="/products"></Link>
