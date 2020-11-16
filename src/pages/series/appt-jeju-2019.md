@@ -71,5 +71,5 @@ events:
     survivor: 仅12%的参选选手
     title: APPT National Day 2
     reEntry: "1"
-category: appt_jeju
+category: appt-jeju
 ---
