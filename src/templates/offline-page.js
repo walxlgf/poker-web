@@ -34,7 +34,7 @@ const OfflinePage = ({ location, data }) => {
             tab={<span><AppleOutlined />赛事简介</span>}
             key="1"
           >
-            {latestSeries && <Summary
+            {latestSeries && category && <Summary
               latestSeries={latestSeries}
               category={category}
             />}
@@ -43,10 +43,10 @@ const OfflinePage = ({ location, data }) => {
             tab={<span><AndroidOutlined />赛程表</span>}
             key="2"
           >
-            <Schedule
+            {latestSeries && category && categories && <Schedule
               seriess={seriess}
               categories={categories}
-              category={category} />
+              category={category} />}
           </TabPane>
           <TabPane
             tab={<span><AppleOutlined />赛事结果</span>}

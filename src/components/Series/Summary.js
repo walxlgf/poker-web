@@ -112,7 +112,7 @@ export default ({ category, latestSeries }) => {
                     </div>
                 </div>
                 <div className="column is-8">
-                    <Img style={{ height: "15rem" }} fluid={bannerImage.childImageSharp.fluid} />
+                    <Img style={{ height: "15rem" }} fluid={bannerImage && bannerImage.childImageSharp.fluid} />
                 </div>
             </div>
             <div className="container is-max-desktop" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
