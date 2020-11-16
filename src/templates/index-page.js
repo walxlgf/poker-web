@@ -10,8 +10,8 @@ export const IndexPageTemplate = ({
   relatedSeries
 }) => (
     <div>
-      {/* <Banner4Index slugs={relatedSeries} />
-      <Series4Index slugs={relatedSeries} /> */}
+      <Banner4Index slugs={relatedSeries} />
+      <Series4Index slugs={relatedSeries} />
       <Event4Index />
       <Gallery></Gallery>
     </div>
