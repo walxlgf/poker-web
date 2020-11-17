@@ -7,14 +7,16 @@ import Summary from '../components/Series/Summary'
 import { Tabs } from 'antd';
 const { TabPane } = Tabs;
 import { AppleOutlined, AndroidOutlined } from '@ant-design/icons';
-const OfflinePage = ({ location, data }) => {
+const OfflinePage = ({ pageContext: { categoryKey }, data }) => {
+
+  console.log(`OfflinePage:categoryKey:${JSON.stringify(categoryKey)}`);
   const seriess = data.seriess && data.seriess.edges ? data.seriess.edges.map(edge => edge.node.frontmatter) : [];
   const categories = data.categories && data.categories.edges ? data.categories.edges.map(edge => edge.node.frontmatter) : [];
   const [category, setCategory] = useState(undefined);
   //如果category没有值，设置为categoryKey指定的那一个。
   useEffect(() => {
     if (!category && categories) {
-      setCategory(categories ? categories.find(item => item.key === location.state.categoryKey) : undefined);
+      setCategory(categories ? categories.find(item => item.key === categoryKey) : undefined);
     }
   })
 

@@ -115,8 +115,6 @@ export default ({ seriess, categories, category }) => {
         return result;
     });
 
-    // console.log(`Schedule:categorySeriess:${JSON.stringify(categorySeriess)}`);
-
     //分组
     let groups = [];
     if (events && events.length > 0) {
@@ -167,7 +165,8 @@ export default ({ seriess, categories, category }) => {
                         {categorySeriess.map(item => <Option key={item.title} value={item.title}>{item.title}</Option>)}
                     </Select>}
             </div>
-            {groups &&
+
+            {groups.length &&
                 <Collapse accordion defaultActiveKey={groups[0].label}>
                     {groups.map(group => (
                         <Panel header={group.label} key={group.label} >

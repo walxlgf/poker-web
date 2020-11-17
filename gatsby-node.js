@@ -52,10 +52,16 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    createPage({
-      path: '/offline',
-      component: path.resolve(`src/templates/offline-page.js`),
-    })
+    let categories = ['appt-jeju', 'rd-jeju', 'rd-manila']
+    for (let i = 0; i < categories.length; i++) {
+      const category = categories[i];
+      createPage({
+        path: `/offline/${category}`,
+        component: path.resolve(`src/templates/offline-page.js`),
+        context: { categoryKey: category }
+      })
+      console.log(`createPages:${JSON.stringify({ path: `/offline/${category}` })}`)
+    }
 
     // Tag pages:
     let tags = []
