@@ -66,16 +66,16 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {
-              label: "Related Series",
-              name: "relatedSeries",
-              widget: "relation",
-              collection: "series",
-              searchFields: ["title"],
-              valueField: "{{slug}}",
-              multiple: true,
-              displayFields: ["title", "description"],
-            } 
+          # - {
+          #     label: "Related Series",
+          #     name: "relatedSeries",
+          #     widget: "relation",
+          #     collection: "series",
+          #     searchFields: ["title"],
+          #     valueField: "{{slug}}",
+          #     multiple: true,
+          #     displayFields: ["title", "description"],
+          #   } 
           - {label: "Banner Image", name: "bannerImage", widget: "image"}
 
       - file: "src/pages/about/index.md"

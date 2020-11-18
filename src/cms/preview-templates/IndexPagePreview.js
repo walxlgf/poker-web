@@ -6,6 +6,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   return (
     <IndexPageTemplate
       relatedSeries={entry.getIn(['data', 'relatedSeries'])}
+      bannerImage={entry.getIn(['data', 'bannerImage'])}
     />
   )
 }

@@ -1,33 +1,39 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import Banner4Index from "../components/Banner4Index/index"
-import Series4Index from "../components/Series4Index"
-import Event4Index from "../components/Event4Index"
+import LatestSeriess from "../components/LatestSeriess"
+import ThisYearSeriess from "../components/ThisYearSeriess"
 import Gallery from "../components/Gallery"
-export const IndexPageTemplate = ({
-  relatedSeries
-}) => (
-    <div>
-      <Banner4Index slugs={relatedSeries} />
-      <Series4Index slugs={relatedSeries} />
-      <Event4Index />
-      <Gallery></Gallery>
+export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess }) => (
+  <div>
+    {/* <Banner4Index slugs={relatedSeries} /> */}
+    <div style={{ backgroundColor: "#000000", width: "100%", height: "800px", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
+      <Img style={{ width: "1920px", height: "100%" }} fluid={bannerImage.childImageSharp.fluid} />
     </div>
-  )
+    <LatestSeriess latestSeriess={latestSeriess} />
+    <ThisYearSeriess thisYearSeriess={thisYearSeriess} />
+    <Gallery></Gallery>
+  </div>
+)
 
 IndexPageTemplate.propTypes = {
-  relatedSeries: PropTypes.array,
+  latestSeriess: PropTypes.array,
+  thisYearSeriess: PropTypes.array,
+  bannerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
-  console.log(`IndexPage:${JSON.stringify(frontmatter)}`)
+  console.log(`IndexPage:data:${JSON.stringify(data)}`)
+  const { index, latestSeriess, thisYearSeriess } = data;
   return (
     <Layout>
       <IndexPageTemplate
-        relatedSeries={frontmatter.relatedSeries}
+        latestSeriess={latestSeriess.edges}
+        thisYearSeriess={thisYearSeriess.edges}
+        bannerImage={index.frontmatter.bannerImage}
       />
     </Layout>
   )
@@ -45,11 +51,82 @@ export default IndexPage
 
 export const seriesQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+    index:markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
       frontmatter {
-        relatedSeries
+        bannerImage {
+          relativePath
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+    latestSeriess:allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] },
+      limit:2,
+      skip:0,
+      filter: {frontmatter: {templateKey: {eq: "series-page"}}}
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 20)
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            bannerImage {
+                childImageSharp {
+                  fluid(maxHeight: 600, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+            }
+          }
+        }
+      }
+    }
+    thisYearSeriess:allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] },
+      limit:4,
+      skip:0,
+      filter: {frontmatter: {templateKey: {eq: "series-page"}}}
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 20)
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+        }
       }
     }
   }
 `
+// export const seriesQuery = graphql`
+//   query IndexPageTemplate {
+//     markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+//       frontmatter {
+//         relatedSeries
+//         bannerImage {
+//           relativePath
+//           childImageSharp {
+//             fluid(maxWidth: 2048, quality: 100) {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
