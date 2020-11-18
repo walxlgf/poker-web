@@ -12,7 +12,7 @@ export const SeriesPageTemplate = ({
   helmet,
 }) => {
   return (
-    <div className="container is-max-desktop">
+    <div className="container is-max-widescreen">
 
     </div>
   )
@@ -37,7 +37,7 @@ const SeriesPage = ({ data }) => {
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
-              name="description"
+              name="fdfffdf"
               content={`${post.frontmatter.description}`}
             />
           </Helmet>

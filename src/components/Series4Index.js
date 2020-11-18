@@ -41,10 +41,10 @@ export default function Banner({ slugs }) {
   return (
     <div style={{ backgroundColor: "#1a1a1a", display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "flex-start" }}>
       <div style={{ backgroundColor: "#DA2A2C", height: "1px", width: "100vw" }}></div>
-      <div className="container is-max-desktop" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
+      <div className="container is-max-widescreen" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
         <div className="title" style={{ border: "1px dotted orange" }}>最新赛事</div>
       </div>
-      <div className="container is-max-desktop" style={{ width: "100vw", border: "1px dotted blue" }}>
+      <div className="container is-max-widescreen" style={{ width: "100vw", border: "1px dotted blue" }}>
         {list && list.map(edge => (
           <div key={edge.node.fields.slug} className="columns" style={{ margin: "1rem", border: "1px dotted green" }}>
             <div className="column is-4"

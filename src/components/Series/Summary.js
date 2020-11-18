@@ -56,8 +56,9 @@ const columns = [
 
 import facebook from '../../img/social/facebook.svg'
 import instagram from '../../img/social/instagram.svg'
-import twitter from '../../img/social/twitter.svg'
-import vimeo from '../../img/social/vimeo.svg'
+import weibo from '../../img/social/weibo.svg'
+import langauge from '../../img/social/langauge.svg'
+import eight from '../../img/social/8.svg'
 import { AppleOutlined, AndroidOutlined } from '@ant-design/icons';
 
 export default ({ category, latestSeries }) => {
@@ -91,8 +92,8 @@ export default ({ category, latestSeries }) => {
 
 
     return (
-        <div className="container is-max-desktop" style={{ backgroundColor: "#1a1a1a" }}>
-            <div className="container is-max-desktop" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
+        <div className="container is-max-widescreen" style={{ backgroundColor: "#1a1a1a" }}>
+            <div className="container is-max-widescreen" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
                 <div className="title" style={{ border: "1px dotted orange" }}>最新赛事</div>
             </div>
             <div className="columns" style={{ margin: "1rem", border: "1px dotted green" }}>
@@ -115,7 +116,7 @@ export default ({ category, latestSeries }) => {
                     <Img style={{ height: "15rem" }} fluid={bannerImage && bannerImage.childImageSharp.fluid} />
                 </div>
             </div>
-            <div className="container is-max-desktop" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
+            <div className="container is-max-widescreen" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
                 <div className="title" style={{ border: "1px dotted orange" }}>重点赛事</div>
             </div>
             <Table
@@ -123,13 +124,13 @@ export default ({ category, latestSeries }) => {
                 columns={columns}
                 pagination={false}
             />
-            <div className="container is-max-desktop" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
+            <div className="container is-max-widescreen" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
                 <Link to={"/"}>
                     <button className="button is-primary is-inverted is-outlined">查看更多赛事</button>
                 </Link>
             </div>
 
-            <div className="container is-max-desktop"
+            <div className="container is-max-widescreen"
                 style={{
                     width: "100%",
                     height: "20rem",
@@ -143,18 +144,22 @@ export default ({ category, latestSeries }) => {
                 <h1 className="title">RDPT专题</h1>
                 <h1 className="title">关注获取最新消息</h1>
                 <div className="social">
+                    <a title="langauge" href="https://langauge.com">
+                        <img
+                            src={langauge}
+                            style={{ width: '1em', height: '1em' }}
+                        />
+                    </a>
+                    <a title="eight" href="https://eight.com">
+                        <img
+                            src={eight}
+                            style={{ width: '1em', height: '1em' }}
+                        />
+                    </a>
                     <a title="facebook" href="https://facebook.com">
                         <img
                             src={facebook}
                             alt="Facebook"
-                            style={{ width: '1em', height: '1em' }}
-                        />
-                    </a>
-                    <a title="twitter" href="https://twitter.com">
-                        <img
-                            className="fas fa-lg"
-                            src={twitter}
-                            alt="Twitter"
                             style={{ width: '1em', height: '1em' }}
                         />
                     </a>
@@ -165,10 +170,10 @@ export default ({ category, latestSeries }) => {
                             style={{ width: '1em', height: '1em' }}
                         />
                     </a>
-                    <a title="vimeo" href="https://vimeo.com">
+                    <a title="weibo" href="https://weibo.com">
                         <img
-                            src={vimeo}
-                            alt="Vimeo"
+                            src={weibo}
+                            alt="Weigo"
                             style={{ width: '1em', height: '1em' }}
                         />
                     </a>

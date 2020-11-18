@@ -29,10 +29,10 @@ export default function Banner({ slugs }) {
 
   return (
     <div style={{ backgroundColor: "#1a1a1a", display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "flex-start" }}>
-      <div className="container is-max-desktop" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
+      <div className="container is-max-widescreen" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
         <div className="title" style={{ border: "1px dotted orange" }}>APPT MANILA 2020 赛事表</div>
       </div>
-      <div className="container is-max-desktop" style={{ width: "100vw", border: "1px dotted blue" }}>
+      <div className="container is-max-widescreen" style={{ width: "100vw", border: "1px dotted blue" }}>
         <div className="columns" style={{ margin: "1rem", border: "1px dotted green" }}>
           {events && events.map(event => (
             <div className="column is-3" key={event.key}>

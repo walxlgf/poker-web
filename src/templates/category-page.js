@@ -9,7 +9,7 @@ export const CategoryPageTemplate = ({
   address
 }) => {
   return (
-    <div className="container is-max-desktop">
+    <div className="container is-max-widescreen">
       {key} - {title} - {address}
     </div>
   )

@@ -151,10 +151,10 @@ const photos = [
 
 export default () => {
     return (<div style={{ backgroundColor: "#1a1a1a", display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "flex-start" }}>
-        <div className="container is-max-desktop" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
+        <div className="container is-max-widescreen" style={{ padding: "2rem", width: "100vw", display: "flex", justifyContent: "center", border: "1px dotted green" }}>
             <div className="title" style={{ border: "1px dotted orange" }}>专辑</div>
         </div>
-        <div className="container is-max-desktop" style={{ width: "100vw", border: "1px dotted blue" }}>
+        <div className="container is-max-widescreen" style={{ width: "100vw", border: "1px dotted blue" }}>
             <Gallery photos={photos} />
         </div>
     </div>)

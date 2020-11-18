@@ -30,7 +30,7 @@ const OfflinePage = ({ pageContext: { categoryKey }, data }) => {
   const latestSeries = categorySeriess ? categorySeriess[0] : {};
   return (
     <Layout>
-      <div className="container is-max-desktop">
+      <div className="container is-max-widescreen">
         <Tabs defaultActiveKey="1" centered>
           <TabPane
             tab={<span><AppleOutlined />赛事简介</span>}

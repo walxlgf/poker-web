@@ -65,7 +65,7 @@ export default function Banner({ slugs }) {
 
           <QueueAnim name="QueueAnim" >
             <Link to={edge.node.fields.slug}>
-              <div className="container is-max-desktop" style={{ marginTop: "5rem", border: "1px dotted blue" }}>
+              <div className="container is-max-widescreen" style={{ marginTop: "5rem", border: "1px dotted blue" }}>
                 <img src={logo} alt="Poker Web" style={{ width: '88px' }} />
 
                 <h1 className="title">

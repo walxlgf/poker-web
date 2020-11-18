@@ -1,14 +1,21 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+// import logo from '../img/logo.svg'
+// import facebook from '../img/social/facebook.svg'
+// import instagram from '../img/social/instagram.svg'
+// import twitter from '../img/social/twitter.svg'
+// import vimeo from '../img/social/vimeo.svg'
+
+import logo from '../img/logo.png'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
+import weibo from '../img/social/weibo.svg'
+import langauge from '../img/social/langauge.svg'
+import eight from '../img/social/8.svg'
+import playButton from '../img/play-button.svg'
+import home from '../img/home.svg'
 
-import { FaHome } from 'react-icons/fa';
-import { IconContext } from "react-icons";
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
@@ -40,8 +47,8 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <div style={{ border: "1px dotted green" }}>
-        <div className="container is-max-desktop" style={{ border: "1px dotted red" }}>
+      <div >
+        {/* <div className="container is-max-widescreen" style={{ border: "1px dotted red"}}>
           <nav className="level is-mobile" style={{ border: "1px dotted green", margin: "0px", height: "3rem" }}  >
             <div className="level-left" >
               <Link to="/" className="level-item" title="Home">
@@ -50,19 +57,23 @@ const Navbar = class extends React.Component {
             </div>
             <div className="level-right">
               <div className="level-item" style={{ border: "1px dotted grey" }}>
-                <div className="social">
+                <div>
+                  <a title="langauge" href="https://langauge.com">
+                    <img
+                      src={langauge}
+                      style={{ width: '1em', height: '1em' }}
+                    />
+                  </a>
+                  <a title="eight" href="https://eight.com">
+                    <img
+                      src={eight}
+                      style={{ width: '1em', height: '1em' }}
+                    />
+                  </a>
                   <a title="facebook" href="https://facebook.com">
                     <img
                       src={facebook}
                       alt="Facebook"
-                      style={{ width: '1em', height: '1em' }}
-                    />
-                  </a>
-                  <a title="twitter" href="https://twitter.com">
-                    <img
-                      className="fas fa-lg"
-                      src={twitter}
-                      alt="Twitter"
                       style={{ width: '1em', height: '1em' }}
                     />
                   </a>
@@ -73,10 +84,10 @@ const Navbar = class extends React.Component {
                       style={{ width: '1em', height: '1em' }}
                     />
                   </a>
-                  <a title="vimeo" href="https://vimeo.com">
+                  <a title="weibo" href="https://weibo.com">
                     <img
-                      src={vimeo}
-                      alt="Vimeo"
+                      src={weibo}
+                      alt="Weigo"
                       style={{ width: '1em', height: '1em' }}
                     />
                   </a>
@@ -84,18 +95,63 @@ const Navbar = class extends React.Component {
               </div>
             </div>
           </nav>
+        </div> */}
+
+        <div style={{ backgroundColor: "#000", width: "100%", height: "110px" }}>
+          <div className="container is-max-widescreen" style={{ height: "100%", display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between" }}>
+            <img src={logo} alt="Poker Web" style={{ width: '186px', height: "48px", margin: "31px 0 31px 0" }} />
+            <div style={{ marginTop: "57px", marginRight: "40px" }}>
+              <a title="langauge" href="https://langauge.com">
+                <img
+                  src={langauge}
+                  style={{ width: '27px', height: '27px' }}
+                />
+              </a>
+              <a title="eight" href="https://eight.com">
+                <img
+                  src={eight}
+                  style={{ width: '27px', height: '27px', marginLeft: '16px' }}
+                />
+              </a>
+              <a title="facebook" href="https://facebook.com">
+                <img
+                  src={facebook}
+                  alt="Facebook"
+                  style={{ width: '27px', height: '27px', marginLeft: '16px' }}
+                />
+              </a>
+              <a title="instagram" href="https://instagram.com">
+                <img
+                  src={instagram}
+                  alt="Instagram"
+                  style={{ width: '27px', height: '27px', marginLeft: '16px' }}
+                />
+              </a>
+              <a title="weibo" href="https://weibo.com">
+                <img
+                  src={weibo}
+                  alt="Weigo"
+                  style={{ width: '27px', height: '27px', marginLeft: '16px' }}
+                />
+              </a>
+            </div>
+          </div>
         </div>
         <div className="full-width-navbar-container">
-          <div className="container is-max-desktop" >
+          <div className="container is-max-widescreen" >
             <nav
               className="navbar is-primary"
               role="navigation"
               aria-label="dropdown navigation"
-              style={{ marginTop: "0.0rem" }}
+            // style={{ marginTop: "0.0rem" }}
             >
-              <div className="navbar-brand" style={{ marginLeft: "0.6rem" }}>
-                <Link className="navbar-item" style={{ width: "3rem" }} to="/" title="Home">
-                  <FaHome />
+              <div className="navbar-brand" >
+                <Link className="navbar-item" to="/" title="Home">
+                  <img
+                    src={home}
+                    alt="Home"
+                    style={{ width: "22px", height: "21px", objectFit: "contain" }}
+                  />
                 </Link>
                 <div
                   className={`navbar-burger burger ${this.state.navBarActiveClass}`}
@@ -113,34 +169,44 @@ const Navbar = class extends React.Component {
               >
                 <div className="navbar-start has-text-centered">
                   <div className="navbar-item has-dropdown is-hoverable">
-                    <div className="navbar-link is-arrowless" >线下赛事</div>
+                    <div className="navbar-link is-arrowless" style={{
+                      fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
+                      paddingRight: "24px", paddingLeft: "24px"
+                    }}>線下賽事</div>
                     <div className="navbar-dropdown is-boxed">
                       <Link className="navbar-item" to="/offline/rd-jeju">红龙杯济州站</Link>
                       <Link className="navbar-item" to="/offline/rd-manila">红龙杯马尼拉站</Link>
                       <Link className="navbar-item" to="/offline/appt-jeju">APPT济州站</Link>
                     </div>
                   </div>
-                  <Link className="navbar-item" to="/products"></Link>
-                  <Link className="navbar-item" to="/blog">
-                    BLOG
-              </Link>
-                  <Link className="navbar-item" to="/about">
-                    选手榜
-              </Link>
-                  <Link className="navbar-item" to="/about">
-                    关于我们
-              </Link>
+                  <Link className="navbar-item" to="/products" style={{
+                    fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
+                    paddingRight: "24px", paddingLeft: "24px"
+                  }}> 線上賽事</Link>
+                  <Link className="navbar-item" to="/blog" style={{
+                    fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
+                    paddingRight: "24px", paddingLeft: "24px"
+                  }}>BLOG</Link>
+                  <Link className="navbar-item" to="/about" style={{
+                    fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
+                    paddingRight: "24px", paddingLeft: "24px"
+                  }}>選手榜</Link>
+                  <Link className="navbar-item" to="/about" style={{
+                    fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
+                    paddingRight: "24px", paddingLeft: "24px"
+                  }}>關於我們</Link>
                 </div>
-                <div className="navbar-end has-text-centered" style={{ paddingRight: "1rem" }}>
-                  <Link className="navbar-item" to="/about"  >
-                    PLAY ONLINE
-              </Link>
+                <div className="navbar-end" style={{ marginRight: "40px" }}>
+                  <Link to="/about"  >
+                    <img src={playButton} style={{ width: "200px", height: "65px" }} />
+                  </Link>
                 </div>
               </div>
             </nav >
           </div>
         </div>
-      </div>
+
+      </div >
     )
   }
 }

@@ -1,12 +1,16 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
 @import "~bulma/sass/utilities/initial-variables";
 
-
+$widescreen: 1280px + (2 * $gap) !default;
 $scheme-main: #f00;
 $scheme-main-bis: #fa0505;
 $scheme-main-ter: #f80a0a;
 
-// Config vars
-$poker-red: #DA2A2C;
+$navbar-height: 4.0625rem !default;
+$navbar-padding-horizontal: 3rem !default;
+
+$poker-red: #db2c2d;
 $poker-red-bis: #D52529;
 $poker-red-ter: #D02023;
 
@@ -25,6 +29,7 @@ $scheme-invert-bis: $poker-red-invert-bis;
 $scheme-invert-bis: $poker-red-invert-ter;
 
 $body-background-color: $black;
+
 
 $text: $poker-red-invert;
 $text-light: $poker-red-invert-bis;
@@ -50,6 +55,7 @@ li {
 
 .full-width-navbar-container {
     width: 100vw;
+    height: 4.0625rem;
     background-color: $primary
 }
 
