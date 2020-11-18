@@ -16,14 +16,14 @@ const OfflinePage = ({ pageContext: { categoryKey }, data }) => {
   //如果category没有值，设置为categoryKey指定的那一个。
   useEffect(() => {
     if (!category && categories) {
-      setCategory(categories ? categories.find(item => item.key === categoryKey) : undefined);
+      setCategory(categories ? categories.find(item => item.categoryKey === categoryKey) : undefined);
     }
   })
 
   // console.log(`OfflinePage:category:${JSON.stringify(category)}`);
   let categorySeriess = [];
   if (category && seriess) {
-    categorySeriess = seriess.filter(series => series.category === category.key);
+    categorySeriess = seriess.filter(series => series.category === category.categoryKey);
   }
   // console.log(`OfflinePage:categorySeriess:${JSON.stringify(categorySeriess)}`);
 
@@ -77,7 +77,7 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            key
+            categoryKey
             title
             address
           }

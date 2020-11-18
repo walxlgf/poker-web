@@ -55,12 +55,7 @@ SeriesPage.propTypes = {
     markdownRemark: PropTypes.object,
   }),
 }
-
-
-
-
 export default SeriesPage
-
 export const pageQuery = graphql`
   query SeriesPageByID($id: String!) {
     markdownRemark(id: { eq: $id }) {

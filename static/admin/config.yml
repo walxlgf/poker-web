@@ -39,7 +39,7 @@ collections:
           widget: "relation",
           collection: "category",
           searchFields: ["title"],
-          valueField: "key",
+          valueField: "categoryKey",
           multiple: false,
           displayFields: ["title"],
         } 
@@ -48,6 +48,7 @@ collections:
       - {label: "Start Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Banner Image", name: "bannerImage", widget: "image"}
+      
   - name: "category"
     label: "Category"
     folder: "src/pages/category"
@@ -55,9 +56,10 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "category-page"}
-      - {label: "Key", name: "key", widget: "string"}
+      - {label: "Category Key", name: "categoryKey", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Address", name: "address", widget: "string"}
+
   - name: "pages"
     label: "Pages"
     files:
@@ -74,7 +76,7 @@ collections:
           #     searchFields: ["title"],
           #     valueField: "{{slug}}",
           #     multiple: true,
-          #     displayFields: ["title", "description"],
+          #     displayFields: ["title"],
           #   } 
           - {label: "Banner Image", name: "bannerImage", widget: "image"}
 

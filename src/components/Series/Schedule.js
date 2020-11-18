@@ -98,7 +98,7 @@ const expandedRowRender = (record) => {
 };
 export default ({ seriess, categories, category }) => {
     const [currentCategory, setCategory] = useState(category);
-    const [categorySeriess, setCategorySeriess] = useState(category && seriess ? seriess.filter(series => series.category === category.key) : []);
+    const [categorySeriess, setCategorySeriess] = useState(category && seriess ? seriess.filter(series => series.category === category.categoryKey) : []);
     const [currentSeries, setSeries] = useState(categorySeriess ? categorySeriess[0] : undefined);
     let { events } = currentSeries ? currentSeries : {};
     //先按日期排序
@@ -140,18 +140,18 @@ export default ({ seriess, categories, category }) => {
             <div style={{ display: "flex", width: "100%", padding: "2rem", flexDirection: "row", alignItems: "center", justifyContent: "center", border: "1px dotted blue" }}>
                 {categories &&
                     <Select
-                        defaultValue={currentCategory.key}
+                        defaultValue={currentCategory.categoryKey}
                         style={{ width: 240 }}
                         onChange={value => {
-                            let category = categories.find(item => item.key === value);
-                            let categorySeriess = category && seriess ? seriess.filter(series => series.category === category.key) : []
+                            let category = categories.find(item => item.categoryKey === value);
+                            let categorySeriess = category && seriess ? seriess.filter(series => series.category === category.categoryKey) : []
                             let currentSeries = categorySeriess ? categorySeriess[0] : undefined;
                             setCategory(category);
                             setCategorySeriess(categorySeriess);
                             setSeries(currentSeries);
                         }}
                     >
-                        {categories.map(item => <Option key={item.key} value={item.key}>{item.title}</Option>)}
+                        {categories.map(item => <Option key={item.categoryKey} value={item.categoryKey}>{item.title}</Option>)}
                     </Select>}
                 {categorySeriess &&
                     <Select

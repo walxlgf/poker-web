@@ -1,6 +1,6 @@
 ---
 templateKey: category-page
-key: rd-jeju
+categoryKey: rd-jeju
 title: RED DRAGON JEJU
 address: 韩国济州神话世界度假酒店 - 蓝鼎娱乐场
 addressEN: 韩国济州神话世界度假酒店 - 蓝鼎娱乐场
