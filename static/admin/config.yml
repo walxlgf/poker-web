@@ -76,6 +76,7 @@ collections:
               multiple: true,
               displayFields: ["title", "description"],
             } 
+          - {label: "Banner Image", name: "bannerImage", widget: "image"}
 
       - file: "src/pages/about/index.md"
         label: "About"
