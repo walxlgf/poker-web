@@ -2,11 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { CategoryPageTemplate } from '../../templates/category-page'
 
-const CategoryPagePreview = ({ entry, widgetFor }) => {
+const CategoryPagePreview = ({ entry }) => {
   return (
     <CategoryPageTemplate
-      content={widgetFor('body')}
-      key={entry.getIn(['data', 'key'])}
+      categoryKey={entry.getIn(['data', 'categoryKey'])}
       title={entry.getIn(['data', 'title'])}
       address={entry.getIn(['data', 'address'])}
     />

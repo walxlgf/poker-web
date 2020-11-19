@@ -5,15 +5,15 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 export const SeriesPageTemplate = ({
-  description,
   title,
+  description,
   bannerImage,
   events,
   helmet,
 }) => {
   return (
     <div className="container is-max-widescreen">
-
+      {title} - {description} - {!!bannerImage && typeof bannerImage === 'string' ? bannerImage : bannerImage.relativePath} - {`Events:${events && events.length}`}
     </div>
   )
 }
@@ -35,9 +35,9 @@ const SeriesPage = ({ data }) => {
         description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
+            <title>{post.frontmatter.title}</title>
             <meta
-              name="fdfffdf"
+              name={post.frontmatter.title}
               content={`${post.frontmatter.description}`}
             />
           </Helmet>
@@ -55,12 +55,7 @@ SeriesPage.propTypes = {
     markdownRemark: PropTypes.object,
   }),
 }
-
-
-
-
 export default SeriesPage
-
 export const pageQuery = graphql`
   query SeriesPageByID($id: String!) {
     markdownRemark(id: { eq: $id }) {

@@ -4,30 +4,29 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 export const CategoryPageTemplate = ({
-  key,
+  categoryKey,
   title,
   address
 }) => {
   return (
     <div className="container is-max-widescreen">
-      {key} - {title} - {address}
+      {categoryKey} - {title} - {address}
     </div>
   )
 }
 
 CategoryPageTemplate.propTypes = {
-  key: PropTypes.string,
+  categoryKey: PropTypes.string,
   title: PropTypes.string,
   address: PropTypes.string,
 }
 
 const CategoryPage = ({ data }) => {
   const { markdownRemark: mk } = data
-  console.log('');
   return (
     <Layout>
       <CategoryPageTemplate
-        key={mk.frontmatter.key}
+        categoryKey={mk.frontmatter.categoryKey}
         title={mk.frontmatter.title}
         address={mk.frontmatter.address}
       />
@@ -47,7 +46,7 @@ export const pageQuery = graphql`
   query CategoryPageByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        key
+        categoryKey
         title
         address
       }

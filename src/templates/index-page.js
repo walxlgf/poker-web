@@ -3,21 +3,21 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/Layout'
-import Banner4Index from "../components/Banner4Index/index"
 import LatestSeriess from "../components/LatestSeriess"
 import ThisYearSeriess from "../components/ThisYearSeriess"
 import Gallery from "../components/Gallery"
-export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess }) => (
-  <div>
-    {/* <Banner4Index slugs={relatedSeries} /> */}
+export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess }) => {
+  console.log(`IndexPageTemplate:bannerImage:${JSON.stringify(bannerImage)}`)
+  return <div>
     <div style={{ backgroundColor: "#000000", width: "100%", height: "800px", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
-      <Img style={{ width: "1920px", height: "100%" }} fluid={bannerImage.childImageSharp.fluid} />
+      {!!bannerImage && !!bannerImage.childImageSharp && <Img style={{ width: "1920px", height: "100%" }} fluid={bannerImage.childImageSharp.fluid} />}
+      {!!bannerImage && typeof bannerImage === 'string' && <img style={{ width: "1920px", height: "100%" }} src={bannerImage} />}
     </div>
     <LatestSeriess latestSeriess={latestSeriess} />
     <ThisYearSeriess thisYearSeriess={thisYearSeriess} />
     <Gallery></Gallery>
   </div>
-)
+}
 
 IndexPageTemplate.propTypes = {
   latestSeriess: PropTypes.array,
@@ -26,7 +26,6 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data }) => {
-  console.log(`IndexPage:data:${JSON.stringify(data)}`)
   const { index, latestSeriess, thisYearSeriess } = data;
   return (
     <Layout>

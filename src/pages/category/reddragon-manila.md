@@ -1,6 +1,6 @@
 ---
 templateKey: category-page
-key: rd-manila
+categoryKey: rd-manila
 title: RED DRAGON MANILA
 address: 马尼拉马尼拉马尼拉马尼拉马尼拉 - 马尼拉
 addressEN: Manila Manila ManilaManilaManila - Manila
