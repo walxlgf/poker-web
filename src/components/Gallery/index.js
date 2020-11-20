@@ -1,64 +1,32 @@
 import React from 'react';
-// import Gallery from 'react-grid-gallery';
 import { Link } from 'gatsby'
 import { navigate } from "gatsby"
-
 import { scrollAnimation } from '../../util/util'
-import './index.scss'
-
-import Gallery from 'react-photo-gallery';
-
+import '../../styles/index-page.scss'
 
 export default () => {
-
     return (
-        <div style={{ background: 'black', paddingBottom: '60px' }}>
-            <div style={{
-                paddingTop: '20px', paddingBottom: '50px', color: 'white', textAlign: 'center',
-                fontSize: '44px', fontFamily: 'NotoSansTC'
-            }}>
-                專輯
+        <div className='photoAlbum'>
+            <div className='m-content' >
+                <div className='m-title'>專輯</div>
+                <div style={{ position: 'relative', height: '800px' }}>
+                    <img className='m-photowall1' src={require('../../img/photo_wall_3.jpg')} />
+                    <img className='m-photowall2' src={require('../../img/photo_wall_5.jpg')}></img>
+                    <img className='m-photowall3' src={require('../../img/photo_wall_4.jpg')}></img>
+                    <img className='m-photowall4' src={require('../../img/photo_wall_6.jpg')}></img>
+                    <img className='m-photowall5' src={require('../../img/photo_wall_7.jpg')}></img>
+                    <img className='m-photowall6' src={require('../../img/photo_wall_8.jpg')}></img>
+                </div>
+                <a className='m-photomore'>更多相冊</a>
+                <a className='m-lookEvent' onClick={({ pageY }) => scrollAnimation(pageY, 1000)} >查看最新賽事</a>
             </div>
-
-            <div style={{ position: 'relative', height: '800px' }}>
-                <img
-                    className='photowall1'
-                    src={require('../../img/photo_wall_3.jpg')} />
-
-                <img
-                    className='photowall2'
-                    src={require('../../img/photo_wall_5.jpg')}></img>
-                <img
-                    className='photowall3'
-                    src={require('../../img/photo_wall_4.jpg')}></img>
-                <img
-                    className='photowall4'
-                    src={require('../../img/photo_wall_6.jpg')}></img>
-                <img
-                    className='photowall5'
-                    src={require('../../img/photo_wall_7.jpg')}></img>
-                <img className='photowall6'
-                    src={require('../../img/photo_wall_8.jpg')}></img>
-            </div>
-
-            <a className='photomore' >
-                更多相冊
-            </a>
-
-            <a
-                onClick={({ pageY }) => scrollAnimation(pageY, 1000)}
-                style={{
-                    width: '250px', height: '65px', border: 'solid 1px #fff', textAlign: 'center', lineHeight: '65px',
-                    color: 'white', fontSize: '18px', fontFamily: 'NotoSansTC', margin: '80px auto', display: 'block'
-                }}>
-                查看最新賽事
-            </a>
         </div >
     )
 }
 
 
-
+/*
+import Gallery from 'react-photo-gallery';
 const IMAGES =
     [
         {
@@ -216,3 +184,4 @@ const photos = [
         </div>
     </div>)
 }
+*/

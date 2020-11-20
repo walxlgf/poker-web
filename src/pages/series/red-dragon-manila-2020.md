@@ -1,9 +1,11 @@
 ---
 templateKey: series-page
 title: RED DRAGON MANILA 2020
-date: 2020-11-09T07:38:54.744Z
-description: "RED DRAGON MANILA 2020 RED DRAGON MANILA 2020 "
+date: 2020-12-09T07:38:54.744Z
+description: "RED DRAGON MANILA 2020"
 bannerImage: /img/jumbotron.jpg
+price: ₩250,000,00
+address: Hong Kong
 events:
   - remark: ""
     no: 1A
