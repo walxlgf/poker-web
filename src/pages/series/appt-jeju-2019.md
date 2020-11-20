@@ -2,7 +2,7 @@
 templateKey: series-page
 title: APPT JEJU 2019
 date: 2019-11-01T08:23:18.728Z
-description: APPT JEJU 2019
+description: APPT JEJU 2019 10
 bannerImage: /img/products-grid2.jpg
 events:
   - remark: ""
