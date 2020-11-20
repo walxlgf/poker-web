@@ -1,8 +1,11 @@
 ---
+category: rd-jeju
 templateKey: series-page
 title: RED DRAGON JEJU 2019
 date: 2019-11-09T07:38:54.744Z
 description: "RED DRAGON JEJU 2019 RED DRAGON JEJU 2019 "
+prize: ¥80,000,000
+address: Shen Zhen
 bannerImage: /img/jumbotron.jpg
 events:
   - remark: ""
@@ -74,5 +77,4 @@ events:
     survivor: 仅12%的参选选手
     title: RD JEJU National Day 2
     reEntry: "1"
-category: rd-jeju
 ---

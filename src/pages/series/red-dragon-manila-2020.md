@@ -1,11 +1,12 @@
 ---
+category: rd-manila
 templateKey: series-page
 title: RED DRAGON MANILA 2020
 date: 2020-12-09T07:38:54.744Z
-description: "RED DRAGON MANILA 2020"
-bannerImage: /img/jumbotron.jpg
-price: ₩250,000,00
+description: RED DRAGON MANILA 2020
+prize: $250,000,000
 address: Hong Kong
+bannerImage: /img/jumbotron.jpg
 events:
   - remark: ""
     no: 1A
@@ -76,5 +77,4 @@ events:
     survivor: 仅12%的参选选手
     title: MDM National Day 2
     reEntry: "1"
-category: rd-manila
 ---

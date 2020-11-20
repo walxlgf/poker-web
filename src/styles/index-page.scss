@@ -45,7 +45,7 @@
                     opacity: 0.6;
                 }
 
-                .t-priceContainer {
+                .t-prizeContainer {
                     .t-text {
                         font-size: 18px;
                         color: white;
@@ -179,7 +179,7 @@
                     height: 45px;
 
                     .o-stateLeft {
-                        width: 135px;
+                        padding: 0 12px 0 17px;
                         height: 45px;
                         display: flex;
                         flex-direction: row;
@@ -195,11 +195,12 @@
                         }
 
                         span {
-                            font-size: 16px;
+                            font-size: 15px;
                             color: black;
                             font-weight: 500;
                             font-family: 'NotoSansTC';
-                            margin-left: 6px
+                            margin-left: 6px;
+                            margin-top: 2px;
                         }
                     }
 
@@ -256,11 +257,13 @@
                     }
 
                     span {
-                        font-size: 21px;
+                        @include t-ellipsis(1);
+                        font-size: 19px;
                         color: white;
                         font-family: 'NotoSansTC';
                         margin-left: 10px;
-                        opacity: 0.6
+                        opacity: 0.6;
+                        white-space: nowrap;
                     }
                 }
 

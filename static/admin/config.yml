@@ -9,10 +9,10 @@
 #     deleteMedia: '[skip ci] Delete “{{path}}”'
 
 # ------------------------------- #
-# backend:
-#   name: proxy
-#   proxy_url: http://localhost:8081/api/v1
-#   branch: master # optional, defaults to master
+backend:
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
+  branch: master # optional, defaults to master
 
 # ------------------------------- #
 # backend:
@@ -29,11 +29,11 @@
 
 
 # ------------------------------- #
-backend:
-  name: github
-  branch: master
-  repo: walxlgf/poker-web
-publish_mode: editorial_workflow
+# backend:
+#   name: github
+#   branch: master
+#   repo: walxlgf/poker-web
+# publish_mode: editorial_workflow
 
 
 media_folder: static/img
@@ -75,6 +75,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Start Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "Prize", name: "prize", widget: "string"}
+      - {label: "Address", name: "address", widget: "string"}
       - {label: "Banner Image", name: "bannerImage", widget: "image"}
       
   - name: "category"
