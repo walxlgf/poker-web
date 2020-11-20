@@ -1,12 +1,40 @@
+# backend:
+#   name: git-gateway
+#   branch: master
+#   commit_messages:
+#     create: 'Create {{collection}} “{{slug}}”'
+#     update: 'Update {{collection}} “{{slug}}”'
+#     delete: 'Delete {{collection}} “{{slug}}”'
+#     uploadMedia: '[skip ci] Upload “{{path}}”'
+#     deleteMedia: '[skip ci] Delete “{{path}}”'
+
+# ------------------------------- #
+# backend:
+#   name: proxy
+#   proxy_url: http://localhost:8081/api/v1
+#   branch: master # optional, defaults to master
+
+# ------------------------------- #
+# backend:
+#   name: git-gateway
+
+# when using the default proxy server port
+# local_backend: true
+
+# local_backend:
+#   # when using a custom proxy server port
+#   url: http://localhost:8081/api/v1
+#   # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
+#   allowed_hosts: ['192.168.1.1']
+
+
+# ------------------------------- #
 backend:
-  name: git-gateway
+  name: github
   branch: master
-  commit_messages:
-    create: 'Create {{collection}} “{{slug}}”'
-    update: 'Update {{collection}} “{{slug}}”'
-    delete: 'Delete {{collection}} “{{slug}}”'
-    uploadMedia: '[skip ci] Upload “{{path}}”'
-    deleteMedia: '[skip ci] Delete “{{path}}”'
+  repo: walxlgf/poker-web
+publish_mode: editorial_workflow
+
 
 media_folder: static/img
 public_folder: /img
