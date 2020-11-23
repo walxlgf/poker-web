@@ -6,16 +6,21 @@ import LatestSeriess from "../components/LatestSeriess"
 import ThisYearSeriess from "../components/ThisYearSeriess"
 import Gallery from "../components/Gallery"
 
-export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess }) => {
-    return <div>
-        <div style={{ backgroundColor: "#000000", width: "100%", height: "800px", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
-            {!!bannerImage && !!bannerImage.childImageSharp && <Img style={{ width: "1920px", height: "100%" }} fluid={bannerImage.childImageSharp.fluid} />}
-            {!!bannerImage && typeof bannerImage === 'string' && <img style={{ width: "1920px", height: "100%" }} src={bannerImage} />}
+export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess, photos }) => {
+    return (
+        <div>
+            {bannerImage ? (
+                <div style={{ backgroundColor: 'black', height: '800px' }}>
+                    {bannerImage.childImageSharp && <Img style={{ width: "1920px", height: '100%', margin: '0 auto' }} fluid={bannerImage.childImageSharp.fluid} />}
+                    {typeof bannerImage === 'string' && <img style={{ width: "1920px", height: '100%', margin: '0 auto' }} src={bannerImage} />}
+                </div>
+            ) : null}
+
+            <LatestSeriess data={latestSeriess} />
+            <ThisYearSeriess data={thisYearSeriess} />
+            <Gallery photos={photos}></Gallery>
         </div>
-        <LatestSeriess data={latestSeriess} />
-        <ThisYearSeriess data={thisYearSeriess} />
-        <Gallery></Gallery>
-    </div>
+    )
 }
 
 
@@ -26,6 +31,7 @@ export default ({ data }) => {
             <IndexPageTemplate
                 latestSeriess={latestSeriess.edges}
                 thisYearSeriess={thisYearSeriess}
+                photos={thisYearSeriess.frontmatter.photos}
                 bannerImage={index.frontmatter.bannerImage}
             />
         </Layout>
@@ -77,7 +83,14 @@ export const seriesQuery = graphql`
       }
     }
     thisYearSeriess:markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
-    frontmatter {
+      frontmatter {
+       photos {
+        width
+        height
+        name{
+          relativePath
+        }
+      }
       thisYearSeries {
         title
         year

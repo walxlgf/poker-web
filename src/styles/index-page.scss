@@ -2,6 +2,7 @@
 
 .latestseries {
     background-color: black;
+    padding-bottom: 10px;
 
     .t-content {
         width: 1200px;
@@ -233,14 +234,14 @@
                     font-size: 30px;
                     color: white;
                     line-height: 35px;
-                    margin-top: 15px
+                    margin-top: 15px;
+                    margin-bottom: 15px;
                 }
 
                 .o-line {
                     height: 2px;
                     background-color: black;
                     border-radius: 1px;
-                    margin-top: -10px
                 }
 
                 .o-date,

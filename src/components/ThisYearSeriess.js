@@ -6,7 +6,9 @@ import '../styles/index-page.scss'
 
 export default ({ data }) => {
 
+    if (!data) return;
     const { title, year, events } = data.frontmatter.thisYearSeries;
+    if (!events || events.length == 0) return null;
 
     const _formatDate = (startTime, endTime) => {
         const __format = (dateStr) => {

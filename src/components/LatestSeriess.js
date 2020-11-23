@@ -6,6 +6,7 @@ import { Months } from '../util/consts'
 
 export default ({ data }) => {
 
+
     const _formatDate = (dateStr) => {
         let date = new Date(dateStr);
         let day = date.getDate();
@@ -43,6 +44,7 @@ export default ({ data }) => {
         )
     }
 
+    if (!data || data.length == 0) return null;
     return (
         <div className='latestseries'>
             <div className='t-content' >

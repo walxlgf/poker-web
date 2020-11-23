@@ -18,17 +18,26 @@ export const SeriesPageTemplate = ({
     )
 }
 
-SeriesPageTemplate.propTypes = {
-    helmet: PropTypes.object,
-    description: PropTypes.string,
-    title: PropTypes.string,
-    bannerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    events: PropTypes.array,
-}
 
-const SeriesPage = ({ data }) => {
+export default ({ data }) => {
     const { markdownRemark: post } = data
-    console.log('');
+
+    /**
+     frontmatter:
+bannerImage: {relativePath: "home-jumbotron.jpg", childImageSharp: {…}}
+date: "December 09, 2020"
+description: "RED DRAGON MANILA 2020"
+events: Array(6)
+0: {no: "1A", title: "RDM National Day 1A", buyin: "₩ 1,350,000", startChips: "6000", startTime: "November 01, 2019", …}
+1: {no: "1B", title: "RDM National Day 1B", buyin: "₩ 1,350,000", startChips: "6000", startTime: "November 01, 2019", …}
+2: {no: "1", title: "RDM National Day 2", buyin: "₩ 1,350,000", startChips: "6000", startTime: "November 02, 2019", …}
+3: {no: "2A", title: "RDM National Day 1A", buyin: "₩ 1,350,000", startChips: "6000", startTime: "November 03, 2019", …}
+4: {no: "2B", title: "RDM National Day 1B", buyin: "₩ 1,350,000", startChips: "6000", startTime: "November 04, 2019", …}
+5: {no: "2", title: "RDM National Day 2", buyin: "₩ 1,350,000", startChips: "6000", startTime: "November 04, 2019", …}
+length: 6
+     * 
+     */
+
     return (
         <Layout>
             <SeriesPageTemplate
@@ -50,12 +59,7 @@ const SeriesPage = ({ data }) => {
     )
 }
 
-SeriesPage.propTypes = {
-    data: PropTypes.shape({
-        markdownRemark: PropTypes.object,
-    }),
-}
-export default SeriesPage
+
 export const pageQuery = graphql`
   query SeriesPageByID($id: String!) {
     markdownRemark(id: { eq: $id }) {

@@ -109,6 +109,24 @@ collections:
           #     displayFields: ["title"],
           #   } 
           - {label: "Banner Image", name: "bannerImage", widget: "image"}
+          - {label: 'ThisYearSeries', name: thisYearSeries, widget: object, fields: [
+              {label: 'Year', name: 'year', widget: string},
+              {label: 'Title', name: 'title', widget: string},
+              {label: 'Events', name: 'events', widget: list, fields: [
+                  {label: 'Name', name: 'name', widget: string},
+                  {label: 'SubName', name: 'subName', widget: string},
+                  {label: 'State', name: 'state', widget: string},
+                  {label: 'StartTime', name: 'startTime', widget: datetime},
+                  {label: 'EndTime', name: 'endTime', widget: datetime},
+                  {label: 'Address', name: 'address', widget: string},
+                  {label: 'Attention', name: 'attention', widget: string},
+              ]}
+            ]}
+          - {label: 'Photos', name: 'photos', widget: 'list', fields: [
+              {label: 'Name', name: 'name', widget: 'image'}, 
+              {label: 'Width', name: 'width', widget: 'string'},
+              {label: 'Height', name: 'height', widget: 'string'}
+            ]}
 
       - file: "src/pages/about/index.md"
         label: "About"

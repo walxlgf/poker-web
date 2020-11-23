@@ -1,16 +1,14 @@
 ---
 templateKey: index-page
 bannerImage: /img/mainbanner.jpg
-
-# ThisYearSeries 数据源  
 thisYearSeries:
   title: 红龙杯赛事表
   year: 2020
-  events: 
+  events:
     - name: 2020红龙杯
       subName: 青龙杯济州站
       state: 已经结束
-      startTime: 2020-12-09T07:38:54.744Z
+      startTime: 2020-12-11T07:38:54.744Z
       endTime: 2020-12-11T07:38:54.744Z
       address: 韩国济州岛
       attention: 101
@@ -35,4 +33,23 @@ thisYearSeries:
       endTime: 2021-01-04T07:38:54.744Z
       address: 台湾台北
       attention: 11
+photos:
+  - name: /img/photo_wall_3.jpg
+    width: "600"
+    height: "400"
+  - name: /img/photo_wall_5.jpg
+    width: "800"
+    height: "533"
+  - name: /img/photo_wall_4.jpg
+    width: "420"
+    height: "280"
+  - name: /img/photo_wall_6.jpg
+    width: "420"
+    height: "280"
+  - name: /img/photo_wall_7.jpg
+    width: "420"
+    height: "280"
+  - name: /img/photo_wall_8.jpg
+    width: "420"
+    height: "280"
 ---
