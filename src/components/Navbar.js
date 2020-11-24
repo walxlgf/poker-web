@@ -174,9 +174,9 @@ const Navbar = class extends React.Component {
                                             paddingRight: "24px", paddingLeft: "24px"
                                         }}>線下賽事</div>
                                         <div className="navbar-dropdown is-boxed">
-                                            <Link className="navbar-item" to="/offline/rd-jeju">红龙杯济州站</Link>
-                                            <Link className="navbar-item" to="/offline/rd-manila">红龙杯马尼拉站</Link>
-                                            <Link className="navbar-item" to="/offline/appt-jeju">APPT济州站</Link>
+                                            <Link className="navbar-item navDrownItem" to="/offline/rd-jeju">红龙杯济州站</Link>
+                                            <Link className="navbar-item navDrownItem" to="/offline/rd-manila">红龙杯马尼拉站</Link>
+                                            <Link className="navbar-item navDrownItem" to="/offline/appt-jeju">APPT济州站</Link>
                                         </div>
                                     </div>
                                     <Link className="navbar-item" to="/products" style={{
