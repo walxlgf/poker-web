@@ -3,8 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 
-export const AboutPageTemplate = ({ title, descriptions, details }) => {
-
+export const RulePageTemplate = ({ title, descriptions, details }) => {
     return (
         <div style={{ backgroundColor: 'black', padding: '100px 0' }}>
             <div style={{ margin: '0 auto', width: '1200px' }}>
@@ -34,7 +33,7 @@ export default ({ data }) => {
     const { title, descriptions, details } = data.markdownRemark.frontmatter
     return (
         <Layout>
-            <AboutPageTemplate
+            <RulePageTemplate
                 title={title}
                 descriptions={descriptions}
                 details={details}
@@ -43,8 +42,8 @@ export default ({ data }) => {
     )
 }
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const RulePageQuery = graphql`
+  query RulePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
