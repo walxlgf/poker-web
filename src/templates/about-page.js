@@ -37,14 +37,32 @@ export const AboutPageTemplate = ({ title, descriptions, details }) => {
                     })
                 }
 
-
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '30px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '30px', marginBottom: '300px', position: 'relative' }}>
 
                     {_renderCircle()}
                     <div style={{ width: '8px', height: '150px', backgroundColor: 'white' }} />
                     {_renderCircle()}
                     <div style={{ width: '8px', height: '150px', backgroundColor: 'white' }} />
                     {_renderCircle()}
+
+                    <div style={{ position: 'absolute', top: '45%', right: '57%' }}>
+                        <p style={{ color: 'white', fontWeight: 'bold', fontSize: '45px', textAlign: 'right', marginBottom: '5px' }}>Nov 2018</p>
+                        <p style={{ color: 'white', fontSize: '20px', textAlign: 'right', marginBottom: '5px' }}>红龙杯首次在济州举行，</p>
+                        <p style={{ color: 'white', fontSize: '20px', textAlign: 'right' }}>打破韩国最高奖记录</p>
+                        <img style={{ width: '300px', height: '180px' }} src={'/img/photo_wall_7.jpg'} />
+                    </div>
+
+                    <div style={{ position: 'absolute', top: '0', left: '57%' }}>
+                        <p style={{ color: 'white', fontWeight: 'bold', fontSize: '45px', textAlign: 'left', marginBottom: '5px' }}>May 2020</p>
+                        <p style={{ color: 'white', fontSize: '20px', textAlign: 'left' }}>红龙杯品牌升级，重新起航</p>
+                        <img style={{ width: '300px', height: '180px' }} src={'/img/photo_wall_6.jpg'} />
+                    </div>
+
+                    <div style={{ position: 'absolute', bottom: '-30%', left: '57%' }}>
+                        <p style={{ color: 'white', fontWeight: 'bold', fontSize: '45px', textAlign: 'left', marginBottom: '5px' }}>May 2009</p>
+                        <p style={{ color: 'white', fontSize: '20px', textAlign: 'left' }}>首届红龙杯（原MPC），在澳门举行</p>
+                        <img style={{ width: '300px', height: '180px' }} src={'/img/photo_wall_5.jpg'} />
+                    </div>
                 </div>
 
             </div>
