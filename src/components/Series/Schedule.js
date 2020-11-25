@@ -1,186 +1,119 @@
-import React, { useState } from 'react'
-import moment from "moment"
-import { Collapse, Table, Select } from 'antd';
-const { Option } = Select;
-const { Panel } = Collapse;
-const columns = [
-    {
-        title: '开始时间',
-        dataIndex: 'startTime',
-        key: 'startTime',
-        width: 120,
-        align: 'left',
-        renderText: (text, record) => moment(text).format('HH:mm'),
-    },
-    {
-        title: '编号',
-        dataIndex: 'no',
-        key: 'no',
-        width: 80,
-        ellipsis: true,
-        align: 'left',
-    },
-    {
-        title: '赛事名称',
-        dataIndex: 'title',
-        key: 'title',
-        width: 250,
-        ellipsis: true,
-        align: 'left',
-    },
-    {
-        title: `买入`,
-        dataIndex: 'buyin',
-        key: 'buyin',
-        width: 120,
-        align: 'right',
-    },
-
-    {
-        title: '起始筹码',
-        dataIndex: 'startChips',
-        key: 'startChips',
-        width: 80,
-        align: 'center',
-    },
-
-    {
-        title: '备注',
-        dataIndex: 'remark',
-        key: 'remark',
-        width: 80,
-        align: 'center',
-    },
-];
-const expandedRowRender = (record) => {
-    const columns1 = [
-        {
-            title: '再买入次数',
-            dataIndex: 'reEntry',
-            key: 'reEntry',
-            width: 120,
-            align: 'center',
-        },
-        {
-            title: '起始盲注',
-            dataIndex: 'startBlind',
-            key: 'startBlind',
-            width: 120,
-            ellipsis: true,
-            align: 'center',
-        },
-        {
-            title: '延迟买入',
-            dataIndex: 'stopLevel',
-            key: 'stopLevel',
-            width: 120,
-            ellipsis: true,
-            align: 'center',
-        },
-        {
-            title: `盲注升级时间`,
-            dataIndex: 'duration',
-            key: 'duration',
-            width: 120,
-            align: 'center',
-        },
-
-        {
-            title: '幸存资格',
-            dataIndex: 'survivor',
-            key: 'survivor',
-            width: 120,
-            align: 'center',
-        },
-    ];
-
-    return <Table columns={columns1} dataSource={[record]} pagination={false} />;
-};
-export default ({ seriess, categories, category }) => {
-    const [currentCategory, setCategory] = useState(category);
-    const [categorySeriess, setCategorySeriess] = useState(category && seriess ? seriess.filter(series => series.category === category.categoryKey) : []);
-    const [currentSeries, setSeries] = useState(categorySeriess ? categorySeriess[0] : undefined);
-    let { events } = currentSeries ? currentSeries : {};
-    //先按日期排序
-    events && events.sort((a, b) => {
-        let aday = moment(a.startTime);
-        let bday = moment(b.startTime);
-        let result = 0;
-        if (bday.startOf('day').isBefore(aday.startOf('day')))
-            result = 1;
-        else if (bday.startOf('day').isSame(aday.startOf('day')))
-            result = 0;
-        else
-            result = -1;
-        return result;
-    });
-
-    //分组
-    let groups = [];
-    if (events && events.length > 0) {
-        let group = { events: [{ ...events[0], key: 0 }], label: moment(events[0].startTime).format("YYYY-MM-DD") };
-        groups.push(group);
-        let index = 1;
-        for (let i = 1; i < events.length; i++) {
-            const event = events[i];
-            if (group.label === moment(event.startTime).format("YYYY-MM-DD")) {
-                group.events.push({ ...event, key: index++ });
-            } else {
-                index = 0;
-                group = { events: [{ ...event, key: index++ }], label: moment(event.startTime).format("YYYY-MM-DD") };
-                groups.push(group);
-            }
-        }
-    }
 
 
+import React, { useState, useEffect } from 'react'
+import '../../styles/offline-page.scss';
+
+
+export default () => {
     return (
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center", border: "1px dotted green" }}>
-
-            <div style={{ display: "flex", width: "100%", padding: "2rem", flexDirection: "row", alignItems: "center", justifyContent: "center", border: "1px dotted blue" }}>
-                {categories &&
-                    <Select
-                        defaultValue={currentCategory.categoryKey}
-                        style={{ width: 240 }}
-                        onChange={value => {
-                            let category = categories.find(item => item.categoryKey === value);
-                            let categorySeriess = category && seriess ? seriess.filter(series => series.category === category.categoryKey) : []
-                            let currentSeries = categorySeriess ? categorySeriess[0] : undefined;
-                            setCategory(category);
-                            setCategorySeriess(categorySeriess);
-                            setSeries(currentSeries);
-                        }}
-                    >
-                        {categories.map(item => <Option key={item.categoryKey} value={item.categoryKey}>{item.title}</Option>)}
-                    </Select>}
-                {categorySeriess &&
-                    <Select
-                        defaultValue={currentSeries && currentSeries.title}
-                        style={{ width: 240 }}
-                        onChange={value => {
-                            let currentSeries = categorySeriess.find(item => item.title === value);
-                            setSeries(currentSeries);
-                        }}
-                    >
-                        {categorySeriess.map(item => <Option key={item.title} value={item.title}>{item.title}</Option>)}
-                    </Select>}
-            </div>
-
-            {groups.length &&
-                <Collapse accordion defaultActiveKey={groups[0].label}>
-                    {groups.map(group => (
-                        <Panel header={group.label} key={group.label} >
-                            <Table
-                                dataSource={group.events}
-                                columns={columns}
-                                pagination={false}
-                                expandable={{
-                                    expandedRowRender
-                                }}
-                            />
-                        </Panel>))}
-                </Collapse>
-            }
+        <div className='s-list-result s-list-box' >
+            <h1>赛程表</h1>
+            <SelectView />
+            <EventList datas={[1, 2, 3]} />
         </div>
-    );
+    )
+}
+
+
+export const SelectView = ({ datas }) => {
+    return (
+        <div className='s-select-box'>
+            <SelectItem datas={['A', 'B', 'C', 'D']} />
+            <div className='s-select-item'>
+                <input className='s-sel-time' placeholder='选择比赛'></input>
+                <span></span>
+            </div>
+            <p>下载完整赛程表</p>
+        </div>
+    )
+}
+
+
+export const SelectItem = ({ datas }) => {
+    const [isFocus, setIsFocus] = useState(false);
+    const [selectText, setSelectText] = useState('');
+    return (
+        <div className='s-select-item'>
+            <input
+                className='s-sel-event'
+                placeholder='选择赛事'
+                readOnly
+                value={selectText}
+                onFocus={() => setIsFocus(true)}
+                onBlur={() => setTimeout(() => { setIsFocus(false) }, 10)}
+            />
+            <span></span>
+            <ul style={{ display: isFocus ? 'block' : 'none' }}>
+                {
+                    datas.map((d, i) => {
+                        return <li onClick={() => setSelectText(d)} key={i}>{d}</li>
+                    })
+                }
+            </ul>
+        </div>
+    )
+}
+
+
+const EventList = ({ datas }) => {
+    const [selectFlags, setSelectFlags] = useState(datas.map((_, i) => i === 0 ? true : false))
+    let active = { height: '240px', transition: 'all 0.2s' };
+    let unActive = { height: '0', transition: 'all 0.2s' };
+    return (
+        <ul className='s-list'>
+            {
+                datas.map((data, index) => {
+                    return (
+                        <li key={index}
+                            style={selectFlags[index] ? { borderBottom: 'none' } : {}}
+                        >
+                            <div
+                                className='s-list-header'
+                                onClick={() => {
+                                    selectFlags[index] = !selectFlags[index];
+                                    setSelectFlags([...selectFlags]);
+                                }}>
+                                <p>30 Nov 2017(星期五)</p>
+                                <i></i>
+                            </div>
+                            <ul style={selectFlags[index] ? active : unActive}>
+                                <li>
+                                    <p>开始时间</p>
+                                    <p>编号</p>
+                                    <p>赛事名称</p>
+                                    <p>等级</p>
+                                    <p>买入</p>
+                                    <p>起始筹码</p>
+                                </li>
+                                <li>
+                                    <p>12:00</p>
+                                    <p>1</p>
+                                    <p>红龙杯-无限德州扑克</p>
+                                    <p>Day1</p>
+                                    <p>250，000，00</p>
+                                    <p>-</p>
+                                </li>
+                                <li>
+                                    <p>12:00</p>
+                                    <p>1</p>
+                                    <p>红龙杯-无限德州扑克</p>
+                                    <p>Day1</p>
+                                    <p>250，000，00</p>
+                                    <p>-</p>
+                                </li>
+                                <li>
+                                    <p>12:00</p>
+                                    <p>1</p>
+                                    <p>红龙杯-无限德州扑克</p>
+                                    <p>Day1</p>
+                                    <p>250，000，00</p>
+                                    <p>-</p>
+                                </li>
+                            </ul>
+                        </li>
+                    )
+                })
+            }
+        </ul>
+    )
 }
