@@ -1,10 +1,10 @@
 
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, memo } from 'react'
 import '../../styles/offline-page.scss';
 
 
-export default () => {
+export default memo(() => {
     return (
         <div className='s-list-result s-list-box' >
             <h1>赛程表</h1>
@@ -12,7 +12,7 @@ export default () => {
             <EventList datas={[1, 2, 3]} />
         </div>
     )
-}
+})
 
 
 export const SelectView = ({ datas }) => {
@@ -84,6 +84,7 @@ const EventList = ({ datas }) => {
                                     <p>等级</p>
                                     <p>买入</p>
                                     <p>起始筹码</p>
+                                    <i className='triangle-down'></i>
                                 </li>
                                 <li>
                                     <p>12:00</p>

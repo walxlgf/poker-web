@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, memo, useMemo } from 'react'
 import Layout from '../components/Layout'
 import Schedule from '../components/Series/Schedule'
 import Result from '../components/Series/Result'
+import Zhibo from '../components/Series/Zhibo'
 import Summary from '../components/Series/Summary'
-import { Tabs } from 'antd';
-const { TabPane } = Tabs;
 import { AppleOutlined, AndroidOutlined } from '@ant-design/icons';
 import '../styles/offline-page.scss';
-
+import SeriesTabs from '../components/SeriesTabs'
 
 
 export default ({ pageContext: { categoryKey }, data }) => {
@@ -30,28 +29,6 @@ export default ({ pageContext: { categoryKey }, data }) => {
 
     const latestSeries = categorySeriess ? categorySeriess[0] : {};
 
-    const [activeTabIndex, setActiveTabIndex] = useState(2)
-
-    let tabIcons = [require('../img/eye.png'), require('../img/eye.png'), require('../img/eye.png'), require('../img/eye.png')]
-    let tabNames = ['赛事简介', '赛程表', '赛事结果', '赛事直播',]
-
-    const _renderContent = () => {
-        if (activeTabIndex === 0) {
-            return (
-                <div className='s-summary-box' >
-
-                </div>
-            )
-        }
-        if (activeTabIndex === 1) return <Schedule />
-        if (activeTabIndex === 2) return <Result />
-        return (
-            <div className='s-zhibo-box' >
-                444
-            </div>
-        )
-    }
-
     return (
         <Layout>
             <div className="s-container">
@@ -60,23 +37,15 @@ export default ({ pageContext: { categoryKey }, data }) => {
                     <img src={'/img/mainbanner.jpg'} />
                 </div>
 
-                <div className='s-tabs'>
-                    {
-                        tabIcons.map((icon, i) => {
-                            return (
-                                <div key={i} onClick={() => setActiveTabIndex(i)}
-                                    className={`s-tab-item ${activeTabIndex === i ? 'isActive' : ''}`}
-                                >
-                                    <img src={icon}></img>
-                                    <p>{tabNames[i]}</p>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-
-                {_renderContent()}
-
+                <SeriesTabs
+                    names={['赛事简介', '赛程表', '赛事结果', '赛事直播']}
+                    icons={[require('../img/eye.png'), require('../img/eye.png'), require('../img/eye.png'), require('../img/eye.png')]}
+                >
+                    <div className='s-summary-box' />
+                    <Schedule />
+                    <Result />
+                    <Zhibo />
+                </SeriesTabs>
             </div>
         </Layout>
     )
