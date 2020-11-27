@@ -28,7 +28,7 @@ RUN yarn global add gatsby-cli
 WORKDIR /app
 ADD . ./
 RUN yarn
-RUN gatsby develop
+RUN gatsby develop -H 0.0.0.0
 
 
 # FROM gatsbyjs/gatsby:onbuild as build
