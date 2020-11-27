@@ -1,73 +1,56 @@
-import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
-import { useStaticQuery } from 'gatsby'
+import React, { useState, useEffect, memo, useMemo } from 'react'
 import Layout from '../components/Layout'
 import Schedule from '../components/Series/Schedule'
+import Result from '../components/Series/Result'
+import Zhibo from '../components/Series/Zhibo'
 import Summary from '../components/Series/Summary'
-import { Tabs } from 'antd';
-const { TabPane } = Tabs;
 import { AppleOutlined, AndroidOutlined } from '@ant-design/icons';
-const OfflinePage = ({ pageContext: { categoryKey }, data }) => {
+import '../styles/offline-page.scss';
+import SeriesTabs from '../components/SeriesTabs'
 
-  console.log(`OfflinePage:categoryKey:${JSON.stringify(categoryKey)}`);
-  const seriess = data.seriess && data.seriess.edges ? data.seriess.edges.map(edge => edge.node.frontmatter) : [];
-  const categories = data.categories && data.categories.edges ? data.categories.edges.map(edge => edge.node.frontmatter) : [];
-  const [category, setCategory] = useState(undefined);
-  //如果category没有值，设置为categoryKey指定的那一个。
-  useEffect(() => {
-    if (!category && categories) {
-      setCategory(categories ? categories.find(item => item.categoryKey === categoryKey) : undefined);
+
+export default ({ pageContext: { categoryKey }, data }) => {
+
+    const seriess = data.seriess && data.seriess.edges ? data.seriess.edges.map(edge => edge.node.frontmatter) : [];
+    const categories = data.categories && data.categories.edges ? data.categories.edges.map(edge => edge.node.frontmatter) : [];
+    const [category, setCategory] = useState(undefined);
+
+    //如果category没有值，设置为categoryKey指定的那一个。
+    useEffect(() => {
+        if (!category && categories) {
+            setCategory(categories ? categories.find(item => item.categoryKey === categoryKey) : undefined);
+        }
+    })
+
+    let categorySeriess = [];
+    if (category && seriess) {
+        categorySeriess = seriess.filter(series => series.category === category.categoryKey);
     }
-  })
 
-  // console.log(`OfflinePage:category:${JSON.stringify(category)}`);
-  let categorySeriess = [];
-  if (category && seriess) {
-    categorySeriess = seriess.filter(series => series.category === category.categoryKey);
-  }
-  // console.log(`OfflinePage:categorySeriess:${JSON.stringify(categorySeriess)}`);
+    const latestSeries = categorySeriess ? categorySeriess[0] : {};
 
-  const latestSeries = categorySeriess ? categorySeriess[0] : {};
-  return (
-    <Layout>
-      <div className="container is-max-widescreen">
-        <Tabs defaultActiveKey="1" centered>
-          <TabPane
-            tab={<span><AppleOutlined />赛事简介</span>}
-            key="1"
-          >
-            {latestSeries && category && <Summary
-              latestSeries={latestSeries}
-              category={category}
-            />}
-          </TabPane>
-          <TabPane
-            tab={<span><AndroidOutlined />赛程表</span>}
-            key="2"
-          >
-            {latestSeries && category && categories && <Schedule
-              seriess={seriess}
-              categories={categories}
-              category={category} />}
-          </TabPane>
-          <TabPane
-            tab={<span><AppleOutlined />赛事结果</span>}
-            key="3">
-            Content of Tab Pane 3
-        </TabPane>
-        </Tabs>
-      </div>
-    </Layout>
-  )
+    return (
+        <Layout>
+            <div className="s-container">
+
+                <div className='s-image-content'>
+                    <img src={'/img/mainbanner.jpg'} />
+                </div>
+
+                <SeriesTabs
+                    names={['赛事简介', '赛程表', '赛事结果', '赛事直播']}
+                    icons={[require('../img/eye.png'), require('../img/eye.png'), require('../img/eye.png'), require('../img/eye.png')]}
+                >
+                    <div className='s-summary-box' />
+                    <Schedule />
+                    <Result />
+                    <Zhibo />
+                </SeriesTabs>
+            </div>
+        </Layout>
+    )
 }
 
-OfflinePage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-}
-
-export default OfflinePage
 
 export const pageQuery = graphql`
   query MyQuery {

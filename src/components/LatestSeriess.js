@@ -17,6 +17,7 @@ export default ({ data }) => {
 
     const _renderItem = (edge, isLastItem) => {
         let { date, prize, address, description, title, bannerImage } = edge.node.frontmatter;
+        let flagStyle = isLastItem ? { right: 0, left: 'auto' } : {}
         return (
             <div className='t-itemContainer' style={{ marginBottom: isLastItem ? '0px' : '60px' }}>
                 <div className='t-itemLeft'>
@@ -30,7 +31,7 @@ export default ({ data }) => {
                 </div>
                 <div className='t-itemRight'>
                     <Img className='t-image' fluid={bannerImage.childImageSharp.fluid} />
-                    <div className='t-timeFlag'>
+                    <div className='t-timeFlag' style={flagStyle}>
                         {address}
                         <span className='t-line'>|</span>
                         {_formatDate(date)}
