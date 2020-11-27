@@ -1,18 +1,18 @@
-# node_modules
-# npm-debug.log
+node_modules
+npm-debug.log
 # Dockerfile*
-# docker-compose*
-# .dockerignore
-# .git
-# .gitignore
-# README.md
-# LICENSE
-# .vscode
-# .github
-# .cache
-# .dependabot
+docker-compose*
+.dockerignore
+.git
+.gitignore
+README.md
+LICENSE
+.vscode
+.github
+.cache
+.dependabot
 
 
-.cache/
-node_modules/
-public/
+# .cache/
+# node_modules/
+# public/
