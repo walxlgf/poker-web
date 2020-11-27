@@ -23,15 +23,15 @@
 # CMD [ "npm", "run", "start" ]
 
 
-# FROM node:12-buster
-# RUN yarn global add gatsby-cli
-# ONBUILD WORKDIR /app
-# ONBUILD ADD . ./
-# ONBUILD RUN yarn
-# ONBUILD RUN gatsby build
+FROM node:12-buster
+RUN yarn global add gatsby-cli
+WORKDIR /app
+ADD . ./
+RUN yarn
+RUN gatsby develop
 
 
-FROM gatsbyjs/gatsby:onbuild as build
+# FROM gatsbyjs/gatsby:onbuild as build
 
-FROM gatsbyjs/gatsby
-COPY --from=build /app/public /pub
+# FROM gatsbyjs/gatsby
+# COPY --from=build /app/public /pub
