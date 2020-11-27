@@ -26,8 +26,9 @@
 FROM node:12-buster
 RUN yarn global add gatsby-cli
 WORKDIR /app
-ADD . ./
+COPY package.json . 
 RUN yarn
+COPY . ./
 RUN gatsby develop -H 0.0.0.0
 
 
