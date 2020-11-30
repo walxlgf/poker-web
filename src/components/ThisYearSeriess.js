@@ -3,6 +3,26 @@ import { Link } from 'gatsby'
 import { Months } from '../util/consts'
 import '../styles/index-page.scss'
 
+const STATES = {
+    '1': {
+        text: '已經結束',
+        icon: require('../img/overIcon.png'),
+        w: '25px',
+        h: '22px'
+    },
+    '2': {
+        text: '即將開始',
+        icon: require('../img/alertIcon.png'),
+        w: '22px',
+        h: '21px'
+    },
+    '3': {
+        text: '敬請期待',
+        icon: require('../img/starIcon.png'),
+        w: '22px',
+        h: '21px'
+    }
+}
 
 export default ({ data }) => {
 
@@ -30,12 +50,13 @@ export default ({ data }) => {
     const _renderItem = (event, isTop) => {
         let bgColor = isTop ? '#db2c2d' : '#b52222';
         let marginTop = isTop ? 0 : '40px';
+        let state = STATES[event.state];
         return (
             <div className='o-itemContainer' style={{ backgroundColor: bgColor, marginTop: marginTop }}>
                 <div className='o-state' >
                     <div className='o-stateLeft'>
-                        <img src={require('../img/overIcon.png')}></img>
-                        <span >{event.state}</span>
+                        <img style={{ width: state.w, height: state.h }} src={state.icon}></img>
+                        <span >{state.text}</span>
                     </div>
                     <div className='o-stateRight'>
                         <span>{event.attention}</span>

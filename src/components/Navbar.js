@@ -48,59 +48,10 @@ const Navbar = class extends React.Component {
     render() {
         return (
             <div >
-                {/* <div className="container is-max-widescreen" style={{ border: "1px dotted red"}}>
-          <nav className="level is-mobile" style={{ border: "1px dotted green", margin: "0px", height: "3rem" }}  >
-            <div className="level-left" >
-              <Link to="/" className="level-item" title="Home">
-                <img src={logo} alt="Poker Web" style={{ width: '88px' }} />
-              </Link>
-            </div>
-            <div className="level-right">
-              <div className="level-item" style={{ border: "1px dotted grey" }}>
-                <div>
-                  <a title="langauge" href="https://langauge.com">
-                    <img
-                      src={langauge}
-                      style={{ width: '1em', height: '1em' }}
-                    />
-                  </a>
-                  <a title="eight" href="https://eight.com">
-                    <img
-                      src={eight}
-                      style={{ width: '1em', height: '1em' }}
-                    />
-                  </a>
-                  <a title="facebook" href="https://facebook.com">
-                    <img
-                      src={facebook}
-                      alt="Facebook"
-                      style={{ width: '1em', height: '1em' }}
-                    />
-                  </a>
-                  <a title="instagram" href="https://instagram.com">
-                    <img
-                      src={instagram}
-                      alt="Instagram"
-                      style={{ width: '1em', height: '1em' }}
-                    />
-                  </a>
-                  <a title="weibo" href="https://weibo.com">
-                    <img
-                      src={weibo}
-                      alt="Weigo"
-                      style={{ width: '1em', height: '1em' }}
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div> */}
-
                 <div style={{ backgroundColor: "#000", width: "100%", height: "110px" }}>
-                    <div className="container is-max-widescreen" style={{ height: "100%", display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between" }}>
+                    <div style={{ width: '1200px', margin: '0 auto', height: "100%", display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
                         <img src={logo} alt="Poker Web" style={{ width: '186px', height: "48px", margin: "31px 0 31px 0" }} />
-                        <div style={{ marginTop: "57px", marginRight: "40px" }}>
+                        <div style={{ marginTop: "57px", }}>
                             <a title="langauge" href="https://langauge.com">
                                 <img
                                     src={langauge}
@@ -138,7 +89,7 @@ const Navbar = class extends React.Component {
                     </div>
                 </div>
                 <div className="full-width-navbar-container">
-                    <div className="container is-max-widescreen" >
+                    <div className="" style={{ width: '1200px', margin: '0 auto', height: '100%' }}>
                         <nav
                             className="navbar is-primary"
                             role="navigation"
@@ -173,10 +124,12 @@ const Navbar = class extends React.Component {
                                             fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
                                             paddingRight: "24px", paddingLeft: "24px"
                                         }}>線下賽事</div>
-                                        <div className="navbar-dropdown is-boxed">
-                                            <Link className="navbar-item navDrownItem" to="/offline/rd-jeju">红龙杯济州站</Link>
-                                            <Link className="navbar-item navDrownItem" to="/offline/rd-manila">红龙杯马尼拉站</Link>
-                                            <Link className="navbar-item navDrownItem" to="/offline/appt-jeju">APPT济州站</Link>
+                                        <div className="navbar-dropdown is-boxed navDropDrown">
+                                            <Link className="navDrownItem" to="/offline/rd-jeju">红龙杯济州站</Link>
+                                            <div style={{ height: '1px', backgroundColor: 'white', margin: '0 15px', opacity: 0.4 }} />
+                                            <Link className="navDrownItem" to="/offline/rd-manila">红龙杯马尼拉站</Link>
+                                            <div style={{ height: '1px', backgroundColor: 'white', margin: '0 15px', opacity: 0.4 }} />
+                                            <Link className="navDrownItem" to="/offline/appt-jeju">APPT济州站</Link>
                                         </div>
                                     </div>
                                     <Link className="navbar-item" to="/products" style={{
@@ -196,7 +149,7 @@ const Navbar = class extends React.Component {
                                         paddingRight: "24px", paddingLeft: "24px"
                                     }}>關於我們</Link>
                                 </div>
-                                <div className="navbar-end" style={{ marginRight: "40px" }}>
+                                <div className="navbar-end" style={{}}>
                                     <Link to="/rule"  >
                                         <img src={playButton} style={{ width: "200px", height: "65px" }} />
                                     </Link>

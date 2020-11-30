@@ -7,28 +7,28 @@ thisYearSeries:
   events:
     - name: 2020红龙杯
       subName: 青龙杯济州站
-      state: 已经结束
+      state: 1
       startTime: 2020-12-11T07:38:54.744Z
       endTime: 2020-12-11T07:38:54.744Z
       address: 韩国济州岛
       attention: 101
     - name: 2020红龙杯
       subName: Online系列賽
-      state: 即将开始
+      state: 2
       startTime: 2020-12-13T07:38:54.744Z
       endTime: 2020-12-15T07:38:54.744Z
       address: 红龙扑克App
       attention: 73
     - name: 2020红龙杯
       subName: 冠军赛马尼拉站
-      state: 敬请期待
+      state: 3
       startTime: 2020-12-18T07:38:54.744Z
       endTime: 2020-12-22T07:38:54.744Z
       address: 菲律宾马尼拉
       attention: 34
     - name: 2020红龙杯
       subName: 台北站
-      state: 敬请期待
+      state: 3
       startTime: 2020-12-28T07:38:54.744Z
       endTime: 2021-01-04T07:38:54.744Z
       address: 台湾台北
