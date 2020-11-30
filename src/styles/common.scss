@@ -11,6 +11,13 @@ $deep-red: #96220e;
     -webkit-box-orient: vertical;
 }
 
+// 版心
+@mixin s-content {
+    padding-bottom: 150px;
+    width: 1200px;
+    margin: 100px auto;
+}
+
 // SeriesTabs
 .s-tabs {
     width: 800px;

@@ -29,14 +29,13 @@ export default ({ pageContext: { categoryKey }, data }) => {
 
     const latestSeries = categorySeriess ? categorySeriess[0] : {};
 
+
     return (
         <Layout>
             <div className="s-container">
-
                 <div className='s-image-content'>
                     <img src={'/img/mainbanner.jpg'} />
                 </div>
-
                 <SeriesTabs
                     names={['赛事简介', '赛程表', '赛事结果', '赛事直播']}
                     icons={[require('../img/eye.png'), require('../img/eye.png'), require('../img/eye.png'), require('../img/eye.png')]}

@@ -1,0 +1,106 @@
+@import './common.scss';
+
+.b-container {
+    background-color: black;
+    position: relative;
+    padding-bottom: 10px;
+
+    .b-image-content {
+        width: 1920px;
+        height: 800px;
+        margin: 0 auto;
+    }
+}
+
+.b-content-box {
+    @include s-content();
+}
+
+.b-news-box {
+    h1 {
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 150px;
+        margin-bottom: 50px;
+    }
+
+    .b-header {
+        display: flex;
+
+        .b-left {
+            flex: 4;
+            margin-right: 50px;
+
+            img {
+                width: 100%;
+                height: 400px;
+            }
+
+            .b-title {
+                color: white;
+                font-size: 23px;
+                margin-bottom: 5px;
+                margin-top: 20px;
+            }
+
+            .b-postname {
+                color: white;
+                font-size: 14px;
+            }
+
+            .b-time {
+                color: white;
+                font-size: 14px;
+                margin-left: 30px;
+            }
+
+            .b-des {
+                color: white;
+                font-size: 14px;
+                margin-top: 20px;
+                line-height: 30px;
+            }
+        }
+
+        .b-right {
+            flex: 2;
+            color: white;
+
+            .b-item {
+                margin-bottom: 20px;
+
+                img {
+                    width: 100%;
+                    height: 250px;
+                }
+
+                .b-title {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+                .b-time {
+                    color: white;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.b-videos-box {
+    background-color: green;
+
+}
+
+.b-photos-box {
+    background-color: yellow;
+
+}
+
+.b-reports-box {
+    background-color: blue;
+
+}

@@ -3,15 +3,25 @@ import '../styles/common.scss'
 
 export default (props) => {
     const { names, icons } = props;
-    const [activeTabIndex, setActiveTabIndex] = useState(1)
+    const [currentTabIndex, setCurrentTabIndex] = useState(1);
+    const [activeIndexs, setActiveIndexs] = useState([1])
+
+    const _tabChange = (index) => {
+        setCurrentTabIndex(index);
+        if (!activeIndexs.includes(index)) {
+            activeIndexs.push(index);
+            setActiveIndexs([...activeIndexs]);
+        }
+    }
+
     return (
         <div>
             <div className='s-tabs'>
                 {
                     icons.map((icon, i) => {
                         return (
-                            <div key={i} onClick={() => setActiveTabIndex(i)}
-                                className={`s-tab-item ${activeTabIndex === i ? 'isActive' : ''}`}>
+                            <div key={i} onClick={() => _tabChange(i)}
+                                className={`s-tab-item ${currentTabIndex === i ? 'isActive' : ''}`}>
                                 <img src={icon}></img>
                                 <p>{names[i]}</p>
                             </div>
@@ -21,8 +31,10 @@ export default (props) => {
             </div>
             {
                 props.children.map((Componment, index) => {
+                    // tab不点击则当前tab不渲染
+                    if (!activeIndexs.includes(index)) return null;
                     return (
-                        <div key={index} style={{ display: index === activeTabIndex ? 'block' : 'none' }}>
+                        <div key={index} style={{ display: index === currentTabIndex ? 'block' : 'none' }}>
                             {Componment}
                         </div>
                     )
