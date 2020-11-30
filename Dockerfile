@@ -1,16 +1,16 @@
 FROM node:12-buster
 
-RUN apk add --no-cache \
-    autoconf \
-    automake \
-    bash \
-    g++ \
-    libc6-compat \
-    libjpeg-turbo-dev \
-    libpng-dev \
-    make \
-    nasm
-    
+# RUN apk add --no-cache \
+#     autoconf \
+#     automake \
+#     bash \
+#     g++ \
+#     libc6-compat \
+#     libjpeg-turbo-dev \
+#     libpng-dev \
+#     make \
+#     nasm
+
 RUN yarn global add gatsby-cli
 
 # The minimal baseline we need for Nodejs
