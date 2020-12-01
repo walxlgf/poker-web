@@ -462,11 +462,13 @@ $photoScale: 1.1;
         display: inline-block;
         background-color: $color;
         transition: all 1s ease 0.3s;
+        opacity: 0;
     }
 
     &.active {
         div {
             width: 100%;
+            opacity: 1;
         }
     }
 }
@@ -489,6 +491,7 @@ $photoScale: 1.1;
 
         div {
             border-top: 15px solid white;
+            transition-delay: 0.7s;
         }
     }
 
@@ -502,6 +505,10 @@ $photoScale: 1.1;
         @include bgItemMix(720px, 50px, -80px, 7, white);
         float: left;
         text-align: right;
+
+        div {
+            transition-delay: 0.5s;
+        }
     }
 
     .m-bg-item5 {
