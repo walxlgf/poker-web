@@ -1,3 +1,11 @@
+# FROM gatsbyjs/gatsby:onbuild
+
+# FROM gatsbyjs/gatsby:onbuild as build
+
+# FROM gatsbyjs/gatsby
+# COPY --from=build /app/public /pub
+
+
 FROM node:12-buster
 
 # RUN apk add --no-cache \
@@ -22,7 +30,8 @@ COPY package.json .
 RUN npm install --silent --no-cache
 # copy the whole source folder(the dir is relative to the Dockerfile COPY . . 
 COPY . .
-CMD [ "npm", "run", "start" ]
+CMD [ "npm", "run", "build" ]
+
 
 
 # FROM node:12-buster
@@ -32,9 +41,3 @@ CMD [ "npm", "run", "start" ]
 # RUN yarn
 # COPY . ./
 # RUN gatsby develop -H 0.0.0.0
-
-
-# FROM gatsbyjs/gatsby:onbuild as build
-
-# FROM gatsbyjs/gatsby
-# COPY --from=build /app/public /pub
