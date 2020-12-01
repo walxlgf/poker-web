@@ -5,50 +5,9 @@ import Layout from '../components/Layout'
 import LatestSeriess from "../components/LatestSeriess"
 import ThisYearSeriess from "../components/ThisYearSeriess"
 import Gallery from "../components/Gallery"
+import { throttle, rangesIntersect } from '../util/util'
 
 export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess, photos }) => {
-
-
-    // 所有  背景色块 距离浏览器顶部高度
-    const [itemTops, setItemTops] = useState([])
-
-    let refs = []
-    for (let index = 0; index < 7; index++) {
-        const bgItemRef = useRef(null)
-        refs.push(bgItemRef);
-    }
-
-    useEffect(() => {
-        let navH = 175;  // 导航栏高度
-        let topImageH = 800;  // 头部image高度
-        for (let index = 0; index < refs.length; index++) {
-            let ref = refs[index];
-            let itemTop = ref.current.offsetTop;
-            itemTops.push({
-                top: itemTop + navH + topImageH,
-                isActive: false
-            });
-        }
-    }, [])
-
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            //可视区域高度  滚动条滚动高度
-            const { clientHeight, scrollTop } = document.documentElement
-            let flag = false;
-            for (let index = 0; index < itemTops.length; index++) {
-                const itemTop = itemTops[index];
-                if (clientHeight + scrollTop < itemTop.top + 200) break;
-                flag = true;
-                itemTop.isActive = true;
-            }
-            if (flag) {
-                setItemTops([...itemTops])
-            }
-        });
-    }, [])
-
-
     return (
         <div style={{ backgroundColor: 'black' }}>
             {bannerImage ? (
@@ -58,25 +17,13 @@ export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess,
                 </div>
             ) : null}
 
-            <div className='bgView'>
-                {
-                    refs.map((ref, index) => {
-                        return (
-                            <div ref={ref} className={`m-bg-item${index + 1} ${itemTops[index] && itemTops[index].isActive ? 'active' : ''}`} >
-                                <div />
-                            </div>
-                        )
-                    })
-                }
-            </div>
-
+            <BgAnimationViews />
             <LatestSeriess data={latestSeriess} />
             <ThisYearSeriess data={thisYearSeriess} />
-            <Gallery photos={photos}></Gallery>
+            <Gallery photos={photos} />
         </div>
     )
 }
-
 
 export default ({ data }) => {
     const { index, latestSeriess, thisYearSeriess } = data;
@@ -92,6 +39,66 @@ export default ({ data }) => {
     )
 }
 
+// 首页背景动画色块
+const BgAnimationViews = () => {
+    const totalItemsCount = 7;
+
+    // 所有  背景色块 距离浏览器顶部高度
+    const [itemLocations, setItemLocations] = useState([])
+    let refs = []
+    for (let index = 0; index < totalItemsCount; index++) {
+        const bgItemRef = useRef(null)
+        refs.push(bgItemRef);
+    }
+
+    useEffect(() => {
+        let navH = 175;  // 导航栏高度
+        let topImageH = 800;  // 头部image高度
+        for (let index = 0; index < refs.length; index++) {
+            let ref = refs[index];
+            let { offsetTop, offsetHeight } = ref.current;
+            itemLocations.push({
+                top: offsetTop + navH + topImageH,
+                bottom: offsetTop + navH + topImageH + offsetHeight,
+                isActive: false
+            });
+        }
+    }, [])
+
+    useEffect(() => {
+        let throttleFn = throttle(() => {
+            const { clientHeight, scrollTop } = document.documentElement;
+            let flag = false;
+            for (let index = 0; index < itemLocations.length; index++) {
+                const location = itemLocations[index];
+                if (!location.isActive
+                    && rangesIntersect([scrollTop, scrollTop + clientHeight], [location.top, location.bottom])) {
+                    flag = true;
+                    location.isActive = true;
+                }
+            }
+            if (flag) {
+                setItemLocations([...itemLocations])
+            }
+        }, 100)
+        window.addEventListener('scroll', throttleFn);
+    }, [])
+
+    return (
+        <div className='bgView'>
+            {
+                refs.map((ref, index) => {
+                    let classname = itemLocations[index] && itemLocations[index].isActive ? 'active' : '';
+                    return (
+                        <div key={index} ref={ref} className={`m-bg-item${index + 1} ${classname}`} >
+                            <div />
+                        </div>
+                    )
+                })
+            }
+        </div>
+    )
+}
 
 export const seriesQuery = graphql`
   query IndexPageTemplate {
