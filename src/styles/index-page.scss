@@ -1,12 +1,12 @@
 @import './common.scss';
 
+// 最新赛事
 .latestseries {
-    background-color: black;
-    padding-bottom: 10px;
-
     .t-content {
         width: 1200px;
         margin: 0 auto;
+        position: relative;
+        z-index: 10;
 
         .t-header {
             display: flex;
@@ -133,11 +133,12 @@
     }
 }
 
-
+// 赛事表
 .thisYearSeries {
-    background-color: black;
     margin-top: -15px;
     padding-bottom: 10px;
+    position: relative;
+    z-index: 11;
 
     .o-content {
         width: 1200px;
@@ -345,10 +346,12 @@ $photoScale: 1.1;
     }
 }
 
+// 照片墙
 .photoAlbum {
 
-    background-color: black;
     padding-bottom: 60px;
+    position: relative;
+    z-index: 99;
 
     .m-content {
 
@@ -442,4 +445,81 @@ $photoScale: 1.1;
             display: block;
         }
     }
+}
+
+
+@mixin bgItemMix($w, $h, $top, $z, $color) {
+    width: $w;
+    height: $h;
+    position: relative;
+    z-index: $z;
+    clear: both;
+    margin-top: $top;
+
+    div {
+        height: 100%;
+        width: 0%;
+        display: inline-block;
+        background-color: $color;
+        transition: all 1s ease 0.3s;
+    }
+
+    &.active {
+        div {
+            width: 100%;
+        }
+    }
+}
+
+// 背景色块
+.bgView {
+    position: absolute;
+    width: 100%;
+    background-color: black;
+
+    .m-bg-item1 {
+        @include bgItemMix(1200px, 917px, 0, 9, #191919);
+        text-align: right; // 决定动画方向
+    }
+
+    .m-bg-item2 {
+        @include bgItemMix(720px, 260px, -326px, 0, #db2c2d);
+        float: right;
+        text-align: left;
+
+        div {
+            border-top: 15px solid white;
+        }
+    }
+
+    .m-bg-item3 {
+        @include bgItemMix(1420px, 1051px, -66px, 8, #262626);
+        float: right;
+        text-align: left;
+    }
+
+    .m-bg-item4 {
+        @include bgItemMix(720px, 50px, -80px, 7, white);
+        float: left;
+        text-align: right;
+    }
+
+    .m-bg-item5 {
+        @include bgItemMix(773px, 685px, -30px, 11, #db2c2d);
+        float: left;
+        text-align: left;
+    }
+
+    .m-bg-item6 {
+        @include bgItemMix(100%, 693px, -480px, 9, #191919);
+        float: left;
+        text-align: right;
+    }
+
+    .m-bg-item7 {
+        @include bgItemMix(690px, 443px, -230px, 9, #db2c2d);
+        float: right;
+        text-align: left;
+    }
+
 }
