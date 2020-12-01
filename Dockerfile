@@ -30,8 +30,8 @@ COPY package.json .
 RUN npm install --silent --no-cache
 # copy the whole source folder(the dir is relative to the Dockerfile COPY . . 
 COPY . .
-# CMD [ "npm", "run", "start" ]
-CMD npm run build && gatsby serve -H 0.0.0.0 -p 80
+CMD [ "npm", "run", "build" ]
+
 
 
 # FROM node:12-buster
