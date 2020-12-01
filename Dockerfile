@@ -30,9 +30,9 @@ COPY package.json .
 RUN npm install --silent --no-cache
 # copy the whole source folder(the dir is relative to the Dockerfile COPY . . 
 COPY . .
-# CMD [ "npm", "run", "build" ]
+CMD [ "npm", "run", "build" ]
 
-CMD [ "npm", "run", "start" ]
+# CMD [ "npm", "run", "start" ]
 
 
 

@@ -15,14 +15,14 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         }
     }
 
-    let data = entry.getIn(['data', 'thisYearSeries']).toJS();
-    let thisYearSeries = { frontmatter: { thisYearSeries: data } }
+    let data = entry.getIn(['data', 'thisYearSeriess']) ? entry.getIn(['data', 'thisYearSeriess']).toJS() : {};
+    let thisYearSeriess = { frontmatter: { thisYearSeriess: data } }
 
     return (
         <IndexPageTemplate
             bannerImage={entry.getIn(['data', 'bannerImage'])}
             photos={photos}
-            thisYearSeriess={thisYearSeries}
+            thisYearSeriess={thisYearSeriess}
         />
     )
 }

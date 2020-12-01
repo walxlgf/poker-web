@@ -145,27 +145,27 @@ export const seriesQuery = graphql`
     }
     thisYearSeriess:markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
       frontmatter {
-       photos {
-        width
-        height
-        name{
-          relativePath
+        photos {
+          width
+          height
+          name{
+            relativePath
+          }
         }
-      }
-      thisYearSeries {
-        title
-        year
-        events {
-          address
-          name
-          subName
-          attention
-          state
-          startTime
-          endTime
+        thisYearSeriess {
+          title
+          year
+          events {
+            address
+            name
+            subName
+            attention
+            state
+            startTime
+            endTime
+          }
         }
       }
     }
-  }
   }
 `
