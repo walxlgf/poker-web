@@ -186,6 +186,21 @@ footer.footer {
     margin: 0 0 1em
 }
 
+.navDrownItem {
+    width: 165px;
+    height: 65px;
+    text-align: center;
+    line-height: 65px;
+    color: white;
+    display: block;
+}
+
 .navDrownItem:hover {
-    background-color: #C72023 !important;
+    background-color: rgba($color: #C72023, $alpha: 0.85) !important;
+    color: white;
+}
+
+.navDropDrown {
+    background-color: rgba($color: #db2c2c, $alpha: 0.85);
+    margin-left: -22px;
 }

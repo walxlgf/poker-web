@@ -10,12 +10,11 @@ export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess,
     return (
         <div>
             {bannerImage ? (
-                <div style={{ backgroundColor: 'black', height: '800px' }}>
-                    {bannerImage.childImageSharp && <Img style={{ width: "1920px", height: '100%', margin: '0 auto' }} fluid={bannerImage.childImageSharp.fluid} />}
-                    {typeof bannerImage === 'string' && <img style={{ width: "1920px", height: '100%', margin: '0 auto' }} src={bannerImage} />}
+                <div style={{ backgroundColor: 'black' }}>
+                    {bannerImage.childImageSharp && <Img style={{ height: '800px' }} fluid={bannerImage.childImageSharp.fluid} />}
+                    {typeof bannerImage === 'string' && <img style={{ height: '800px' }} src={bannerImage} />}
                 </div>
             ) : null}
-
             <LatestSeriess data={latestSeriess} />
             <ThisYearSeriess data={thisYearSeriess} />
             <Gallery photos={photos}></Gallery>

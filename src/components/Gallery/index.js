@@ -9,6 +9,12 @@ export default ({ photos }) => {
 
     if (!photos || photos.length == 0) return null;
 
+    const _pxHandle = (x) => {
+        x = x + '';
+        if (x.includes('px')) return x;
+        return x + 'px';
+    }
+
     return (
         <div className='photoAlbum'>
             <div className='m-content' >
@@ -18,8 +24,14 @@ export default ({ photos }) => {
                         photos.map((photo, index) => {
                             let classname = `m-photowall${index + 1}`;
                             let src = `/img/${photo.name.relativePath}`
-                            let style = { width: photo.width, height: photo.height }
-                            return <img key={index} className={classname} style={style} src={src} />
+                            let style = { width: _pxHandle(photo.width), height: _pxHandle(photo.height) }
+                            return (
+                                <div key={index} className={classname}
+                                    style={{ width: style.width, height: style.height, position: 'absolute', overflow: 'hidden' }}>
+                                    <img key={index} style={style} src={src} />
+                                    <div className='m-cover' style={{}} />
+                                </div>
+                            )
                         })
                     }
                 </div>

@@ -30,9 +30,9 @@
                 position: relative;
 
                 .t-title {
-                    font-size: 35px;
+                    font-size: 38px;
                     color: white;
-                    font-family: 'NotoSansTC';
+                    font-family: 'Noto Sans TC';
                     margin-top: -12px;
                 }
 
@@ -57,7 +57,7 @@
                         font-size: 50px;
                         font-weight: bold;
                         color: white;
-                        font-family: 'NotoSansTC';
+                        font-family: 'Noto Sans TC';
                         margin-top: -15px;
                     }
                 }
@@ -93,6 +93,7 @@
                     padding: 0 20px;
                     height: 80px;
                     background-color: #b52222;
+                    opacity: 0.8;
                     line-height: 80px;
                     text-align: center;
                     color: white;
@@ -101,7 +102,7 @@
                     bottom: 43px;
                     font-weight: bold;
                     font-size: 28px;
-                    font-family: 'NotoSansTC';
+                    font-family: 'Noto Sans TC';
 
                     .t-line {
                         color: black;
@@ -149,7 +150,7 @@
             padding-bottom: 41px;
 
             h3 {
-                font-family: 'NotoSansTC';
+                font-family: 'Noto Sans TC';
                 font-size: 44px;
                 color: white;
             }
@@ -190,16 +191,11 @@
                         margin-left: -25px;
                         float: left;
 
-                        img {
-                            width: 22px;
-                            height: 22px
-                        }
-
                         span {
                             font-size: 15px;
                             color: black;
                             font-weight: 500;
-                            font-family: 'NotoSansTC';
+                            font-family: 'Noto Sans TC';
                             margin-left: 6px;
                             margin-top: 2px;
                         }
@@ -218,19 +214,19 @@
                         span {
                             font-size: 16px;
                             color: white;
-                            font-family: 'NotoSansTC';
+                            font-family: 'Noto Sans TC';
                             margin-right: 6px
                         }
 
                         img {
-                            width: 32px;
-                            height: 18px
+                            width: 34px;
+                            height: 19px
                         }
                     }
                 }
 
                 .o-title {
-                    font-family: 'NotoSansTC';
+                    font-family: 'Noto Sans TC';
                     font-size: 30px;
                     color: white;
                     line-height: 35px;
@@ -253,7 +249,7 @@
 
                 .o-date {
                     img {
-                        width: 25px;
+                        width: 27px;
                         height: 25px
                     }
 
@@ -261,7 +257,7 @@
                         @include t-ellipsis(1);
                         font-size: 19px;
                         color: white;
-                        font-family: 'NotoSansTC';
+                        font-family: 'Noto Sans TC';
                         margin-left: 10px;
                         opacity: 0.6;
                         white-space: nowrap;
@@ -272,14 +268,14 @@
                     margin-top: -5px;
 
                     img {
-                        width: 25px;
+                        width: 27px;
                         height: 31px
                     }
 
                     span {
                         font-size: 19px;
                         color: white;
-                        font-family: 'NotoSansTC';
+                        font-family: 'Noto Sans TC';
                         margin-left: 10px;
                         opacity: 0.6
                     }
@@ -308,7 +304,7 @@
             line-height: 65px;
             color: white;
             font-size: 18px;
-            font-family: 'NotoSansTC';
+            font-family: 'Noto Sans TC';
             margin: 57px auto;
         }
 
@@ -316,16 +312,36 @@
 }
 
 
-$photoScale: 1.03;
+$photoScale: 1.1;
 
 @mixin photoMix() {
     position: absolute;
     object-fit: cover;
 
     &:hover {
-        transform: scale($photoScale);
         z-index: 999;
-        transition: all 0.1s linear;
+
+        .m-cover {
+            opacity: 0.6;
+        }
+
+        img {
+            transform: scale($photoScale);
+        }
+    }
+
+    img {
+        transition: all 1.3s ease;
+    }
+
+    .m-cover {
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
     }
 }
 
@@ -335,8 +351,6 @@ $photoScale: 1.03;
     padding-bottom: 60px;
 
     .m-content {
-        width: 1920px;
-        margin: 0 auto;
 
         .m-title {
             padding-top: 20px;
@@ -344,7 +358,7 @@ $photoScale: 1.03;
             color: white;
             text-align: center;
             font-size: 44px;
-            font-family: 'NotoSansTC';
+            font-family: 'Noto Sans TC';
         }
 
         .m-photowall1 {
@@ -364,11 +378,6 @@ $photoScale: 1.03;
             top: 50%;
             transform: translate(-50%, -50%);
             z-index: 2;
-
-            &:hover {
-                transform: scale(1.02) translate(-50%, -50%);
-                z-index: 999;
-            }
         }
 
         .m-photowall3 {
@@ -415,7 +424,7 @@ $photoScale: 1.03;
             line-height: 65px;
             color: white;
             font-size: 18px;
-            font-family: 'NotoSansTC';
+            font-family: 'Noto Sans TC';
             margin: 20px auto;
             display: block
         }
@@ -428,7 +437,7 @@ $photoScale: 1.03;
             line-height: 65px;
             color: white;
             font-size: 18px;
-            font-family: 'NotoSansTC';
+            font-family: 'Noto Sans TC';
             margin: 80px auto;
             display: block;
         }
