@@ -1,7 +1,13 @@
 ---
   category: "rd-manila"
+  templateKey: "series-page"
   title: "RED DRAGON MANILA"
-  startTime: "2020-08-24T02:09:00.701Z"
+  date: "2020-08-24T02:09:00.701Z"
+  description: "RED DRAGON MANILA"
+  currency: "PHP"
+  prize: "250000000"
+  address: "Manila, Philippines"
+  bannerImage: "/img/jumbotron.jpg"
   events: 
     - 
       no: "16B"
