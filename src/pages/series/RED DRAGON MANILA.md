@@ -7,7 +7,7 @@
   currency: "PHP"
   prize: "250000000"
   address: "Manila, Philippines"
-  bannerImage: "/img/jumbotron.jpg"
+  bannerImage: "http://localhost:1337/parse/files/app/da873be8df5e983d15167179d7d7aded_logo.jpeg"
   events: 
     - 
       no: "16B"
