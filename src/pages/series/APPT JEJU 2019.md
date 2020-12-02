@@ -7,7 +7,7 @@
   currency: "₩"
   prize: "250000000"
   address: "Seoul, South Korea"
-  bannerImage: "/img/jumbotron.jpg"
+  bannerImage: "http://localhost:1337/parse/files/app/581a175269e9fa7e5bc9634a937c2098_logo.jpeg"
   events: 
     - 
       no: "12"
