@@ -80,16 +80,6 @@ export const pageQuery = graphql`
             events {
               no
               title
-              buyin
-              startChips
-              startTime(formatString: "MMMM DD, YYYY")
-              remark
-              reEntry
-              startBlind
-              stopLevel
-              duration
-              survivor
-              isMain
             }
             bannerImage {
               relativePath

@@ -44,7 +44,7 @@ export default ({ data }) => {
     }
 
     const _renderItem = (edge, isLastItem) => {
-        let { date, prize, address, description, title, bannerImage } = edge.node.frontmatter;
+        let { date, prize, address, description, title, seriesImage } = edge.node.frontmatter;
         let flagStyle = isLastItem ? { right: 0, left: 'auto' } : {}
         return (
             <div className='t-itemContainer' style={{ marginBottom: isLastItem ? '0px' : '60px' }}>
@@ -58,7 +58,7 @@ export default ({ data }) => {
                     <Link className='t-toDetail' to={edge.node.fields.slug} >最新晉級名單</Link>
                 </div>
                 <div className={`t-itemRight ${css(styles.holeIn)}`}>
-                    <Img className='t-image' fluid={bannerImage.childImageSharp.fluid} />
+                    <img className='t-image' src={seriesImage}></img>
                     <div className='t-timeFlag' style={flagStyle}>
                         {address}
                         <span className='t-line'>|</span>

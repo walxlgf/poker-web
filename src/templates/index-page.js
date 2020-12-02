@@ -132,13 +132,7 @@ export const seriesQuery = graphql`
             description
             address
             prize
-            bannerImage {
-                childImageSharp {
-                  fluid(maxHeight: 600, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-            }
+            seriesImage
           }
         }
       }

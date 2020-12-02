@@ -7,7 +7,7 @@
   currency: "₩"
   prize: "250000000"
   address: "Seoul, South Korea"
-  bannerImage: "http://localhost:1337/parse/files/app/f9c6ae72ba79e7647f6a5490473ca059_logo.jpeg"
+  seriesImage: "http://localhost:1337/parse/files/app/f9c6ae72ba79e7647f6a5490473ca059_logo.jpeg"
   events: 
     - 
       no: "4A"
