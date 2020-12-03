@@ -3,7 +3,7 @@
   templateKey: "series-page"
   title: "APPT JEJU 2019"
   date: "2020-08-24T01:36:44.541Z"
-  description: "APPT JEJU 2019"
+  description: "济州举行的高奖励赛事"
   currency: "₩"
   prize: "2500000"
   address: ""
