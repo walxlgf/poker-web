@@ -3,7 +3,7 @@
   templateKey: "series-page"
   title: "RED DRAGON MANILA"
   date: "2020-08-24T02:09:00.701Z"
-  description: "RED DRAGON MANILA"
+  description: "马尼拉牛逼精彩赛事值得期待"
   currency: "PHP"
   prize: "2500000"
   address: ""
