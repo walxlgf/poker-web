@@ -1,13 +1,13 @@
 ---
-  category: "rd-manila"
+  category: "appt-jeju"
   templateKey: "series-page"
   title: "APPT JEJU 2019"
   date: "2020-08-24T01:36:44.541Z"
   description: "APPT JEJU 2019"
   currency: "₩"
-  prize: "250000000"
-  address: "Seoul, South Korea"
-  seriesImage: "http://localhost:1337/parse/files/app/581a175269e9fa7e5bc9634a937c2098_logo.jpeg"
+  prize: "2500000"
+  address: ""
+  seriesImage: "http://localhost:1337/parse/files/app/97229b7e331d102c4906652a608a33c7_bg.jpeg"
   events: 
     - 
       no: "12"
