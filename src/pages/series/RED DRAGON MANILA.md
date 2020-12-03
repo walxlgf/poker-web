@@ -7,7 +7,7 @@
   currency: "PHP"
   prize: "2500000"
   address: ""
-  seriesImage: "http://localhost:1337/parse/files/app/da873be8df5e983d15167179d7d7aded_logo.jpeg"
+  seriesImage: "http://localhost:1337/parse/files/app/cf6510a5f300ca13e8ecb1accf640764_bg.jpeg"
   events: 
     - 
       no: "16B"
