@@ -3,7 +3,7 @@
   templateKey: "series-page"
   title: "RED DRAGON JEJU 2019"
   date: "2020-08-24T02:02:14.333Z"
-  description: "RED DRAGON JEJU 2019"
+  description: "济州举行的高奖励赛事，很好啊啊啊啊啊的亟待解决的决定减肥就减肥积分积分积分积分积分分多的地方方法"
   currency: "₩"
   prize: "2500000"
   address: ""
