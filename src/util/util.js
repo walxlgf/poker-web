@@ -1,4 +1,5 @@
 
+import React, { useState, useEffect } from "react"
 
 export const scrollAnimation = (currentY, targetY) => {
     // 计算需要移动的距离
@@ -54,4 +55,30 @@ export const rangesIntersect = (ranges1, ranges2) => {
     // ranges2和ranges1后相交
     let scale = (ranges2[1] - ranges1[1]) / (ranges2[1] - ranges2[0]);
     return scale < 0.5;
+}
+
+export const HoverAnimationView = (props) => {
+    const animationName = props.animationName || 'animate__bounceIn';
+    const [isBtnHover, setIsBtnHover] = useState(false);
+    const [hoverTime, setHoverTime] = useState(null); // 时间控制下，否则鼠标移入移除会疯狂回调
+    return (
+        <div onMouseEnter={() => {
+            setHoverTime(Date.now())
+            setIsBtnHover(true);
+        }}
+            onMouseLeave={() => {
+                if (Date.now() - hoverTime < 50) return;
+                setIsBtnHover(false)
+            }}
+            className={`animate__animated ${isBtnHover ? animationName : ''}`} >
+            {props.children}
+        </div>
+    )
+}
+
+
+export const useWindowScrollHook = (fn) => {
+    useEffect(() => {
+        window.addEventListener('scroll', throttle(fn, 100));
+    }, [])
 }
