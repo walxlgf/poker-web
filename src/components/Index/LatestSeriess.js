@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import '../../styles/index-page.scss'
 import { Months } from '../../util/consts'
 import "animate.css";
-import { HoverAnimationView } from '../../util/util'
+import { HoverAnimationView, PlaceHolderImg } from '../../util/util'
 import Bus, { EVENTS } from '../../util/eventBus.js'
 
 
@@ -53,7 +53,7 @@ export default ({ data }) => {
                     </Link>
                 </div>
                 <div className={`t-itemRight`}>
-                    <a><img className='t-image' src={seriesImage}></img></a>
+                    <a><PlaceHolderImg className='t-image' src={seriesImage} plscr={require('../../img/seriesPlaceholder.jpeg')} /></a>
                     <div className='t-timeFlag' style={flagStyle}>
                         {address}
                         <span className='t-line'>|</span>

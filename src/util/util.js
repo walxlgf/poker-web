@@ -76,6 +76,18 @@ export const HoverAnimationView = (props) => {
     )
 }
 
+export const PlaceHolderImg = (props) => {
+    const { src, plscr } = props;
+    const [showSrc, setShowSrc] = useState(src);
+    return (
+        <img
+            {...props}
+            src={showSrc}
+            onError={() => plscr && setShowSrc(plscr)}
+        />
+    );
+}
+
 
 export const useWindowScrollHook = (fn) => {
     useEffect(() => {
