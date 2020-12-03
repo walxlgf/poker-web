@@ -5,8 +5,8 @@
   date: "2020-08-24T02:09:00.701Z"
   description: "RED DRAGON MANILA"
   currency: "PHP"
-  prize: "250000000"
-  address: "Manila, Philippines"
+  prize: "2500000"
+  address: ""
   seriesImage: "http://localhost:1337/parse/files/app/da873be8df5e983d15167179d7d7aded_logo.jpeg"
   events: 
     - 
