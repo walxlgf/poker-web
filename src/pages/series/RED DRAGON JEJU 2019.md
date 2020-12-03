@@ -1,12 +1,12 @@
 ---
-  category: "rd-manila"
+  category: "rd-jeju"
   templateKey: "series-page"
   title: "RED DRAGON JEJU 2019"
   date: "2020-08-24T02:02:14.333Z"
   description: "RED DRAGON JEJU 2019"
   currency: "₩"
-  prize: "250000000"
-  address: "Seoul, South Korea"
+  prize: "2500000"
+  address: ""
   seriesImage: "http://localhost:1337/parse/files/app/f9c6ae72ba79e7647f6a5490473ca059_logo.jpeg"
   events: 
     - 
