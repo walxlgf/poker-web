@@ -6,7 +6,6 @@
   description: "马尼拉牛逼精彩赛事值得期待"
   currency: "PHP"
   prize: "2500000"
-  address: ""
   seriesImage: "http://localhost:1337/parse/files/app/cf6510a5f300ca13e8ecb1accf640764_bg.jpeg"
   events: 
     - 

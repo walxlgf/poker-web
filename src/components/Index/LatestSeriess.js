@@ -35,8 +35,19 @@ export default ({ data }) => {
         return t.split('').reverse().join('');// + '.' + r;
     }
 
+    const _addressOfCategory = (category) => {
+        if (category === 'appt-jeju') {
+            return '济州站'
+        } else if (category === 'rd-jeju') {
+            return '济州站'
+        } else if (category === 'rd-manila') {
+            return '马尼拉站'
+        }
+        return ''
+    }
+
     const _renderItem = (edge, isLastItem) => {
-        let { date, prize, address, description, title, seriesImage, currency } = edge.node.frontmatter;
+        let { date, prize, category, description, title, seriesImage, currency } = edge.node.frontmatter;
         let flagStyle = isLastItem ? { right: 0, left: 'auto' } : {}
         return (
             <div className={`t-itemContainer animate__animated ${isShow ? 'animate__fadeIn' : ''}`}
@@ -48,14 +59,14 @@ export default ({ data }) => {
                         <span className='t-text'>奖金</span>
                         <p className='t-amount'>{`${currency} ${_formatMoney(prize)}`}</p>
                     </div>
-                    <Link className='t-toDetail' to={edge.node.fields.slug} >
+                    <Link className='t-toDetail' /*to={edge.node.fields.slug} */>
                         <HoverAnimationView>最新晉級名單</HoverAnimationView>
                     </Link>
                 </div>
                 <div className={`t-itemRight`}>
                     <a><PlaceHolderImg className='t-image' src={seriesImage} plscr={require('../../img/seriesPlaceholder.jpeg')} /></a>
                     <div className='t-timeFlag' style={flagStyle}>
-                        {address}
+                        {_addressOfCategory(category)}
                         <span className='t-line'>|</span>
                         {_formatDate(date)}
                     </div>

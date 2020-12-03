@@ -6,7 +6,6 @@
   description: "济州举行的高奖励赛事"
   currency: "₩"
   prize: "2500000"
-  address: ""
   seriesImage: "http://localhost:1337/parse/files/app/97229b7e331d102c4906652a608a33c7_bg.jpeg"
   events: 
     - 

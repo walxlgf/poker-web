@@ -6,7 +6,6 @@
   description: "济州举行的高奖励赛事，很好啊啊啊啊啊的亟待解决的决定减肥就减肥积分积分积分积分积分分多的地方方法"
   currency: "₩"
   prize: "2500000"
-  address: ""
   seriesImage: "http://localhost:1337/parse/files/app/86efe95d79967ed7c4ed645a02cadc31_bg.jpeg"
   events: 
     - 

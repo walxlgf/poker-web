@@ -72,7 +72,7 @@ export const seriesQuery = graphql`
             date
             title
             description
-            address
+            category
             prize
             seriesImage
             currency
