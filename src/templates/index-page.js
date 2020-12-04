@@ -27,14 +27,15 @@ export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess,
 }
 
 export default ({ data }) => {
-    const { index, latestSeriess, thisYearSeriess } = data;
+    const { index, latestSeriess } = data;
+    const { thisYearSeriess, photos, bannerImage } = index.frontmatter;
     return (
         <Layout>
             <IndexPageTemplate
                 latestSeriess={latestSeriess.edges}
                 thisYearSeriess={thisYearSeriess}
-                photos={thisYearSeriess.frontmatter.photos}
-                bannerImage={index.frontmatter.bannerImage}
+                photos={photos}
+                bannerImage={bannerImage}
             />
         </Layout>
     )
@@ -52,6 +53,26 @@ export const seriesQuery = graphql`
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
             }
+          }
+        }
+        photos {
+          width
+          height
+          name{
+            relativePath
+          }
+        }
+        thisYearSeriess {
+          title
+          year
+          events {
+            address
+            name
+            subName
+            attention
+            state
+            startTime
+            endTime
           }
         }
       }
@@ -76,30 +97,6 @@ export const seriesQuery = graphql`
             prize
             seriesImage
             currency
-          }
-        }
-      }
-    }
-    thisYearSeriess:markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
-      frontmatter {
-        photos {
-          width
-          height
-          name{
-            relativePath
-          }
-        }
-        thisYearSeriess {
-          title
-          year
-          events {
-            address
-            name
-            subName
-            attention
-            state
-            startTime
-            endTime
           }
         }
       }

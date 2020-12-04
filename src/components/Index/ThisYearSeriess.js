@@ -88,7 +88,7 @@ export default ({ data }) => {
     }
 
     if (!data) return;
-    const { title, year, events } = data.frontmatter.thisYearSeriess;
+    const { title, year, events } = data;
     if (!events || events.length == 0) return null;
 
     return (
