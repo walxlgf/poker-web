@@ -11,24 +11,7 @@ import SeriesTabs from '../components/SeriesTabs'
 
 export default ({ pageContext: { categoryKey }, data }) => {
 
-    const seriess = data.seriess && data.seriess.edges ? data.seriess.edges.map(edge => edge.node.frontmatter) : [];
-    const categories = data.categories && data.categories.edges ? data.categories.edges.map(edge => edge.node.frontmatter) : [];
-    const [category, setCategory] = useState(undefined);
-
-    //如果category没有值，设置为categoryKey指定的那一个。
-    useEffect(() => {
-        if (!category && categories) {
-            setCategory(categories ? categories.find(item => item.categoryKey === categoryKey) : undefined);
-        }
-    })
-
-    let categorySeriess = [];
-    if (category && seriess) {
-        categorySeriess = seriess.filter(series => series.category === category.categoryKey);
-    }
-
-    const latestSeries = categorySeriess ? categorySeriess[0] : {};
-
+    const series = data.seriess.edges.map(edge => edge.node.frontmatter);
 
     return (
         <Layout>
@@ -41,8 +24,8 @@ export default ({ pageContext: { categoryKey }, data }) => {
                     icons={[require('../img/eye.png'), require('../img/eye.png'), require('../img/eye.png'), require('../img/eye.png')]}
                 >
                     <div className='s-summary-box' />
-                    <Schedule />
-                    <Result />
+                    <Schedule series={series} category={categoryKey} />
+                    <Result series={series} />
                     <Zhibo />
                 </SeriesTabs>
             </div>
@@ -80,6 +63,12 @@ export const pageQuery = graphql`
             events {
               no
               title
+              startTime
+              startingChips
+              buyin
+              bounty
+              adminFee
+              reEntry
             }
             bannerImage {
               relativePath

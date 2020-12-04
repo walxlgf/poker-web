@@ -1,44 +1,118 @@
 
 
-import React, { useState, memo } from 'react'
+import React, { useState, memo, useEffect } from 'react'
 import '../../styles/offline-page.scss';
+import { Weeks, Months, Categories } from '../../util/consts'
 
+export default memo(({ series, category }) => {
 
-export default memo(() => {
+    const [curCategory, setCurCategory] = useState(category);
+    const [curTime, setCurTime] = useState('');
+    const [times, setTimes] = useState([]);
+    const [groupEvents, setGroupEvents] = useState([]);
+
+    // 根据选择的category过滤数据
+    useEffect(() => {
+        let categorySeries = []
+        for (let index = 0; index < series.length; index++) {
+            const serie = series[index];
+            if (serie.category === curCategory) {
+                categorySeries.push(serie);
+            }
+        }
+        let { groupEvents, times } = _handleEvent(categorySeries);
+        setGroupEvents(groupEvents);
+        setTimes(times);
+    }, [curCategory, curTime])
+
+    // 将series中的所有event按照指定格式处理后返回
+    // 返回格式：groupEvents： [{date:'9 Nov 2019(星期六), events:[...]}, ...]
+    //         times :       ['9 Nov 2019(星期六)',...]
+    const _handleEvent = (categorySeries) => {
+        let events = [];
+        for (let index = 0; index < categorySeries.length; index++) {
+            const serie = categorySeries[index];
+            for (let j = 0; j < serie.events.length; j++) {
+                const event = serie.events[j];
+                events.push(event);
+            }
+        }
+
+        events.sort((e1, e2) => new Date(e1.startTime) - new Date(e2.startTime));
+
+        let groupEvents = [];
+        let times = [];
+        for (let index = 0; index < events.length; index++) {
+            const event = events[index];
+            let startDate = new Date(event.startTime);
+            let year = startDate.getFullYear();
+            let month = Months[startDate.getMonth()]//获取月，从0 - 11
+            let date = startDate.getDate();//获取日
+            let weekend = startDate.getDay(); //获取星期几，这里获得到的是数字1-7
+            let day = Weeks[weekend];
+            let dateStr = `${date} ${month} ${year}(${day})`;
+
+            if (times.length) {
+                let lastTime = times[times.length - 1];
+                if (lastTime !== dateStr) times.push(dateStr);
+            } else {
+                times.push(dateStr);
+            }
+
+            if (groupEvents.length > 0) {
+                let lastItem = groupEvents[groupEvents.length - 1];
+                if (lastItem.date === dateStr) {
+                    lastItem.events.push(event);
+                } else {
+                    if (!curTime.length || curTime === dateStr) {
+                        groupEvents.push({ date: dateStr, events: [event] })
+                    }
+                }
+            } else {
+                if (!curTime.length || curTime === dateStr) {
+                    groupEvents.push({ date: dateStr, events: [event] })
+                }
+            }
+        }
+        return { groupEvents, times };
+    }
+
     return (
         <div className='s-list-result s-list-box' >
             <h1>赛程表</h1>
-            <SelectView />
-            <EventList datas={[1, 2, 3]} />
+            <div className='s-select-box'>
+                <SelectItem placeholder='选择赛事' value={category} datas={Categories} select={(c) => {
+                    setCurCategory(c);
+                    setCurTime('');
+                }} />
+                <SelectItem placeholder='选择比赛时间' value={curTime} datas={times} select={t => setCurTime(t)} />
+                <p>下载完整赛程表</p>
+            </div>
+            <EventList datas={groupEvents} />
         </div>
     )
 })
 
+export const SelectItem = ({ datas, value, placeholder, select }) => {
 
-export const SelectView = ({ datas }) => {
-    return (
-        <div className='s-select-box'>
-            <SelectItem datas={['A', 'B', 'C', 'D']} />
-            <div className='s-select-item'>
-                <input className='s-sel-time' placeholder='选择比赛'></input>
-                <span></span>
-            </div>
-            <p>下载完整赛程表</p>
-        </div>
-    )
-}
-
-
-export const SelectItem = ({ datas }) => {
     const [isFocus, setIsFocus] = useState(false);
-    const [selectText, setSelectText] = useState('');
+    const [selectText, setSelectText] = useState(null);
+    const selectAction = (text) => {
+        setSelectText(text);
+        select && select(text);
+    }
+
+    useEffect(() => {
+        setSelectText(value);
+    }, [value])
+
     return (
         <div className='s-select-item'>
             <input
                 className='s-sel-event'
-                placeholder='选择赛事'
+                placeholder={placeholder}
                 readOnly
-                value={selectText}
+                value={selectText || ''}
                 onFocus={() => setIsFocus(true)}
                 onBlur={() => setTimeout(() => { setIsFocus(false) }, 10)}
             />
@@ -46,7 +120,7 @@ export const SelectItem = ({ datas }) => {
             <ul style={{ display: isFocus ? 'block' : 'none' }}>
                 {
                     datas.map((d, i) => {
-                        return <li onClick={() => setSelectText(d)} key={i}>{d}</li>
+                        return <li onClick={() => selectAction(d)} key={i}>{d}</li>
                     })
                 }
             </ul>
@@ -56,44 +130,59 @@ export const SelectItem = ({ datas }) => {
 
 
 const EventList = ({ datas }) => {
-    const [selectFlags, setSelectFlags] = useState(datas.map((_, i) => i === 0 ? true : false))
-    let active = { height: '240px', transition: 'all 0.2s' };
-    let unActive = { height: '0', transition: 'all 0.2s' };
+    if (datas.length == 0) return null;
+    const [selectFlags, setSelectFlags] = useState([]);
+
+    const _handleTime = (time) => {
+        let date = new Date(time);
+        let hour = date.getHours();
+        let min = date.getMinutes();
+        return `${hour < 10 ? '0' + hour : hour}:${min < 10 ? '0' + min : min} `
+    }
+
+    useEffect(() => {
+        let selectFlags = datas.map((_, i) => i === 0 ? true : false);
+        setSelectFlags(selectFlags);
+    }, [datas])
+
     return (
         <ul className='s-list'>
             {
                 datas.map((data, index) => {
                     return (
                         <li key={index}
-                            style={selectFlags[index] ? { borderBottom: 'none' } : {}}
-                        >
+                            style={selectFlags[index] ? { borderBottom: 'none' } : {}} >
                             <div
                                 className='s-list-header'
                                 onClick={() => {
                                     selectFlags[index] = !selectFlags[index];
                                     setSelectFlags([...selectFlags]);
                                 }}>
-                                <p>30 Nov 2017(星期五)</p>
+                                <p>{data.date}</p>
                                 <i></i>
                             </div>
-                            <ul style={selectFlags[index] ? active : unActive}>
+                            <ul style={{ height: selectFlags[index] ? `${(data.events.length + 1) * 60}px` : 0, transition: 'all 0.2s' }}>
                                 <li>
                                     <p>开始时间</p>
                                     <p>编号</p>
                                     <p>赛事名称</p>
-                                    <p>等级</p>
                                     <p>买入</p>
                                     <p>起始筹码</p>
                                     <i className='triangle-down'></i>
                                 </li>
-                                <li>
-                                    <p>12:00</p>
-                                    <p>1</p>
-                                    <p>红龙杯-无限德州扑克</p>
-                                    <p>Day1</p>
-                                    <p>250，000，00</p>
-                                    <p>-</p>
-                                </li>
+                                {
+                                    data.events.map((e, i) => {
+                                        return (
+                                            <li key={e.no}>
+                                                <p>{_handleTime(e.startTime)}</p>
+                                                <p>{e.no}</p>
+                                                <p>{e.title}</p>
+                                                <p>{e.buyin}</p>
+                                                <p>{e.startingChips}</p>
+                                            </li>
+                                        )
+                                    })
+                                }
                             </ul>
                         </li>
                     )

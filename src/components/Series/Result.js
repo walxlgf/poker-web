@@ -1,12 +1,16 @@
 import React, { useState, memo } from 'react'
 import '../../styles/offline-page.scss';
-import { SelectView } from './Schedule'
+import { SelectItem } from './Schedule'
 
-export default memo(() => {
+export default memo(({ series }) => {
     return (
         <div className='s-list-result  s-result-box' >
             <h1>赛事结果</h1>
-            <SelectView />
+            <div className='s-select-box'>
+                <SelectItem placeholder='选择赛事' datas={['A', 'B', 'C']} />
+                <SelectItem placeholder='选择比赛时间' datas={['2019', '2020']} />
+                <p>下载完整赛程表</p>
+            </div>
             <List />
             <div className='s-more'>查看更多</div>
         </div>
