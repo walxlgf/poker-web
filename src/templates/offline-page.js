@@ -69,6 +69,12 @@ export const pageQuery = graphql`
               bounty
               adminFee
               reEntry
+              payouts{
+                  rank
+                  amount
+                  nationality
+                  name
+              }
             }
             bannerImage {
               relativePath

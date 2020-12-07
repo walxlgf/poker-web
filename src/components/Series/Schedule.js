@@ -3,6 +3,7 @@
 import React, { useState, memo, useEffect } from 'react'
 import '../../styles/offline-page.scss';
 import { Weeks, Months, Categories } from '../../util/consts'
+import { formatMoney } from '../../util/util'
 
 export default memo(({ series, category }) => {
 
@@ -82,6 +83,7 @@ export default memo(({ series, category }) => {
             <h1>赛程表</h1>
             <div className='s-select-box'>
                 <SelectItem placeholder='选择赛事' value={category} datas={Categories} select={(c) => {
+                    if (c === curCategory) return;
                     setCurCategory(c);
                     setCurTime('');
                 }} />
@@ -177,8 +179,8 @@ const EventList = ({ datas }) => {
                                                 <p>{_handleTime(e.startTime)}</p>
                                                 <p>{e.no}</p>
                                                 <p>{e.title}</p>
-                                                <p>{e.buyin}</p>
-                                                <p>{e.startingChips}</p>
+                                                <p>{formatMoney(e.buyin)}</p>
+                                                <p>{formatMoney(e.startingChips)}</p>
                                             </li>
                                         )
                                     })

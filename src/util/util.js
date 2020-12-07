@@ -41,6 +41,16 @@ export const throttle = (fn, delay = 1000) => {
     };
 }
 
+export const formatMoney = (s) => {
+    s = s + '';
+    let l = s.split('.')[0].split('').reverse();
+    let t = '';
+    for (let i = 0; i < l.length; i++) {
+        t += l[i] + ((i + 1) % 3 == 0 && (i + 1) != l.length ? ',' : '');
+    }
+    return t.split('').reverse().join('');// + '.' + r;
+}
+
 
 // 类似x轴坐标系 求两个区间是否相交
 // 如 [1000,2000], [1800, 2100]两个区间后相交，相交部分百分比为200/300,大于50%认为相交
@@ -63,6 +73,7 @@ export const HoverAnimationView = (props) => {
     const [hoverTime, setHoverTime] = useState(null); // 时间控制下，否则鼠标移入移除会疯狂回调
     return (
         <div onMouseEnter={() => {
+            if (Date.now() - hoverTime < 50) return;
             setHoverTime(Date.now())
             setIsBtnHover(true);
         }}

@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import '../../styles/index-page.scss'
 import { Months } from '../../util/consts'
 import "animate.css";
-import { HoverAnimationView, PlaceHolderImg } from '../../util/util'
+import { HoverAnimationView, PlaceHolderImg, formatMoney } from '../../util/util'
 import Bus, { EVENTS } from '../../util/eventBus.js'
 
 
@@ -24,15 +24,6 @@ export default ({ data }) => {
         if (day < 10) day = '0' + day;
         let dateArr = [day, Months[date.getMonth()], date.getFullYear()]
         return dateArr.join(' ')
-    }
-
-    const _formatMoney = (s) => {
-        let l = s.split('.')[0].split('').reverse();
-        let t = '';
-        for (let i = 0; i < l.length; i++) {
-            t += l[i] + ((i + 1) % 3 == 0 && (i + 1) != l.length ? ',' : '');
-        }
-        return t.split('').reverse().join('');// + '.' + r;
     }
 
     const _addressOfCategory = (category) => {
@@ -57,7 +48,7 @@ export default ({ data }) => {
                     <p className='t-desc'>{description}</p>
                     <div className='t-prizeContainer' style={{ display: prize ? 'block' : 'none' }}>
                         <span className='t-text'>奖金</span>
-                        <p className='t-amount'>{`${currency} ${_formatMoney(prize)}`}</p>
+                        <p className='t-amount'>{`${currency} ${formatMoney(prize)}`}</p>
                     </div>
                     <Link className='t-toDetail' /*to={edge.node.fields.slug} */>
                         <HoverAnimationView>最新晉級名單</HoverAnimationView>
