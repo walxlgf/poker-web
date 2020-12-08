@@ -15,8 +15,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         }
     }
 
-    let data = entry.getIn(['data', 'thisYearSeriess']) ? entry.getIn(['data', 'thisYearSeriess']).toJS() : {};
-    let thisYearSeriess = { frontmatter: { thisYearSeriess: data } }
+    let thisYearSeriess = entry.getIn(['data', 'thisYearSeriess']) ? entry.getIn(['data', 'thisYearSeriess']).toJS() : {};
 
     return (
         <IndexPageTemplate

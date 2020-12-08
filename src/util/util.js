@@ -1,4 +1,5 @@
 
+import React, { useState, useEffect } from "react"
 
 export const scrollAnimation = (currentY, targetY) => {
     // 计算需要移动的距离
@@ -40,6 +41,16 @@ export const throttle = (fn, delay = 1000) => {
     };
 }
 
+export const formatMoney = (s) => {
+    s = s + '';
+    let l = s.split('.')[0].split('').reverse();
+    let t = '';
+    for (let i = 0; i < l.length; i++) {
+        t += l[i] + ((i + 1) % 3 == 0 && (i + 1) != l.length ? ',' : '');
+    }
+    return t.split('').reverse().join('');// + '.' + r;
+}
+
 
 // 类似x轴坐标系 求两个区间是否相交
 // 如 [1000,2000], [1800, 2100]两个区间后相交，相交部分百分比为200/300,大于50%认为相交
@@ -54,4 +65,43 @@ export const rangesIntersect = (ranges1, ranges2) => {
     // ranges2和ranges1后相交
     let scale = (ranges2[1] - ranges1[1]) / (ranges2[1] - ranges2[0]);
     return scale < 0.5;
+}
+
+export const HoverAnimationView = (props) => {
+    const animationName = props.animationName || 'animate__bounceIn';
+    const [isBtnHover, setIsBtnHover] = useState(false);
+    const [hoverTime, setHoverTime] = useState(null); // 时间控制下，否则鼠标移入移除会疯狂回调
+    return (
+        <div onMouseEnter={() => {
+            if (Date.now() - hoverTime < 50) return;
+            setHoverTime(Date.now())
+            setIsBtnHover(true);
+        }}
+            onMouseLeave={() => {
+                if (Date.now() - hoverTime < 50) return;
+                setIsBtnHover(false)
+            }}
+            className={`animate__animated ${isBtnHover ? animationName : ''}`} >
+            {props.children}
+        </div>
+    )
+}
+
+export const PlaceHolderImg = (props) => {
+    const { src, plscr } = props;
+    const [showSrc, setShowSrc] = useState(src);
+    return (
+        <img
+            {...props}
+            src={showSrc}
+            onError={() => plscr && setShowSrc(plscr)}
+        />
+    );
+}
+
+
+export const useWindowScrollHook = (fn) => {
+    useEffect(() => {
+        window.addEventListener('scroll', throttle(fn, 100));
+    }, [])
 }

@@ -1,5 +1,11 @@
 @import './common.scss';
 
+@mixin animtionDelay {
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
 // 最新赛事
 .latestseries {
     .t-content {
@@ -21,6 +27,7 @@
         }
 
         .t-itemContainer {
+            @include animtionDelay;
             display: flex;
             flex-direction: row;
             height: 380px;
@@ -34,6 +41,7 @@
                     color: white;
                     font-family: 'Noto Sans TC';
                     margin-top: -12px;
+                    width: 95%;
                 }
 
                 .t-desc {
@@ -141,6 +149,7 @@
     z-index: 11;
 
     .o-content {
+        @include animtionDelay;
         width: 1200px;
         margin: 0 auto;
 
@@ -298,8 +307,10 @@
         }
 
         .o-more {
+            display: block;
             width: 250px;
             height: 65px;
+            margin: 0 auto;
             border: solid 1px #fff;
             text-align: center;
             line-height: 65px;
@@ -354,6 +365,7 @@ $photoScale: 1.1;
     z-index: 99;
 
     .m-content {
+        @include animtionDelay;
 
         .m-title {
             padding-top: 20px;
@@ -461,7 +473,7 @@ $photoScale: 1.1;
         width: 0%;
         display: inline-block;
         background-color: $color;
-        transition: all 1s ease 0.3s;
+        transition: all 1s ease 0s;
         opacity: 0;
     }
 
@@ -491,7 +503,7 @@ $photoScale: 1.1;
 
         div {
             border-top: 15px solid white;
-            transition-delay: 0.7s;
+            transition-delay: 0.8s;
         }
     }
 
@@ -507,7 +519,7 @@ $photoScale: 1.1;
         text-align: right;
 
         div {
-            transition-delay: 0.5s;
+            transition-delay: 0.3s;
         }
     }
 
