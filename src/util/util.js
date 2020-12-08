@@ -105,3 +105,31 @@ export const useWindowScrollHook = (fn) => {
         window.addEventListener('scroll', throttle(fn, 100));
     }, [])
 }
+
+/*
+export const _export = () => {
+    import { jsPDF } from "jspdf";
+    import html2canvas from 'html2canvas';
+    let content = document.querySelector("#hhhhhhhh");
+    let offsetTop = content.offsetTop;
+    let offsetBottom = 600;
+    html2canvas(content, {
+        width: window.screen.availWidth, // 截图区域的宽
+        height: document.documentElement.scrollHeight - offsetTop - offsetBottom, // 截图区域的高
+        x: 0,  // 截图区域相对x偏移点
+        y: offsetTop,// 截图区域相对y偏移点，就是相对浏览器顶端的偏移
+        backgroundColor: '#333',
+    }).then(canvas => {
+        document.body.append(canvas)
+        var pageData = canvas.toDataURL('image/jpeg', 1.0);// 画布转为图片
+        var pdf = new jsPDF('', 'pt', 'a4');// 生成pdf对象,方向默认竖直，尺寸ponits，格式a4[595.28,841.89]
+        // pdf.addImage(pageData, 'JPEG', 0, 0, 595.28, 592.28 / canvas.width * canvas.height); // addImage后两个参数控制添加图片的尺寸，此处将页面高度按照a4纸宽高比列进行压缩
+        pdf.addPage();
+        pdf.addPage();
+        pdf.addPage();
+        pdf.addImage(pageData, 'JPEG', 0, 0, 595, canvas.height); // addImage后两个参数控制添加图片的尺寸，此处将页面高度按照a4纸宽高比列进行压缩
+        // pdf.save(title + '-authorization.pdf'); // 文件名可以自己取一个
+        pdf.save("a4.pdf");
+    });
+}
+*/

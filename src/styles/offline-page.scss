@@ -44,64 +44,6 @@
         flex-direction: row;
         justify-content: space-between;
 
-        .s-select-item {
-            height: 40px;
-            width: 300px;
-            position: relative;
-
-            input {
-                width: 150px;
-                height: 40px;
-                outline-style: none;
-                border-width: 1px;
-                border-color: rgba($color: #fff, $alpha: 0.5);
-                border-style: solid;
-                background-color: transparent;
-                padding-left: 10px;
-                color: white;
-                vertical-align: top;
-                box-sizing: border-box;
-
-                // input的placeholder设置样式
-                &::-webkit-input-placeholder {
-                    color: white;
-                }
-            }
-
-            span {
-                display: inline-block;
-                width: 40px;
-                height: 40px;
-                background-color: $nor-red;
-                margin: 0 20px 0 3px;
-            }
-
-            ul {
-                position: absolute;
-                width: 200px;
-                max-height: 350px;
-                overflow: scroll;
-                list-style: none;
-                z-index: 9999;
-                padding: 5px 0;
-                border-radius: 5px;
-                background-color: white;
-
-                li {
-                    height: 40px;
-                    padding-left: 10px;
-                    line-height: 40px;
-                    color: #888888;
-                    cursor: pointer;
-                    white-space: nowrap;
-
-                    &:hover {
-                        background-color: #eee;
-                    }
-                }
-            }
-        }
-
         p {
             width: 200px;
             height: 40px;
@@ -111,6 +53,69 @@
             text-align: center;
             font-size: 16px;
             line-height: 40px;
+        }
+    }
+}
+
+// SelectItem
+.s-select-item {
+    height: 40px;
+    width: 300px;
+    position: relative;
+
+    input {
+        width: 150px;
+        height: 40px;
+        outline-style: none;
+        border-width: 1px;
+        border-color: rgba($color: #fff, $alpha: 0.5);
+        border-style: solid;
+        background-color: transparent;
+        padding-left: 10px;
+        color: white;
+        vertical-align: top;
+        box-sizing: border-box;
+
+        // input的placeholder设置样式
+        &::-webkit-input-placeholder {
+            color: white;
+        }
+    }
+
+    span {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: $nor-red;
+        margin: 0 20px 0 3px;
+    }
+
+    ul {
+        position: absolute;
+        width: 200px;
+        max-height: 350px;
+        overflow: scroll;
+        list-style: none;
+        z-index: 9999;
+        padding: 5px 0;
+        border-radius: 5px;
+        background-color: white;
+
+        li {
+            height: 40px;
+            padding-left: 10px;
+            line-height: 40px;
+            color: #888888;
+            cursor: pointer;
+            white-space: nowrap;
+
+            &:hover {
+                background-color: #eee;
+            }
+
+            &.active {
+                background-color: rgb(233, 247, 254);
+            }
         }
     }
 }
@@ -152,24 +157,20 @@
                 }
             }
 
-            ul {
+            >ul {
                 width: 100%;
                 list-style: none;
                 height: 0;
                 overflow: hidden;
 
-                li {
+                >li {
                     display: flex;
                     justify-content: space-between;
                     height: 60px;
                     line-height: 60px;
-                    background-color: #ddd;
+                    background-color: #bbb;
                     padding: 0 20px;
                     position: relative;
-
-                    &:nth-child(even) {
-                        background-color: white;
-                    }
 
                     &:nth-child(1) {
                         background-color: $nor-red;
@@ -185,6 +186,15 @@
                             bottom: -12px;
                             z-index: 999;
                         }
+                    }
+
+                    .s-list-seperator {
+                        position: absolute;
+                        left: 20px;
+                        right: 20px;
+                        bottom: 0;
+                        height: 1px;
+                        background-color: rgba($color: #fff, $alpha: 0.5);
                     }
                 }
             }

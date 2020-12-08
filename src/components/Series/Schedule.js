@@ -3,7 +3,8 @@
 import React, { useState, memo, useEffect } from 'react'
 import '../../styles/offline-page.scss';
 import { Weeks, Months, Categories } from '../../util/consts'
-import { formatMoney } from '../../util/util'
+import { formatMoney } from '../../util/util';
+import SelectItem from './SelectItem'
 
 export default memo(({ series, category }) => {
 
@@ -95,42 +96,6 @@ export default memo(({ series, category }) => {
     )
 })
 
-export const SelectItem = ({ datas, value, placeholder, select }) => {
-
-    const [isFocus, setIsFocus] = useState(false);
-    const [selectText, setSelectText] = useState(null);
-    const selectAction = (text) => {
-        setSelectText(text);
-        select && select(text);
-    }
-
-    useEffect(() => {
-        setSelectText(value);
-    }, [value])
-
-    return (
-        <div className='s-select-item'>
-            <input
-                className='s-sel-event'
-                placeholder={placeholder}
-                readOnly
-                value={selectText || ''}
-                onFocus={() => setIsFocus(true)}
-                onBlur={() => setTimeout(() => { setIsFocus(false) }, 10)}
-            />
-            <span></span>
-            <ul style={{ display: isFocus ? 'block' : 'none' }}>
-                {
-                    datas.map((d, i) => {
-                        return <li onClick={() => selectAction(d)} key={i}>{d}</li>
-                    })
-                }
-            </ul>
-        </div>
-    )
-}
-
-
 const EventList = ({ datas }) => {
     if (datas.length == 0) return null;
     const [selectFlags, setSelectFlags] = useState([]);
@@ -174,6 +139,7 @@ const EventList = ({ datas }) => {
                                 </li>
                                 {
                                     data.events.map((e, i) => {
+                                        let showSep = i !== data.events.length - 1;
                                         return (
                                             <li key={e.no}>
                                                 <p>{_handleTime(e.startTime)}</p>
@@ -181,6 +147,7 @@ const EventList = ({ datas }) => {
                                                 <p>{e.title}</p>
                                                 <p>{formatMoney(e.buyin)}</p>
                                                 <p>{formatMoney(e.startingChips)}</p>
+                                                <div style={{ display: showSep ? 'block' : 'none' }} className='s-list-seperator' />
                                             </li>
                                         )
                                     })

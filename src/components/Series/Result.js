@@ -1,6 +1,6 @@
 import React, { useState, memo, useEffect } from 'react'
 import '../../styles/offline-page.scss';
-import { SelectItem } from './Schedule'
+import SelectItem from './SelectItem'
 import { formatMoney } from '../../util/util'
 
 
