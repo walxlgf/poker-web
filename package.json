@@ -56,7 +56,7 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "npm run develop",
-    "build": "npm run clean && export CHOKIDAR_USEPOLLING=1 && gatsby build && gatsby serve -H 0.0.0.0 -p 9000",
+    "build": "npm run clean && export CHOKIDAR_USEPOLLING=1 && gatsby build",
     "develop": "npm run clean && export CHOKIDAR_USEPOLLING=1 && gatsby develop -H 0.0.0.0 -p 8000",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
