@@ -13,7 +13,7 @@ export const SeriesPageTemplate = ({
 }) => {
     return (
         <div className="container is-max-widescreen">
-            {title} - {description} - {!!bannerImage && typeof bannerImage === 'string' ? bannerImage : bannerImage.relativePath} - {`Events:${events && events.length}`}
+            {title} - {description} - {`Events:${events && events.length}`}
         </div>
     )
 }
