@@ -9,7 +9,7 @@ jobs:
   build:
 
     runs-on: self-hosted
-
+    continue-on-error: true
     steps:
     - uses: actions/checkout@v2
 
@@ -26,4 +26,4 @@ jobs:
       run: docker container stop poker-web && docker container rm poker-web
 
     - name: Start new Container
-      run: docker run -d --name poker-web -p 80:80 poker-web:v1
+      run: docker run -d --name poker-web -p 80:80 poker-web:v1z
