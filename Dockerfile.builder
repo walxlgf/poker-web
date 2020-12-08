@@ -2,4 +2,4 @@
 FROM hello-world:install
 COPY . .
 RUN pwd
-RUN gatsby build
+RUN npm build
