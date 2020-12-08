@@ -1,4 +1,4 @@
-FROM hello-world:builder as builder
+FROM poker-web:builder as builder
 
 FROM nginx:alpine AS release
 COPY --from=builder /usr/src/app/public /usr/share/nginx/html
