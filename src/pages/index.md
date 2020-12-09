@@ -5,14 +5,14 @@ thisYearSeriess:
   title: 红龙杯赛事表
   year: 2020
   events:
-    - name: 2020红龙杯
+    - name: 2020红龙杯AA
       subName: 青龙杯济州站
       state: 1
       startTime: 2020-12-11T07:38:54.744Z
       endTime: 2020-12-11T07:38:54.744Z
       address: 韩国济州岛
       attention: 101
-    - name: 2020红龙杯
+    - name: 2020红龙杯AABB
       subName: Online系列賽
       state: 2
       startTime: 2020-12-13T07:38:54.744Z
