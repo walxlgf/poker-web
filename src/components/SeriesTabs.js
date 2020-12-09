@@ -3,8 +3,8 @@ import '../styles/common.scss'
 
 export default (props) => {
     const { names, icons } = props;
-    const [currentTabIndex, setCurrentTabIndex] = useState(2);
-    const [activeIndexs, setActiveIndexs] = useState([2])
+    const [currentTabIndex, setCurrentTabIndex] = useState(1);
+    const [activeIndexs, setActiveIndexs] = useState([1])
 
     const _tabChange = (index) => {
         setCurrentTabIndex(index);

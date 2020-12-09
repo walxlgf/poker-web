@@ -3,7 +3,8 @@
 import React, { useState, memo, useEffect } from 'react'
 import '../../styles/offline-page.scss';
 import { Weeks, Months, Categories } from '../../util/consts'
-import { formatMoney } from '../../util/util'
+import { formatMoney } from '../../util/util';
+import SelectItem from './SelectItem'
 
 export default memo(({ series, category }) => {
 
@@ -95,45 +96,32 @@ export default memo(({ series, category }) => {
     )
 })
 
-export const SelectItem = ({ datas, value, placeholder, select }) => {
-
-    const [isFocus, setIsFocus] = useState(false);
-    const [selectText, setSelectText] = useState(null);
-    const selectAction = (text) => {
-        setSelectText(text);
-        select && select(text);
-    }
+const liHeight = 60;
+const EventList = ({ datas }) => {
+    // 记录所有row是否被点击了，以及row的高度
+    const [selectItems, setSelectItems] = useState([]);
 
     useEffect(() => {
-        setSelectText(value);
-    }, [value])
+        let selectItems = [];
+        for (let index = 0; index < datas.length; index++) {
+            let subItems = [];
+            for (let j = 0; j < datas[index].events.length; j++) {
+                subItems.push({ select: false, height: liHeight + 'px' });
+            }
+            selectItems.push({ select: false, subItems, height: 0 });
+        }
+        setSelectItems(selectItems);
+    }, [datas])
 
-    return (
-        <div className='s-select-item'>
-            <input
-                className='s-sel-event'
-                placeholder={placeholder}
-                readOnly
-                value={selectText || ''}
-                onFocus={() => setIsFocus(true)}
-                onBlur={() => setTimeout(() => { setIsFocus(false) }, 10)}
-            />
-            <span></span>
-            <ul style={{ display: isFocus ? 'block' : 'none' }}>
-                {
-                    datas.map((d, i) => {
-                        return <li onClick={() => selectAction(d)} key={i}>{d}</li>
-                    })
-                }
-            </ul>
-        </div>
-    )
-}
-
-
-const EventList = ({ datas }) => {
-    if (datas.length == 0) return null;
-    const [selectFlags, setSelectFlags] = useState([]);
+    const _getItemHeight = (item) => {
+        if (!item.select) return 0;
+        let height = liHeight;
+        for (let j = 0; j < item.subItems.length; j++) {
+            const subItem = item.subItems[j];
+            height += subItem.select ? 3 * liHeight : liHeight;
+        }
+        return height + 'px';
+    }
 
     const _handleTime = (time) => {
         let date = new Date(time);
@@ -142,53 +130,72 @@ const EventList = ({ datas }) => {
         return `${hour < 10 ? '0' + hour : hour}:${min < 10 ? '0' + min : min} `
     }
 
-    useEffect(() => {
-        let selectFlags = datas.map((_, i) => i === 0 ? true : false);
-        setSelectFlags(selectFlags);
-    }, [datas])
-
     return (
         <ul className='s-list'>
-            {
-                datas.map((data, index) => {
-                    return (
-                        <li key={index}
-                            style={selectFlags[index] ? { borderBottom: 'none' } : {}} >
-                            <div
-                                className='s-list-header'
-                                onClick={() => {
-                                    selectFlags[index] = !selectFlags[index];
-                                    setSelectFlags([...selectFlags]);
-                                }}>
-                                <p>{data.date}</p>
-                                <i></i>
-                            </div>
-                            <ul style={{ height: selectFlags[index] ? `${(data.events.length + 1) * 60}px` : 0, transition: 'all 0.2s' }}>
-                                <li>
-                                    <p>开始时间</p>
-                                    <p>编号</p>
-                                    <p>赛事名称</p>
-                                    <p>买入</p>
-                                    <p>起始筹码</p>
-                                    <i className='triangle-down'></i>
-                                </li>
-                                {
-                                    data.events.map((e, i) => {
-                                        return (
-                                            <li key={e.no}>
-                                                <p>{_handleTime(e.startTime)}</p>
-                                                <p>{e.no}</p>
-                                                <p>{e.title}</p>
-                                                <p>{formatMoney(e.buyin)}</p>
-                                                <p>{formatMoney(e.startingChips)}</p>
-                                            </li>
-                                        )
-                                    })
-                                }
-                            </ul>
-                        </li>
-                    )
-                })
+            { datas.map((data, index) => {
+                let item = selectItems[index] || {};
+                return (
+                    <li key={index} style={item.select ? { borderBottom: 'none' } : {}} >
+                        <div
+                            className='s-list-header'
+                            onClick={() => {
+                                item.select = !item.select;
+                                item.height = _getItemHeight(item);
+                                setSelectItems([...selectItems]);
+                            }}>
+                            <p>{data.date}</p>
+                            <i></i>
+                        </div>
+                        <ul style={{ height: item.height, transition: 'all 0.2s' }}>
+                            <li className='s-in-list-header'>
+                                <p>开始时间</p>
+                                <p>编号</p>
+                                <p>赛事名称</p>
+                                <p>买入</p>
+                                <p>起始筹码</p>
+                                <i className='triangle-down'></i>
+                            </li>
+                            {data.events.map((e, i) => {
+                                let subItem = item.subItems && item.subItems[i] || {};
+                                let sepOpacity = i === data.events.length - 1 || subItem.select ? 0 : 1;
+                                return (
+                                    <li style={{ height: subItem.height, transition: 'all 0.2s' }} key={e.no}>
+                                        <div onClick={() => {
+                                            subItem.select = !subItem.select;
+                                            item.height = _getItemHeight(item);
+                                            subItem.height = subItem.select ? 3 * liHeight + 'px' : liHeight + 'px';
+                                            setSelectItems([...selectItems]);
+                                        }}>
+                                            <p>{_handleTime(e.startTime)}</p>
+                                            <p>{e.no}</p>
+                                            <p>{e.title}</p>
+                                            <p>{formatMoney(e.buyin)}</p>
+                                            <p>{formatMoney(e.startingChips)}</p>
+                                            <i className='triangle-down'></i>
+                                            <div className='s-list-seperator' style={{ opacity: sepOpacity, transition: 'all 0.2s' }} />
+                                        </div>
+                                        <div>
+                                            <p>开始时间</p>
+                                            <p>编号</p>
+                                            <p>赛事名称</p>
+                                            <p>买入</p>
+                                            <p>起始筹码</p>
+                                            <div className='s-list-seperator' style={{ backgroundColor: '#ddd' }} />
+                                        </div>
+                                        <div>
+                                            <p>1次/组</p>
+                                            <p>200000</p>
+                                            <p>Level 1</p>
+                                            <p>20分钟</p>
+                                            <p>剩余12%参赛选手</p>
+                                        </div>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </li>
+                )
+            })
             }
         </ul>
     )
