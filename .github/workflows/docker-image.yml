@@ -16,7 +16,7 @@ jobs:
       run: docker build -f Dockerfile.install -t poker-web:install .
 
     - name: Build the Docker  builder image
-      run: docker build -f Dockerfile.builder --no-cache  -t poker-web:builder .
+      run: docker build -f Dockerfile.builder --no-cache -t poker-web:builder .
 
     - name: Build the Docker  release image
       run: docker build -f Dockerfile.release --no-cache -t poker-web:v1 .
