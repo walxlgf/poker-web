@@ -3,4 +3,3 @@ RUN yarn global add gatsby-cli
 WORKDIR /usr/src/app
 COPY package.json . 
 RUN npm install --only=production
-RUN pwd
