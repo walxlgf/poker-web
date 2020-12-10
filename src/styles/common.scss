@@ -1,5 +1,7 @@
 $nor-red: #db2c2d;
-$deep-red: #96220e;
+$deep-red: #a41f21;
+$line-width: 0.75px;
+$font-family: 'Noto Sans TC';
 
 // 文本显示几行的混合
 @mixin t-ellipsis($lines) {
@@ -49,33 +51,7 @@ $deep-red: #96220e;
     }
 }
 
-// SeriesTabs
-.s-tabs {
-    width: 800px;
-    height: 90px;
-    display: flex;
-    flex-direction: row;
-    margin: -45px auto;
-
-    .s-tab-item {
-        width: 200px;
-        height: 90px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        margin-right: 2px;
-        background-color: gray;
-
-        p {
-            margin-left: 10px;
-            margin-bottom: 0;
-            color: white;
-            font-size: 17px;
-        }
-
-        &.isActive {
-            background-color: $nor-red;
-        }
-    }
+// 用于设置小于1的边框
+@mixin minBorder($color, $w: $line-width) {
+    box-shadow: 0px 0px 0px $w $color;
 }
