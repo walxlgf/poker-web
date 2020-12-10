@@ -1,5 +1,5 @@
 
 FROM poker-web:install
 COPY . .
-RUN pwd
-RUN ["npm","run","build"]
+# CMD ["gatsby","build"]
+CMD ["npm","run","build"]
