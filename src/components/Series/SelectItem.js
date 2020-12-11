@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import '../../styles/common.scss'
 
 export default ({ datas, value, placeholder, select }) => {
 

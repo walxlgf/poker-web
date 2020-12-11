@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo, useMemo } from 'react'
+import React, { useState } from 'react'
 import '../styles/common.scss'
 
 export default (props) => {

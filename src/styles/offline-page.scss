@@ -1,4 +1,4 @@
-@import './common.scss';
+@import './mixin.scss';
 
 // 线下赛事整体框架
 .s-container {
@@ -6,10 +6,10 @@
     position: relative;
     padding-bottom: 10px;
 
-    .s-image-content {
-        width: 1920px;
-        height: 800px;
-        margin: 0 auto;
+    .topBanner {
+        height: 650px;
+        width: 100%;
+        object-fit: cover;
     }
 }
 
@@ -48,7 +48,7 @@
                 font-size: 21px;
                 font-weight: 300;
                 margin-bottom: 15px;
-                opacity: 0.7;
+                opacity: 0.9;
                 width: 80%;
                 margin-left: 42px;
             }
@@ -279,71 +279,6 @@
     }
 }
 
-// SelectItem
-.s-select-item {
-    height: 55px;
-    width: 310px;
-    position: relative;
-    display: flex;
-
-    input {
-        width: 250px;
-        height: 100%;
-        outline-style: none;
-        border: 1px solid rgba($color: #fff, $alpha: 0.5);
-        background-color: transparent;
-        padding-left: 20px;
-        color: white;
-        font-size: 16px;
-        font-weight: 300;
-        font-family: $font-family;
-
-        // input的placeholder设置样式
-        &::-webkit-input-placeholder {
-            color: white;
-        }
-    }
-
-    span {
-        display: inline-block;
-        width: 55px;
-        height: 55px;
-        background-color: $nor-red;
-        margin: 0 25px 0 3px;
-    }
-
-    ul {
-        position: absolute;
-        top: 105%;
-        width: 232px;
-        max-height: 350px;
-        overflow: scroll;
-        list-style: none;
-        z-index: 9999;
-        padding: 5px 0;
-        border-radius: 5px;
-        background-color: white;
-
-        li {
-            height: 40px;
-            padding-left: 10px;
-            line-height: 40px;
-            box-sizing: border-box;
-            color: #888888;
-            cursor: pointer;
-            white-space: nowrap;
-
-            &:hover {
-                background-color: #eee;
-            }
-
-            &.active {
-                background-color: rgb(233, 247, 254);
-            }
-        }
-    }
-}
-
 // 赛程表
 .s-list-box {
     .s-list {
@@ -370,6 +305,7 @@
                     color: white;
                     font-size: 28px;
                     font-family: $font-family;
+                    margin-bottom: 0;
                 }
 
                 i {
@@ -403,6 +339,7 @@
                         margin-top: 13px;
                         padding-left: 15px;
                         margin-left: -15px;
+                        color: white;
                         border-left: 1px solid #811213;
 
                         &:nth-child(1) {
@@ -421,7 +358,14 @@
                 }
 
                 .s-in-list-other {
-                    overflow: hidden;
+                    display: flex;
+                    height: 70px;
+                    line-height: 70px;
+                    color: black;
+                    font-weight: 300;
+                    font-size: 18px;
+                    font-family: $font-family;
+                    white-space: nowrap;
 
                     &:nth-child(even) {
                         background-color: #f1f1f1;
@@ -430,42 +374,142 @@
                     &:nth-child(odd) {
                         background-color: #d5d7d8;
                     }
-
-                    div {
-                        display: flex;
-                        align-items: center;
-                        height: 70px;
-                        line-height: 70px;
-                        position: relative;
-                        color: black;
-                        font-weight: 300;
-                        font-size: 18px;
-                        font-family: $font-family;
-                        white-space: nowrap;
-
-                        // &:nth-child(1) {
-                        //     position: relative;
-                        //     background-color: #d5d7d8;
-
-                        //     .triangle-down {
-                        //         @include triangle(bottom, 12px, #d5d7d8);
-                        //         position: absolute;
-                        //         left: 20px;
-                        //         bottom: -12px;
-                        //         z-index: 999;
-                        //     }
-                        // }
-
-                        // .s-list-seperator {
-                        //     position: absolute;
-                        //     left: 20px;
-                        //     right: 20px;
-                        //     bottom: 0;
-                        //     height: 1px;
-                        //     background-color: rgba($color: red, $alpha: 0.5);
-                        // }
-                    }
                 }
+            }
+        }
+    }
+}
+
+// 赛程表event详情的modal弹框
+.modal-box {
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    overflow: scroll;
+
+    .m-content {
+        width: 697px;
+        // height: 1144px;
+        background-color: white;
+        margin: 150px auto;
+        padding: 25px;
+        padding-bottom: 50px;
+
+        .header {
+            display: flex;
+            align-items: center;
+            height: 70px;
+            background-color: $nor-red;
+            justify-content: space-between;
+            padding: 0 25px;
+
+            p {
+                color: white;
+                font-size: 25px;
+                font-family: $font-family;
+            }
+
+            i {
+                background: url('../img/eye.png') no-repeat center;
+                background-size: contain;
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .title {
+            color: black;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: $font-family;
+            margin: 20px 25px;
+        }
+
+        .descItem {
+            border-bottom: 1px solid #d5d7d8;
+            padding: 0 25px;
+            display: flex;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: $font-family;
+            color: black;
+            line-height: 60px;
+
+            .left {
+                flex: 3;
+                display: flex;
+
+                .key {
+                    width: 106px;
+                }
+            }
+
+            .right {
+                flex: 2.4;
+                display: flex;
+
+                .key {
+                    width: 144px;
+                }
+            }
+
+            .left .value,
+            .right .value {
+                font-weight: 300;
+            }
+        }
+
+        table {
+            width: 647px;
+            margin-top: 30px;
+
+            tr {
+                display: flex;
+            }
+
+            th,
+            td {
+                font-size: 18px;
+                font-family: $font-family;
+                color: black;
+                font-weight: 500;
+                height: 50px;
+                line-height: 50px;
+                flex: 1;
+
+                &:nth-child(1) {
+                    padding-left: 20px;
+                }
+            }
+
+            thead {
+                background-color: #d5d7d8;
+            }
+
+            tbody tr {
+                border-bottom: 1px solid #d5d7d8;
+
+                td {
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .m-bottom {
+            margin: 20px auto;
+            width: 270px;
+            display: flex;
+            justify-content: space-between;
+
+            .share,
+            .download {
+                width: 120px;
+                height: 45px;
+                background-color: $nor-red;
             }
         }
     }
@@ -479,59 +523,81 @@
         background-color: $deep-red;
         width: 100%;
         list-style: none;
-        margin-top: 50px;
+        margin-top: 59px;
 
-        li {
+        .header-item {
             display: flex;
-            justify-content: space-between;
-            height: 60px;
-            line-height: 60px;
-            background-color: #ddd;
-            padding: 0 20px;
+            height: 70px;
+            line-height: 70px;
+            background-color: $nor-red;
+            align-items: center;
+
+            p {
+                height: 35px;
+                line-height: 35px;
+                color: white;
+                font-size: 18px;
+                font-family: $font-family;
+                font-weight: bold;
+                padding-left: 15px;
+                margin-left: -15px;
+                border-left: 1px solid #811213;
+
+                &:nth-child(1) {
+                    border-left: none;
+                    margin-left: 59px;
+                }
+            }
+        }
+
+        .other-item {
+            display: flex;
+            height: 70px;
+            line-height: 70px;
+            background-color: #d5d7d8;
+            color: black;
+            font-size: 19px;
+            font-weight: 300;
+            font-family: $font-family;
+            position: relative;
 
             &:nth-child(even) {
-                background-color: white
+                background-color: #f1f1f2
             }
 
-            &:nth-child(1) {
-                background-color: $nor-red;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 0 20px;
+            .rank {
+                margin-left: 74px;
+
+                i {
+                    display: inline-block;
+                    position: absolute;
+                    width: 179px;
+                    height: 55px;
+                    top: 7px;
+                    left: 0;
+                }
 
                 p {
-                    height: 35px;
-                    line-height: 35px;
-                    color: white;
-                    font-size: 20px;
-                    padding-left: 15px;
-                    margin-left: -15px;
-                    border-left: 1px solid #811213;
+                    position: relative;
 
-                    &:nth-child(1) {
-                        border-left: none;
-                        margin-left: 35px;
+                    &.topThree {
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 900;
                     }
                 }
             }
 
-            p {
-                &:nth-child(1) {
-                    flex: 1.4;
-                    margin-left: 50px;
-                }
+            .name {
+                display: flex;
+                align-items: center;
 
-                &:nth-child(2) {
-                    flex: 3;
-                }
-
-                &:nth-child(3) {
-                    flex: 2;
-                }
-
-                &:nth-child(4) {
-                    flex: 2;
+                img {
+                    width: 50px;
+                    height: 50px;
+                    background-color: #ccc;
+                    border-radius: 50%;
+                    margin-right: 14px;
                 }
             }
         }
@@ -543,11 +609,11 @@
         @include minBorder($nor-red);
         text-align: center;
         line-height: 65px;
-        opacity: 0.7;
         color: white;
         font-size: 18px;
-        opacity: 0.6;
-        margin: 70px auto;
+        font-weight: 500;
+        font-family: $font-family;
+        margin: 59px auto;
     }
 }
 

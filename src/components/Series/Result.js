@@ -46,7 +46,7 @@ export default memo(({ series }) => {
                         let event = curEvents.find(e => e.title === t)
                         setCurSelectEvent(event);
                     }} />
-                <p>下载完整赛程表</p>
+                <p>下载完整赛程结果</p>
             </div>
             <List payouts={isExpand ? curPayouts : curPayouts.slice(0, Math.min(curPayouts.length, 10))} />
             <div className='s-more' onClick={_expandAction} style={{ display: isShowMore ? 'block' : 'none' }}>查看更多</div>
@@ -59,15 +59,29 @@ const List = ({ payouts }) => {
     payouts = payouts.sort((s1, s2) => s1.rank - s2.rank);
     return (
         <ul>
-            <li><p>排名</p><p>获奖者</p><p>国家</p><p>奖金</p></li>
+            <li className='header-item'>
+                <p style={{ flex: 215 / 1200 }}>排名</p>
+                <p style={{ flex: 379 / 1200 }}>获奖者</p>
+                <p style={{ flex: 279 / 1200 }}>国家</p>
+                <p style={{ flex: 319 / 1200 }}>奖金</p>
+            </li>
             {
                 payouts.map((payout, i) => {
+                    let topThreeColor = i == 0 ? '#f7a929' : (i == 1 ? '#8a8c8e' : '#c06e4e');
+                    let ranks = ['冠軍', '亞軍', '季軍'];
+                    let isTopThree = payout.rank <= 3;
                     return (
-                        <li key={i}>
-                            <p>{payout.rank}</p>
-                            <p>{payout.name}</p>
-                            <p>{payout.nationality}</p>
-                            <p>{formatMoney(payout.amount)}</p>
+                        <li className='other-item' key={i}>
+                            <div className='rank' style={{ flex: 215 / 1200, }}>
+                                <i style={{ backgroundColor: topThreeColor, display: isTopThree ? 'block' : 'none' }}></i>
+                                <p className={`${isTopThree ? 'topThree' : ''}`}>{isTopThree ? ranks[payout.rank - 1] : payout.rank}</p>
+                            </div >
+                            <div className='name' style={{ flex: 379 / 1200 }}>
+                                <img style={{ display: isTopThree ? 'block' : 'none' }}></img>
+                                <p>{payout.name}</p>
+                            </div>
+                            <p style={{ flex: 279 / 1200 }}>{payout.nationality}</p>
+                            <p style={{ flex: 319 / 1200 }}>{formatMoney(payout.amount)}</p>
                         </li>
                     )
                 })
