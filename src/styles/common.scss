@@ -1,81 +1,97 @@
-$nor-red: #db2c2d;
-$deep-red: #96220e;
-
-// 文本显示几行的混合
-@mixin t-ellipsis($lines) {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: box;
-    display: -webkit-box;
-    -webkit-line-clamp: $lines;
-    -webkit-box-orient: vertical;
-}
-
-// 版心
-@mixin s-content {
-    padding-bottom: 150px;
-    width: 1200px;
-    margin: 100px auto;
-}
-
-// 三角形
-@mixin triangle($direction, $size, $borderColor) {
-    content: "";
-    height: 0;
-    width: 0;
-
-    @if $direction==top {
-        border-bottom: $size solid $borderColor;
-        border-left: $size dashed transparent;
-        border-right: $size dashed transparent;
-    }
-
-    @else if $direction==right {
-        border-left: $size solid $borderColor;
-        border-top: $size dashed transparent;
-        border-bottom: $size dashed transparent;
-    }
-
-    @else if $direction==bottom {
-        border-top: $size solid $borderColor;
-        border-left: $size dashed transparent;
-        border-right: $size dashed transparent;
-    }
-
-    @else if $direction==left {
-        border-right: $size solid $borderColor;
-        border-top: $size dashed transparent;
-        border-bottom: $size dashed transparent;
-    }
-}
+@import './mixin.scss';
 
 // SeriesTabs
 .s-tabs {
-    width: 800px;
-    height: 90px;
+    width: 966px;
+    height: 115px;
     display: flex;
-    flex-direction: row;
-    margin: -45px auto;
+    justify-content: space-between;
+    margin: -57.5px auto;
 
     .s-tab-item {
-        width: 200px;
-        height: 90px;
+        width: 240px;
+        height: 100%;
         display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: center;
-        margin-right: 2px;
-        background-color: gray;
+        background-color: #58595b;
 
         p {
             margin-left: 10px;
             margin-bottom: 0;
             color: white;
-            font-size: 17px;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: $font-family;
         }
 
         &.isActive {
             background-color: $nor-red;
+        }
+    }
+}
+
+// SelectItem
+.s-select-item {
+    height: 55px;
+    width: 310px;
+    position: relative;
+    display: flex;
+
+    input {
+        width: 250px;
+        height: 100%;
+        outline-style: none;
+        border: 1px solid rgba($color: #fff, $alpha: 0.5);
+        background-color: transparent;
+        padding-left: 20px;
+        color: white;
+        font-size: 16px;
+        font-weight: 300;
+        font-family: $font-family;
+
+        // input的placeholder设置样式
+        &::-webkit-input-placeholder {
+            color: white;
+        }
+    }
+
+    span {
+        display: inline-block;
+        width: 55px;
+        height: 55px;
+        background-color: $nor-red;
+        margin: 0 25px 0 3px;
+    }
+
+    ul {
+        position: absolute;
+        top: 105%;
+        width: 232px;
+        max-height: 350px;
+        overflow: scroll;
+        list-style: none;
+        z-index: 9999;
+        padding: 5px 0;
+        border-radius: 5px;
+        background-color: white;
+
+        li {
+            height: 40px;
+            padding-left: 10px;
+            line-height: 40px;
+            box-sizing: border-box;
+            color: #888888;
+            cursor: pointer;
+            white-space: nowrap;
+
+            &:hover {
+                background-color: #eee;
+            }
+
+            &.active {
+                background-color: rgb(233, 247, 254);
+            }
         }
     }
 }

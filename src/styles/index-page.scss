@@ -1,4 +1,4 @@
-@import './common.scss';
+@import './mixin.scss';
 
 @mixin animtionDelay {
     animation-duration: 2s;
@@ -73,7 +73,7 @@
                 .t-toDetail {
                     width: 250px;
                     height: 65px;
-                    border: solid 1px #db2c2d;
+                    @include minBorder(#db2c2d);
                     text-align: center;
                     line-height: 65px;
                     opacity: 0.7;
@@ -114,7 +114,6 @@
 
                     .t-line {
                         color: black;
-                        width: 1px;
                         margin: 0 18px;
                         line-height: 26px;
                     }
@@ -255,6 +254,7 @@
                     display: flex;
                     flex-direction: row;
                     align-items: center;
+                    margin-top: 10px;
                 }
 
                 .o-date {
@@ -275,8 +275,6 @@
                 }
 
                 .o-location {
-                    margin-top: -5px;
-
                     img {
                         width: 27px;
                         height: 31px
@@ -294,7 +292,7 @@
                 .o-detail {
                     width: 240px;
                     height: 60px;
-                    border: solid 1px #000000;
+                    @include minBorder(#000000);
                     text-align: center;
                     line-height: 60px;
                     color: white;
@@ -311,7 +309,7 @@
             width: 250px;
             height: 65px;
             margin: 0 auto;
-            border: solid 1px #fff;
+            @include minBorder(#fff);
             text-align: center;
             line-height: 65px;
             color: white;
@@ -434,7 +432,7 @@ $photoScale: 1.1;
         .m-photomore {
             width: 250px;
             height: 65px;
-            border: solid 1px #fff;
+            @include minBorder(#fff);
             text-align: center;
             line-height: 65px;
             color: white;
@@ -447,7 +445,7 @@ $photoScale: 1.1;
         .m-lookEvent {
             width: 250px;
             height: 65px;
-            border: solid 1px #fff;
+            @include minBorder(#fff);
             text-align: center;
             line-height: 65px;
             color: white;

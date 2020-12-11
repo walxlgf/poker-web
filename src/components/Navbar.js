@@ -89,11 +89,13 @@ const Navbar = class extends React.Component {
                     </div>
                 </div>
                 <div className="full-width-navbar-container">
-                    <div className="" style={{ width: '1200px', margin: '0 auto', height: '100%' }}>
+                    <div style={{ width: '1200px', margin: '0 auto', height: '100%' }}>
                         <nav
                             className="navbar is-primary"
                             role="navigation"
                             aria-label="dropdown navigation"
+                            style={{ height: '100%' }}
+
                         // style={{ marginTop: "0.0rem" }}
                         >
                             <div className="navbar-brand" >

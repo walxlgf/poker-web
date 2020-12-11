@@ -173,7 +173,7 @@ const Footer = class extends React.Component {
                                 }} placeholder='信息' />
 
                                 <div style={{
-                                    width: "250px", height: "65px", marginTop: "29px", border: "1px solid #fff"
+                                    width: "250px", height: "65px", marginTop: "29px", boxShadow: '0px 0px 0px .7px #fff'
                                 }} >
                                     <div style={{
                                         textAlign: 'center', width: "100%", marginTop: "19px",
@@ -182,7 +182,8 @@ const Footer = class extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div style={{ height: "1px", width: "100%", margin: "42px 0 19px", border: "1px solid #db2c2d" }}></div>
+
+                        <div style={{ width: "100%", margin: "42px 0 19px", boxShadow: '0px 0px 0px .7px #db2c2d' }}></div>
                         <div className="columns" style={{ width: "100%", height: "55px", marginBottom: "28px", color: "#fff", fontFamily: "Noto Sans TC", fontSize: "15px", fontWeight: 300, fontStretch: 'normal', }}>
                             <div className="column is-5" style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "flex-start" }}>
                                 <div >Copyright © 2020 Red Dragon Poker Tour 保留所有權利。</div>

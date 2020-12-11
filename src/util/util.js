@@ -106,6 +106,12 @@ export const useWindowScrollHook = (fn) => {
     }, [])
 }
 
+// 聚合函数
+export const compose = (...funcs) => {
+    if (funcs.length == 0) return arg => arg;
+    return funcs.reduce((a, b) => (...args) => a(b(...args)));
+}
+
 /*
 export const _export = () => {
     import { jsPDF } from "jspdf";
