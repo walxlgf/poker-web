@@ -1,0 +1,36 @@
+on:
+  - push
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    name: Build
+    steps:
+      - uses: actions/checkout@v2
+      - name: Gatsby Cache Folder
+        uses: actions/cache@v2
+        with:
+          path: ./.cache
+          key: gatsby-cache-folder
+      - name: Gatsby Public Folder
+        uses: actions/cache@v2
+        with:
+          path: ./public
+          key: gatsby-public-folder
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ./node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-     
+      - name: Npm install
+        run: 'npm install'
+      - name: Build app
+        # run: 'npm run build:incremental'
+        run: 'npm run build'

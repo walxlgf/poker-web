@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "..\\hello-world"
+		},
+		{
+			"path": "..\\..\\githubactions\\gatsby-incremental-builds-gh-actions-example"
 		}
 	],
 	"settings": {}
