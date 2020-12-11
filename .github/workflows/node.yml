@@ -31,6 +31,7 @@ jobs:
             ${{ runner.os }}-     
       - name: Npm install
         run: 'npm install'
-      - name: Build app incremental
-        run: 'npm run build:incremental'
-        # run: 'npm run build'
+      # - name: Build app incremental
+        # run: 'npm run build:incremental'
+      - name: Build app
+        run: 'npm run build'
