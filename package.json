@@ -57,7 +57,7 @@
     "clean": "gatsby clean",
     "start": "npm run develop",
     "build": "export GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=false && gatsby build  --log-pages",
-    "build:incremental": "export GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true && gatsby build --log-pages",
+    "build:incremental": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "npm run clean && export CHOKIDAR_USEPOLLING=1 && gatsby develop -H 0.0.0.0 -p 8000",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
