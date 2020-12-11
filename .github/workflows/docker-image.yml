@@ -21,9 +21,13 @@ jobs:
     - name: Build the Docker  release image
       run: docker build -f Dockerfile.release --no-cache -t poker-web:v1 .
 
-    - name: Run Builder Container
-      run: docker run --rm --name poker-web.builder --mount source=public,target=/usr/src/app/public poker-web:builder
+    # - name: Run Builder Container
+    #   run: docker run --rm --name poker-web.builder --mount source=public,target=/usr/src/app/public poker-web:builder
       
+    # - name: Start new Container
+    #   continue-on-error: true
+    #   run: docker run -d --name poker-web -p 80:80 --mount source=public,target=/usr/share/nginx/html poker-web:v1
+
     - name: Start new Container
       continue-on-error: true
-      run: docker run -d --name poker-web -p 80:80 --mount source=public,target=/usr/share/nginx/html poker-web:v1
+      run: docker run -d  --rm --name poker-web -p 80:80 poker-web:v1
