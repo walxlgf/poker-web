@@ -9,10 +9,6 @@
   seriesImage: "http://localhost:1337/parse/files/app/cf6510a5f300ca13e8ecb1accf640764_bg.jpeg"
   events: 
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "16B"
       title: "Red Dragon Poker Challenge - 10M GTD"
       startTime: "2020-01-09T12:17:13.038Z"
@@ -22,33 +18,14 @@
       bounty: 0
       adminFee: 6000
       staffFee: 3
-      createdAt: "2020-08-24T02:11:45.651Z"
-      updatedAt: "2020-08-25T03:04:42.822Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "SrpCEEEfhD"
-      boundEventNo: "16B"
-      boundEventTitle: "Red Dragon Poker Challenge - 10M GTD"
       boundEventEntries: 157
-      boundEventIsChild: true
-      boundEventIsParent: false
       boundEventPlayers: 139
       boundEventPrizePools: 8223660
       boundEventRemain: 19
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "01erqi5Gpe"
       objectId: "1B0yY3qsHT"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: []
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "16"
       title: "Red Dragon Poker Challenge - Final Day"
       startTime: "2020-01-09T16:38:59.432Z"
@@ -58,25 +35,10 @@
       bounty: 0
       adminFee: 6000
       staffFee: 3
-      createdAt: "2020-08-24T02:11:53.203Z"
-      updatedAt: "2020-08-25T03:04:43.950Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "O9V4slS4Yw"
-      boundEventNo: "16"
-      boundEventTitle: "Red Dragon Poker Challenge - Final Day"
       boundEventEntries: 376
-      boundEventIsChild: false
-      boundEventIsParent: true
       boundEventPlayers: 249
       boundEventPrizePools: 19694880
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "inguog7XoQ"
       objectId: "3uraEvzUsR"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |40 |  \n| 2 | 100 | 100 | 100 |40 |  \n| 3 | 100 | 200 | 200 |40 |  \n| 4 | 100 | 300 | 300 |40 |  \n| break | | | | 15 | \n| 5 | 200 | 400 | 400 |40 |  \n| 6 | 200 | 500 | 500 |40 |  \n| 7 | 300 | 600 | 600 |40 |  \n| 8 | 400 | 800 | 800 |40 |  \n| break | | | | 15 | \n| 9 | 500 | 1000 | 1000 |40 |  \n| 10 | 600 | 1200 | 1200 |40 |  \n| 11 | 800 | 1600 | 1600 |40 |  \n| 12 | 1000 | 2000 | 2000 |40 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |40 |  \n| 14 | 1500 | 3000 | 3000 |40 |  \n| 15 | 2000 | 4000 | 4000 |40 |  \n| 16 | 2500 | 5000 | 5000 |40 |  \n| break | | | | 15 | \n| 17 | 3000 | 6000 | 6000 |40 |  \n| break | | | | 60 | \n| 18 | 4000 | 8000 | 8000 |40 |  \n| 19 | 5000 | 10000 | 10000 |40 |  \n| 20 | 6000 | 12000 | 12000 |40 |  \n| break | | | | 15 | \n| 21 | 8000 | 16000 | 16000 |40 |  \n| 22 | 10000 | 20000 | 20000 |40 |  \n| 23 | 10000 | 25000 | 25000 |40 |  \n| break | | | | 15 | \n| 24 | 15000 | 30000 | 30000 |40 |  \n| 25 | 20000 | 40000 | 40000 |40 |  \n| 26 | 25000 | 50000 | 50000 |40 |  \n| break | | | | 15 | \n| 27 | 30000 | 60000 | 60000 |40 |  \n| 28 | 40000 | 80000 | 80000 |40 |  \n| 29 | 50000 | 100000 | 100000 |40 |  \n| break | | | | 15 | \n| 30 | 60000 | 120000 | 120000 |40 |  \n| 31 | 80000 | 160000 | 160000 |40 |  \n| 32 | 100000 | 200000 | 200000 |40 |  \n| break | | | | 15 | \n| 33 | 125000 | 250000 | 250000 |40 |  \n"
       payouts: 
@@ -357,10 +319,6 @@
           name: "NGUYEN NANG QUANG FLJ R"
           avatar: "http://localhost:1337/parse/files/app/49882b6fcb16c4be834fa11c834e7b14_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "18A"
       title: "Deepstack - Single Re-entry per Flight - 1A"
       startTime: "2020-01-10T04:13:27.841Z"
@@ -370,33 +328,14 @@
       bounty: 0
       adminFee: 3000
       staffFee: 3
-      createdAt: "2020-08-24T02:12:20.716Z"
-      updatedAt: "2020-08-25T03:04:45.179Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "nYcKwZE2Y7"
-      boundEventNo: "18A"
-      boundEventTitle: "Deepstack - Single Re-entry per Flight - 1A"
       boundEventEntries: 72
-      boundEventIsChild: true
-      boundEventIsParent: false
       boundEventPlayers: 68
       boundEventPrizePools: 1885680
       boundEventRemain: 10
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "o5WepBWtFw"
       objectId: "4E5HniyQEY"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |30 |  \n| 2 | 100 | 100 | 100 |30 |  \n| 3 | 100 | 200 | 200 |30 |  \n| 4 | 100 | 300 | 300 |30 |  \n| break | | | | 15 | \n| 5 | 200 | 400 | 400 |30 |  \n| 6 | 200 | 500 | 500 |30 |  \n| 7 | 300 | 600 | 600 |30 |  \n| 8 | 400 | 800 | 800 |30 |  \n| break | | | | 15 | \n| 9 | 500 | 1000 | 1000 |30 |  \n| 10 | 600 | 1200 | 1200 |30 |  \n| 11 | 800 | 1600 | 1600 |30 |  \n| 12 | 1000 | 2000 | 2000 |30 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |30 |  \n| 14 | 1500 | 3000 | 3000 |30 |  \n| 15 | 2000 | 4000 | 4000 |30 |  \n| 16 | 2500 | 5000 | 5000 |30 |  \n| break | | | | 15 | \n| 17 | 3000 | 6000 | 6000 |30 |  \n| 18 | 4000 | 8000 | 8000 |30 |  \n| 19 | 5000 | 10000 | 10000 |30 |  \n| 20 | 6000 | 12000 | 12000 |30 |  \n| break | | | | 15 | \n| 21 | 8000 | 16000 | 16000 |30 |  \n| 22 | 10000 | 20000 | 20000 |30 |  \n| 23 | 10000 | 25000 | 25000 |30 |  \n| 24 | 15000 | 30000 | 30000 |30 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |30 |  \n| 26 | 25000 | 50000 | 50000 |30 |  \n| 27 | 30000 | 60000 | 60000 |30 |  \n| 28 | 40000 | 80000 | 80000 |30 |  \n| break | | | | 15 | \n| 29 | 50000 | 100000 | 100000 |30 |  \n| 30 | 60000 | 120000 | 120000 |30 |  \n| 31 | 80000 | 160000 | 160000 |30 |  \n| 32 | 100000 | 200000 | 200000 |30 |  \n| break | | | | 15 | \n| 33 | 125000 | 250000 | 250000 |30 |  \n"
       payouts: []
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "13"
       title: "Satellite to Event #14 NLH"
       startTime: "2020-01-08T04:10:37.545Z"
@@ -406,25 +345,10 @@
       bounty: 0
       adminFee: 600
       staffFee: 3
-      createdAt: "2020-08-24T02:10:46.069Z"
-      updatedAt: "2020-08-25T03:04:38.323Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "uvq6ZiMmQv"
-      boundEventNo: "13"
-      boundEventTitle: "Satellite to Event #14 NLH"
       boundEventEntries: 60
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 56
       boundEventPrizePools: 256080
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "eGj1JnblHM"
       objectId: "652d5upvUD"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: 
@@ -471,10 +395,6 @@
           name: "WANG MINLIANG"
           avatar: "http://localhost:1337/parse/files/app/6828a1dbb34b357398dd5881165014a9_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "4"
       title: "Satellite to Event #5"
       startTime: "2020-01-05T03:49:55.466Z"
@@ -484,25 +404,10 @@
       bounty: 0
       adminFee: 720
       staffFee: 3
-      createdAt: "2020-08-24T02:09:55.969Z"
-      updatedAt: "2020-08-25T03:04:31.372Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "RuQTbhCW9k"
-      boundEventNo: "4"
-      boundEventTitle: "Satellite to Event #5"
       boundEventEntries: 41
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 36
       boundEventPrizePools: 209985.6
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "opxyREkZp4"
       objectId: "6gLU8Fgjvb"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: 
@@ -537,10 +442,6 @@
           name: "SHAH CHIRAG"
           avatar: "http://localhost:1337/parse/files/app/69fcc0df6269b327f87510d059be525d_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "9B"
       title: "Red Dragon Main Event - Php 50M GTD - 1B"
       startTime: "2020-01-07T05:14:48.740Z"
@@ -550,33 +451,14 @@
       bounty: 0
       adminFee: 11000
       staffFee: 3
-      createdAt: "2020-08-24T02:10:27.459Z"
-      updatedAt: "2020-08-25T03:04:36.910Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "TmIlafmWI2"
-      boundEventNo: "9B"
-      boundEventTitle: "Red Dragon Main Event - Php 50M GTD - 1B"
       boundEventEntries: 357
-      boundEventIsChild: true
-      boundEventIsParent: false
       boundEventPlayers: 301
       boundEventPrizePools: 34282710
       boundEventRemain: 112
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "88Rv49cQhk"
       objectId: "6yFNttUWWu"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |40 |  \n| 2 | 100 | 100 | 100 |40 |  \n| 3 | 100 | 200 | 200 |40 |  \n| break | | | | 15 | \n| 4 | 100 | 300 | 300 |40 |  \n| 5 | 200 | 400 | 400 |40 |  \n| 6 | 200 | 500 | 500 |40 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |40 |  \n| 8 | 400 | 800 | 800 |40 |  \n| 9 | 500 | 1000 | 1000 |40 |  \n| break | | | | 15 | \n| 10 | 600 | 1200 | 1200 |40 |  \n| 11 | 800 | 1600 | 1600 |40 |  \n| 12 | 1000 | 2000 | 2000 |40 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |40 |  \n| 14 | 1500 | 3000 | 3000 |40 |  \n| 15 | 2000 | 4000 | 4000 |40 |  \n| break | | | | 15 | \n| 16 | 2500 | 5000 | 5000 |40 |  \n| 17 | 3000 | 6000 | 6000 |40 |  \n| 18 | 4000 | 8000 | 8000 |40 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |40 |  \n| 20 | 6000 | 12000 | 12000 |40 |  \n| 21 | 8000 | 16000 | 16000 |40 |  \n| break | | | | 15 | \n| 22 | 10000 | 20000 | 20000 |40 |  \n| 23 | 10000 | 25000 | 25000 |40 |  \n| 24 | 15000 | 30000 | 30000 |40 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |40 |  \n| 26 | 25000 | 50000 | 50000 |40 |  \n| 27 | 30000 | 60000 | 60000 |40 |  \n| break | | | | 15 | \n| 28 | 40000 | 80000 | 80000 |40 |  \n| 29 | 50000 | 100000 | 100000 |40 |  \n| 30 | 60000 | 120000 | 120000 |40 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |40 |  \n| 32 | 100000 | 200000 | 200000 |40 |  \n| 33 | 125000 | 250000 | 250000 |40 |  \n"
       payouts: []
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "9"
       title: "Red Dragon Main Event - Final Day"
       startTime: "2020-01-09T02:08:47.091Z"
@@ -586,25 +468,10 @@
       bounty: 0
       adminFee: 11000
       staffFee: 3
-      createdAt: "2020-08-24T02:11:05.647Z"
-      updatedAt: "2020-08-25T03:04:40.925Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "na7SCeSRAq"
-      boundEventNo: "9"
-      boundEventTitle: "Red Dragon Main Event - Final Day"
       boundEventEntries: 669
-      boundEventIsChild: false
-      boundEventIsParent: true
       boundEventPlayers: 409
       boundEventPrizePools: 64244070
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "7SIWjQzvRN"
       objectId: "A8TzjxBaLw"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |60 |  \n| 2 | 100 | 100 | 100 |60 |  \n| 3 | 100 | 200 | 200 |60 |  \n| break | | | | 15 | \n| 4 | 100 | 300 | 300 |60 |  \n| 5 | 200 | 400 | 400 |60 |  \n| 6 | 200 | 500 | 500 |60 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |60 |  \n| 8 | 400 | 800 | 800 |60 |  \n| 9 | 500 | 1000 | 1000 |60 |  \n| break | | | | 15 | \n| 10 | 600 | 1200 | 1200 |60 |  \n| 11 | 800 | 1600 | 1600 |60 |  \n| 12 | 1000 | 2000 | 2000 |60 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |60 |  \n| 14 | 1500 | 3000 | 3000 |60 |  \n| break | | | | 15 | \n| 15 | 2000 | 4000 | 4000 |60 |  \n| 16 | 2500 | 5000 | 5000 |60 |  \n| break | | | | 15 | \n| 17 | 3000 | 6000 | 6000 |60 |  \n| 18 | 4000 | 8000 | 8000 |60 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |60 |  \n| 20 | 6000 | 12000 | 12000 |60 |  \n| break | | | | 15 | \n| 21 | 8000 | 16000 | 16000 |60 |  \n| 22 | 10000 | 20000 | 20000 |60 |  \n| break | | | | 15 | \n| 23 | 10000 | 25000 | 25000 |60 |  \n| 24 | 15000 | 30000 | 30000 |60 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |60 |  \n| 26 | 25000 | 50000 | 50000 |60 |  \n| 27 | 30000 | 60000 | 60000 |60 |  \n| 28 | 40000 | 80000 | 80000 |60 |  \n| break | | | | 15 | \n| 29 | 50000 | 100000 | 100000 |60 |  \n| 30 | 60000 | 120000 | 120000 |60 |  \n| 31 | 80000 | 160000 | 160000 |60 |  \n| 32 | 100000 | 200000 | 200000 |60 |  \n| break | | | | 15 | \n| 33 | 125000 | 250000 | 250000 |60 |  \n"
       payouts: 
@@ -1095,10 +962,6 @@
           name: "CARTER GABRIEL DOMINIC"
           avatar: "http://localhost:1337/parse/files/app/dc3f7376a9214f0ca0a9b13f75b18d50_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "5"
       title: "Deepstack - NLH - Day 2 Final"
       startTime: "2020-01-05T18:24:56.231Z"
@@ -1108,25 +971,10 @@
       bounty: 0
       adminFee: 5000
       staffFee: 3
-      createdAt: "2020-08-24T02:10:05.203Z"
-      updatedAt: "2020-08-25T03:04:33.726Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "tFPdX7P55V"
-      boundEventNo: "5"
-      boundEventTitle: "Deepstack - NLH - Day 2 Final"
       boundEventEntries: 136
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 136
       boundEventPrizePools: 5936400
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "StAbPxamnu"
       objectId: "DK2nBcljWw"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |30 |  \n| 2 | 100 | 100 | 100 |30 |  \n| 3 | 100 | 200 | 200 |30 |  \n| 4 | 100 | 300 | 300 |30 |  \n| break | | | | 15 | \n| 5 | 200 | 400 | 400 |30 |  \n| 6 | 200 | 500 | 500 |30 |  \n| 7 | 300 | 600 | 600 |30 |  \n| 8 | 400 | 800 | 800 |30 |  \n| break | | | | 15 | \n| 9 | 500 | 1000 | 1000 |30 |  \n| 10 | 600 | 1200 | 1200 |30 |  \n| 11 | 800 | 1600 | 1600 |30 |  \n| 12 | 1000 | 2000 | 2000 |30 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |30 |  \n| 14 | 1500 | 3000 | 3000 |30 |  \n| 15 | 2000 | 4000 | 4000 |30 |  \n| 16 | 2500 | 5000 | 5000 |30 |  \n| break | | | | 15 | \n| 17 | 3000 | 6000 | 6000 |30 |  \n| 18 | 4000 | 8000 | 8000 |30 |  \n| break | | | | 60 | \n| 19 | 5000 | 10000 | 10000 |30 |  \n| 20 | 6000 | 12000 | 12000 |30 |  \n| 21 | 8000 | 16000 | 16000 |30 |  \n| 22 | 10000 | 20000 | 20000 |30 |  \n| break | | | | 15 | \n| 23 | 10000 | 25000 | 25000 |30 |  \n| 24 | 15000 | 30000 | 30000 |30 |  \n| 25 | 20000 | 40000 | 40000 |30 |  \n| 26 | 25000 | 50000 | 50000 |30 |  \n| break | | | | 15 | \n| 27 | 30000 | 60000 | 60000 |30 |  \n| 28 | 40000 | 80000 | 80000 |30 |  \n| 29 | 50000 | 100000 | 100000 |30 |  \n| 30 | 60000 | 120000 | 120000 |30 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |30 |  \n| 32 | 100000 | 200000 | 200000 |30 |  \n| 33 | 125000 | 250000 | 250000 |30 |  \n"
       payouts: 
@@ -1221,10 +1069,6 @@
           name: "CARTER GABRIEL DOMINIC"
           avatar: "http://localhost:1337/parse/files/app/dc3f7376a9214f0ca0a9b13f75b18d50_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "17"
       title: "High Roller - One Day Event"
       startTime: "2020-01-09T05:29:31.792Z"
@@ -1234,25 +1078,10 @@
       bounty: 0
       adminFee: 15000
       staffFee: 3
-      createdAt: "2020-08-24T02:11:43.504Z"
-      updatedAt: "2020-08-25T03:04:42.327Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "LSF12dFNyy"
-      boundEventNo: "17"
-      boundEventTitle: "High Roller - One Day Event"
       boundEventEntries: 36
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 29
       boundEventPrizePools: 6460200
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "obH4AITmjF"
       objectId: "HvMFeCYnZ0"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 200 | 0 |30 |  \n| 2 | 100 | 200 | 200 |30 |  \n| 3 | 100 | 300 | 300 |30 |  \n| 4 | 200 | 400 | 400 |30 |  \n| break | | | | 15 | \n| 5 | 200 | 500 | 500 |30 |  \n| 6 | 300 | 600 | 600 |30 |  \n| 7 | 400 | 800 | 800 |30 |  \n| 8 | 500 | 1000 | 1000 |30 |  \n| break | | | | 15 | \n| 9 | 600 | 1200 | 1200 |30 |  \n| 10 | 800 | 1600 | 1600 |30 |  \n| 11 | 1000 | 2000 | 2000 |30 |  \n| 12 | 1000 | 2500 | 2500 |30 |  \n| break | | | | 60 | \n| 13 | 1500 | 3000 | 3000 |30 |  \n| 14 | 2000 | 4000 | 4000 |30 |  \n| 15 | 2500 | 5000 | 5000 |30 |  \n| 16 | 3000 | 6000 | 6000 |30 |  \n| break | | | | 15 | \n| 17 | 4000 | 8000 | 8000 |30 |  \n| 18 | 5000 | 10000 | 10000 |30 |  \n| 19 | 6000 | 12000 | 12000 |30 |  \n| 20 | 8000 | 16000 | 16000 |30 |  \n| break | | | | 15 | \n| 21 | 10000 | 20000 | 20000 |30 |  \n| 22 | 10000 | 25000 | 25000 |30 |  \n| 23 | 15000 | 30000 | 30000 |30 |  \n| 24 | 20000 | 40000 | 40000 |30 |  \n| break | | | | 15 | \n| 25 | 25000 | 50000 | 50000 |30 |  \n| 26 | 30000 | 60000 | 60000 |30 |  \n| 27 | 40000 | 80000 | 80000 |30 |  \n| 28 | 50000 | 100000 | 100000 |30 |  \n| break | | | | 15 | \n| 29 | 60000 | 120000 | 120000 |30 |  \n| 30 | 80000 | 160000 | 160000 |30 |  \n| 31 | 100000 | 200000 | 200000 |30 |  \n| 32 | 125000 | 250000 | 250000 |30 |  \n"
       payouts: 
@@ -1293,10 +1122,6 @@
           name: "STEELE KIRK MICHAEL"
           avatar: "http://localhost:1337/parse/files/app/251d6b8c10773cf5f307472e61b36651_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "20"
       title: "Red Dragon High Roller - Day 2 Final"
       startTime: "2020-01-10T21:25:28.212Z"
@@ -1306,25 +1131,10 @@
       bounty: 0
       adminFee: 15000
       staffFee: 3
-      createdAt: "2020-08-24T02:12:39.657Z"
-      updatedAt: "2020-08-25T03:04:47.923Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "gooOwu3sOp"
-      boundEventNo: "20"
-      boundEventTitle: "Red Dragon High Roller - Day 2 Final"
       boundEventEntries: 101
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 72
       boundEventPrizePools: 23022950
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "gg55p9C2HN"
       objectId: "JXMYqvOZGS"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 200 | 0 |40 |  \n| 2 | 100 | 200 | 200 |40 |  \n| 3 | 100 | 300 | 300 |40 |  \n| break | | | | 15 | \n| 4 | 200 | 400 | 400 |40 |  \n| 5 | 200 | 500 | 500 |40 |  \n| 6 | 300 | 600 | 600 |40 |  \n| break | | | | 15 | \n| 7 | 400 | 800 | 800 |40 |  \n| 8 | 500 | 1000 | 1000 |40 |  \n| 9 | 600 | 1200 | 1200 |40 |  \n| break | | | | 15 | \n| 10 | 800 | 1600 | 1600 |40 |  \n| 11 | 1000 | 2000 | 2000 |40 |  \n| 12 | 1000 | 2500 | 2500 |40 |  \n| break | | | | 15 | \n| 13 | 1500 | 3000 | 3000 |40 |  \n| 14 | 2000 | 4000 | 4000 |40 |  \n| 15 | 2500 | 5000 | 5000 |40 |  \n| break | | | | 15 | \n| 16 | 3000 | 6000 | 6000 |40 |  \n| 17 | 4000 | 8000 | 8000 |40 |  \n| 18 | 5000 | 10000 | 10000 |40 |  \n| 19 | 6000 | 12000 | 12000 |40 |  \n| 20 | 8000 | 16000 | 16000 |40 |  \n| break | | | | 15 | \n| 21 | 10000 | 20000 | 20000 |40 |  \n| 22 | 10000 | 25000 | 25000 |40 |  \n| 23 | 15000 | 30000 | 30000 |40 |  \n| break | | | | 15 | \n| 24 | 20000 | 40000 | 40000 |40 |  \n| 25 | 25000 | 50000 | 50000 |40 |  \n| 26 | 30000 | 60000 | 60000 |40 |  \n| break | | | | 15 | \n| 27 | 40000 | 80000 | 80000 |40 |  \n| 28 | 50000 | 100000 | 100000 |40 |  \n| 29 | 60000 | 120000 | 120000 |40 |  \n| break | | | | 15 | \n| 30 | 80000 | 160000 | 160000 |40 |  \n| 31 | 100000 | 200000 | 200000 |40 |  \n| 32 | 125000 | 250000 | 250000 |40 |  \n| 33 | 150000 | 300000 | 300000 |40 |  \n"
       payouts: 
@@ -1407,10 +1217,6 @@
           name: "SAMANT KANISHKA ANANT"
           avatar: "http://localhost:1337/parse/files/app/99e587f745c205c5afca024174466c46_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "1A"
       title: "Red Dragon Kickoff - Day 1A"
       startTime: "2020-01-04T04:03:39.576Z"
@@ -1420,33 +1226,14 @@
       bounty: 0
       adminFee: 2000
       staffFee: 3
-      createdAt: "2020-08-24T02:09:23.485Z"
-      updatedAt: "2020-08-25T03:04:28.016Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "nFzh9sqFTB"
-      boundEventNo: "1A"
-      boundEventTitle: "Red Dragon Kickoff - Day 1A"
       boundEventEntries: 170
-      boundEventIsChild: true
-      boundEventIsParent: false
       boundEventPlayers: 147
       boundEventPrizePools: 2968200
       boundEventRemain: 21
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "ADGWEeCGho"
       objectId: "NjDFxB3op1"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: []
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "18"
       title: "Deepstack - Day 2"
       startTime: "2020-01-10T20:10:52.945Z"
@@ -1456,25 +1243,10 @@
       bounty: 0
       adminFee: 3000
       staffFee: 3
-      createdAt: "2020-08-24T02:12:31.948Z"
-      updatedAt: "2020-08-25T03:04:47.171Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "irHcDZidF8"
-      boundEventNo: "18"
-      boundEventTitle: "Deepstack - Day 2"
       boundEventEntries: 146
-      boundEventIsChild: false
-      boundEventIsParent: true
       boundEventPlayers: 116
       boundEventPrizePools: 3823740
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "wYg23LE1LU"
       objectId: "OQmQfKC8R1"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |30 |  \n| 2 | 100 | 100 | 100 |30 |  \n| 3 | 100 | 200 | 200 |30 |  \n| 4 | 100 | 300 | 300 |30 |  \n| break | | | | 15 | \n| 5 | 200 | 400 | 400 |30 |  \n| 6 | 200 | 500 | 500 |30 |  \n| 7 | 300 | 600 | 600 |30 |  \n| 8 | 400 | 800 | 800 |30 |  \n| break | | | | 15 | \n| 9 | 500 | 1000 | 1000 |30 |  \n| 10 | 600 | 1200 | 1200 |30 |  \n| 11 | 800 | 1600 | 1600 |30 |  \n| 12 | 1000 | 2000 | 2000 |30 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |30 |  \n| 14 | 1500 | 3000 | 3000 |30 |  \n| 15 | 2000 | 4000 | 4000 |30 |  \n| 16 | 2500 | 5000 | 5000 |30 |  \n| break | | | | 15 | \n| 17 | 3000 | 6000 | 6000 |30 |  \n| 18 | 4000 | 8000 | 8000 |30 |  \n| 19 | 5000 | 10000 | 10000 |30 |  \n| 20 | 6000 | 12000 | 12000 |30 |  \n| break | | | | 15 | \n| 21 | 8000 | 16000 | 16000 |30 |  \n| 22 | 10000 | 20000 | 20000 |30 |  \n| 23 | 10000 | 25000 | 25000 |30 |  \n| 24 | 15000 | 30000 | 30000 |30 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |30 |  \n| 26 | 25000 | 50000 | 50000 |30 |  \n| 27 | 30000 | 60000 | 60000 |30 |  \n| 28 | 40000 | 80000 | 80000 |30 |  \n| break | | | | 15 | \n| 29 | 50000 | 100000 | 100000 |30 |  \n| 30 | 60000 | 120000 | 120000 |30 |  \n| 31 | 80000 | 160000 | 160000 |30 |  \n| 32 | 100000 | 200000 | 200000 |30 |  \n| break | | | | 15 | \n| 33 | 125000 | 250000 | 250000 |30 |  \n"
       payouts: 
@@ -1587,10 +1359,6 @@
           name: "GLORIA MENELEO"
           avatar: "http://localhost:1337/parse/files/app/47ec67f9524d042d4155fc176bff1089_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "9C"
       title: "Red Dragon Main Event - Php 50M GTD - 1C"
       startTime: "2020-01-07T12:12:00.676Z"
@@ -1600,33 +1368,14 @@
       bounty: 0
       adminFee: 11000
       staffFee: 3
-      createdAt: "2020-08-24T02:10:41.497Z"
-      updatedAt: "2020-08-25T03:04:37.739Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "dUG1kUK58X"
-      boundEventNo: "9C"
-      boundEventTitle: "Red Dragon Main Event - Php 50M GTD - 1C"
       boundEventEntries: 99
-      boundEventIsChild: true
-      boundEventIsParent: false
       boundEventPlayers: 87
       boundEventPrizePools: 9506970
       boundEventRemain: 45
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "mxzHvp9hbc"
       objectId: "OahK9jp3Wn"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| break | | | | 15 | \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: []
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "8"
       title: "Satellite to Red Dragon Main Event"
       startTime: "2020-01-06T04:07:03.640Z"
@@ -1636,25 +1385,10 @@
       bounty: 0
       adminFee: 1440
       staffFee: 3
-      createdAt: "2020-08-24T02:10:12.152Z"
-      updatedAt: "2020-08-25T03:04:34.282Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "aXGr3lFje3"
-      boundEventNo: "8"
-      boundEventTitle: "Satellite to Red Dragon Main Event"
       boundEventEntries: 48
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 46
       boundEventPrizePools: 491673.6
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "fRDL41TRti"
       objectId: "OgLEJVRv6g"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: 
@@ -1689,10 +1423,6 @@
           name: "YUMUL TRISTAN FLOREN VASQUEZ"
           avatar: "http://localhost:1337/parse/files/app/25f4824b96f8c9412bf2b9106d2fe9a1_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "11"
       title: "Satellite to Red Dragon Main Event"
       startTime: "2020-01-06T13:04:18.689Z"
@@ -1702,25 +1432,10 @@
       bounty: 0
       adminFee: 1440
       staffFee: 3
-      createdAt: "2020-08-24T02:10:18.970Z"
-      updatedAt: "2020-08-25T03:04:35.671Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "kVFq7H9j72"
-      boundEventNo: "11"
-      boundEventTitle: "Satellite to Red Dragon Main Event"
       boundEventEntries: 83
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 77
       boundEventPrizePools: 850185.6
       boundEventRemain: 6
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "xw9eIQ1NYl"
       objectId: "OinAum460O"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: 
@@ -1773,10 +1488,6 @@
           name: "XIAO SHIZI"
           avatar: "http://localhost:1337/parse/files/app/6759ec1ddc22af5ff67145a7cd35de26_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "14"
       title: "SuperStack - NLH - Freezeout - Day 2 Final"
       startTime: "2020-01-08T17:57:11.078Z"
@@ -1786,25 +1497,10 @@
       bounty: 0
       adminFee: 4000
       staffFee: 3
-      createdAt: "2020-08-24T02:10:55.508Z"
-      updatedAt: "2020-08-25T03:04:39.965Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "xPMtpz2l0Y"
-      boundEventNo: "14"
-      boundEventTitle: "SuperStack - NLH - Freezeout - Day 2 Final"
       boundEventEntries: 191
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 191
       boundEventPrizePools: 6669720
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "7RANAw5S2Z"
       objectId: "RtoaFaAd37"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |30 |  \n| 2 | 100 | 100 | 100 |30 |  \n| 3 | 100 | 200 | 200 |30 |  \n| 4 | 100 | 300 | 300 |30 |  \n| break | | | | 15 | \n| 5 | 200 | 400 | 400 |30 |  \n| 6 | 200 | 500 | 500 |30 |  \n| 7 | 300 | 600 | 600 |30 |  \n| 8 | 400 | 800 | 800 |30 |  \n| break | | | | 15 | \n| 9 | 500 | 1000 | 1000 |30 |  \n| 10 | 600 | 1200 | 1200 |30 |  \n| 11 | 800 | 1600 | 1600 |30 |  \n| 12 | 1000 | 2000 | 2000 |30 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |30 |  \n| 14 | 1500 | 3000 | 3000 |30 |  \n| 15 | 2000 | 4000 | 4000 |30 |  \n| 16 | 2500 | 5000 | 5000 |30 |  \n| break | | | | 15 | \n| 17 | 3000 | 6000 | 6000 |30 |  \n| 18 | 4000 | 8000 | 8000 |30 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |30 |  \n| 20 | 6000 | 12000 | 12000 |30 |  \n| 21 | 8000 | 16000 | 16000 |30 |  \n| 22 | 10000 | 20000 | 20000 |30 |  \n| break | | | | 15 | \n| 23 | 10000 | 25000 | 25000 |30 |  \n| 24 | 15000 | 30000 | 30000 |30 |  \n| 25 | 20000 | 40000 | 40000 |30 |  \n| 26 | 25000 | 50000 | 50000 |30 |  \n| break | | | | 15 | \n| 27 | 30000 | 60000 | 60000 |30 |  \n| 28 | 40000 | 80000 | 80000 |30 |  \n| 29 | 50000 | 100000 | 100000 |30 |  \n| 30 | 60000 | 120000 | 120000 |30 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |30 |  \n| 32 | 100000 | 200000 | 200000 |30 |  \n| 33 | 125000 | 250000 | 250000 |30 |  \n"
       payouts: 
@@ -1935,10 +1631,6 @@
           name: "KWOK TING SHUM"
           avatar: "http://localhost:1337/parse/files/app/19bcf51bb45d80ee45b46e836c5e256b_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "19"
       title: "Satellite - Red Dragon High Roller - Single Re-entry per Flight"
       startTime: "2020-01-10T06:19:14.709Z"
@@ -1948,25 +1640,10 @@
       bounty: 0
       adminFee: 2500
       staffFee: 3
-      createdAt: "2020-08-24T02:12:24.565Z"
-      updatedAt: "2020-08-25T03:04:45.957Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "s9rIIxCuMd"
-      boundEventNo: "19"
-      boundEventTitle: "Satellite - Red Dragon High Roller - Single Re-entry per Flight"
       boundEventEntries: 42
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 38
       boundEventPrizePools: 916650
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "Cjj0iPgKjf"
       objectId: "SMPm6wc5ED"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: 
@@ -1995,10 +1672,6 @@
           name: "GONZAGA TERRY ALINDADA"
           avatar: "http://localhost:1337/parse/files/app/495a61461810a4d26e88aef3a4f1e6ec_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "7"
       title: "Satellite to Red Dragon Main Event - Single Re-entry"
       startTime: "2020-01-05T13:01:41.403Z"
@@ -2008,25 +1681,10 @@
       bounty: 0
       adminFee: 1440
       staffFee: 3
-      createdAt: "2020-08-24T02:10:01.871Z"
-      updatedAt: "2020-08-25T03:04:32.770Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "PJixZlhRdW"
-      boundEventNo: "7"
-      boundEventTitle: "Satellite to Red Dragon Main Event - Single Re-entry"
       boundEventEntries: 64
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 60
       boundEventPrizePools: 655564.8
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "fzXCaxCgPP"
       objectId: "V6ffW4wWo9"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: 
@@ -2067,10 +1725,6 @@
           name: "FINNIGAN MICHAEL JOHN"
           avatar: "http://localhost:1337/parse/files/app/e76a6c107027b7fd3ff2b4e07ecfedb9_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "10"
       title: "Turbo - NLH - Single Re-entry"
       startTime: "2020-01-06T11:26:31.815Z"
@@ -2080,25 +1734,10 @@
       bounty: 0
       adminFee: 2000
       staffFee: 3
-      createdAt: "2020-08-24T02:10:14.776Z"
-      updatedAt: "2020-08-25T03:04:34.836Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "0PTRVvmgl8"
-      boundEventNo: "10"
-      boundEventTitle: "Turbo - NLH - Single Re-entry"
       boundEventEntries: 82
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 74
       boundEventPrizePools: 1431720
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "8pNMd2uA2y"
       objectId: "Xi5C2pE5Lz"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |15 |  \n| 2 | 100 | 100 | 100 |15 |  \n| 3 | 100 | 200 | 200 |15 |  \n| 4 | 100 | 300 | 300 |15 |  \n| 5 | 200 | 400 | 400 |15 |  \n| 6 | 200 | 500 | 500 |15 |  \n| 7 | 300 | 600 | 600 |15 |  \n| 8 | 400 | 800 | 800 |15 |  \n| break | | | | 15 | \n| 9 | 500 | 1000 | 1000 |15 |  \n| 10 | 600 | 1200 | 1200 |15 |  \n| 11 | 800 | 1600 | 1600 |15 |  \n| 12 | 1000 | 2000 | 2000 |15 |  \n| 13 | 1000 | 2500 | 2500 |15 |  \n| 14 | 1500 | 3000 | 3000 |15 |  \n| 15 | 2000 | 4000 | 4000 |15 |  \n| 16 | 2500 | 5000 | 5000 |15 |  \n| break | | | | 15 | \n| 17 | 3000 | 6000 | 6000 |15 |  \n| 18 | 4000 | 8000 | 8000 |15 |  \n| 19 | 5000 | 10000 | 10000 |15 |  \n| 20 | 6000 | 12000 | 12000 |15 |  \n| 21 | 8000 | 16000 | 16000 |15 |  \n| 22 | 10000 | 20000 | 20000 |15 |  \n| 23 | 10000 | 25000 | 25000 |15 |  \n| 24 | 15000 | 30000 | 30000 |15 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |15 |  \n| 26 | 25000 | 50000 | 50000 |15 |  \n| 27 | 30000 | 60000 | 60000 |15 |  \n| 28 | 40000 | 80000 | 80000 |15 |  \n| 29 | 50000 | 100000 | 100000 |15 |  \n| 30 | 60000 | 120000 | 120000 |15 |  \n| 31 | 80000 | 160000 | 160000 |15 |  \n| 32 | 100000 | 200000 | 200000 |15 |  \n| break | | | | 15 | \n| 33 | 125000 | 250000 | 250000 |15 |  \n"
       payouts: 
@@ -2163,10 +1802,6 @@
           name: "WU YU FAI"
           avatar: "http://localhost:1337/parse/files/app/d4559fb390d38b04845874099b0b35fc_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "2"
       title: "Satellite to Super High Roller"
       startTime: "2020-01-04T06:23:26.170Z"
@@ -2176,25 +1811,10 @@
       bounty: 0
       adminFee: 6000
       staffFee: 3
-      createdAt: "2020-08-24T02:09:30.180Z"
-      updatedAt: "2020-08-25T03:04:28.809Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "f19JrC9khZ"
-      boundEventNo: "2"
-      boundEventTitle: "Satellite to Super High Roller"
       boundEventEntries: 9
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 7
       boundEventPrizePools: 471420
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "6HAfObrPIm"
       objectId: "Z2ZxHodVAe"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 200 | 0 |20 |  \n| 3 | 100 | 300 | 0 |20 |  \n| break | | | | 15 | \n| 4 | 200 | 400 | 0 |20 |  \n| 5 | 300 | 600 | 0 |20 |  \n| 6 | 500 | 1000 | 0 |20 |  \n| 7 | 700 | 1400 | 0 |20 |  \n| 8 | 1000 | 2000 | 0 |20 |  \n| 9 | 1000 | 3000 | 0 |20 |  \n| break | | | | 15 | \n| 10 | 2000 | 4000 | 0 |20 |  \n| 11 | 3000 | 6000 | 0 |20 |  \n| 12 | 5000 | 10000 | 0 |20 |  \n| 13 | 7000 | 14000 | 0 |20 |  \n| 14 | 10000 | 20000 | 0 |20 |  \n| 15 | 15000 | 30000 | 0 |20 |  \n| break | | | | 15 | \n| 16 | 20000 | 40000 | 0 |20 |  \n| 17 | 30000 | 60000 | 0 |20 |  \n| 18 | 50000 | 100000 | 0 |20 |  \n| 19 | 75000 | 150000 | 0 |20 |  \n| 20 | 100000 | 200000 | 0 |20 |  \n| 21 | 150000 | 300000 | 0 |20 |  \n| 22 | 200000 | 400000 | 0 |20 |  \n| 23 | 300000 | 600000 | 0 |20 |  \n"
       payouts: 
@@ -2217,10 +1837,6 @@
           name: "TIAN HAO"
           avatar: "http://localhost:1337/parse/files/app/24e22f6162649eae4aef9d55c7d21a74_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "22"
       title: "SuperStack - Single Re-entry"
       startTime: "2020-01-11T07:23:16.543Z"
@@ -2230,25 +1846,10 @@
       bounty: 0
       adminFee: 10000
       staffFee: 3
-      createdAt: "2020-08-24T02:12:50.327Z"
-      updatedAt: "2020-10-13T03:13:08.958Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "uFUN2r8EUo"
-      boundEventNo: "22"
-      boundEventTitle: "SuperStack - Single Re-entry"
       boundEventEntries: 58
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 49
       boundEventPrizePools: 5063400
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "IBn9097vjq"
       objectId: "bmNFoMaKnr"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: 
@@ -2295,10 +1896,6 @@
           name: "HONG JINHO"
           avatar: "http://localhost:1337/parse/files/app/2b7e6d57373153e3dd349e3fbc83f533_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "18B"
       title: "Deepstack - Single Re-entry per Flight - 1B"
       startTime: "2020-01-10T11:15:54.493Z"
@@ -2308,33 +1905,14 @@
       bounty: 0
       adminFee: 3000
       staffFee: 3
-      createdAt: "2020-08-24T02:12:27.465Z"
-      updatedAt: "2020-08-25T03:04:46.662Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "wtDnAW0kJO"
-      boundEventNo: "18B"
-      boundEventTitle: "Deepstack - Single Re-entry per Flight - 1B"
       boundEventEntries: 74
-      boundEventIsChild: true
-      boundEventIsParent: false
       boundEventPlayers: 67
       boundEventPrizePools: 1938060
       boundEventRemain: 10
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "HDlaO3MW9i"
       objectId: "boW4s7Vylw"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| break | | | | 30 | \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: []
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "12"
       title: "Satellite to Red Dragon Main Event"
       startTime: "2020-01-07T04:14:54.366Z"
@@ -2344,25 +1922,10 @@
       bounty: 0
       adminFee: 1440
       staffFee: 3
-      createdAt: "2020-08-24T02:10:23.232Z"
-      updatedAt: "2020-08-25T03:04:36.406Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "sC2PYQ5JfR"
-      boundEventNo: "12"
-      boundEventTitle: "Satellite to Red Dragon Main Event"
       boundEventEntries: 82
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 68
       boundEventPrizePools: 839942.4
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "J3mPhyDBOr"
       objectId: "cHGBhyCEDm"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: 
@@ -2415,10 +1978,6 @@
           name: "BRYAN ROBERT ANTHONY"
           avatar: "http://localhost:1337/parse/files/app/f14a46e2feab1d7207873b898cb1fd1d_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "3"
       title: "Red Dragon Super High Roller - Day 2 Final"
       startTime: "2020-01-04T20:45:16.136Z"
@@ -2428,25 +1987,10 @@
       bounty: 0
       adminFee: 15000
       staffFee: 3
-      createdAt: "2020-08-24T02:09:40.395Z"
-      updatedAt: "2020-08-25T03:04:29.999Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "g2GxLohqWG"
-      boundEventNo: "3"
-      boundEventTitle: "Red Dragon Super High Roller - Day 2 Final"
       boundEventEntries: 30
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 25
       boundEventPrizePools: 14113500
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "NVzLuShwXK"
       objectId: "h8acHOCJW5"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 500 | 1000 | 1000 |40 |  \n| 2 | 500 | 1000 | 1000 |40 |  \n| 3 | 1000 | 1500 | 1500 |40 |  \n| break | | | | 15 | \n| 4 | 1000 | 2000 | 2000 |40 |  \n| 5 | 1000 | 2500 | 2500 |40 |  \n| 6 | 1500 | 3000 | 3000 |40 |  \n| break | | | | 15 | \n| 7 | 2000 | 4000 | 4000 |40 |  \n| 8 | 2500 | 5000 | 5000 |40 |  \n| 9 | 3000 | 6000 | 6000 |40 |  \n| break | | | | 15 | \n| 10 | 4000 | 8000 | 8000 |40 |  \n| 11 | 5000 | 10000 | 10000 |40 |  \n| 12 | 6000 | 12000 | 12000 |40 |  \n| break | | | | 15 | \n| 13 | 8000 | 16000 | 16000 |40 |  \n| 14 | 10000 | 20000 | 20000 |40 |  \n| 15 | 10000 | 25000 | 25000 |40 |  \n| break | | | | 15 | \n| 16 | 15000 | 30000 | 30000 |40 |  \n| 17 | 20000 | 40000 | 40000 |40 |  \n| 18 | 25000 | 50000 | 50000 |40 |  \n| break | | | | 15 | \n| 19 | 30000 | 60000 | 60000 |40 |  \n| 20 | 40000 | 80000 | 80000 |40 |  \n| 21 | 50000 | 100000 | 100000 |40 |  \n| break | | | | 15 | \n| 22 | 60000 | 120000 | 120000 |40 |  \n| 23 | 80000 | 160000 | 160000 |40 |  \n| 24 | 100000 | 200000 | 200000 |40 |  \n| break | | | | 15 | \n| 25 | 125000 | 250000 | 250000 |40 |  \n| 26 | 150000 | 300000 | 300000 |40 |  \n| 27 | 200000 | 400000 | 400000 |40 |  \n| break | | | | 15 | \n| 28 | 250000 | 500000 | 500000 |40 |  \n| 29 | 300000 | 600000 | 600000 |40 |  \n| 30 | 400000 | 800000 | 800000 |40 |  \n| break | | | | 15 | \n| 31 | 500000 | 1000000 | 1000000 |40 |  \n"
       payouts: 
@@ -2481,10 +2025,6 @@
           name: "WU YAKE"
           avatar: "http://localhost:1337/parse/files/app/18556ef6b0c62b961a31abcc11cb18a6_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "1"
       title: "Red Dragon Kickoff - Day 2 Final"
       startTime: "2020-01-05T00:23:30.147Z"
@@ -2494,25 +2034,10 @@
       bounty: 0
       adminFee: 2000
       staffFee: 3
-      createdAt: "2020-08-24T02:09:42.171Z"
-      updatedAt: "2020-08-25T03:04:30.805Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "cuUopCYI6V"
-      boundEventNo: "1"
-      boundEventTitle: "Red Dragon Kickoff - Day 2 Final"
       boundEventEntries: 394
-      boundEventIsChild: false
-      boundEventIsParent: true
       boundEventPlayers: 281
       boundEventPrizePools: 6879240
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "Zxcc5QxgD2"
       objectId: "jO014rzxjN"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |15 |  \n| 2 | 100 | 100 | 100 |15 |  \n| 3 | 100 | 200 | 200 |15 |  \n| 4 | 100 | 300 | 300 |15 |  \n| 5 | 200 | 400 | 400 |15 |  \n| 6 | 200 | 500 | 500 |15 |  \n| 7 | 300 | 600 | 600 |15 |  \n| 8 | 400 | 800 | 800 |15 |  \n| break | | | | 15 | \n| 9 | 500 | 1000 | 1000 |15 |  \n| 10 | 600 | 1200 | 1200 |15 |  \n| 11 | 800 | 1600 | 1600 |15 |  \n| 12 | 1000 | 2000 | 2000 |15 |  \n| 13 | 1000 | 2500 | 2500 |15 |  \n| 14 | 1500 | 3000 | 3000 |15 |  \n| 15 | 2000 | 4000 | 4000 |15 |  \n| 16 | 2500 | 5000 | 5000 |15 |  \n| break | | | | 15 | \n| 17 | 3000 | 6000 | 6000 |15 |  \n| break | | | | 30 | \n| 18 | 4000 | 8000 | 8000 |30 |  \n| 19 | 5000 | 10000 | 10000 |30 |  \n| 20 | 6000 | 12000 | 12000 |30 |  \n| 21 | 8000 | 16000 | 16000 |30 |  \n| break | | | | 15 | \n| 22 | 10000 | 20000 | 20000 |30 |  \n| 23 | 10000 | 25000 | 25000 |30 |  \n| 24 | 15000 | 30000 | 30000 |30 |  \n| 25 | 20000 | 40000 | 40000 |30 |  \n| break | | | | 15 | \n| 26 | 25000 | 50000 | 50000 |30 |  \n| 27 | 30000 | 60000 | 60000 |30 |  \n| 28 | 40000 | 80000 | 80000 |30 |  \n| 29 | 50000 | 100000 | 100000 |30 |  \n| break | | | | 15 | \n| 30 | 60000 | 120000 | 120000 |30 |  \n| 31 | 80000 | 160000 | 160000 |30 |  \n| 32 | 100000 | 200000 | 200000 |30 |  \n| 33 | 125000 | 250000 | 250000 |30 |  \n"
       payouts: 
@@ -2805,10 +2330,6 @@
           name: "YUH KWANGSUK"
           avatar: "http://localhost:1337/parse/files/app/b499920777d5e93c34aec83e09be2e18_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "21"
       title: "Deepstack - NLH - Single Re-entry"
       startTime: "2020-01-11T05:13:16.919Z"
@@ -2818,25 +2339,10 @@
       bounty: 0
       adminFee: 2000
       staffFee: 3
-      createdAt: "2020-08-24T02:12:44.769Z"
-      updatedAt: "2020-08-25T03:04:48.592Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "1pI2ppry9J"
-      boundEventNo: "21"
-      boundEventTitle: "Deepstack - NLH - Single Re-entry"
       boundEventEntries: 92
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 83
       boundEventPrizePools: 1606320
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "hUtEE9lTrz"
       objectId: "o43fuqP14C"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: 
@@ -2901,10 +2407,6 @@
           name: "YARES MELVIN MARTISANO"
           avatar: "http://localhost:1337/parse/files/app/ab95e1ea7d50b4094f5caa9a5ee79f5c_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "15"
       title: "Satellite to Red Dragon Poker Challenge"
       startTime: "2020-01-08T13:02:57.790Z"
@@ -2914,25 +2416,10 @@
       bounty: 0
       adminFee: 840
       staffFee: 3
-      createdAt: "2020-08-24T02:10:49.316Z"
-      updatedAt: "2020-08-25T03:04:39.170Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "Fpyc2RP4YI"
-      boundEventNo: "15"
-      boundEventTitle: "Satellite to Red Dragon Poker Challenge"
       boundEventEntries: 104
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 92
       boundEventPrizePools: 621420.8
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "rkljs0ouRx"
       objectId: "oUicAwGa27"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: 
@@ -3003,10 +2490,6 @@
           name: "YANG XIAOTIAN"
           avatar: "http://localhost:1337/parse/files/app/46f2bcd6b023d9cdd62ce873a5ae69f4_avatar.jpg"
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "1B"
       title: "Red Dragon Kickoff - Day 1B"
       startTime: "2020-01-04T11:14:27.178Z"
@@ -3016,33 +2499,14 @@
       bounty: 0
       adminFee: 2000
       staffFee: 3
-      createdAt: "2020-08-24T02:09:31.374Z"
-      updatedAt: "2020-08-25T03:04:29.262Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "tanbNcropT"
-      boundEventNo: "1B"
-      boundEventTitle: "Red Dragon Kickoff - Day 1B"
       boundEventEntries: 224
-      boundEventIsChild: true
-      boundEventIsParent: false
       boundEventPlayers: 194
       boundEventPrizePools: 3911040
       boundEventRemain: 28
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "Ce7z4xuWAC"
       objectId: "olHtxz1Ugd"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |20 |  \n| 2 | 100 | 100 | 100 |20 |  \n| 3 | 100 | 200 | 200 |20 |  \n| 4 | 100 | 300 | 300 |20 |  \n| 5 | 200 | 400 | 400 |20 |  \n| 6 | 200 | 500 | 500 |20 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |20 |  \n| 8 | 400 | 800 | 800 |20 |  \n| 9 | 500 | 1000 | 1000 |20 |  \n| 10 | 600 | 1200 | 1200 |20 |  \n| 11 | 800 | 1600 | 1600 |20 |  \n| 12 | 1000 | 2000 | 2000 |20 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |20 |  \n| 14 | 1500 | 3000 | 3000 |20 |  \n| 15 | 2000 | 4000 | 4000 |20 |  \n| 16 | 2500 | 5000 | 5000 |20 |  \n| 17 | 3000 | 6000 | 6000 |20 |  \n| 18 | 4000 | 8000 | 8000 |20 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |20 |  \n| 20 | 6000 | 12000 | 12000 |20 |  \n| 21 | 8000 | 16000 | 16000 |20 |  \n| 22 | 10000 | 20000 | 20000 |20 |  \n| 23 | 10000 | 25000 | 25000 |20 |  \n| 24 | 15000 | 30000 | 30000 |20 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |20 |  \n| 26 | 25000 | 50000 | 50000 |20 |  \n| 27 | 30000 | 60000 | 60000 |20 |  \n| 28 | 40000 | 80000 | 80000 |20 |  \n| 29 | 50000 | 100000 | 100000 |20 |  \n| 30 | 60000 | 120000 | 120000 |20 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |20 |  \n| 32 | 100000 | 200000 | 200000 |20 |  \n| 33 | 125000 | 250000 | 250000 |20 |  \n"
       payouts: []
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "9A"
       title: "Main Event - Php 50M GTD - 1A"
       startTime: "2020-01-09T20:41:32.095Z"
@@ -3052,33 +2516,14 @@
       bounty: 0
       adminFee: 11000
       staffFee: 3
-      createdAt: "2020-08-24T02:12:09.530Z"
-      updatedAt: "2020-08-25T03:04:44.704Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "OJJgAXcqRq"
-      boundEventNo: "9A"
-      boundEventTitle: "Main Event - Php 50M GTD - 1A"
       boundEventEntries: 213
-      boundEventIsChild: true
-      boundEventIsParent: false
       boundEventPlayers: 181
       boundEventPrizePools: 20454390
       boundEventRemain: 72
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "l0kjI1g1F3"
       objectId: "t5XBQ8g95J"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |40 |  \n| 2 | 100 | 100 | 100 |40 |  \n| 3 | 100 | 200 | 200 |40 |  \n| break | | | | 15 | \n| 4 | 100 | 300 | 300 |40 |  \n| 5 | 200 | 400 | 400 |40 |  \n| 6 | 200 | 500 | 500 |40 |  \n| break | | | | 15 | \n| 7 | 300 | 600 | 600 |40 |  \n| 8 | 400 | 800 | 800 |40 |  \n| 9 | 500 | 1000 | 1000 |40 |  \n| break | | | | 15 | \n| 10 | 600 | 1200 | 1200 |40 |  \n| 11 | 800 | 1600 | 1600 |40 |  \n| 12 | 1000 | 2000 | 2000 |40 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |40 |  \n| 14 | 1500 | 3000 | 3000 |40 |  \n| 15 | 2000 | 4000 | 4000 |40 |  \n| break | | | | 15 | \n| 16 | 2500 | 5000 | 5000 |40 |  \n| 17 | 3000 | 6000 | 6000 |40 |  \n| 18 | 4000 | 8000 | 8000 |40 |  \n| break | | | | 15 | \n| 19 | 5000 | 10000 | 10000 |40 |  \n| 20 | 6000 | 12000 | 12000 |40 |  \n| 21 | 8000 | 16000 | 16000 |40 |  \n| break | | | | 15 | \n| 22 | 10000 | 20000 | 20000 |40 |  \n| 23 | 10000 | 25000 | 25000 |40 |  \n| 24 | 15000 | 30000 | 30000 |40 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |40 |  \n| 26 | 25000 | 50000 | 50000 |40 |  \n| 27 | 30000 | 60000 | 60000 |40 |  \n| break | | | | 15 | \n| 28 | 40000 | 80000 | 80000 |40 |  \n| 29 | 50000 | 100000 | 100000 |40 |  \n| 30 | 60000 | 120000 | 120000 |40 |  \n| break | | | | 15 | \n| 31 | 80000 | 160000 | 160000 |40 |  \n| 32 | 100000 | 200000 | 200000 |40 |  \n| 33 | 125000 | 250000 | 250000 |40 |  \n"
       payouts: []
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "16A"
       title: "Red Dragon Poker Challenge - 10M GTD"
       startTime: "2020-01-09T05:13:51.800Z"
@@ -3088,33 +2533,14 @@
       bounty: 0
       adminFee: 6000
       staffFee: 3
-      createdAt: "2020-08-24T02:11:33.235Z"
-      updatedAt: "2020-08-25T03:04:41.497Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "YggHOC8thC"
-      boundEventNo: "16A"
-      boundEventTitle: "Red Dragon Poker Challenge - 10M GTD"
       boundEventEntries: 219
-      boundEventIsChild: true
-      boundEventIsParent: false
       boundEventPlayers: 189
       boundEventPrizePools: 11471220
       boundEventRemain: 27
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "PAqIwk1nsJ"
       objectId: "tv17rt7hLb"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |30 |  \n| 2 | 100 | 100 | 100 |30 |  \n| 3 | 100 | 200 | 200 |30 |  \n| 4 | 100 | 300 | 300 |30 |  \n| break | | | | 15 | \n| 5 | 200 | 400 | 400 |30 |  \n| 6 | 200 | 500 | 500 |30 |  \n| 7 | 300 | 600 | 600 |30 |  \n| 8 | 400 | 800 | 800 |30 |  \n| break | | | | 15 | \n| 9 | 500 | 1000 | 1000 |30 |  \n| 10 | 600 | 1200 | 1200 |30 |  \n| 11 | 800 | 1600 | 1600 |30 |  \n| 12 | 1000 | 2000 | 2000 |30 |  \n| break | | | | 15 | \n| 13 | 1000 | 2500 | 2500 |30 |  \n| 14 | 1500 | 3000 | 3000 |30 |  \n| 15 | 2000 | 4000 | 4000 |30 |  \n| 16 | 2500 | 5000 | 5000 |30 |  \n| break | | | | 15 | \n| 17 | 3000 | 6000 | 6000 |30 |  \n| 18 | 4000 | 8000 | 8000 |30 |  \n| 19 | 5000 | 10000 | 10000 |30 |  \n| 20 | 6000 | 12000 | 12000 |30 |  \n| break | | | | 15 | \n| 21 | 8000 | 16000 | 16000 |30 |  \n| 22 | 10000 | 20000 | 20000 |30 |  \n| 23 | 10000 | 25000 | 25000 |30 |  \n| 24 | 15000 | 30000 | 30000 |30 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |30 |  \n| 26 | 25000 | 50000 | 50000 |30 |  \n| 27 | 30000 | 60000 | 60000 |30 |  \n| 28 | 40000 | 80000 | 80000 |30 |  \n| break | | | | 15 | \n| 29 | 50000 | 100000 | 100000 |30 |  \n| 30 | 60000 | 120000 | 120000 |30 |  \n| 31 | 80000 | 160000 | 160000 |30 |  \n| 32 | 100000 | 200000 | 200000 |30 |  \n| break | | | | 15 | \n| 33 | 125000 | 250000 | 250000 |30 |  \n"
       payouts: []
     - 
-      series: 
-        __type: "Pointer"
-        className: "Series"
-        objectId: "IHa3NbJnO7"
       no: "6"
       title: "Turbo - NLH - Single Re-entry"
       startTime: "2020-01-05T11:13:42.048Z"
@@ -3124,25 +2550,10 @@
       bounty: 0
       adminFee: 2000
       staffFee: 3
-      createdAt: "2020-08-24T02:09:58.066Z"
-      updatedAt: "2020-08-25T03:04:32.212Z"
-      boundPartner: 
-        __type: "Pointer"
-        className: "Partner"
-        objectId: "FIZ2OaggEK"
-      boundEventId: "BuzkiCMx9r"
-      boundEventNo: "6"
-      boundEventTitle: "Turbo - NLH - Single Re-entry"
       boundEventEntries: 78
-      boundEventIsChild: false
-      boundEventIsParent: false
       boundEventPlayers: 67
       boundEventPrizePools: 1361880
       boundEventRemain: 1
-      structure: 
-        __type: "Pointer"
-        className: "Structure"
-        objectId: "PMDYwyPHKZ"
       objectId: "vNfKVE3zPr"
       rounds: "| 　 Level 　 | 　 SmallBlind 　 | 　 BigBlind 　 | 　 Ante 　 | 　 Duration 　 | \n | :--: | :--: | :--: | :--: | :--: | \n| 1 | 100 | 100 | 0 |15 |  \n| 2 | 100 | 100 | 100 |15 |  \n| 3 | 100 | 200 | 200 |15 |  \n| 4 | 100 | 300 | 300 |15 |  \n| 5 | 200 | 400 | 400 |15 |  \n| 6 | 200 | 500 | 500 |15 |  \n| 7 | 300 | 600 | 600 |15 |  \n| 8 | 400 | 800 | 800 |15 |  \n| break | | | | 15 | \n| 9 | 500 | 1000 | 1000 |15 |  \n| 10 | 600 | 1200 | 1200 |15 |  \n| 11 | 800 | 1600 | 1600 |15 |  \n| 12 | 1000 | 2000 | 2000 |15 |  \n| 13 | 1000 | 2500 | 2500 |15 |  \n| 14 | 1500 | 3000 | 3000 |15 |  \n| 15 | 2000 | 4000 | 4000 |15 |  \n| 16 | 2500 | 5000 | 5000 |15 |  \n| break | | | | 15 | \n| 17 | 3000 | 6000 | 6000 |15 |  \n| 18 | 4000 | 8000 | 8000 |15 |  \n| 19 | 5000 | 10000 | 10000 |15 |  \n| 20 | 6000 | 12000 | 12000 |15 |  \n| 21 | 8000 | 16000 | 16000 |15 |  \n| 22 | 10000 | 20000 | 20000 |15 |  \n| 23 | 10000 | 25000 | 25000 |15 |  \n| 24 | 15000 | 30000 | 30000 |15 |  \n| break | | | | 15 | \n| 25 | 20000 | 40000 | 40000 |15 |  \n| 26 | 25000 | 50000 | 50000 |15 |  \n| 27 | 30000 | 60000 | 60000 |15 |  \n| 28 | 40000 | 80000 | 80000 |15 |  \n| 29 | 50000 | 100000 | 100000 |15 |  \n| 30 | 60000 | 120000 | 120000 |15 |  \n| 31 | 80000 | 160000 | 160000 |15 |  \n| 32 | 100000 | 200000 | 200000 |15 |  \n| break | | | | 15 | \n| 33 | 125000 | 250000 | 250000 |15 |  \n"
       payouts: 
