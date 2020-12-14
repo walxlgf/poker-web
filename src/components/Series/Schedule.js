@@ -38,7 +38,6 @@ export default memo(({ series, category }) => {
         let currency;
         for (let index = 0; index < categorySeries.length; index++) {
             const serie = categorySeries[index];
-            console.log(serie);
             currency = serie.currency;
             for (let j = 0; j < serie.events.length; j++) {
                 const event = serie.events[j];

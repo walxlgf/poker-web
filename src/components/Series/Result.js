@@ -67,7 +67,6 @@ const List = ({ payouts }) => {
             </li>
             {
                 payouts.map((payout, i) => {
-                    console.log(payout.avatar);
                     let topThreeColor = i == 0 ? '#f7a929' : (i == 1 ? '#8a8c8e' : '#c06e4e');
                     let ranks = ['冠軍', '亞軍', '季軍'];
                     let isTopThree = payout.rank <= 3;

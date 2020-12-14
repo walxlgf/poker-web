@@ -1,5 +1,6 @@
 ---
-templateKey: category-page
+onlyData: true
+templateKey: category
 categoryKey: rd-jeju
 title: 紅龍杯冠軍賽濟洲站
 address: 韓國濟洲話世界b假酒b鼎娛樂場 38 Sinhwayeoksa-ro 304 beon-gil,Andeok-myeon Seogwipo-si, Jeju, Korea

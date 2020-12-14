@@ -32,7 +32,7 @@ export default ({ pageContext: { categoryKey }, data }) => {
 export const pageQuery = graphql`
   query MyQuery {
     categories:allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "category-page" } } }
+      filter: { frontmatter: { templateKey: { eq: "category" } } }
     ) {
       edges {
         node {
