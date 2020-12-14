@@ -20,6 +20,9 @@
 		},
 		{
 			"path": "..\\..\\githubactions\\gatsby-incremental-builds-gh-actions-example"
+		},
+		{
+			"path": "..\\..\\..\\Documents\\pokerweb\\icon"
 		}
 	],
 	"settings": {}
