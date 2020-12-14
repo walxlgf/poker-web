@@ -56,12 +56,21 @@
         }
     }
 
-    span {
+    .indicator {
         display: inline-block;
         width: 55px;
         height: 55px;
         background-color: $nor-red;
         margin: 0 25px 0 3px;
+        text-align: center;
+        line-height: 55px;
+
+        i {
+            background: url('../img/arrow-down.svg') no-repeat center;
+            width: 27px;
+            height: 10px;
+            display: inline-block;
+        }
     }
 
     ul {
@@ -69,7 +78,7 @@
         top: 105%;
         width: 232px;
         max-height: 350px;
-        overflow: scroll;
+        overflow-y: scroll;
         list-style: none;
         z-index: 9999;
         padding: 5px 0;
@@ -77,9 +86,10 @@
         background-color: white;
 
         li {
-            height: 40px;
-            padding-left: 10px;
-            line-height: 40px;
+            height: 55px;
+            padding: 0 20px;
+            line-height: 55px;
+            overflow: hidden;
             box-sizing: border-box;
             color: #888888;
             cursor: pointer;

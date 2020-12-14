@@ -1,18 +1,18 @@
 
-import { tuple } from 'antd/lib/_util/type';
 import React, { useState, memo, useEffect, useRef, forwardRef, useImperativeHandle } from 'react'
 import '../../styles/offline-page.scss';
 import { Weeks, Months, Categories } from '../../util/consts'
 import { formatMoney } from '../../util/util';
 import SelectItem from './SelectItem'
 
+
 export default memo(({ series, category }) => {
 
     const [curCategory, setCurCategory] = useState(category);
     const [curTime, setCurTime] = useState('');
     const [times, setTimes] = useState([]);
+    const [currency, setCurrency] = useState('');
     const [groupEvents, setGroupEvents] = useState([]);
-    const [eventModalVisible, setEventModalVisible] = useState(false);
     const eventModalRef = useRef(null);
 
     // 根据选择的category过滤数据
@@ -24,9 +24,10 @@ export default memo(({ series, category }) => {
                 categorySeries.push(serie);
             }
         }
-        let { groupEvents, times } = _handleEvent(categorySeries);
+        let { groupEvents, times, currency } = _handleEvent(categorySeries);
         setGroupEvents(groupEvents);
         setTimes(times);
+        setCurrency(currency);
     }, [curCategory, curTime])
 
     // 将series中的所有event按照指定格式处理后返回
@@ -34,8 +35,11 @@ export default memo(({ series, category }) => {
     //         times :       ['9 Nov 2019(星期六)',...]
     const _handleEvent = (categorySeries) => {
         let events = [];
+        let currency;
         for (let index = 0; index < categorySeries.length; index++) {
             const serie = categorySeries[index];
+            console.log(serie);
+            currency = serie.currency;
             for (let j = 0; j < serie.events.length; j++) {
                 const event = serie.events[j];
                 events.push(event);
@@ -78,11 +82,7 @@ export default memo(({ series, category }) => {
                 }
             }
         }
-        return { groupEvents, times };
-    }
-
-    const _eventDetailAction = (event) => {
-        eventModalRef.current.show();
+        return { groupEvents, times, currency };
     }
 
     return (
@@ -97,25 +97,28 @@ export default memo(({ series, category }) => {
                 <SelectItem placeholder='选择比赛时间' value={curTime} datas={times} select={t => setCurTime(t)} />
                 <p>下载完整赛程表</p>
             </div>
-            <EventList datas={groupEvents} detailAction={_eventDetailAction} />
+            <EventList currency={currency} datas={groupEvents} detailAction={(event) => eventModalRef.current.show(event)} />
             <EventDetailModal ref={eventModalRef} />
         </div>
     )
 })
 
-
+// Event详情 弹框
 const EventDetailModal = forwardRef((props, ref) => {
 
+    const [data, setData] = useState(null);
+    const [rounds, setRounds] = useState([]);
     const [visible, setVisible] = useState(false);
     useImperativeHandle(ref, () => ({ show, hidden }));
 
-    const show = () => {
+    const show = (event) => {
         const { scrollTop } = document.documentElement;
         // 禁止除了modal以外的滚动
         document.body.style.position = 'fixed';
         // antd中的Modal当弹出时，body会自动滚动到最顶部，这里采用设置top值防止默认的回滚行为
         document.body.style.top = `-${scrollTop}px`;
         setVisible(true);
+        setData(event);
     };
 
     const hidden = () => {
@@ -128,79 +131,95 @@ const EventDetailModal = forwardRef((props, ref) => {
         setVisible(false);
     }
 
-    let descItems = [
-        { left: { key: '開始時間', value: '04 Jan 2020, 12:03' }, right: { key: '起始籌碼', value: '20,000' } },
-        { left: { key: '買入總額', value: '18,000' }, right: { key: '重複買入次數', value: '1' } },
-        { left: { key: '管理費', value: '2000' }, right: { key: '買入次數', value: '188' } },
-        { left: { key: '獎勵', value: '0' }, right: { key: '剩餘人數', value: '21' } },
-        { left: { key: '小費', value: '3%' }, right: { key: '獎池總額', value: '20,000,99' } },
-    ]
+    useEffect(() => {
+        if (!data || !data.rounds) return;
+        let rounds = [];
+        let roundsStr = data.rounds.replace(/\s+/g, "");
+        let items = roundsStr.split('|');
+        let rank1Index = items.findIndex(item => item === '1'); // 找出第一个round
+        items = items.slice(rank1Index); // 删除第一个round之前的头部数据
+        for (let i = 0; i < items.length;) {
+            rounds.push(items.slice(i, i += 6)); // 每6个元素分成一组,注意每组最后一个是一个空字符串  
+        }
+        setRounds(rounds);
+    }, [data])
 
-    if (!visible) return null;
+    const _handleTime = (time) => {
+        let date = new Date(time);
+        let year = date.getFullYear();
+        let month = Months[date.getMonth()]//获取月，从0 - 11
+        let day = date.getDate();//获取日
+        day = day < 10 ? '0' + day : day;
+        let hour = date.getHours();
+        hour = hour < 10 ? '0' + hour : hour;
+        let min = date.getMinutes();
+        min = min < 10 ? '0' + min : min;
+        return `${day} ${month} ${year}, ${hour}:${min}`;
+    }
+
+    if (!visible || !data) return null;
+    let descItems = [
+        { left: { key: '開始時間', value: _handleTime(data.startTime) }, right: { key: '起始籌碼', value: formatMoney(data.startingChips) } },
+        { left: { key: '買入總額', value: formatMoney(data.buyin + data.adminFee + data.bounty) }, right: { key: '重複買入次數', value: data.reEntry } },
+        { left: { key: '管理費', value: formatMoney(data.adminFee) }, right: { key: '買入次數', value: data.boundEventEntries } },
+        { left: { key: '獎勵', value: '-' }, right: { key: '剩餘人數', value: data.boundEventRemain } },
+        { left: { key: '小費', value: `${data.staffFee}%` }, right: { key: '獎池總額', value: formatMoney(data.boundEventPrizePools) } },
+    ];
+
     return (
         <div className='modal-box' onClick={hidden}>
             <div className='m-content' onClick={(e) => { e.stopPropagation() }}>
                 <div className='header'>
                     <p>賽事詳情</p>
-                    <i onClick={hidden}></i>
+                    <a onClick={hidden}></a>
                 </div>
-                <h4 className='title'>#1A Red Dragon Kickoﬀ - Day 1A</h4>
-                {
-                    descItems.map((item, index) => {
-                        let isLastItem = index === descItems.length - 1;
-                        return (
-                            <div key={index} className='descItem' style={isLastItem ? { borderBottom: 'none' } : {}}>
-                                <div className='left'>
-                                    <p className='key'>{item.left.key}</p>
-                                    <p className='value'>{item.left.value}</p>
-                                </div>
-                                <div className='right'>
-                                    <p className='key'>{item.right.key}</p>
-                                    <p className='value'>{item.right.value}</p>
-                                </div>
+                <h4 className='title'>{data.title}</h4>
+                {descItems.map((item, index) => {
+                    let isLastItem = index === descItems.length - 1;
+                    return (
+                        <div key={index} className='descItem' style={isLastItem ? { borderBottom: 'none' } : {}}>
+                            <div className='left'>
+                                <p className='key'>{item.left.key}</p>
+                                <p className='value'>{item.left.value}</p>
                             </div>
-                        )
-                    })
-                }
+                            <div className='right'>
+                                <p className='key'>{item.right.key}</p>
+                                <p className='value'>{item.right.value}</p>
+                            </div>
+                        </div>
+                    )
+                })}
                 <table >
                     <thead>
-                        <tr>
-                            <th>級別</th>
-                            <th>小盲注</th>
-                            <th>大盲注</th>
-                            <th>前注</th>
-                            <th>時長</th>
-                        </tr>
+                        <tr><th>級別</th><th>小盲注</th><th>大盲注</th><th>前注</th><th>時長</th></tr>
                     </thead>
                     <tbody>
-                        {
-                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, i) => {
-                                let isLastItem = i === 9;
-                                return (
-                                    <tr key={i} style={isLastItem ? { borderBottom: 'none' } : {}}>
-                                        <td>{i + 1}</td>
-                                        <td>100</td>
-                                        <td>200</td>
-                                        <td>200</td>
-                                        <td>110</td>
-                                    </tr>
-                                )
-                            })
-                        }
+                        {rounds.map((round, i) => {
+                            let isLastItem = i === rounds.length - 1;
+                            return (
+                                <tr key={i} style={isLastItem ? { borderBottom: 'none' } : {}}>
+                                    {round.map((v, j) => {
+                                        if (j === round.length - 1) return null;
+                                        return <td key={j}>{formatMoney(v)}</td>
+                                    })}
+                                </tr>
+                            )
+                        })}
                     </tbody>
                 </table>
                 <div className='m-bottom'>
-                    <div className='share'><i></i></div>
-                    <div className='download'><i></i></div>
+                    <a className='share'><i></i></a>
+                    <a className='download'><i></i></a>
                 </div>
             </div>
         </div>
     )
 })
 
+// Events 列表
 const liHeight = 70;
 const EventList = (props) => {
-    const { datas, detailAction } = props;
+    const { datas, currency, detailAction } = props;
     // 记录所有row是否被点击了，以及row的高度
     const [selectItems, setSelectItems] = useState([]);
 
@@ -246,7 +265,7 @@ const EventList = (props) => {
                             setSelectItems([...selectItems]);
                         }}>
                         <p>{data.date}</p>
-                        <i></i>
+                        <i className={item.select ? 'active' : ''}></i>
                     </div>
                     <ul style={{ height: item.height, transition: 'all 0.2s' }}>
                         <li className='s-in-list-header'>
@@ -254,7 +273,7 @@ const EventList = (props) => {
                             <p style={{ flex: 79 / 1200 }}>編號</p>
                             <p style={{ flex: 273 / 1200 }}>賽事名稱</p>
                             <p style={{ flex: 103 / 1200 }}>等級</p>
-                            <p style={{ flex: 149 / 1200 }}>買入(韓元)</p>
+                            <p style={{ flex: 149 / 1200 }}>{`買入 (${currency})`}</p>
                             <p style={{ flex: 136 / 1200 }}>起始筹码</p>
                             <p style={{ flex: 203 / 1200 }}>備注</p>
                             <p style={{ flex: 112 / 1200 }}>查看詳情</p>
@@ -268,8 +287,8 @@ const EventList = (props) => {
                                     <div style={{ flex: 273 / 1200, maxWidth: '266px' }}>
                                         <p style={{ width: '80%', overflow: 'hidden', textOverflow: 'ellipsis' }}>{e.title}</p>
                                     </div>
-                                    <p style={{ flex: 103 / 1200 }}>Day 1A</p>
-                                    <p style={{ flex: 149 / 1200 }}>{formatMoney(e.buyin)}</p>
+                                    <p style={{ flex: 103 / 1200 }}>-</p>
+                                    <p style={{ flex: 149 / 1200 }}>{formatMoney(e.buyin + e.adminFee + e.bounty)}</p>
                                     <p style={{ flex: 136 / 1200 }}>{formatMoney(e.startingChips)}</p>
                                     <div style={{ flex: 203 / 1200, maxWidth: '200px' }}>
                                         <p style={{ width: '90%', overflow: 'hidden', textOverflow: 'ellipsis' }}>-</p>
@@ -285,8 +304,7 @@ const EventList = (props) => {
                     </ul>
                 </li>
             )
-        })
-        }
+        })}
         </ul>
     )
 }

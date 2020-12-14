@@ -11,16 +11,14 @@ import SeriesTabs from '../components/SeriesTabs'
 export default ({ pageContext: { categoryKey }, data }) => {
 
     const series = data.seriess.edges.map(edge => edge.node.frontmatter);
+    const categories = data.categories.edges.map(edge => edge.node.frontmatter).filter(c => c.categoryKey === categoryKey);
 
     return (
         <Layout>
             <div className="s-container">
                 <img className='topBanner' src={'/img/mainbanner.jpg'} />
-                <SeriesTabs
-                    names={['赛事简介', '赛程表', '赛事结果', '赛事直播']}
-                    icons={[require('../img/eye.png'), require('../img/eye.png'), require('../img/eye.png'), require('../img/eye.png')]}
-                >
-                    <Summary />
+                <SeriesTabs>
+                    <Summary category={categories.length && categories[0]} />
                     <Schedule series={series} category={categoryKey} />
                     <Result series={series} />
                     <Zhibo />
@@ -42,6 +40,10 @@ export const pageQuery = graphql`
             categoryKey
             title
             address
+            date
+            prize
+            currency
+            others
           }
         }
       }
@@ -57,6 +59,7 @@ export const pageQuery = graphql`
             title
             description
             category
+            currency
             events {
               no
               title
@@ -66,11 +69,18 @@ export const pageQuery = graphql`
               bounty
               adminFee
               reEntry
+              staffFee
+              boundEventEntries
+              boundEventPlayers
+              boundEventPrizePools
+              boundEventRemain
+              rounds
               payouts{
                   rank
                   amount
                   nationality
                   name
+                  avatar
               }
             }
             bannerImage {

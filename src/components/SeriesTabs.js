@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
 import '../styles/common.scss'
 
+
+const NAMES = ['赛事简介', '赛程表', '赛事结果', '赛事直播'];
+const ICONS = [
+    { name: require('../img/tab-summary.svg'), w: '42.5px', h: '45.5' },
+    { name: require('../img/tab-list.svg'), w: '45px', h: '41' },
+    { name: require('../img/tab-result.svg'), w: '34.4px', h: '48' },
+    { name: require('../img/tab-video.svg'), w: '46px', h: '46' },
+]
 export default (props) => {
-    const { names, icons } = props;
     const [currentTabIndex, setCurrentTabIndex] = useState(1);
     const [activeIndexs, setActiveIndexs] = useState([currentTabIndex])
 
@@ -17,12 +24,12 @@ export default (props) => {
     return (
         <div>
             <div className='s-tabs'>
-                {icons.map((icon, i) => {
+                {ICONS.map((icon, i) => {
                     return (
                         <div key={i} onClick={() => _tabChange(i)}
                             className={`s-tab-item ${currentTabIndex === i ? 'isActive' : ''}`}>
-                            <img src={icon}></img>
-                            <p>{names[i]}</p>
+                            <img src={icon.name} style={{ width: icon.w, height: icon.h }}></img>
+                            <p>{NAMES[i]}</p>
                         </div>
                     )
                 })}

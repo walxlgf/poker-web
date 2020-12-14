@@ -67,6 +67,7 @@ const List = ({ payouts }) => {
             </li>
             {
                 payouts.map((payout, i) => {
+                    console.log(payout.avatar);
                     let topThreeColor = i == 0 ? '#f7a929' : (i == 1 ? '#8a8c8e' : '#c06e4e');
                     let ranks = ['冠軍', '亞軍', '季軍'];
                     let isTopThree = payout.rank <= 3;
@@ -77,7 +78,7 @@ const List = ({ payouts }) => {
                                 <p className={`${isTopThree ? 'topThree' : ''}`}>{isTopThree ? ranks[payout.rank - 1] : payout.rank}</p>
                             </div >
                             <div className='name' style={{ flex: 379 / 1200 }}>
-                                <img style={{ display: isTopThree ? 'block' : 'none' }}></img>
+                                <img src={payout.avatar} style={{ display: isTopThree ? 'block' : 'none' }}></img>
                                 <p>{payout.name}</p>
                             </div>
                             <p style={{ flex: 279 / 1200 }}>{payout.nationality}</p>
