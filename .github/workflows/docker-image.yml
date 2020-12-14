@@ -12,23 +12,22 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    # 为了重复不install,拆分
     - name: Build the Docker  install image
       run: docker build -f Dockerfile.install -t poker-web:install .
 
+    # 为了重复不Build,拆分
     - name: Build the Docker  builder image
       run: docker build -f Dockerfile.builder -t poker-web:builder .
-
+    
     - name: Build the Docker  release image
-      run: docker build -f Dockerfile.release --no-cache -t poker-web:v1 .
+      run: docker build -f Dockerfile.release -t poker-web:v1 .
 
+    # 一定要指定public和.cache为卷，相当于缓存，不然使用build:incremental没有效果
     - name: Run Builder Container
       run: docker run --rm --name poker-web.builder --mount source=public,target=/usr/src/app/public --mount source=cache,target=/usr/src/app/.cache poker-web:builder
       
+    # 和Builder Container共享public卷。
     - name: Start new Container
       continue-on-error: true
       run: docker run -d --name poker-web -p 80:80 --mount source=public,target=/usr/share/nginx/html poker-web:v1
-
-
-    # - name: Start new Container
-    #   continue-on-error: true
-    #   run: docker run -d  --rm --name poker-web -p 80:80 poker-web:v1
