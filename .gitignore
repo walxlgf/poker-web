@@ -11,3 +11,4 @@ package-lock.json
 yarn-lock.json
 yarn.lock
 *.log
+*.code-workspace
