@@ -57,13 +57,12 @@
                 display: flex;
 
                 img {
-                    width: 27px;
-                    height: 31px;
                     margin-right: 15px;
                 }
 
                 p {
                     margin-left: 0px;
+                    margin-bottom: 20px;
                 }
             }
         }
@@ -213,12 +212,15 @@
                 }
 
                 i {
-                    background: url('../img/eye.png') no-repeat center;
-                    background-size: contain;
-                    width: 30px;
-                    height: 30px;
-                    display: inline-block;
+                    background: url('../img/plus.svg') no-repeat center;
+                    width: 23px;
+                    height: 23px;
                     margin-right: 30px;
+                    transition: all 0.2s;
+
+                    &.active {
+                        transform: rotateZ(45deg);
+                    }
                 }
 
                 .triangle-down {
@@ -235,12 +237,26 @@
 
                 .inner {
                     background-color: #f1f1f2;
-                    color: black;
-                    font-size: 18px;
-                    font-weight: 300;
-                    font-family: $font-family;
-                    line-height: 39px;
                     padding: 34px 40px;
+
+                    div {
+                        display: flex;
+                        color: black;
+                        font-size: 18px;
+                        font-weight: 300;
+                        font-family: $font-family;
+                        line-height: 39px;
+
+                        p {
+                            &:nth-child(1) {
+                                width: 3%;
+                            }
+
+                            &:nth-child(2) {
+                                width: 97%;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -309,11 +325,15 @@
                 }
 
                 i {
-                    background: url('../img/eye.png') no-repeat center;
-                    background-size: contain;
-                    width: 30px;
-                    height: 30px;
-                    margin-top: 20px;
+                    background: url('../img/plus.svg') no-repeat center;
+                    width: 23px;
+                    height: 23px;
+                    margin-top: 23px;
+                    transition: all 0.2s;
+
+                    &.active {
+                        transform: rotateZ(45deg);
+                    }
                 }
             }
 
@@ -393,7 +413,6 @@
 
     .m-content {
         width: 697px;
-        // height: 1144px;
         background-color: white;
         margin: 150px auto;
         padding: 25px;
@@ -413,11 +432,10 @@
                 font-family: $font-family;
             }
 
-            i {
-                background: url('../img/eye.png') no-repeat center;
-                background-size: contain;
-                width: 30px;
-                height: 30px;
+            a {
+                background: url('../img/close.svg') no-repeat center;
+                width: 23px;
+                height: 23px;
             }
         }
 
@@ -510,6 +528,23 @@
                 width: 120px;
                 height: 45px;
                 background-color: $nor-red;
+                text-align: center;
+            }
+
+            .share i {
+                background: url('../img/share.svg') no-repeat center;
+                width: 21px;
+                height: 21px;
+                display: inline-block;
+                margin-top: 12px;
+            }
+
+            .download i {
+                background: url('../img/download.svg') no-repeat center;
+                width: 21px;
+                height: 19px;
+                margin-top: 13px;
+                display: inline-block;
             }
         }
     }

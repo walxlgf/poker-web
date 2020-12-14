@@ -43,6 +43,7 @@ export const throttle = (fn, delay = 1000) => {
 
 export const formatMoney = (s) => {
     s = s + '';
+    if (isNaN(parseFloat(s))) return s;
     let l = s.split('.')[0].split('').reverse();
     let t = '';
     for (let i = 0; i < l.length; i++) {
@@ -51,6 +52,18 @@ export const formatMoney = (s) => {
     return t.split('').reverse().join('');// + '.' + r;
 }
 
+export const ICONS = () => {
+    let arr = []
+    for (let index = 29; index <= 66; index++) {
+        arr.push(<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <img style={{ width: '100px', height: '100px', padding: '20px' }}
+                src={require(`../img/icon/20201201 RDPT Website-${index}.svg`)}>
+            </img>
+            <span>{index}</span>
+        </div>);
+    }
+    return <div style={{ backgroundColor: 'gray', display: 'flex', flexWrap: 'wrap' }}>{arr}</div>;
+}
 
 // 类似x轴坐标系 求两个区间是否相交
 // 如 [1000,2000], [1800, 2100]两个区间后相交，相交部分百分比为200/300,大于50%认为相交

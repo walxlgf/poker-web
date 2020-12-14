@@ -17,14 +17,13 @@ export default ({ datas, value, placeholder, select }) => {
     return (
         <div className='s-select-item'>
             <input
-                className='s-sel-event'
                 placeholder={placeholder}
                 readOnly
                 value={selectText}
                 onFocus={() => setIsFocus(true)}
                 onBlur={() => setTimeout(() => { setIsFocus(false) }, 10)}
             />
-            <span></span>
+            <div className='indicator'><i></i></div>
             <ul style={{ display: isFocus ? 'block' : 'none' }}>
                 {
                     datas.map((d, i) => {
