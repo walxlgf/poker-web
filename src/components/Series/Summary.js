@@ -10,7 +10,7 @@ export default ({ category }) => {
                 <div className='s-rdpt-content'>
                 </div>
             </div>
-            <DescList />
+            <DescList descs={category.descs} />
         </div>
     )
 }
@@ -104,45 +104,13 @@ const MainEvents = () => {
     )
 }
 
-
-const DESCS = [
-    {
-        title: '比賽規則',
-        img: require('../../img/location.png'),
-        texts: [
-            '要什下務經人收價，而笑目光必具重行一行小費還說生你自因不位會，近力著動歷上遊,還說生你自因不位會，近力著動歷上遊,還說生你自因不位會，近力著動歷上遊；',
-            '品燈總是解毛民，中就帶遠種，到之上題的反里但坐打神候山入一強南變下的對孩理積品立下財業學',
-            '開檢心法大味，言論親國受運一工太人是不活，以定為際，則年利調古一反角廠究笑講，中做這總前讀新行造；',
-            '良長取生家止回年，言論親國受運一工太人是不活，不總見經腦兒已病為；',
-            '中帶日水他，日制國類處是飛低企後實夜權我負開美好回府輕路兒舞散人增勢，還已當你麗子早如告去書來文紅一事；',
-            '要什下務經人收價，而笑目光必具重行一行小費還說生你自因不位會，近力著動歷上遊；',
-            '品燈總是解毛民，中就帶遠種，到之上題的反里但坐打神候山入一強南變下的對孩理積品立下財業學；',
-            '開檢心法大味，言論親國受運一工太人是不活，以定為際，則年利調古一反角廠究笑講，中做這總前讀新行造,開檢心法大味，言論親國受運一工太人是不活，以定為際，則年利調古一反角廠究笑講，中做這總前讀新行造；,開檢心法大味，言論親國受運一工太人是不活，以定為際，則年利調古一反角廠究笑講，中做這總前讀新行造；'
-        ]
-    },
-    {
-        title: '買入金額(韓元)',
-        img: require('../../img/location.png'),
-    },
-    {
-        title: '住宿資料',
-        img: require('../../img/location.png'),
-    },
-    {
-        title: '場地交通',
-        img: require('../../img/location.png'),
-    },
-    {
-        title: '場地資訊',
-        img: require('../../img/location.png'),
-    },
-]
-const DescList = () => {
+const DescList = ({ descs }) => {
     const [selectItems, setSelectItems] = useState([true]);
+    if (!descs || descs.length == 0) return null;
     return (
         <ul className='s-desc-list'>
             {
-                DESCS.map((desc, i) => {
+                descs.map((desc, i) => {
                     let isExpand = selectItems[i];
                     return (
                         <li key={i}>
@@ -153,7 +121,7 @@ const DescList = () => {
                                     setSelectItems([...selectItems]);
                                 }}>
                                 <div className='left'>
-                                    <img src={desc.img}></img>
+                                    <img src={require('../../img/location.png')}></img>
                                     <p>{desc.title}</p>
                                 </div>
                                 <i className={isExpand ? 'active' : ''}></i>
