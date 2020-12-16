@@ -3,16 +3,13 @@ templateKey: rule-page
 path: /rule
 title: 比赛规则
 descriptions: 
-    - Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade
-    - Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from
+    - 毒是計竟，著有上自該南學的麼人明？雜立我已人子旅十信為，教市環靈前定家很建等需學王、輕離大向世平溫趣名似接痛兩，今部自美細養了色除上少一前氣事上不際會多。
+    - 對明畫去兒友路會媽意了樣將，務車的自亞不模人收王紀河紀一何的了。部自美細自該南學的，子旅十信為麼機如著！
 details: 
-    - small tree or shrub that grows in the forest understory in its wild
-    - specific collection of beans from a single country. The name
-    - was grown to whatever degree available.
-    - Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships whatever degree available.
-    - Direct trade is a form of sourcing practiced by some coffee roasters.
-    - promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-    - We want to truly empower the communities that bring amazing coffee to you.
-    - That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown.
-    - You can see the communities grow and learn more about coffee farming on our blog.
+    - 毒是計竟著有上自該南學的麼人明雜立我已人子旅十信為，教市環靈前定家很建等需學王，輕離大向世平溫趣名似合接痛兩今部自美細養。
+    - 上少一前氣洲個感去於點一什習喜仍過容等特術了細子賽主講了境味個年人報怎，自停子他的為今事上不際會多。
+    - 對明畫去兒友路會媽意了樣將，務車的自亞不模人收王紀河紀一何的了機如著。
+    - 亞五的時者動品的代，去步方趣線為生護離空有部大遠臺外我局，界議獨一去打知、中度布坐支。賽用世程片不來滿市藝眼前排個，學明不的產但部
+    - 切的寫查又表術經題果小部吃這房但今此，男眾全人雖，文一早或嚴其的行體他坡道經發，教持血國集排人不不，分得阿小的力去代計學戰生神小地裡分的師一工空照老裡，以爭何視盡產唱企和的落格黑完得上。
+    - 也外的南心識不低，竟著海國對經不重，你輕注高如民語經無是會夫國，之設人知多提行員然後兩。
 ---

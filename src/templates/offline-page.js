@@ -18,7 +18,7 @@ export default ({ pageContext: { categoryKey }, data }) => {
             <div className="s-container">
                 <img className='topBanner' src={'/img/mainbanner.jpg'} />
                 <SeriesTabs>
-                    <Summary category={categories.length && categories[0]} />
+                    <Summary category={categories.length && categories[0]} series={series} />
                     <Schedule series={series} category={categoryKey} />
                     <Result series={series} />
                     <Zhibo />
@@ -44,6 +44,10 @@ export const pageQuery = graphql`
             prize
             currency
             others
+            mains {
+                serieId
+                eventIds
+            }
             descs{
                 key
                 values
@@ -64,8 +68,10 @@ export const pageQuery = graphql`
             description
             category
             currency
+            objectId
             events {
               no
+              objectId
               title
               startTime
               startingChips

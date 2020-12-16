@@ -3,68 +3,43 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 
-export const AboutPageTemplate = ({ title, descriptions, details }) => {
-
-    const _renderCircle = () => {
-        return (
-            <div style={{ padding: '10px', backgroundColor: 'blue', width: '100px', height: '100px', borderRadius: '50px' }}>
-                <div style={{
-                    width: '80px', height: '80px', borderRadius: '40px', borderColor: 'red', borderWidth: '5px',
-                    backgroundColor: 'blue', borderStyle: 'solid'
-                }}>
-                </div>
-            </div>
-        )
-    }
+export const AboutPageTemplate = ({ descriptions }) => {
 
     return (
-        <div style={{ backgroundColor: 'black', paddingBottom: '100px' }}>
-
-            <div style={{ width: '1920px', height: '800px', margin: '0 auto' }}>
-                <img style={{ width: '100%', height: '100%' }} src={'/img/mainbanner.jpg'} />
-            </div>
-
-            <div style={{ margin: '0 auto', width: '1200px' }}>
-                <h1 style={{ color: 'white', textAlign: 'center', fontSize: '40px', paddingBottom: '30px', paddingTop: '100px' }}>关于我们</h1>
-
-                <img style={{ width: '420px', height: '280px', margin: '0 auto', display: 'block', marginBottom: '50px' }} src={'/img/photo_wall_8.jpg'} />
-
-                {
-                    descriptions.map((des, i) => {
-                        return (
-                            <p key={i} style={{ color: 'white', textAlign: 'center', width: '60%', fontSize: '25px', margin: '20px auto' }}>{des}</p>
-                        )
-                    })
-                }
-
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '30px', marginBottom: '300px', position: 'relative' }}>
-
-                    {_renderCircle()}
-                    <div style={{ width: '8px', height: '150px', backgroundColor: 'white' }} />
-                    {_renderCircle()}
-                    <div style={{ width: '8px', height: '150px', backgroundColor: 'white' }} />
-                    {_renderCircle()}
-
-                    <div style={{ position: 'absolute', top: '45%', right: '57%' }}>
-                        <p style={{ color: 'white', fontWeight: 'bold', fontSize: '45px', textAlign: 'right', marginBottom: '5px' }}>Nov 2018</p>
-                        <p style={{ color: 'white', fontSize: '20px', textAlign: 'right', marginBottom: '5px' }}>红龙杯首次在济州举行，</p>
-                        <p style={{ color: 'white', fontSize: '20px', textAlign: 'right' }}>打破韩国最高奖记录</p>
-                        <img style={{ width: '300px', height: '180px' }} src={'/img/photo_wall_7.jpg'} />
+        <div className='aboutPage'>
+            <img style={{ width: '100%', height: '400px' }} src={'/img/mainbanner.jpg'} />
+            <div className='content'>
+                <h1>关于我们</h1>
+                <img className='desImage' src={'/img/photo_wall_8.jpg'} />
+                <div className='descBox'>
+                    {descriptions.map((des, i) => {
+                        return <div className='descRow' key={i}>{des}</div>
+                    })}
+                </div>
+                <div className='historyBox'>
+                    <h3>紅龍歷史</h3>
+                    <div className='progressLine' />
+                    <div className='circleOuter'><div className='circleInner' /></div>
+                    <div className='circleOuter'><div className='circleInner' /></div>
+                    <div className='circleOuter'><div className='circleInner' /></div>
+                    <div className='progressDes first'>
+                        <h3 >May 2020</h3>
+                        <p >紅龍杯品牌升級，重新起航</p>
+                        <img src={'/img/photo_wall_6.jpg'} />
                     </div>
-
-                    <div style={{ position: 'absolute', top: '0', left: '57%' }}>
-                        <p style={{ color: 'white', fontWeight: 'bold', fontSize: '45px', textAlign: 'left', marginBottom: '5px' }}>May 2020</p>
-                        <p style={{ color: 'white', fontSize: '20px', textAlign: 'left' }}>红龙杯品牌升级，重新起航</p>
-                        <img style={{ width: '300px', height: '180px' }} src={'/img/photo_wall_6.jpg'} />
+                    <div className='progressDes first2'>
+                        <h3>Nov 2018</h3>
+                        <div style={{ width: '70%', float: 'right' }}>
+                            <p >紅龍杯首次在濟洲舉辦，打破韓國最高獎池記錄</p>
+                        </div>
+                        <img src={'/img/photo_wall_7.jpg'} />
                     </div>
-
-                    <div style={{ position: 'absolute', bottom: '-30%', left: '57%' }}>
-                        <p style={{ color: 'white', fontWeight: 'bold', fontSize: '45px', textAlign: 'left', marginBottom: '5px' }}>May 2009</p>
-                        <p style={{ color: 'white', fontSize: '20px', textAlign: 'left' }}>首届红龙杯（原MPC），在澳门举行</p>
-                        <img style={{ width: '300px', height: '180px' }} src={'/img/photo_wall_5.jpg'} />
+                    <div className='progressDes first3'>
+                        <h3 >May 2009</h3>
+                        <p >首屆紅龍杯(原MPC)，在澳門舉行</p>
+                        <img src={'/img/photo_wall_5.jpg'} />
                     </div>
                 </div>
-
             </div>
         </div>
     )
@@ -87,9 +62,7 @@ export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
         descriptions
-        details
       }
     }
   }

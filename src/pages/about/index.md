@@ -3,16 +3,12 @@ templateKey: about-page
 path: /about
 title: About ME
 descriptions: 
-    - Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade
-    - Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from
-details: 
-    - small tree or shrub that grows in the forest understory in its wild
-    - specific collection of beans from a single country. The name
-    - was grown to whatever degree available.
-    - Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships whatever degree available.
-    - Direct trade is a form of sourcing practiced by some coffee roasters.
-    - promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-    - We want to truly empower the communities that bring amazing coffee to you.
-    - That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown.
-    - You can see the communities grow and learn more about coffee farming on our blog.
+    - 傳奇之所以誕生，是為了書寫歷史。那麼撲克遊戲的歷史中，就必須要有紅龍撲克的名字……
+    - 紅龍起源於MPC澳門撲克杯，是PokerStars為亞洲地區玩家傾力打造的品牌撲克錦標賽由於紅龍獎盃的獨特造型，漸漸被玩家們習慣性稱為「紅龍杯」。
+    - 2009年第一屆紅龍杯一經舉辦，便因為其賽程賽制與國際接軌，一流的配套服務，豐厚的巨額獎金，和極具傳奇色彩的獎盃便受到世界各國玩家們追捧。
+    - 2018年，紅龍撲克橫空出世，秉承公開透明，以保障玩家利益為核心價值，由PokerStars全球領先的反夥牌技術加持，為玩家打造公平綠色的遊戲體驗，放心享受競技的樂趣。   
+    - 發展至今，紅龍已形成線上線下全方位的綜合性撲克品牌。在鞏固遊戲業務，舉辦高品質國際賽事的同時，為玩家建立起放心娛樂的撲克社區環境。
+    - 未來，紅龍依然會為反作弊技術的革新投入大力資源，並積極拓展佈局互聯網娛樂的其他領域，將紅龍公平至上，玩家至上的品牌價值發揮到極致。始終如一，成為「玩家最放心的選擇」。
+    - 紅龍的故事不長，下一個十年，有你的加入會更加精彩。
+
 ---

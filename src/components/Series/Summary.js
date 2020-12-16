@@ -1,12 +1,37 @@
+
 import React, { useState } from 'react'
 import { Months } from '../../util/consts'
+import { formatMoney } from '../../util/util';
 
-export default ({ category }) => {
+export default ({ category, series }) => {
+
+    let mainSeries = category.mains || [];
+    let events = [];
+    for (let i = 0; i < mainSeries.length; i++) {
+        const mainSer = mainSeries[i];
+        let targetSerie;
+        for (let j = 0; j < series.length; j++) {
+            const serie = series[j];
+            if (mainSer.serieId === serie.objectId) {
+                targetSerie = serie;
+                break;
+            }
+        }
+        if (!targetSerie) continue;
+        for (let k = 0; k < targetSerie.events.length; k++) {
+            const event = targetSerie.events[k];
+            if (mainSer.eventIds.includes(event.objectId)) {
+                events.push(event);
+                if (events.length === mainSer.eventIds.lenght) break;
+            }
+        }
+    }
+
     return (
         <div className='s-summary-box' >
             <h1>赛事简介</h1>
             <CategorySummary category={category} />
-            <MainEvents />
+            <MainEvents category={category} events={events} />
             <div className='s-rdpt'>
                 <div className='s-rdpt-content'>
                 </div>
@@ -64,7 +89,21 @@ const CategorySummary = ({ category }) => {
     )
 }
 
-const MainEvents = () => {
+const MainEvents = ({ events, category }) => {
+
+    const [isExpand, setIsExpand] = useState(false);
+    const NormalRowNum = 6;
+
+    const _handleTime = (time) => {
+        let date = new Date(time);
+        let year = date.getFullYear();
+        let month = Months[date.getMonth()]//获取月，从0 - 11
+        let day = date.getDate();//获取日
+        day = day < 10 ? '0' + day : day;
+        return `${day} ${month} ${year}`;
+    }
+
+    if (events.length == 0) return null;
     return (
         <div className='s-main-events'>
             <h3>重點賽事</h3>
@@ -72,49 +111,26 @@ const MainEvents = () => {
                 <li>
                     <p>賽事名稱</p>
                     <p>賽事時間</p>
-                    <p>買入(韓元)</p>
-                    <p>保証金總獎池(韓元)</p>
+                    <p>{`買入(${category.currency})`}</p>
+                    <p>{`保証金總獎池(${category.currency})`}</p>
                 </li>
-                <li>
-                    <p>超级豪客赛</p>
-                    <p>19-25 Jun 2020</p>
-                    <p>4000000</p>
-                    <p>600000000</p>
-                </li>
-                <li>
-                    <p>超级豪客赛</p>
-                    <p>19-25 Jun 2020</p>
-                    <p>4000000</p>
-                    <p>600000000</p>
-                </li>
-                <li>
-                    <p>超级豪客赛</p>
-                    <p>19-25 Jun 2020</p>
-                    <p>4000000</p>
-                    <p>600000000</p>
-                </li>
-                <li>
-                    <p>超级豪客赛</p>
-                    <p>19-25 Jun 2020</p>
-                    <p>4000000</p>
-                    <p>600000000</p>
-                </li>
-                <li>
-                    <p>超级豪客赛</p>
-                    <p>19-25 Jun 2020</p>
-                    <p>4000000</p>
-                    <p>600000000</p>
-                </li>
-                <li>
-                    <p>超级豪客赛</p>
-                    <p>19-25 Jun 2020</p>
-                    <p>4000000</p>
-                    <p>600000000</p>
-                </li>
+                {events.map((e, i) => {
+                    if (!isExpand && i >= NormalRowNum) return null;
+                    return (
+                        <li key={e.objectId}>
+                            <p>{e.title}</p>
+                            <p>{_handleTime(e.startTime)}</p>
+                            <p>{formatMoney(e.buyin + e.adminFee + e.bounty)}</p>
+                            <p>-</p>
+                        </li>
+                    )
+                })}
             </ul>
-            <div className='more'>
-                查看更多賽程
-            </div>
+            {!isExpand && events.length > NormalRowNum ? (
+                <div onClick={() => setIsExpand(true)} className='more'>
+                    查看更多賽程
+                </div>
+            ) : null}
         </div>
     )
 }

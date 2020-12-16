@@ -17,7 +17,6 @@ export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess,
                     {typeof bannerImage === 'string' && <img style={{ height: '650px' }} src={bannerImage} />}
                 </div>
             ) : null}
-            
 
             <BgAnimationViews />
             <LatestSeriess data={latestSeriess} />
