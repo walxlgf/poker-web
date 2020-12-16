@@ -14,6 +14,9 @@
       eventIds: 
         - "xhyQxGlO4n"
         - "vzXCnuiKvd"
+        - "odcXAHGRqW"
+        - "Piy2GHx98J"
+        - "x8ANIsbYZi"
   descs: 
     - 
       key: "比賽規則"
