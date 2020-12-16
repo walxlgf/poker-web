@@ -11,11 +11,6 @@
   mains: 
     - 
       serieId: "OgYEw3vN3J"
-      eventIds: 
-        - "xhyQxGlO4n"
-        - "vzXCnuiKvd"
-        - "x8ANIsbYZi"
-        - "kn9yrOKJPq"
   descs: 
     - 
       key: "比賽規則"
