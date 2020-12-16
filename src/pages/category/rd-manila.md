@@ -1,9 +1,20 @@
 ---
+  onlyData: true
+  templateKey: "category"
+  categoryKey: "rd-manila"
+  currency: "PHP"
   title: "RED DRAGON MANILA"
   address: "马尼拉 38 Sinhwayeoksa-ro 304 beon-gil,Andeok-myeon Seogwipo-si, Jeju, Korea"
   others: "聯絡電話: (+82) 64 908 8888 | 酒店預計: (+82) 82 64 908 8800 | 服裝規定: 休閑 | 入場年齡限制: 19歲以上"
   prize: "9999999"
   date: "2020-12-10T08:16:40.574Z"
+  mains: 
+    - 
+      serieId: "IHa3NbJnO7"
+      eventIds: 
+        - "jO014rzxjN"
+        - "NjDFxB3op1"
+        - "Z2ZxHodVAe"
   descs: 
     - 
       key: "说明"
@@ -31,7 +42,3 @@
         - "便利"
         - "繁华"
         - "满大街"
-  onlyData: true
-  templateKey: "category"
-  categoryKey: "rd-manila"
-  currency: "PHP"
