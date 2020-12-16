@@ -7,6 +7,7 @@
   currency: "PHP"
   prize: "2500000"
   seriesImage: "http://localhost:1337/parse/files/app/cf6510a5f300ca13e8ecb1accf640764_bg.jpeg"
+  objectId: "IHa3NbJnO7"
   events: 
     - 
       no: "16B"
