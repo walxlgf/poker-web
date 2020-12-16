@@ -10,7 +10,7 @@ const ICONS = [
     { name: require('../img/tab-video.svg'), w: '46px', h: '46' },
 ]
 export default (props) => {
-    const [currentTabIndex, setCurrentTabIndex] = useState(1);
+    const [currentTabIndex, setCurrentTabIndex] = useState(0);
     const [activeIndexs, setActiveIndexs] = useState([currentTabIndex])
 
     const _tabChange = (index) => {
