@@ -10,6 +10,11 @@
   date: "2020-12-15T08:07:13.583Z"
   mains: 
     - 
+      serieId: "IHa3NbJnO7"
+      eventIds: 
+        - "olHtxz1Ugd"
+        - "h8acHOCJW5"
+    - 
       serieId: "OgYEw3vN3J"
       eventIds: 
         - "xhyQxGlO4n"
@@ -17,6 +22,13 @@
         - "odcXAHGRqW"
         - "Piy2GHx98J"
         - "x8ANIsbYZi"
+    - 
+      serieId: "PmHWiWJHQ2"
+      eventIds: 
+        - "A9uWKj2Hjh"
+        - "19hX2gtfLZ"
+    - 
+      serieId: "zpSc0eLoLB"
   descs: 
     - 
       key: "比賽規則"
