@@ -7,6 +7,7 @@
   currency: "₩"
   prize: "2500000"
   seriesImage: "http://localhost:1337/parse/files/app/97229b7e331d102c4906652a608a33c7_bg.jpeg"
+  objectId: "OgYEw3vN3J"
   events: 
     - 
       no: "12"
