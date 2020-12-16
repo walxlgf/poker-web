@@ -13,7 +13,6 @@ export default ({ pageContext: { categoryKey }, data }) => {
     const series = data.seriess.edges.map(edge => edge.node.frontmatter);
     const categories = data.categories.edges.map(edge => edge.node.frontmatter).filter(c => c.categoryKey === categoryKey);
 
-    console.log(categories);
     return (
         <Layout>
             <div className="s-container">
@@ -46,8 +45,8 @@ export const pageQuery = graphql`
             currency
             others
             descs{
-                title
-                texts
+                key
+                values
             }
           }
         }

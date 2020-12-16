@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Months } from '../../util/consts'
 
 export default ({ category }) => {
     return (
@@ -16,6 +17,16 @@ export default ({ category }) => {
 }
 
 const CategorySummary = ({ category }) => {
+
+    const _handleTime = (time) => {
+        let date = new Date(time);
+        let year = date.getFullYear();
+        let month = Months[date.getMonth()]//获取月，从0 - 11
+        let day = date.getDate();//获取日
+        day = day < 10 ? '0' + day : day;
+        return `${day} ${month} ${year}`;
+    }
+
     let others = category.others || '';
     others = others.split('|');
     return (
@@ -24,12 +35,16 @@ const CategorySummary = ({ category }) => {
                 <h4>{category.title}</h4>
                 <div className='image-text'>
                     <img style={{ width: '35px', height: '30px' }} src={require('../../img/summary-calendar.svg')}></img>
-                    <p >{category.date}</p>
+                    <p >{_handleTime(category.date)}</p>
                 </div>
-                <div className='image-text'>
-                    <img style={{ width: '33px', height: '32px' }} src={require('../../img/summary-price.svg')}></img>
-                    <p>{`${category.currency}  ${category.prize}`}</p>
-                </div>
+                {
+                    category.prize ? (
+                        <div className='image-text'>
+                            <img style={{ width: '33px', height: '32px' }} src={require('../../img/summary-price.svg')}></img>
+                            <p>{`${category.currency}  ${category.prize}`}</p>
+                        </div>
+                    ) : null
+                }
                 <div className='image-text'>
                     <img style={{ width: '29px', height: '33px' }} src={require('../../img/summary-location.svg')}></img>
                     <p>{category.address}</p>
@@ -122,7 +137,7 @@ const DescList = ({ descs }) => {
                                 }}>
                                 <div className='left'>
                                     <img src={require('../../img/location.png')}></img>
-                                    <p>{desc.title}</p>
+                                    <p>{desc.key}</p>
                                 </div>
                                 <i className={isExpand ? 'active' : ''}></i>
                                 <b className='triangle-down' style={{ display: isExpand ? 'block' : 'none' }}></b>
@@ -130,7 +145,7 @@ const DescList = ({ descs }) => {
                             <div className='desc' style={{ height: selectItems[i] ? 'auto' : '0px' }}>
                                 <div className='inner'>
                                     {
-                                        desc.texts && desc.texts.map((text, index) => {
+                                        desc.values && desc.values.map((text, index) => {
                                             return (
                                                 <div key={index}>
                                                     <p>{`${String.fromCharCode(97 + index)}.`}</p>

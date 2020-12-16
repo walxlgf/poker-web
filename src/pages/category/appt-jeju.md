@@ -21,3 +21,6 @@
   templateKey: "category"
   categoryKey: "appt-jeju"
   currency: "₩"
+
+
+
