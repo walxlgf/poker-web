@@ -142,7 +142,7 @@ const Navbar = class extends React.Component {
                                         fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
                                         paddingRight: "24px", paddingLeft: "24px"
                                     }}>BLOG</Link>
-                                    <Link className="navbar-item" to="/about" style={{
+                                    <Link className="navbar-item" to="/xsb" style={{
                                         fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
                                         paddingRight: "24px", paddingLeft: "24px"
                                     }}>選手榜</Link>

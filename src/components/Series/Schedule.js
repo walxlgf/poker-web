@@ -1,47 +1,52 @@
 
 import React, { useState, memo, useEffect, useRef, forwardRef, useImperativeHandle } from 'react'
 import '../../styles/offline-page.scss';
-import { Weeks, Months, Categories } from '../../util/consts'
+import { Weeks, Months } from '../../util/consts'
 import { formatMoney } from '../../util/util';
 import SelectItem from './SelectItem'
 
 
-export default memo(({ series, category }) => {
+const EventTypes = {
+    all: '全部赛事',
+    main: '主赛事',
+    high: '超级豪客赛',
+}
 
-    const [curCategory, setCurCategory] = useState(category);
+const AllEventTypes = [EventTypes.all, EventTypes.main, EventTypes.high];
+
+export default memo(({ series }) => {
+
+    const [curEventType, setCurEventType] = useState(AllEventTypes[0]);
     const [curTime, setCurTime] = useState('');
     const [times, setTimes] = useState([]);
     const [currency, setCurrency] = useState('');
     const [groupEvents, setGroupEvents] = useState([]);
     const eventModalRef = useRef(null);
 
-    // 根据选择的category过滤数据
+    // 根据选择的type过滤数据
     useEffect(() => {
-        let categorySeries = []
-        for (let index = 0; index < series.length; index++) {
-            const serie = series[index];
-            if (serie.category === curCategory) {
-                categorySeries.push(serie);
-            }
-        }
-        let { groupEvents, times, currency } = _handleEvent(categorySeries);
+        let { groupEvents, times, currency } = _handleEvent();
         setGroupEvents(groupEvents);
         setTimes(times);
         setCurrency(currency);
-    }, [curCategory, curTime])
+    }, [curEventType, curTime])
 
     // 将series中的所有event按照指定格式处理后返回
     // 返回格式：groupEvents： [{date:'9 Nov 2019(星期六), events:[...]}, ...]
     //         times :       ['9 Nov 2019(星期六)',...]
-    const _handleEvent = (categorySeries) => {
+    const _handleEvent = () => {
         let events = [];
         let currency;
-        for (let index = 0; index < categorySeries.length; index++) {
-            const serie = categorySeries[index];
+        for (let index = 0; index < series.length; index++) {
+            const serie = series[index];
             currency = serie.currency;
             for (let j = 0; j < serie.events.length; j++) {
                 const event = serie.events[j];
-                events.push(event);
+                if (curEventType === EventTypes.all ||
+                    (curEventType === EventTypes.main && event.type == 'main') ||
+                    (curEventType === EventTypes.high && event.type == 'high')) {
+                    events.push(event);
+                }
             }
         }
 
@@ -88,11 +93,12 @@ export default memo(({ series, category }) => {
         <div className='s-list-result s-list-box' >
             <h1>赛程表</h1>
             <div className='s-select-box'>
-                <SelectItem placeholder='选择赛事' value={category} datas={Categories} select={(c) => {
-                    if (c === curCategory) return;
-                    setCurCategory(c);
-                    setCurTime('');
-                }} />
+                <SelectItem placeholder='选择赛事' value={curEventType} datas={AllEventTypes}
+                    select={(t) => {
+                        if (t === curEventType) return;
+                        setCurEventType(t);
+                        setCurTime('');
+                    }} />
                 <SelectItem placeholder='选择比赛时间' value={curTime} datas={times} select={t => setCurTime(t)} />
                 <p>下载完整赛程表</p>
             </div>
@@ -229,7 +235,12 @@ const EventList = (props) => {
             for (let j = 0; j < datas[index].events.length; j++) {
                 subItems.push({ select: false, height: liHeight + 'px' });
             }
-            selectItems.push({ select: false, subItems, height: 0 });
+            let item = { select: false, subItems, height: 0 };
+            if (index == 0) { // 默认第一项展开
+                item.select = true;
+                item.height = _getItemHeight(item);
+            }
+            selectItems.push(item);
         }
         setSelectItems(selectItems);
     }, [datas])

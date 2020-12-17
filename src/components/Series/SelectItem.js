@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import '../../styles/common.scss'
 
 export default ({ datas, value, placeholder, select }) => {
 
     const [isFocus, setIsFocus] = useState(false);
     const [selectText, setSelectText] = useState('');
+    const inputRef = useRef(null)
     const selectAction = (text) => {
         setSelectText(text);
         select && select(text);
@@ -17,13 +18,14 @@ export default ({ datas, value, placeholder, select }) => {
     return (
         <div className='s-select-item'>
             <input
+                ref={inputRef}
                 placeholder={placeholder}
                 readOnly
                 value={selectText}
                 onFocus={() => setIsFocus(true)}
                 onBlur={() => setTimeout(() => { setIsFocus(false) }, 10)}
             />
-            <div className='indicator'><i></i></div>
+            <div onClick={() => inputRef.current.focus()} className='indicator'><i></i></div>
             <ul style={{ display: isFocus ? 'block' : 'none' }}>
                 {
                     datas.map((d, i) => {

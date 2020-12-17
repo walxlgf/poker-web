@@ -9,17 +9,15 @@ import SeriesTabs from '../components/SeriesTabs'
 
 
 export default ({ pageContext: { categoryKey }, data }) => {
-
-    const series = data.seriess.edges.map(edge => edge.node.frontmatter);
-    const categories = data.categories.edges.map(edge => edge.node.frontmatter).filter(c => c.categoryKey === categoryKey);
-
+    const category = data.categories.edges.map(edge => edge.node.frontmatter).find(c => c.categoryKey === categoryKey);
+    const series = data.seriess.edges.map(edge => edge.node.frontmatter).filter(s => s.category === categoryKey);
     return (
         <Layout>
             <div className="s-container">
                 <img className='topBanner' src={'/img/mainbanner.jpg'} />
                 <SeriesTabs>
-                    <Summary category={categories.length && categories[0]} series={series} />
-                    <Schedule series={series} category={categoryKey} />
+                    <Summary category={category} series={series} />
+                    <Schedule series={series} />
                     <Result series={series} />
                     <Zhibo />
                 </SeriesTabs>
@@ -73,6 +71,7 @@ export const pageQuery = graphql`
               no
               objectId
               title
+              type
               startTime
               startingChips
               buyin
