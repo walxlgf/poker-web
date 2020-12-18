@@ -134,7 +134,7 @@ const Navbar = class extends React.Component {
                                             <Link className="navDrownItem" to="/offline/appt-jeju">APPT济州站</Link>
                                         </div>
                                     </div>
-                                    <Link className="navbar-item" to="/products" style={{
+                                    <Link className="navbar-item" to="/blog" style={{
                                         fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
                                         paddingRight: "24px", paddingLeft: "24px"
                                     }}> 線上賽事</Link>
