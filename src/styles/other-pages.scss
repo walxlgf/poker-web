@@ -169,9 +169,174 @@
     }
 }
 
+// 选手榜页面
 .xsbPage {
     background-color: black;
-    padding-bottom: 362px;
+    padding-bottom: 215px;
     color: white;
     font-family: $font-family;
+
+    .xsb-content {
+        margin: 0 auto;
+        width: 1200px;
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 50px;
+            padding-bottom: 110px;
+            margin-top: 124px;
+        }
+
+        .topBox {
+            display: flex;
+
+            .right {
+                margin-left: 60px;
+                height: 572px;
+                flex: 1;
+                position: relative;
+
+                .rightBottom {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+
+                    .eventname {
+                        font-weight: 300;
+                        font-size: 28px;
+                    }
+
+                    .name {
+                        font-weight: 900;
+                        font-size: 31px;
+                    }
+
+                    .iconbox {
+                        display: flex;
+                        margin-top: 10px;
+
+                        .national {
+                            display: flex;
+                            margin-right: 35px;
+
+                            .nationalIcon {
+                                width: 28px;
+                                height: 32px;
+                            }
+
+                            .moneyIcon {
+                                width: 33px;
+                                height: 33px;
+                            }
+
+                            p {
+                                margin-top: 10px;
+                                margin-left: 8px;
+                                font-weight: 300;
+                                font-size: 19px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        >ul {
+            width: 100%;
+            list-style: none;
+            margin-top: 120px;
+
+            .header-item {
+                display: flex;
+                height: 70px;
+                line-height: 70px;
+                background-color: $nor-red;
+                align-items: center;
+
+                p {
+                    height: 35px;
+                    line-height: 35px;
+                    color: white;
+                    font-size: 18px;
+                    font-family: $font-family;
+                    font-weight: bold;
+                    padding-left: 15px;
+                    margin-left: -15px;
+                    border-left: 1px solid #811213;
+
+                    &:nth-child(1) {
+                        border-left: none;
+                        margin-left: 59px;
+                    }
+                }
+            }
+
+            .other-item {
+                display: flex;
+                height: 70px;
+                line-height: 70px;
+                background-color: #d5d7d8;
+                color: black;
+                font-size: 19px;
+                font-weight: 300;
+                font-family: $font-family;
+                position: relative;
+
+                &:nth-child(even) {
+                    background-color: #f1f1f2
+                }
+
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4) {
+                    color: white;
+                }
+
+                .rank {
+                    margin-left: 74px;
+
+                    i {
+                        display: inline-block;
+                        position: absolute;
+                        width: 179px;
+                        height: 55px;
+                        top: 7px;
+                        left: 0;
+                    }
+
+                    p {
+                        position: relative;
+
+                        &.topThree {
+                            font-size: 15px;
+                            font-weight: 900;
+                        }
+                    }
+                }
+
+                .name {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        background-color: #ccc;
+                        border-radius: 50%;
+                        margin-right: 14px;
+                    }
+                }
+
+                .topThreeLine {
+                    height: 1px;
+                    background-color: rgba($color: white, $alpha: 0.7);
+                    position: absolute;
+                    bottom: 0;
+                    z-index: 999;
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
