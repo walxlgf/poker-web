@@ -142,17 +142,17 @@ const Navbar = class extends React.Component {
                                         fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
                                         paddingRight: "24px", paddingLeft: "24px"
                                     }}>BLOG</Link>
-                                    <Link className="navbar-item" to="/xsb" style={{
+                                    <Link className="navbar-item" to="/others/xsb" style={{
                                         fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
                                         paddingRight: "24px", paddingLeft: "24px"
                                     }}>選手榜</Link>
-                                    <Link className="navbar-item" to="/about" style={{
+                                    <Link className="navbar-item" to="/others/about" style={{
                                         fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
                                         paddingRight: "24px", paddingLeft: "24px"
                                     }}>關於我們</Link>
                                 </div>
                                 <div className="navbar-end" style={{}}>
-                                    <Link to="/rule"  >
+                                    <Link to="/others/rule"  >
                                         <img src={playButton} style={{ width: "200px", height: "65px" }} />
                                     </Link>
                                 </div>
