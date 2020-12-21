@@ -34,19 +34,13 @@ const Footer = class extends React.Component {
                                         >红龙杯济州站</Link>
 
                                         <Link
-                                            to="/offline/rd-jeju"
+                                            to="/offline/rd-manila"
                                             style={{
                                                 color: "#fff", fontFamily: "Noto Sans TC", fontSize: "14.5px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: '36.5px', letterSpacing: 'normal',
                                             }}
                                         >红龙杯马尼拉站</Link>
                                         <Link
-                                            to="/offline/rd-jeju"
-                                            style={{
-                                                color: "#fff", fontFamily: "Noto Sans TC", fontSize: "14.5px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: '36.5px', letterSpacing: 'normal',
-                                            }}
-                                        >APPT济州站</Link>
-                                        <Link
-                                            to="/offline/rd-jeju"
+                                            to="/offline/appt-jeju"
                                             style={{
                                                 color: "#fff", fontFamily: "Noto Sans TC", fontSize: "14.5px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: '36.5px', letterSpacing: 'normal',
                                             }}

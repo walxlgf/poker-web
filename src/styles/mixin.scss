@@ -13,13 +13,6 @@ $font-family: 'Noto Sans TC';
     -webkit-box-orient: vertical;
 }
 
-// 版心
-@mixin s-content {
-    padding-bottom: 150px;
-    width: 1200px;
-    margin: 100px auto;
-}
-
 // 三角形
 @mixin triangle($direction, $size, $borderColor) {
     content: "";
