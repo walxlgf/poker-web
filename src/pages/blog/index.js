@@ -11,9 +11,8 @@ export default () => {
                 <div className='b-image-content'>
                     <img src={'/img/mainbanner.jpg'} />
                 </div>
-                <SeriesTabs
-                    names={['新闻', '视频', '相册', '实时播报']}
-                    icons={[require('../../img/eye.png'), require('../../img/eye.png'), require('../../img/eye.png'), require('../../img/eye.png')]}
+                <SeriesTabs activeTab={{ index: 0 }}
+
                 >
                     <Videos />
                     <News />

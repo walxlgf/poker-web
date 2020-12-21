@@ -6,17 +6,27 @@ import Zhibo from '../components/Series/Zhibo'
 import Summary from '../components/Series/Summary'
 import '../styles/offline-page.scss';
 import SeriesTabs from '../components/SeriesTabs'
+import { scrollAnimation } from '../util/util'
 
 
 export default ({ pageContext: { categoryKey }, data }) => {
+    // 使用对象而不是数字，为了每次点击都刷新页面
+    const [activeTab, setActiveTab] = useState({ index: 0 });
+
     const category = data.categories.edges.map(edge => edge.node.frontmatter).find(c => c.categoryKey === categoryKey);
     const series = data.seriess.edges.map(edge => edge.node.frontmatter).filter(s => s.category === categoryKey);
+
+    const _toSchedulePage = () => {
+        setActiveTab({ index: 1 })
+        scrollAnimation(1500, 700);
+    }
+
     return (
         <Layout>
             <div className="s-container">
                 <img className='topBanner' src={'/img/mainbanner.jpg'} />
-                <SeriesTabs>
-                    <Summary category={category} series={series} />
+                <SeriesTabs activeTab={activeTab}>
+                    <Summary category={category} series={series} detailAction={_toSchedulePage} />
                     <Schedule series={series} />
                     <Result series={series} />
                     <Zhibo />

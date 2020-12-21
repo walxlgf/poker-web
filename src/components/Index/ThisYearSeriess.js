@@ -29,7 +29,7 @@ const STATES = {
 
 export default ({ data }) => {
 
-    const [isShow, setIsShow] = useState(false)
+    const [isShow, setIsShow] = useState(true)
     useEffect(() => {
         Bus.addListener(EVENTS.bgAnimationView, (index) => {
             if (index != 2) return; // 监听第三个色块的出现

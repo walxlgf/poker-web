@@ -152,6 +152,12 @@ const Navbar = class extends React.Component {
                                     }}>關於我們</Link>
                                 </div>
                                 <div className="navbar-end" style={{}}>
+                                    <Link to="/others/guide"  >
+                                        <div style={{ display: 'flex', backgroundColor: 'rgba(129,18,19,0.7)', width: '128px', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                                            <img src={require('../img/guideIcon.svg')} style={{ width: "10px", height: "11px", marginRight: '12px' }} />
+                                            <p style={{ fontSize: '20px', fontWeight: 'bold', color: 'white', fontFamily: 'Noto Sans TC' }}>LIVE</p>
+                                        </div>
+                                    </Link>
                                     <Link to="/others/rule"  >
                                         <img src={playButton} style={{ width: "200px", height: "65px" }} />
                                     </Link>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/common.scss'
 
 
@@ -10,8 +10,13 @@ const ICONS = [
     { name: require('../img/tab-video.svg'), w: '46px', h: '46' },
 ]
 export default (props) => {
-    const [currentTabIndex, setCurrentTabIndex] = useState(0);
+
+    const [currentTabIndex, setCurrentTabIndex] = useState(props.activeIndex || 0);
     const [activeIndexs, setActiveIndexs] = useState([currentTabIndex])
+
+    useEffect(() => {
+        _tabChange(props.activeTab.index)
+    }, [props.activeTab])
 
     const _tabChange = (index) => {
         setCurrentTabIndex(index);

@@ -8,7 +8,7 @@ import "animate.css";
 
 export default ({ photos }) => {
 
-    const [isShow, setIsShow] = useState(false)
+    const [isShow, setIsShow] = useState(true)
     useEffect(() => {
         Bus.addListener(EVENTS.bgAnimationView, (index) => {
             if (index != 5) return; // 监听第六个色块的出现

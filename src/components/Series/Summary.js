@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Months } from '../../util/consts'
 import { formatMoney } from '../../util/util';
 
-export default ({ category, series }) => {
+export default ({ category, series, detailAction }) => {
 
     let mainSeries = category.mains || [];
     let events = [];
@@ -31,7 +31,7 @@ export default ({ category, series }) => {
         <div className='s-summary-box' >
             <h1>赛事简介</h1>
             <CategorySummary category={category} />
-            <MainEvents category={category} events={events} />
+            <MainEvents category={category} events={events} detailAction={detailAction} />
             <div className='s-rdpt'>
                 <div className='s-rdpt-content'>
                 </div>
@@ -89,10 +89,9 @@ const CategorySummary = ({ category }) => {
     )
 }
 
-const MainEvents = ({ events, category }) => {
+const MainEvents = ({ events, category, detailAction }) => {
 
-    const [isExpand, setIsExpand] = useState(false);
-    const NormalRowNum = 6;
+    events = events && events.slice(0, Math.min(4, events.length))
 
     const _handleTime = (time) => {
         let date = new Date(time);
@@ -115,7 +114,6 @@ const MainEvents = ({ events, category }) => {
                     <p>{`保証金總獎池(${category.currency})`}</p>
                 </li>
                 {events.map((e, i) => {
-                    if (!isExpand && i >= NormalRowNum) return null;
                     return (
                         <li key={e.objectId}>
                             <p>{e.title}</p>
@@ -126,11 +124,9 @@ const MainEvents = ({ events, category }) => {
                     )
                 })}
             </ul>
-            {!isExpand && events.length > NormalRowNum ? (
-                <div onClick={() => setIsExpand(true)} className='more'>
-                    查看更多賽程
-                </div>
-            ) : null}
+            <div onClick={detailAction} className='more'>
+                查看更多賽程
+            </div>
         </div>
     )
 }

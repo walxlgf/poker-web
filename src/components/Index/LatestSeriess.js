@@ -9,7 +9,7 @@ import Bus, { EVENTS } from '../../util/eventBus.js'
 
 export default ({ data }) => {
 
-    const [isShow, setIsShow] = useState(false)
+    const [isShow, setIsShow] = useState(true)
 
     useEffect(() => {
         Bus.addListener(EVENTS.bgAnimationView, (index) => {

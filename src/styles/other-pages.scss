@@ -340,3 +340,103 @@
         }
     }
 }
+
+// 媒体指引页面
+.guidePage {
+    padding-top: 10px;
+    padding-bottom: 215px;
+    color: white;
+    font-family: $font-family;
+    background-color: black;
+
+    .guide-content {
+        margin: 0 auto;
+        width: 1200px;
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 50px;
+            padding-bottom: 50px;
+            margin-top: 110px;
+        }
+
+        .mediaRequestBox {
+            .title {
+                font-size: 25px;
+                font-weight: 300;
+                text-align: center;
+                margin-bottom: 0;
+            }
+
+            .g-progress {
+                display: flex;
+                width: 1000px;
+                margin: 53px auto;
+                height: 94px;
+                align-items: center;
+                font-weight: 300;
+                font-size: 25px;
+
+                i {
+                    background: url('../img/guideProgress.svg') no-repeat center;
+                    width: 94px;
+                    height: 94px;
+                    display: inline-block;
+                    line-height: 94px;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 40px;
+                    margin: 0 20px;
+                }
+
+                .rightarrow {
+                    font-weight: bold;
+                    font-size: 60px;
+                }
+            }
+
+            .download {
+                width: 250px;
+                height: 65px;
+                line-height: 65px;
+                text-align: center;
+                margin: 0 auto;
+                border: 1px solid $nor-red;
+            }
+        }
+
+        .summarybox {
+            margin-top: 45px;
+            font-size: 18px;
+            font-weight: 300;
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+
+        .guideDetailBox {
+            margin-top: 50px;
+
+            .seperatorline {
+                width: 100%;
+                height: 1px;
+                background-color: $nor-red;
+            }
+
+            .paragtitle {
+                font-size: 22px;
+                color: #a41f21;
+                font-weight: bold;
+                margin-top: 50px;
+            }
+
+            .paragraph {
+                margin-top: 30px;
+                line-height: 40px;
+            }
+        }
+
+    }
+}

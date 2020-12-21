@@ -2,12 +2,24 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 
 
 const TemplateWrapper = ({ children }) => {
-    const { title, description } = useSiteMetadata()
+    const { site } = useStaticQuery(
+        graphql`
+      query SITE_METADATA_QUERY233 {
+        site {
+          siteMetadata {
+            title
+            description
+          }
+        }
+      }
+    `
+    )
+    const { title, description } = site.siteMetadata;
     return (
         <div >
             <Helmet>

@@ -90,10 +90,10 @@ const Footer = class extends React.Component {
                                         <Link style={{
                                             color: "#fff", fontFamily: "Noto Sans TC", fontSize: "16px", fontWeight: 500, fontStretch: 'normal', fontStyle: 'normal', lineHeight: '55px', letterSpacing: 'normal',
                                         }}
-                                            to="/">选手榜</Link>
+                                            to="/others/xsb">选手榜</Link>
                                         <Link style={{
                                             color: "#fff", fontFamily: "Noto Sans TC", fontSize: "16px", fontWeight: 500, fontStretch: 'normal', fontStyle: 'normal', lineHeight: '36.5px', letterSpacing: 'normal',
-                                        }} to="/offline/rd-jeju">关于我们</Link>
+                                        }} to="/others/about">关于我们</Link>
                                     </div>
                                 </div>
                                 <div style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "flex-start" }}>
