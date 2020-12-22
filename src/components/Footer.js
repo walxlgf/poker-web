@@ -55,26 +55,26 @@ const Footer = class extends React.Component {
                                             color: "#fff", fontFamily: "Noto Sans TC", fontSize: "16px", fontWeight: 500, fontStretch: 'normal', fontStyle: 'normal', lineHeight: '36.5px', letterSpacing: 'normal',
                                         }} to="/offline/rd-jeju">BLOG</Link>
                                         <Link
-                                            to="/offline/rd-jeju"
+                                            to="/blog?index=0"
                                             style={{
                                                 color: "#fff", fontFamily: "Noto Sans TC", fontSize: "14.5px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: '36.5px', letterSpacing: 'normal',
                                             }}
                                         >新闻</Link>
 
                                         <Link
-                                            to="/offline/rd-jeju"
+                                            to="/blog?index=1"
                                             style={{
                                                 color: "#fff", fontFamily: "Noto Sans TC", fontSize: "14.5px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: '36.5px', letterSpacing: 'normal',
                                             }}
                                         >视频</Link>
                                         <Link
-                                            to="/offline/rd-jeju"
+                                            to="/blog?index=2"
                                             style={{
                                                 color: "#fff", fontFamily: "Noto Sans TC", fontSize: "14.5px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: '36.5px', letterSpacing: 'normal',
                                             }}
                                         >相册</Link>
                                         <Link
-                                            to="/offline/rd-jeju"
+                                            to="/blog?index=3"
                                             style={{
                                                 color: "#fff", fontFamily: "Noto Sans TC", fontSize: "14.5px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: '36.5px', letterSpacing: 'normal',
                                             }}

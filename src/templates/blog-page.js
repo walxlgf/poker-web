@@ -1,15 +1,24 @@
 import React, { memo } from 'react'
 import Layout from '../components/Layout'
+import SelectItem from '../components/Series/SelectItem';
 import SeriesTabs from '../components/SeriesTabs'
 import '../styles/blog-page.scss';
-import { ICONS } from '../util/util'
 
-export default () => {
+
+export default (props) => {
+
+    let params = props.location.search;
+    let activeTabIndex = 3;
+    if (params) {
+        let [_, index] = params.split('=');
+        if (index) activeTabIndex = parseInt(index);
+    }
+
     return (
         <Layout>
             <div className='b-container'>
                 <img className='topBanner' src={'/img/mainbanner.jpg'} />
-                <SeriesTabs type='blog' >
+                <SeriesTabs type='blog' activeTab={{ index: activeTabIndex }}>
                     <News />
                     <Videos />
                     <Photos />
@@ -20,16 +29,7 @@ export default () => {
     )
 }
 
-const NameAndTimeItem = ({ text, isTime }) => {
-    return (
-        <div className='b-nameAndTime'>
-            <img style={{ width: '21px', height: '21px' }} src={require('../img/like.svg')} />
-            <p>{text}</p>
-        </div>
-    )
-}
-
-
+// 新闻
 const News = memo(() => {
     return (
         <div className='b-content-box b-news-box'>
@@ -93,26 +93,148 @@ const News = memo(() => {
     )
 })
 
-const Videos = () => {
+// 视频
+const Videos = memo(() => {
     return (
         <div className='b-content-box b-videos-box'>
+            <h1>视频</h1>
+            <div className='select-box'>
+                <SelectItem placeholder='选择系列' value='1' datas={[1, 2, 3]}
+                    select={t => {
+                    }} />
+                <SelectItem placeholder='选择赛事' value='1' datas={[1, 2, 3]}
+                    select={t => {
 
+                    }}
+                />
+                <p>搜尋視頻</p>
+            </div>
+            <ul className='mainList'>
+                {[1, 2].map((_, i) => {
+                    return (
+                        <li style={i % 2 == 0 ? { marginLeft: 0 } : {}}>
+                            <div>
+                                <img src={'/img/mainbanner.jpg'}></img>
+                                <img src={require('../img/tab-video.svg')}></img>
+                            </div>
+                            <h3>紅龍杯冠軍賽濟洲站</h3>
+                            <p>13-23 Aug 2020</p>
+                        </li>
+                    )
+                })}
+            </ul>
+            <ul className='otherList'>
+                {[1, 2, 3, 4, 5, 6].map((_, i) => {
+                    return (
+                        <li style={i % 3 == 0 ? { marginLeft: 0 } : {}}>
+                            <div>
+                                <img src={'/img/mainbanner.jpg'}></img>
+                                <img src={require('../img/tab-video.svg')}></img>
+                            </div>
+                            <h3>紅龍杯挑戰賽</h3>
+                            <p>20-25 Sep 2019</p>
+                        </li>
+                    )
+                })}
+            </ul>
+            <div className='s-more'>查看更多</div>
         </div>
     )
-}
+})
 
-const Photos = () => {
+// 相册
+const Photos = memo(() => {
     return (
         <div className='b-content-box b-photos-box'>
+            <h1>相册</h1>
+            <div className='select-box'>
+                <SelectItem placeholder='选择系列' value='1' datas={[1, 2, 3]}
+                    select={t => {
+                    }} />
+                <SelectItem placeholder='选择赛事' value='1' datas={[1, 2, 3]}
+                    select={t => {
 
+                    }}
+                />
+                <p>搜尋相册</p>
+            </div>
+            <ul className='mainList'>
+                {[1, 2].map((_, i) => {
+                    return (
+                        <li style={i % 2 == 0 ? { marginLeft: 0 } : {}}>
+                            <img src={'/img/mainbanner.jpg'}></img>
+                        </li>
+                    )
+                })}
+            </ul>
+            <ul className='otherList'>
+                {[1, 2, 3, 4, 5, 6].map((_, i) => {
+                    return (
+                        <li style={i % 3 == 0 ? { marginLeft: 0 } : {}}>
+                            <img src={'/img/mainbanner.jpg'}></img>
+                        </li>
+                    )
+                })}
+            </ul>
+            <div className='s-more'>查看更多</div>
         </div>
     )
-}
+})
 
-const Reports = () => {
+// 实时播报
+const Reports = memo(() => {
+
+    const _renderEventStateItem = (type, top) => {
+        return (
+            <div style={{ position: 'absolute', top }} className='b-eventStateItem'>
+                <img src={require(`../img/event-${type}.svg`)}></img>
+            </div>
+        )
+    }
+
+    const _renderEventStateDesc = (type, style, triangleStyle) => {
+        let text = type === 1 ? '比赛结束' : type === 2 ? '比賽獲獎' : '比賽開始'
+        let triangleClassName = type === 2 ? 'triangleRight' : 'triangleLeft';
+        return (
+            <div style={style} className='b-eventStateDesc'>
+                <img src={'/img/mainbanner.jpg'} />
+                <div className='bottombox'>
+                    <p className='stateText'>{text}</p>
+                    <NameAndTimeItem style={{ marginRight: 0 }} isTime={true} text='20 Aug 2020' />
+                </div>
+                <i style={triangleStyle} className={triangleClassName}></i>
+            </div>
+        )
+    }
+
     return (
         <div className='b-content-box b-reports-box'>
+            <h1>实时播报</h1>
+            <div className='select-box'>
+                <SelectItem placeholder='选择系列' value='1' datas={[1, 2, 3]}
+                    select={t => {
+                    }} />
+            </div>
+            <div className='progressBox'>
+                <div className='progressLine' />
+                {_renderEventStateItem('over', '0')}
+                {_renderEventStateItem('prize', '387px')}
+                {_renderEventStateItem('start', '775px')}
+                {_renderEventStateDesc(1, { left: '57%', top: '2%' }, { left: '-12px', top: '7%' })}
+                {_renderEventStateDesc(2, { right: '57%', top: '27%' }, { right: '-12px', top: '49%' })}
+                {_renderEventStateDesc(3, { left: '57%', top: '55%' }, { left: '-12px', top: '86%' })}
+                <p className='eventName'>2020紅龍杯台北站</p>
+            </div>
+        </div>
+    )
+})
 
+
+const NameAndTimeItem = ({ text, isTime, style = {} }) => {
+    return (
+        <div style={style} className='b-nameAndTime'>
+            <img style={{ width: '21px', height: '21px' }} src={require('../img/like.svg')} />
+            <p>{text}</p>
         </div>
     )
 }

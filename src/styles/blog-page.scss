@@ -13,7 +13,7 @@
 }
 
 .b-content-box {
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     width: 1200px;
     margin: 100px auto;
     color: white;
@@ -169,18 +169,280 @@
 
 // 视频
 .b-videos-box {
-    background-color: green;
+    h1 {
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 120px;
+        margin-bottom: 60px;
+    }
 
+    .select-box {
+        display: flex;
+        width: 850px;
+        margin: 0 auto;
+
+        p {
+            width: 250px;
+            height: 55px;
+            line-height: 55px;
+            background-color: $nor-red;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+
+    .mainList {
+        list-style: none;
+        display: flex;
+        margin-top: 120px;
+
+        >li {
+            margin-left: 50px;
+
+            div {
+                position: relative;
+
+                img {
+                    &:nth-child(1) {
+                        width: 575px;
+                        height: 383px;
+                    }
+
+                    &:nth-child(2) {
+                        width: 85px;
+                        height: 85px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 30px;
+                margin-top: 22px;
+            }
+
+            p {
+                font-size: 21px;
+                font-weight: 300;
+                margin-top: 12px;
+            }
+        }
+    }
+
+    .otherList {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+
+        >li {
+            margin-left: 49.5px;
+            margin-top: 50px;
+
+            div {
+                position: relative;
+
+                img {
+                    &:nth-child(1) {
+                        width: 367px;
+                        height: 244px;
+                    }
+
+                    &:nth-child(2) {
+                        width: 65px;
+                        height: 65px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 30px;
+                margin-top: 12px;
+            }
+
+            p {
+                font-size: 21px;
+                font-weight: 300;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .s-more {
+        width: 250px;
+        height: 65px;
+        @include minBorder($nor-red);
+        text-align: center;
+        line-height: 65px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: $font-family;
+        margin: 60px auto;
+    }
 }
 
 // 相册
 .b-photos-box {
-    background-color: yellow;
+    h1 {
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 120px;
+        margin-bottom: 60px;
+    }
+
+    .select-box {
+        display: flex;
+        width: 850px;
+        margin: 0 auto;
+
+        p {
+            width: 250px;
+            height: 55px;
+            line-height: 55px;
+            background-color: $nor-red;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+
+    .mainList {
+        list-style: none;
+        display: flex;
+        margin-top: 120px;
+
+        >li {
+            margin-left: 50px;
+
+            img {
+                width: 575px;
+                height: 383px;
+            }
+        }
+    }
+
+    .otherList {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+
+        >li {
+            margin-left: 49.5px;
+            margin-top: 50px;
+
+            img {
+                width: 367px;
+                height: 244px;
+            }
+        }
+    }
+
+    .s-more {
+        width: 250px;
+        height: 65px;
+        @include minBorder($nor-red);
+        text-align: center;
+        line-height: 65px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: $font-family;
+        margin: 60px auto;
+    }
 }
 
 // 实时报道
 .b-reports-box {
-    background-color: blue;
+
+    h1 {
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 120px;
+        margin-bottom: 60px;
+    }
+
+    .select-box {
+        display: flex;
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    .progressBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        position: relative;
+
+        .progressLine {
+            width: 9px;
+            height: 796px;
+            background-color: #d5d7d8;
+            margin-top: 50px;
+        }
+
+        .b-eventStateItem {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            padding: 13px;
+            background-color: black;
+        }
+
+        .b-eventStateDesc {
+            position: absolute;
+            padding: 15px;
+            background-color: #8a8c8e;
+
+            img {
+                width: 400px;
+                height: 265px;
+            }
+
+            .bottombox {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 15px;
+
+                .stateText {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .triangleLeft {
+            @include triangle(left, 12px, #8a8c8e);
+            position: absolute;
+            z-index: 999;
+        }
+
+        .triangleRight {
+            @include triangle(right, 12px, #8a8c8e);
+            position: absolute;
+            z-index: 999;
+        }
+
+        .eventName {
+            font-size: 30px;
+            margin-top: 50px;
+        }
+    }
+
 
 }
 
