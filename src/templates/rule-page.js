@@ -23,7 +23,7 @@ export const RulePageTemplate = ({ title, descriptions, details }) => {
 export default ({ data }) => {
     const { title, descriptions, details } = data.markdownRemark.frontmatter
     return (
-        <Layout>
+        <Layout type='rule'>
             <RulePageTemplate
                 title={title}
                 descriptions={descriptions}

@@ -6,14 +6,23 @@ export default ({ datas, value, placeholder, select }) => {
     const [isFocus, setIsFocus] = useState(false);
     const [selectText, setSelectText] = useState('');
     const inputRef = useRef(null)
+
+    useEffect(() => {
+        setSelectText(value);
+    }, [value])
+
     const selectAction = (text) => {
         setSelectText(text);
         select && select(text);
     }
 
-    useEffect(() => {
-        setSelectText(value);
-    }, [value])
+    const toggleFocusState = () => {
+        if (isFocus) {
+            inputRef.current.blur()
+        } else {
+            inputRef.current.focus()
+        }
+    }
 
     return (
         <div className='s-select-item'>
@@ -25,7 +34,7 @@ export default ({ datas, value, placeholder, select }) => {
                 onFocus={() => setIsFocus(true)}
                 onBlur={() => setTimeout(() => { setIsFocus(false) }, 10)}
             />
-            <div onClick={() => inputRef.current.focus()} className='indicator'><i></i></div>
+            <a onClick={toggleFocusState} className='indicator'><i></i></a>
             <ul style={{ display: isFocus ? 'block' : 'none' }}>
                 {
                     datas.map((d, i) => {

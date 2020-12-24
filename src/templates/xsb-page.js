@@ -34,7 +34,7 @@ export default ({ data }) => {
     }, [curSerie])
 
     return (
-        <Layout>
+        <Layout type='xsb'>
             <div className='xsbPage'>
                 <img style={{ width: '100%', height: '400px' }} src={'/img/mainbanner.jpg'} />
                 <div className='xsb-content'>

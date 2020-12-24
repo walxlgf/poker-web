@@ -30,7 +30,7 @@ export default ({ data }) => {
     const { index, latestSeriess } = data;
     const { thisYearSeriess, photos, bannerImage } = index.frontmatter;
     return (
-        <Layout>
+        <Layout type='index'>
             <IndexPageTemplate
                 latestSeriess={latestSeriess.edges}
                 thisYearSeriess={thisYearSeriess}

@@ -15,7 +15,7 @@ export default (props) => {
     }
 
     return (
-        <Layout>
+        <Layout type='blog'>
             <div className='b-container'>
                 <img className='topBanner' src={'/img/mainbanner.jpg'} />
                 <SeriesTabs type='blog' activeTab={{ index: activeTabIndex }}>
@@ -107,7 +107,7 @@ const Videos = memo(() => {
 
                     }}
                 />
-                <p>搜尋視頻</p>
+                <a>搜尋視頻</a>
             </div>
             <ul className='mainList'>
                 {[1, 2].map((_, i) => {
@@ -156,7 +156,7 @@ const Photos = memo(() => {
 
                     }}
                 />
-                <p>搜尋相册</p>
+                <a>搜尋相册</a>
             </div>
             <ul className='mainList'>
                 {[1, 2].map((_, i) => {

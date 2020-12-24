@@ -100,7 +100,7 @@ export default memo(({ series }) => {
                         setCurTime('');
                     }} />
                 <SelectItem placeholder='选择比赛时间' value={curTime} datas={times} select={t => setCurTime(t)} />
-                <p>下载完整赛程表</p>
+                <a>下载完整赛程表</a>
             </div>
             <EventList currency={currency} datas={groupEvents} detailAction={(event) => eventModalRef.current.show(event)} />
             <EventDetailModal ref={eventModalRef} />
@@ -305,7 +305,7 @@ const EventList = (props) => {
                                     </div>
                                     <img
                                         onClick={() => detailAction(e)}
-                                        style={{ flex: 112 / 1200, width: '34px', height: '19px', objectFit: 'contain', marginTop: '25px' }}
+                                        style={{ flex: 112 / 1200, width: '34px', height: '19px', objectFit: 'contain', marginTop: '25px', cursor: 'pointer' }}
                                         src={require('../../img/eye.png')}
                                     />
                                 </li>

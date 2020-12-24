@@ -7,7 +7,7 @@ import '../styles/other-pages.scss'
 export default ({ data }) => {
     const { title, guideSummarys, guideDetails } = data.markdownRemark.frontmatter
     return (
-        <Layout>
+        <Layout type='guide'>
             <div className='guidePage'>
                 <div className='guide-content'>
                     <h1>{title}</h1>

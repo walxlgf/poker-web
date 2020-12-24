@@ -46,7 +46,7 @@ export default memo(({ series }) => {
                         let event = curEvents.find(e => e.title === t)
                         setCurSelectEvent(event);
                     }} />
-                <p>下载完整赛程结果</p>
+                <a>下载完整赛程结果</a>
             </div>
             <List payouts={isExpand ? curPayouts : curPayouts.slice(0, Math.min(curPayouts.length, 10))} />
             <CommonButton onClick={_expandAction} text='查看更多' style={{ margin: '50px auto', display: isShowMore ? 'block' : 'none' }} />

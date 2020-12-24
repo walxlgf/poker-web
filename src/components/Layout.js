@@ -6,27 +6,37 @@ import { withPrefix } from 'gatsby'
 import { graphql, useStaticQuery } from 'gatsby'
 
 
-const TemplateWrapper = ({ children }) => {
-    const { site } = useStaticQuery(
-        graphql`
-      query SITE_METADATA_QUERY233 {
-        site {
-          siteMetadata {
-            title
-            description
+export default ({ children, type }) => {
+    const data = useStaticQuery(graphql`
+    query {allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "seo" } } })
+     {
+        edges {
+          node {
+            frontmatter {
+              seos{
+                 key
+                 title
+                 description
+                 keywords
+              } 
+            }
           }
         }
       }
-    `
-    )
-    const { title, description } = site.siteMetadata;
-    return (
-        <div >
+    }
+    `)
+
+    let seos = data.allMarkdownRemark.edges.map(edge => edge.node.frontmatter)[0].seos;
+    let seo = seos.find(seo => seo.key === type)
+    if (!seo) seo = seos[0];
+    const { title, description, keywords } = seo
+
+    const _renderMetas = () => {
+        return (
             <Helmet>
-                <html lang="en" />
                 <title>{title}</title>
                 <meta name="description" content={description} />
-
+                <meta name="keywords" content={keywords} />
                 <link
                     rel="apple-touch-icon"
                     sizes="180x180"
@@ -44,28 +54,22 @@ const TemplateWrapper = ({ children }) => {
                     href={`${withPrefix('/')}img/favicon-16x16.png`}
                     sizes="16x16"
                 />
-
                 <link
                     rel="mask-icon"
                     href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
                     color="#ff4400"
                 />
-                <meta name="theme-color" content="#fff" />
-
-                <meta property="og:type" content="business.business" />
-                <meta property="og:title" content={title} />
-                <meta property="og:url" content="/" />
-                <meta
-                    property="og:image"
-                    content={`${withPrefix('/')}img/og-image.jpg`}
-                />
             </Helmet>
-            <Navbar />
-            <div>{children}</div>
-            <Footer />
-        </div>
+        )
+    }
 
+    return (
+        <>
+            {_renderMetas()}
+            <Navbar />
+            {children}
+            <Footer />
+        </>
     )
 }
 
-export default TemplateWrapper

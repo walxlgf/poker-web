@@ -48,7 +48,7 @@ export const AboutPageTemplate = ({ descriptions }) => {
 export default ({ data }) => {
     const { title, descriptions, details } = data.markdownRemark.frontmatter
     return (
-        <Layout>
+        <Layout type='about'>
             <AboutPageTemplate
                 title={title}
                 descriptions={descriptions}

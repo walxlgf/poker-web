@@ -44,11 +44,11 @@ export default (props) => {
             <div className='s-tabs'>
                 {ICONS.map((icon, i) => {
                     return (
-                        <div key={i} onClick={() => _tabChange(i)}
+                        <a key={i} onClick={() => _tabChange(i)}
                             className={`s-tab-item ${currentTabIndex === i ? 'isActive' : ''}`}>
                             <img src={icon.name} style={{ width: icon.w, height: icon.h }}></img>
                             <p>{NAMES[i]}</p>
-                        </div>
+                        </a>
                     )
                 })}
             </div>

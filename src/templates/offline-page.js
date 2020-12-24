@@ -22,7 +22,7 @@ export default ({ pageContext: { categoryKey }, data }) => {
     }
 
     return (
-        <Layout>
+        <Layout type='offline'>
             <div className="s-container">
                 <img className='topBanner' src={'/img/mainbanner.jpg'} />
                 <SeriesTabs activeTab={activeTab}>

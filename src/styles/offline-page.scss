@@ -269,7 +269,7 @@
         margin: 50px auto;
         display: flex;
 
-        p {
+        a {
             width: 250px;
             height: 55px;
             line-height: 55px;
@@ -302,6 +302,7 @@
                 display: flex;
                 justify-content: space-between;
                 padding: 0 38px;
+                cursor: pointer;
 
                 p {
                     height: 70px;
