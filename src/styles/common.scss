@@ -105,3 +105,25 @@
         }
     }
 }
+
+.commonButton {
+    width: 250px;
+    height: 65px;
+    border: 1px solid rgba($color: $nor-red, $alpha: 0.6);
+    text-align: center;
+    line-height: 65px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: $font-family;
+    display: block;
+
+    p {
+        transition: all 0.2s;
+
+        &.active {
+            transform: scale(1.2);
+            color: white;
+        }
+    }
+}

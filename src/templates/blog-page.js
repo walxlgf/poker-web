@@ -1,14 +1,14 @@
-import React, { memo } from 'react'
+import React, { memo, useState } from 'react'
 import Layout from '../components/Layout'
 import SelectItem from '../components/Series/SelectItem';
 import SeriesTabs from '../components/SeriesTabs'
 import '../styles/blog-page.scss';
-
+import { CommonButton } from '../util/util'
 
 export default (props) => {
 
     let params = props.location.search;
-    let activeTabIndex = 3;
+    let activeTabIndex = 0;
     if (params) {
         let [_, index] = params.split('=');
         if (index) activeTabIndex = parseInt(index);
@@ -87,7 +87,7 @@ const News = memo(() => {
                         </div>
                     )
                 })}
-                <div className='s-more'>查看更多</div>
+                <CommonButton text='查看更多' style={{ margin: '50px auto' }} />
             </div>
         </div>
     )
@@ -112,7 +112,7 @@ const Videos = memo(() => {
             <ul className='mainList'>
                 {[1, 2].map((_, i) => {
                     return (
-                        <li style={i % 2 == 0 ? { marginLeft: 0 } : {}}>
+                        <li key={i} style={i % 2 == 0 ? { marginLeft: 0 } : {}}>
                             <div>
                                 <img src={'/img/mainbanner.jpg'}></img>
                                 <img src={require('../img/tab-video.svg')}></img>
@@ -126,7 +126,7 @@ const Videos = memo(() => {
             <ul className='otherList'>
                 {[1, 2, 3, 4, 5, 6].map((_, i) => {
                     return (
-                        <li style={i % 3 == 0 ? { marginLeft: 0 } : {}}>
+                        <li key={i} style={i % 3 == 0 ? { marginLeft: 0 } : {}}>
                             <div>
                                 <img src={'/img/mainbanner.jpg'}></img>
                                 <img src={require('../img/tab-video.svg')}></img>
@@ -137,7 +137,7 @@ const Videos = memo(() => {
                     )
                 })}
             </ul>
-            <div className='s-more'>查看更多</div>
+            <CommonButton text='查看更多' style={{ margin: '60px auto' }} />
         </div>
     )
 })
@@ -161,7 +161,7 @@ const Photos = memo(() => {
             <ul className='mainList'>
                 {[1, 2].map((_, i) => {
                     return (
-                        <li style={i % 2 == 0 ? { marginLeft: 0 } : {}}>
+                        <li key={i} style={i % 2 == 0 ? { marginLeft: 0 } : {}}>
                             <img src={'/img/mainbanner.jpg'}></img>
                         </li>
                     )
@@ -170,13 +170,13 @@ const Photos = memo(() => {
             <ul className='otherList'>
                 {[1, 2, 3, 4, 5, 6].map((_, i) => {
                     return (
-                        <li style={i % 3 == 0 ? { marginLeft: 0 } : {}}>
+                        <li key={i} style={i % 3 == 0 ? { marginLeft: 0 } : {}}>
                             <img src={'/img/mainbanner.jpg'}></img>
                         </li>
                     )
                 })}
             </ul>
-            <div className='s-more'>查看更多</div>
+            <CommonButton text='查看更多' style={{ margin: '60px auto' }} />
         </div>
     )
 })

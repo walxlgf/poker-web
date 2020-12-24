@@ -1,7 +1,7 @@
 import React, { useState, memo, useEffect } from 'react'
 import '../../styles/offline-page.scss';
 import SelectItem from './SelectItem'
-import { formatMoney } from '../../util/util'
+import { formatMoney, CommonButton } from '../../util/util'
 
 
 export default memo(({ series }) => {
@@ -49,7 +49,7 @@ export default memo(({ series }) => {
                 <p>下载完整赛程结果</p>
             </div>
             <List payouts={isExpand ? curPayouts : curPayouts.slice(0, Math.min(curPayouts.length, 10))} />
-            <div className='s-more' onClick={_expandAction} style={{ display: isShowMore ? 'block' : 'none' }}>查看更多</div>
+            <CommonButton onClick={_expandAction} text='查看更多' style={{ margin: '50px auto', display: isShowMore ? 'block' : 'none' }} />
         </div>
     )
 })

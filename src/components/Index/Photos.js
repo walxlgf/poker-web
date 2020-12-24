@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'gatsby'
 import { navigate } from "gatsby"
-import { scrollAnimation, HoverAnimationView } from '../../util/util'
+import { scrollAnimation, CommonButton } from '../../util/util'
 import '../../styles/index-page.scss'
 import Bus, { EVENTS } from '../../util/eventBus.js'
 import "animate.css";
@@ -43,12 +42,9 @@ export default ({ photos }) => {
                         })
                     }
                 </div>
-                <a className='m-photomore'>
-                    <HoverAnimationView>更多相冊</HoverAnimationView>
-                </a>
-                <a className='m-lookEvent' onClick={({ pageY }) => scrollAnimation(pageY, 850)} >
-                    <HoverAnimationView>查看最新賽事</HoverAnimationView>
-                </a>
+                <CommonButton text='更多相冊' style={{ margin: '30px auto', borderColor: 'rgba(255,255,255,0.6)' }} />
+                <CommonButton text='查看最新賽事' style={{ margin: '130px auto', borderColor: 'rgba(255,255,255,0.6)' }}
+                    onClick={({ pageY }) => scrollAnimation(pageY, 850)} />
             </div>
         </div >
     )

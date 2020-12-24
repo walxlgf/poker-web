@@ -40,7 +40,7 @@
                     font-size: 38px;
                     color: white;
                     font-family: 'Noto Sans TC';
-                    margin-top: -12px;
+                    margin-top: -15px;
                     width: 95%;
                 }
 
@@ -49,12 +49,14 @@
                     font-size: 18px;
                     color: white;
                     line-height: 35px;
-                    margin-top: -5px;
+                    margin-top: 15px;
                     width: 78%;
                     opacity: 0.6;
                 }
 
                 .t-prizeContainer {
+                    margin-top: 15px;
+
                     .t-text {
                         font-size: 18px;
                         color: white;
@@ -68,21 +70,6 @@
                         font-family: 'Noto Sans TC';
                         margin-top: -15px;
                     }
-                }
-
-                .t-toDetail {
-                    width: 250px;
-                    height: 65px;
-                    @include minBorder(#db2c2d);
-                    text-align: center;
-                    line-height: 65px;
-                    opacity: 0.7;
-                    color: white;
-                    font-size: 18px;
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    opacity: 0.6;
                 }
             }
 
@@ -288,36 +275,8 @@
                         opacity: 0.6
                     }
                 }
-
-                .o-detail {
-                    width: 240px;
-                    height: 60px;
-                    @include minBorder(#000000);
-                    text-align: center;
-                    line-height: 60px;
-                    color: white;
-                    font-size: 18px;
-                    position: absolute;
-                    left: 20px;
-                    bottom: 20px;
-                }
             }
         }
-
-        .o-more {
-            display: block;
-            width: 250px;
-            height: 65px;
-            margin: 0 auto;
-            @include minBorder(#fff);
-            text-align: center;
-            line-height: 65px;
-            color: white;
-            font-size: 18px;
-            font-family: 'Noto Sans TC';
-            margin: 57px auto;
-        }
-
     }
 }
 

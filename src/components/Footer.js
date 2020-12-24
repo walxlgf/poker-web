@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
-import logo from '../img/logo.svg'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import weibo from '../img/social/weibo.svg'
 import eight from '../img/social/8.svg'
 import rdlogo from '../img/red-dragon-logo.png'
 import pslogo from '../img/poker-stars-logo.png'
+import { CommonButton } from '../util/util'
 
 const Footer = class extends React.Component {
     render() {
@@ -159,21 +158,13 @@ const Footer = class extends React.Component {
                                 }}>聯絡我們</div>
                                 <input style={{
                                     color: "#fff", backgroundColor: "#333333", width: "422px",
-                                    height: "47px", outline: 'none', paddingLeft: '10px', border: 'none'
+                                    height: "47px", outline: 'none', paddingLeft: '15px', border: 'none'
                                 }} placeholder='電郵' />
                                 <textarea style={{
                                     color: "#fff", backgroundColor: "#333333", width: "422px", height: "135px",
-                                    marginTop: "27px", outline: 'none', paddingLeft: '10px', paddingTop: '10px', border: 'none', resize: 'none'
+                                    marginTop: "27px", outline: 'none', paddingLeft: '15px', paddingTop: '10px', border: 'none', resize: 'none'
                                 }} placeholder='信息' />
-
-                                <div style={{
-                                    width: "250px", height: "65px", marginTop: "29px", boxShadow: '0px 0px 0px .7px #fff'
-                                }} >
-                                    <div style={{
-                                        textAlign: 'center', width: "100%", marginTop: "19px",
-                                        color: "#fff", fontFamily: "Noto Sans TC", fontSize: "16px", fontWeight: 500,
-                                    }}>發送信息</div>
-                                </div>
+                                <CommonButton text='發送信息' style={{ marginTop: '29px', borderColor: 'rgba(255,255,255,0.6)' }} />
                             </div>
                         </div>
 

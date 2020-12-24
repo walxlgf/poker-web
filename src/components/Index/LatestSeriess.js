@@ -1,9 +1,8 @@
-import React, { useEffect, useMemo, useState } from "react"
-import { Link } from 'gatsby'
+import React, { useEffect, useState } from "react"
 import '../../styles/index-page.scss'
 import { Months } from '../../util/consts'
 import "animate.css";
-import { HoverAnimationView, PlaceHolderImg, formatMoney } from '../../util/util'
+import { CommonButton, PlaceHolderImg, formatMoney } from '../../util/util'
 import Bus, { EVENTS } from '../../util/eventBus.js'
 
 
@@ -50,9 +49,7 @@ export default ({ data }) => {
                         <span className='t-text'>奖金</span>
                         <p className='t-amount'>{`${currency} ${formatMoney(prize)}`}</p>
                     </div>
-                    <Link className='t-toDetail' /*to={edge.node.fields.slug} */>
-                        <HoverAnimationView>最新晉級名單</HoverAnimationView>
-                    </Link>
+                    <CommonButton text='最新晉級名單' style={{ position: 'absolute', bottom: '0' }} />
                 </div>
                 <div className={`t-itemRight`}>
                     <a><PlaceHolderImg className='t-image' src={seriesImage} plscr={require('../../img/seriesPlaceholder.jpeg')} /></a>

@@ -1,5 +1,6 @@
 import React, { useState, memo } from 'react'
 import '../../styles/offline-page.scss';
+import { CommonButton } from '../../util/util'
 
 export default memo(() => {
     return (
@@ -46,7 +47,7 @@ export default memo(() => {
                         <p className='s-time'>20-25  sep 2019</p>
                     </li>
                 </ul>
-                <div className='s-more'>查看更多视频</div>
+                <CommonButton text='查看更多视频' style={{ margin: '50px auto' }} />
             </div>
         </div>
     )

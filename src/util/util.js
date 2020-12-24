@@ -100,6 +100,23 @@ export const HoverAnimationView = (props) => {
     )
 }
 
+export const CommonButton = ({ text, style, onClick = () => { } }) => {
+    const [isBtnHover, setIsBtnHover] = useState(false);
+    return (
+        <a
+            onClick={onClick}
+            style={style || {}}
+            className='commonButton'
+            onMouseEnter={() => { setIsBtnHover(true); }}
+            onMouseLeave={() => { setIsBtnHover(false) }}
+        >
+            <p className={`${isBtnHover ? 'active' : ''}`}>
+                {text || ''}
+            </p>
+        </a>
+    )
+}
+
 export const PlaceHolderImg = (props) => {
     const { src, plscr } = props;
     const [showSrc, setShowSrc] = useState(src);

@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
 import { Months } from '../../util/consts'
-import { formatMoney } from '../../util/util';
+import { formatMoney, CommonButton } from '../../util/util';
 
 export default ({ category, series, detailAction }) => {
 
@@ -124,9 +124,7 @@ const MainEvents = ({ events, category, detailAction }) => {
                     )
                 })}
             </ul>
-            <div onClick={detailAction} className='more'>
-                查看更多賽程
-            </div>
+            <CommonButton onClick={detailAction} text='查看更多賽程' style={{ margin: '50px auto' }} />
         </div>
     )
 }

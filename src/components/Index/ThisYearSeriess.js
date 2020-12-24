@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react"
-import { Link } from 'gatsby'
 import { Months } from '../../util/consts'
 import '../../styles/index-page.scss'
 import Bus, { EVENTS } from '../../util/eventBus.js'
 import "animate.css";
-import { HoverAnimationView } from '../../util/util'
+import { CommonButton } from '../../util/util'
 
 const STATES = {
     '1': {
@@ -80,9 +79,9 @@ export default ({ data }) => {
                     <img src={require('../../img/location.png')}></img>
                     <span >{event.address}</span>
                 </p>
-                <a className='o-detail'>
-                    <HoverAnimationView>查看詳情</HoverAnimationView>
-                </a>
+                <CommonButton
+                    text='查看詳情'
+                    style={{ position: 'absolute', bottom: '20px', borderColor: 'rgba(0,0,0,0.6)', left: '15px' }} />
             </div>
         )
     }
@@ -100,9 +99,7 @@ export default ({ data }) => {
                 <ul>
                     {events.map((e, i) => { return <li key={i}>{_renderItem(e, i % 2 == 0)}</li> })}
                 </ul>
-                <a className='o-more'>
-                    <HoverAnimationView>閱讀緊多</HoverAnimationView>
-                </a>
+                <CommonButton text='閱讀緊多' style={{ margin: '80px auto', borderColor: 'rgba(255,255,255,0.6)' }} />
             </div>
         </div >
     )

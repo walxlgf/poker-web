@@ -4,6 +4,7 @@
     background-color: black;
     position: relative;
     padding-bottom: 10px;
+    min-height: 1000px;
 
     .topBanner {
         height: 650px;
@@ -150,21 +151,7 @@
                 }
             }
         }
-
-        .s-more {
-            width: 250px;
-            height: 65px;
-            @include minBorder($nor-red);
-            text-align: center;
-            line-height: 65px;
-            color: white;
-            font-size: 18px;
-            font-weight: 500;
-            font-family: $font-family;
-            margin: 30px auto;
-        }
     }
-
 }
 
 // 视频
@@ -276,19 +263,6 @@
             }
         }
     }
-
-    .s-more {
-        width: 250px;
-        height: 65px;
-        @include minBorder($nor-red);
-        text-align: center;
-        line-height: 65px;
-        color: white;
-        font-size: 18px;
-        font-weight: 500;
-        font-family: $font-family;
-        margin: 60px auto;
-    }
 }
 
 // 相册
@@ -347,19 +321,6 @@
                 height: 244px;
             }
         }
-    }
-
-    .s-more {
-        width: 250px;
-        height: 65px;
-        @include minBorder($nor-red);
-        text-align: center;
-        line-height: 65px;
-        color: white;
-        font-size: 18px;
-        font-weight: 500;
-        font-family: $font-family;
-        margin: 60px auto;
     }
 }
 

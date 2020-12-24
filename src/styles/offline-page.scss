@@ -5,6 +5,7 @@
     background-color: black;
     position: relative;
     padding-bottom: 10px;
+    min-height: 1000px;
 
     .topBanner {
         height: 650px;
@@ -147,20 +148,6 @@
                     }
                 }
             }
-        }
-
-
-        .more {
-            width: 250px;
-            height: 65px;
-            line-height: 65px;
-            @include minBorder($nor-red);
-            text-align: center;
-            color: white;
-            font-size: 18px;
-            font-weight: 500;
-            font-family: $font-family;
-            margin: 59px auto;
         }
     }
 
@@ -638,19 +625,6 @@
             }
         }
     }
-
-    .s-more {
-        width: 250px;
-        height: 65px;
-        @include minBorder($nor-red);
-        text-align: center;
-        line-height: 65px;
-        color: white;
-        font-size: 18px;
-        font-weight: 500;
-        font-family: $font-family;
-        margin: 59px auto;
-    }
 }
 
 // 赛事直播
@@ -770,24 +744,6 @@
                     font-size: 16px;
                 }
             }
-
-
-        }
-
-        .s-more {
-            width: 250px;
-            height: 65px;
-            @include minBorder($nor-red);
-            text-align: center;
-            line-height: 65px;
-            opacity: 0.7;
-            color: white;
-            font-size: 18px;
-            opacity: 0.6;
-            margin: 30px auto;
         }
     }
-
-
-
 }
