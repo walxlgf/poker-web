@@ -23,7 +23,7 @@ export default (props) => {
     const ICONS = props.type === 'blog' ? B_ICONS : E_ICONS;
     const NAMES = props.type === 'blog' ? B_NAMES : E_NAMES;
 
-    const [currentTabIndex, setCurrentTabIndex] = useState(props.activeTab || 0);
+    const [currentTabIndex, setCurrentTabIndex] = useState(-1);
     const [activeIndexs, setActiveIndexs] = useState([currentTabIndex])
 
     useEffect(() => {
