@@ -24,15 +24,11 @@ export const throttle = (fn, delay = 1000) => {
     let timer = null;
     let firstTime = true;
     return function (...args) {
-        if (firstTime) {
-            // 第一次加载
+        if (firstTime) {// 第一次加载
             fn.apply(this, args);
             return firstTime = false;
         }
-        if (timer) {
-            // 定时器正在执行中，跳过
-            return;
-        }
+        if (timer) return; // 定时器正在执行中，跳过
         timer = setTimeout(() => {
             clearTimeout(timer);
             timer = null;
@@ -80,25 +76,25 @@ export const rangesIntersect = (ranges1, ranges2) => {
     return scale < 0.5;
 }
 
-export const HoverAnimationView = (props) => {
-    const animationName = props.animationName || 'animate__bounceIn';
-    const [isBtnHover, setIsBtnHover] = useState(false);
-    const [hoverTime, setHoverTime] = useState(null); // 时间控制下，否则鼠标移入移除会疯狂回调
-    return (
-        <div onMouseEnter={() => {
-            if (Date.now() - hoverTime < 50) return;
-            setHoverTime(Date.now())
-            setIsBtnHover(true);
-        }}
-            onMouseLeave={() => {
-                if (Date.now() - hoverTime < 50) return;
-                setIsBtnHover(false)
-            }}
-            className={`animate__animated ${isBtnHover ? animationName : ''}`} >
-            {props.children}
-        </div>
-    )
-}
+// export const HoverAnimationView = (props) => {
+//     const animationName = props.animationName || 'animate__bounceIn';
+//     const [isBtnHover, setIsBtnHover] = useState(false);
+//     const [hoverTime, setHoverTime] = useState(null); // 时间控制下，否则鼠标移入移除会疯狂回调
+//     return (
+//         <div onMouseEnter={() => {
+//             if (Date.now() - hoverTime < 50) return;
+//             setHoverTime(Date.now())
+//             setIsBtnHover(true);
+//         }}
+//             onMouseLeave={() => {
+//                 if (Date.now() - hoverTime < 50) return;
+//                 setIsBtnHover(false)
+//             }}
+//             className={`animate__animated ${isBtnHover ? animationName : ''}`} >
+//             {props.children}
+//         </div>
+//     )
+// }
 
 export const CommonButton = ({ text, style, onClick = () => { } }) => {
     const [isBtnHover, setIsBtnHover] = useState(false);
@@ -140,6 +136,21 @@ export const useWindowScrollHook = (fn) => {
 export const compose = (...funcs) => {
     if (funcs.length == 0) return arg => arg;
     return funcs.reduce((a, b) => (...args) => a(b(...args)));
+}
+
+// 自定义深拷贝
+export const deepCopy = (target, source) => {
+    for (const key in source) {
+        let value = source[key];
+        if (typeof value === 'object') {
+            // constructor属性存储在原型对象上,是对象的构造函数
+            let newObj = new value.constructor();
+            deepCopy(newObj, value);
+            target[key] = newObj;
+        } else {
+            target[key] = source[key];
+        }
+    }
 }
 
 /*
