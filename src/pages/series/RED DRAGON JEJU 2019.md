@@ -1,4 +1,5 @@
 ---
+  onlyData: true
   category: "rd-jeju"
   templateKey: "series-page"
   title: "RED DRAGON JEJU 2019"

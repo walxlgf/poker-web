@@ -1,4 +1,5 @@
 ---
+  onlyData: true
   category: "appt-jeju"
   templateKey: "series-page"
   title: "APPT JEJU 2019"

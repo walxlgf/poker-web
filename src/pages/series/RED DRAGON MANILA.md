@@ -1,4 +1,5 @@
 ---
+  onlyData: true
   category: "rd-manila"
   templateKey: "series-page"
   title: "RED DRAGON MANILA"

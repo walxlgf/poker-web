@@ -4,11 +4,9 @@ import cloudinary from 'netlify-cms-media-library-cloudinary'
 
 import AboutPagePreview from './preview-templates/AboutPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
-import SeriesPagePreview from './preview-templates/SeriesPagePreview'
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
 
 CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('index', IndexPagePreview)
-CMS.registerPreviewTemplate('series', SeriesPagePreview)

@@ -1,12 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-// import logo from '../img/logo.svg'
-// import facebook from '../img/social/facebook.svg'
-// import instagram from '../img/social/instagram.svg'
-// import twitter from '../img/social/twitter.svg'
-// import vimeo from '../img/social/vimeo.svg'
-
 import logo from '../img/logo.png'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
@@ -24,7 +17,7 @@ const Navbar = class extends React.Component {
             navBarActiveClass: '',
         }
 
-        let paths = ['/', '/offline', '/blog', '/others/xsb', '/others/about', '/others/guide'];
+        let paths = ['/', '/offline', '/blog', '/online', '/others/xsb', '/others/about', '/others/guide'];
         let locationPath = window.location.pathname;
         this.navBgs = {};
         paths.forEach(p => {
@@ -34,8 +27,6 @@ const Navbar = class extends React.Component {
                 this.navBgs[p] = {}
             }
         })
-
-
     }
 
     toggleHamburger = () => {
@@ -136,9 +127,9 @@ const Navbar = class extends React.Component {
                                             <Link className="navDrownItem" to="/offline/appt-jeju">APPT济州站</Link>
                                         </div>
                                     </div>
-                                    <Link className="navbar-item" to="/blog" style={{
+                                    <Link className="navbar-item" to="/online" style={{
                                         fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
-                                        paddingRight: "24px", paddingLeft: "24px", ...{ ...this.navBgs['/blog'] }
+                                        paddingRight: "24px", paddingLeft: "24px", ...{ ...this.navBgs['/online'] }
                                     }}> 線上賽事</Link>
                                     <Link className="navbar-item" to="/blog" style={{
                                         fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',

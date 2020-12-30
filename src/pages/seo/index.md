@@ -33,6 +33,11 @@ seos:
         description: 线下，赢钱，收入
         keywords: 线下，赢钱，收入
     -
+        key: online
+        title: 线上赛事
+        description: 线上，赢钱，收入
+        keywords: 线上，赢钱，收入
+    -
         key: xsb
         title: 选手榜
         description: 选手，排名，牛逼
