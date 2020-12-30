@@ -18,6 +18,8 @@
     padding-bottom: 150px;
     width: 1200px;
     margin: 100px auto;
+    font-family: $font-family;
+    color: white;
 }
 
 // 赛事简介
@@ -633,73 +635,82 @@
     @include s-content();
 
     h1 {
-        color: white;
         font-size: 50px;
         font-weight: bold;
         text-align: center;
         margin-top: 150px;
     }
 
-    .s-player-box {
-        width: 700px;
-        margin: 50px auto;
+    .s-current-box {
+        display: flex;
+        margin-top: 55px;
 
-        .s-image-box {
-            width: 100%;
-            height: 400px;
-            position: relative;
+        .s-left {
+            margin-right: 33px;
 
-            img {
-                &:nth-child(1) {
-                    width: 100%;
-                    height: 100%;
+            .s-image-box {
+                width: 826px;
+                height: 465px;
+                position: relative;
+
+                img {
+                    &:nth-child(1) {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    &:nth-child(2) {
+                        width: 85px;
+                        height: 85px;
+                    }
                 }
+            }
 
-                &:nth-child(2) {
-                    width: 60px;
-                    height: 60px;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+            .s-audio-title {
+                font-size: 30px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            .s-des-box {
+                font-weight: 300;
+                font-size: 17px;
+                display: flex;
+                justify-content: space-between;
+
+                .like-share-box {
+                    .s-like {
+                        img {
+                            width: 23px;
+                            height: 21px;
+                            margin-left: 6px;
+                            margin-right: 20px;
+                        }
+                    }
+
+                    .s-share {
+                        img {
+                            width: 21px;
+                            height: 21px;
+                            margin-left: 6px;
+                        }
+                    }
                 }
             }
         }
 
-        .s-audio-title {
-            color: white;
-            font-size: 25px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        div {
-            color: white;
-            font-size: 16px;
-            background-color: red;
-
-            p {
-                margin-bottom: 0;
-                float: left;
-            }
-
-            .s-like {
-                float: right;
-            }
-
-            .s-share {
-                margin-left: 20px;
-                float: right;
-            }
+        .s-right {
+            width: 339px;
+            height: 565px;
+            background-color: gray;
         }
     }
 
     .s-other-box {
-        margin-top: 100px;
+        margin-top: 90px;
 
-        h1 {
-            color: white;
-            font-size: 40px;
+        h2 {
+            font-size: 44px;
             text-align: center;
         }
 
@@ -707,42 +718,34 @@
             list-style: none;
             display: flex;
             justify-content: space-between;
+            margin-top: 65px;
 
             li {
-
                 div {
                     position: relative;
-                    width: 360px;
-                    height: 240px;
+                    width: 367px;
+                    height: 244px;
 
                     img {
                         &:nth-child(1) {
-                            width: 360px;
-                            height: 240px;
+                            width: 100%;
+                            height: 100%;
                         }
 
                         &:nth-child(2) {
-                            width: 50px;
-                            height: 50px;
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
+                            width: 65px;
+                            height: 65px;
                         }
                     }
                 }
 
                 .s-title {
-                    color: white;
-                    font-size: 20px;
-                    font-weight: bold;
-                    margin-top: 10px;
-                    margin-bottom: 0px;
+                    font-size: 30px;
+                    margin-top: 5px;
                 }
 
                 .s-time {
-                    color: white;
-                    font-size: 16px;
+                    font-size: 21px;
                 }
             }
         }

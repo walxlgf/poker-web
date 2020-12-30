@@ -11,7 +11,7 @@ import { scrollAnimation } from '../util/util'
 
 export default ({ pageContext: { categoryKey }, data }) => {
     // 使用对象而不是数字，为了每次点击都刷新页面
-    const [activeTab, setActiveTab] = useState({ index: 0 });
+    const [activeTab, setActiveTab] = useState({ index: 3 });
 
     const category = data.categories.edges.map(edge => edge.node.frontmatter).find(c => c.categoryKey === categoryKey);
     const series = data.seriess.edges.map(edge => edge.node.frontmatter).filter(s => s.category === categoryKey);

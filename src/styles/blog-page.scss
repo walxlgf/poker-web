@@ -203,10 +203,6 @@
                     &:nth-child(2) {
                         width: 85px;
                         height: 85px;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
                     }
                 }
             }
@@ -245,10 +241,6 @@
                     &:nth-child(2) {
                         width: 65px;
                         height: 65px;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
                     }
                 }
             }

@@ -115,7 +115,7 @@ const Videos = memo(() => {
                         <li key={i} style={i % 2 == 0 ? { marginLeft: 0 } : {}}>
                             <div>
                                 <img src={'/img/mainbanner.jpg'}></img>
-                                <img src={require('../img/tab-video.svg')}></img>
+                                <img className='absCenter' src={require('../img/tab-video.svg')}></img>
                             </div>
                             <h3>紅龍杯冠軍賽濟洲站</h3>
                             <p>13-23 Aug 2020</p>
@@ -129,7 +129,7 @@ const Videos = memo(() => {
                         <li key={i} style={i % 3 == 0 ? { marginLeft: 0 } : {}}>
                             <div>
                                 <img src={'/img/mainbanner.jpg'}></img>
-                                <img src={require('../img/tab-video.svg')}></img>
+                                <img className='absCenter' src={require('../img/tab-video.svg')}></img>
                             </div>
                             <h3>紅龍杯挑戰賽</h3>
                             <p>20-25 Sep 2019</p>
