@@ -23,6 +23,19 @@ const Navbar = class extends React.Component {
             active: false,
             navBarActiveClass: '',
         }
+
+        let paths = ['/', '/offline', '/blog', '/others/xsb', '/others/about', '/others/guide'];
+        let locationPath = window.location.pathname;
+        this.navBgs = {};
+        paths.forEach(p => {
+            if (p === locationPath || (locationPath.includes('/offline') && p.includes('/offline'))) {
+                this.navBgs[p] = { backgroundColor: '#b52222' };
+            } else {
+                this.navBgs[p] = {}
+            }
+        })
+
+
     }
 
     toggleHamburger = () => {
@@ -95,27 +108,16 @@ const Navbar = class extends React.Component {
                             role="navigation"
                             aria-label="dropdown navigation"
                             style={{ height: '100%' }}
-
-                        // style={{ marginTop: "0.0rem" }}
                         >
-                            <div className="navbar-brand" >
-                                <Link className="navbar-item" to="/" title="Home">
-                                    <img
-                                        src={home}
-                                        alt="Home"
-                                        style={{ width: "22px", height: "21px", objectFit: "contain" }}
-                                    />
-                                </Link>
-                                <div
-                                    className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-                                    data-target="navMenu"
-                                    onClick={() => this.toggleHamburger()}
-                                >
-                                    <span />
-                                    <span />
-                                    <span />
-                                </div>
-                            </div>
+                            <Link className="navbar-item" to="/" title="Home"
+                                style={{ padding: '0 20px', ...{ ...this.navBgs['/'] } }}
+                            >
+                                <img
+                                    src={home}
+                                    alt="Home"
+                                    style={{ width: "22px", height: "21px", objectFit: "contain" }}
+                                />
+                            </Link>
                             <div
                                 id="navMenu"
                                 className={`navbar-menu ${this.state.navBarActiveClass}`}
@@ -124,7 +126,7 @@ const Navbar = class extends React.Component {
                                     <div className="navbar-item has-dropdown is-hoverable">
                                         <div className="navbar-link is-arrowless" style={{
                                             fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
-                                            paddingRight: "24px", paddingLeft: "24px"
+                                            paddingRight: "24px", paddingLeft: "24px", ...{ ...this.navBgs['/offline'] }
                                         }}>線下賽事</div>
                                         <div className="navbar-dropdown is-boxed navDropDrown">
                                             <Link className="navDrownItem" to="/offline/rd-jeju/">红龙杯济州站</Link>
@@ -136,19 +138,19 @@ const Navbar = class extends React.Component {
                                     </div>
                                     <Link className="navbar-item" to="/blog" style={{
                                         fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
-                                        paddingRight: "24px", paddingLeft: "24px"
+                                        paddingRight: "24px", paddingLeft: "24px", ...{ ...this.navBgs['/blog'] }
                                     }}> 線上賽事</Link>
                                     <Link className="navbar-item" to="/blog" style={{
                                         fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
-                                        paddingRight: "24px", paddingLeft: "24px"
+                                        paddingRight: "24px", paddingLeft: "24px", ...{ ...this.navBgs['/blog'] }
                                     }}>BLOG</Link>
                                     <Link className="navbar-item" to="/others/xsb" style={{
                                         fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
-                                        paddingRight: "24px", paddingLeft: "24px"
+                                        paddingRight: "24px", paddingLeft: "24px", ...{ ...this.navBgs['/others/xsb'] }
                                     }}>選手榜</Link>
                                     <Link className="navbar-item" to="/others/about" style={{
                                         fontFamily: "Noto Sans TC", fontSize: "18px", fontWeight: 300, fontStretch: 'normal', fontStyle: 'normal', lineHeight: 'normal', letterSpacing: 'normal',
-                                        paddingRight: "24px", paddingLeft: "24px"
+                                        paddingRight: "24px", paddingLeft: "24px", ...{ ...this.navBgs['/others/about'] }
                                     }}>關於我們</Link>
                                 </div>
                                 <div className="navbar-end" style={{}}>

@@ -62,7 +62,6 @@ export default ({ children, type }) => {
             </Helmet>
         )
     }
-
     return (
         <>
             {_renderMetas()}
