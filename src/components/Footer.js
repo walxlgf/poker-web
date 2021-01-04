@@ -8,6 +8,8 @@ import rdlogo from '../img/red-dragon-logo.png'
 import pslogo from '../img/poker-stars-logo.png'
 import { CommonButton } from '../util/util'
 
+
+
 const Footer = class extends React.Component {
     render() {
         return (
@@ -169,22 +171,25 @@ const Footer = class extends React.Component {
                         </div>
 
                         <div style={{ width: "100%", margin: "42px 0 19px", boxShadow: '0px 0px 0px .7px #db2c2d' }}></div>
-                        <div className="columns" style={{ width: "100%", height: "55px", marginBottom: "28px", color: "#fff", fontFamily: "Noto Sans TC", fontSize: "15px", fontWeight: 300, fontStretch: 'normal', }}>
-                            <div className="column is-5" style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "flex-start" }}>
+                        <div
+                            style={{
+                                width: "100%", height: "55px", marginBottom: "28px", color: "#fff", fontFamily: "Noto Sans TC",
+                                fontSize: "15px", fontWeight: 300, margin: '0 0 28px 0', display: 'flex', alignItems: 'center'
+                            }}>
+                            <div className="column is-8" style={{ display: "flex", paddingLeft: 0 }}>
                                 <div >Copyright © 2020 Red Dragon Poker Tour 保留所有權利。</div>
-                            </div>
-                            <div className="column is-3" style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "flex-start" }}>
+                                <div style={{ marginLeft: '20px' }}></div>
                                 <div>私隱政策</div>
-                                <div style={{ margin: "0px 4px 0px 4px" }}>I</div>
+                                <div style={{ margin: "0px 8px 0px 8px", opacity: 0.5 }}>I</div>
                                 <div>賽事規則</div>
-                                <div style={{ margin: "0px 4px 0px 4px" }}>I</div>
+                                <div style={{ margin: "0px 8px 0px 8px", opacity: 0.5 }}>I</div>
                                 <div>媒體指南</div>
                             </div>
-                            <div className="column is-4" style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "flex-end" }}>
+                            <div className="column is-4" style={{ display: "flex", justifyContent: "flex-end", paddingRight: 0 }}>
                                 <div>繁體</div>
-                                <div style={{ margin: "0px 4px 0px 4px" }}>I</div>
+                                <div style={{ margin: "0px 8px 0px 8px", opacity: 0.5 }}>I</div>
                                 <div>簡體</div>
-                                <div style={{ margin: "0px 4px 0px 4px" }}>I</div>
+                                <div style={{ margin: "0px 8px 0px 8px", opacity: 0.5 }}>I</div>
                                 <div>ENG</div>
                             </div>
                         </div>
