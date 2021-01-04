@@ -11,7 +11,7 @@ import { scrollAnimation } from '../util/util'
 
 export default ({ pageContext: { categoryKey }, data }) => {
     // 使用对象而不是数字，为了每次点击都刷新页面
-    const [activeTab, setActiveTab] = useState({ index: 0 });
+    const [activeTab, setActiveTab] = useState({ index: 3 });
 
     const category = data.categories.edges.map(edge => edge.node.frontmatter).find(c => c.categoryKey === categoryKey);
     const series = data.seriess.edges.map(edge => edge.node.frontmatter).filter(s => s.category === categoryKey);
@@ -21,16 +21,37 @@ export default ({ pageContext: { categoryKey }, data }) => {
         scrollAnimation(1500, 700);
     }
 
+    const _renderBgItems = () => {
+        let bgs = [
+            { num: 7, prex: 'summary' },
+            { num: 3, prex: 'list' },
+            { num: 4, prex: 'result' },
+            { num: 4, prex: 'zhibo' },
+        ];
+        let curBg = bgs[activeTab.index];
+        let bgItems = [];
+        for (let index = 0; index < curBg.num; index++) {
+            let className = `${curBg.prex}-bg-item-${index + 1}`;
+            bgItems.push(<div key={index} className={className} />)
+        }
+        return (
+            <div className='bg-view-box'>
+                {bgItems}
+            </div>
+        )
+    }
+
     return (
         <Layout type='offline'>
             <div className="s-container">
                 <img className='topBanner' src={'/img/mainbanner.jpg'} />
-                <SeriesTabs activeTab={activeTab}>
+                <SeriesTabs activeTab={activeTab} tabChange={index => setActiveTab({ index })}>
                     <Summary category={category} series={series} detailAction={_toSchedulePage} />
                     <Schedule series={series} />
                     <Result series={series} />
                     <Zhibo />
                 </SeriesTabs>
+                {_renderBgItems()}
             </div>
         </Layout>
     )

@@ -32,6 +32,8 @@ export default (props) => {
     }, [props.activeTab])
 
     const _tabChange = (index) => {
+        if (currentTabIndex === index) return;
+        props.tabChange && props.tabChange(index);
         setCurrentTabIndex(index);
         if (!activeIndexs.includes(index)) {
             activeIndexs.push(index);

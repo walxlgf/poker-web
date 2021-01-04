@@ -41,6 +41,13 @@ export const AboutPageTemplate = ({ descriptions }) => {
                     </div>
                 </div>
             </div>
+            <div className='bg-view-box'>
+                <div className='item1'></div>
+                <div className='item2'></div>
+                <div className='item3'></div>
+                <div className='item4'></div>
+                <div className='item5'></div>
+            </div>
         </div>
     )
 }
