@@ -1,5 +1,13 @@
 @import './mixin.scss';
 
+@mixin bgItemMix($w, $h, $color, $z:0) {
+    width: $w;
+    height: $h;
+    background-color: $color;
+    position: absolute;
+    z-index: $z;
+}
+
 // 线下赛事整体框架
 .s-container {
     background-color: black;
@@ -23,164 +31,109 @@
         z-index: -10;
 
         .summary-bg-item-1 {
-            width: 60%;
-            height: 1726.3px;
-            background-color: #191919;
-            position: absolute;
+            @include bgItemMix(60%, 1726.3px, #191919);
             left: 0;
             top: 650px;
         }
 
         .summary-bg-item-2 {
-            width: 198px;
-            height: 20px;
-            background-color: white;
-            position: absolute;
+            @include bgItemMix(198px, 20px, white);
             right: 0;
             top: 1000px;
         }
 
         .summary-bg-item-3 {
-            width: 65%;
-            height: 767px;
-            background-color: #262626;
-            position: absolute;
+            @include bgItemMix(65%, 767px, #262626);
             right: 0;
             top: 1020px;
         }
 
         .summary-bg-item-4 {
-            width: 500px;
-            height: 75px;
-            background-color: $nor-red;
-            position: absolute;
+            @include bgItemMix(500px, 75px, $nor-red);
             right: 0;
             top: 1787px;
         }
 
         .summary-bg-item-5 {
-            width: 700px;
-            height: 100px;
-            background-color: $nor-red;
-            position: absolute;
+            @include bgItemMix(700px, 100px, $nor-red);
             left: 0;
             top: 2060px;
         }
 
         .summary-bg-item-6 {
-            width: 500px;
-            height: 20px;
-            background-color: white;
-            position: absolute;
+            @include bgItemMix(500px, 20px, white);
             left: 0;
             top: 2600px;
         }
 
         .summary-bg-item-7 {
-            width: 40%;
-            height: 400px;
-            background-color: #191919;
-            position: absolute;
+            @include bgItemMix(40%, 400px, #191919);
             right: 0;
             bottom: 0;
         }
 
         .list-bg-item-1 {
-            width: 50%;
-            height: 40%;
-            background-color: #262626;
-            position: absolute;
+            @include bgItemMix(50%, 40%, #262626);
             left: 0;
             bottom: 500px;
         }
 
         .list-bg-item-2 {
-            width: 60%;
-            height: 1265px;
-            background-color: #191919;
-            position: absolute;
+            @include bgItemMix(60%, 1265px, #191919);
             right: 0;
             bottom: 0;
         }
 
         .list-bg-item-3 {
-            width: 35%;
-            height: 40px;
-            background-color: white;
-            position: absolute;
+            @include bgItemMix(35%, 40px, white);
             right: 0;
             bottom: 0;
         }
 
         .result-bg-item-1 {
-            width: 33%;
-            height: 700px;
-            background-color: #262626;
-            position: absolute;
+            @include bgItemMix(33%, 700px, #262626);
             right: 0;
             bottom: 700px;
         }
 
         .result-bg-item-2 {
-            width: 38%;
-            height: 800px;
-            background-color: #191919;
-            position: absolute;
+            @include bgItemMix(38%, 800px, #191919);
             left: 0;
             bottom: 0px;
         }
 
         .result-bg-item-3 {
-            width: 40px;
-            height: 600px;
-            background-color: white;
-            position: absolute;
+            @include bgItemMix(40px, 600px, white);
             left: 0;
             bottom: 200px;
         }
 
         .result-bg-item-4 {
-            width: 50%;
-            height: 80px;
-            background-color: $nor-red;
-            position: absolute;
+            @include bgItemMix(50%, 80px, $nor-red);
             right: 0;
             bottom: 0;
         }
 
         .zhibo-bg-item-1 {
-            width: 70%;
-            height: 915px;
-            background-color: #191919;
-            position: absolute;
+            @include bgItemMix(70%, 915px, #191919, 6);
             left: 0;
             top: 650px;
-            z-index: 6;
         }
 
         .zhibo-bg-item-2 {
-            width: 33%;
-            height: 25px;
-            background-color: white;
-            position: absolute;
+            @include bgItemMix(33%, 25px, white);
             right: 0;
             top: 1300px;
         }
 
         .zhibo-bg-item-3 {
-            width: 70%;
-            height: 590px;
-            background-color: #262626;
-            position: absolute;
+            @include bgItemMix(70%, 590px, #262626);
             right: 0;
             top: 1325px;
         }
 
         .zhibo-bg-item-4 {
-            width: 45%;
-            height: 50px;
-            background-color: $nor-red;
-            position: absolute;
+            @include bgItemMix(45%, 50px, $nor-red);
             left: 110px;
             bottom: 0;
         }

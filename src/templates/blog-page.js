@@ -8,22 +8,46 @@ import { CommonButton } from '../util/util'
 export default (props) => {
 
     let params = props.location.search;
-    let activeTabIndex = 0;
+    let defaultTabIndex = 0;
     if (params) {
         let [_, index] = params.split('=');
-        if (index) activeTabIndex = parseInt(index);
+        if (index) defaultTabIndex = parseInt(index);
+    }
+
+    const [activeTabIndex, setActiveTabIndex] = useState(defaultTabIndex)
+
+    const _renderBgItems = () => { // 背景色块
+        let bgs = [
+            { num: 5, prex: 'news' },
+            { num: 4, prex: 'videos' },
+            { num: 4, prex: 'photos' },
+            { num: 4, prex: 'reports' },
+        ];
+        let curBg = bgs[activeTabIndex];
+        let bgItems = [];
+        for (let index = 0; index < curBg.num; index++) {
+            let className = `${curBg.prex}-bg-item-${index + 1}`;
+            bgItems.push(<div key={index} className={className} />)
+        }
+        return (
+            <div className='bg-view-box'>
+                {bgItems}
+            </div>
+        )
     }
 
     return (
         <Layout type='blog'>
             <div className='b-container'>
                 <img className='topBanner' src={'/img/mainbanner.jpg'} />
-                <SeriesTabs type='blog' activeTab={{ index: activeTabIndex }}>
+                <SeriesTabs type='blog' activeTab={{ index: activeTabIndex }}
+                    tabChange={index => setActiveTabIndex(index)}>
                     <News />
                     <Videos />
                     <Photos />
                     <Reports />
                 </SeriesTabs>
+                {_renderBgItems()}
             </div>
         </Layout>
     )

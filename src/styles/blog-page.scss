@@ -1,8 +1,17 @@
 @import './mixin.scss';
 
+@mixin bgItemMix($w, $h, $color, $z:0) {
+    width: $w;
+    height: $h;
+    background-color: $color;
+    position: absolute;
+    z-index: $z;
+}
+
 .b-container {
     background-color: black;
     position: relative;
+    z-index: 10;
     padding-bottom: 10px;
     min-height: 1000px;
 
@@ -10,6 +19,119 @@
         height: 650px;
         width: 100%;
         object-fit: cover;
+    }
+
+    .bg-view-box {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -10;
+
+        .news-bg-item-1 {
+            @include bgItemMix(545px, 1322px, #262626);
+            right: 0;
+            top: 650px;
+        }
+
+        .news-bg-item-2 {
+            @include bgItemMix(720px, 25px, white);
+            right: 0;
+            top: 1870px;
+        }
+
+        .news-bg-item-3 {
+            @include bgItemMix(570px, 1000px, #191919);
+            top: 2000px;
+            height: auto;
+            left: 0;
+            bottom: 0;
+        }
+
+        .news-bg-item-4 {
+            @include bgItemMix(775px, 60px, $nor-red);
+            top: 2340px;
+            left: 0;
+        }
+
+        .news-bg-item-5 {
+            @include bgItemMix(780px, 25px, $nor-red);
+            left: 570px;
+            bottom: 0;
+        }
+
+        .videos-bg-item-1 {
+            @include bgItemMix(33%, 597px, #262626);
+            right: 0;
+            top: 650px;
+        }
+
+        .videos-bg-item-2 {
+            @include bgItemMix(50%, 926px, #191919);
+            left: 0;
+            bottom: 0;
+        }
+
+        .videos-bg-item-3 {
+            @include bgItemMix(27%, 60px, $nor-red);
+            left: 0;
+            bottom: 0;
+        }
+
+        .videos-bg-item-4 {
+            @include bgItemMix(150px, 540px, white);
+            right: 0;
+            bottom: 0;
+        }
+
+        .photos-bg-item-1 {
+            @include bgItemMix(52%, 1000px, #262626);
+            left: 0;
+            top: 650px;
+        }
+
+        .photos-bg-item-2 {
+            @include bgItemMix(360px, 100px, $nor-red);
+            left: 0;
+            bottom: 0;
+        }
+
+        .photos-bg-item-3 {
+            @include bgItemMix(600px, 1000px, #191919);
+            right: 0;
+            bottom: 0;
+        }
+
+        .photos-bg-item-4 {
+            @include bgItemMix(410px, 40px, white);
+            right: 0;
+            bottom: 1000px;
+        }
+
+        .reports-bg-item-1 {
+            @include bgItemMix(650px, 1030px, #262626, 5);
+            right: 0;
+            top: 650px;
+        }
+
+        .reports-bg-item-2 {
+            @include bgItemMix(80%, 750px, #191919);
+            left: 0;
+            bottom: 0;
+        }
+
+        .reports-bg-item-3 {
+            @include bgItemMix(480px, 330px, $nor-red);
+            left: 0;
+            bottom: 170px;
+        }
+
+        .reports-bg-item-4 {
+            @include bgItemMix(20%, 40px, white);
+            right: 0;
+            bottom: 0;
+        }
     }
 }
 
