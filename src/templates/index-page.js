@@ -8,7 +8,7 @@ import Photos from "../components/Index/Photos"
 import BgAnimationViews from "../components/Index/BgAnimationViews"
 
 
-export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess, photos }) => {
+export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess, series, photos }) => {
     return (
         <div style={{ backgroundColor: 'black' }}>
             {bannerImage ? (
@@ -20,20 +20,23 @@ export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess,
 
             <BgAnimationViews />
             <LatestSeriess data={latestSeriess} />
-            <ThisYearSeriess data={thisYearSeriess} />
+            <ThisYearSeriess data={series} />
             <Photos photos={photos} />
         </div>
     )
 }
 
 export default ({ data }) => {
-    const { index, latestSeriess } = data;
+    const { index, g_series } = data;
     const { thisYearSeriess, photos, bannerImage } = index.frontmatter;
+    let series = g_series.edges.map(edge => edge.node.frontmatter);
+    let latestSeriess = series.slice(0, Math.min(series.length, 2));
     return (
         <Layout type='index'>
             <IndexPageTemplate
-                latestSeriess={latestSeriess.edges}
+                latestSeriess={latestSeriess}
                 thisYearSeriess={thisYearSeriess}
+                series={series}
                 photos={photos}
                 bannerImage={bannerImage}
             />
@@ -77,18 +80,12 @@ export const seriesQuery = graphql`
         }
       }
     }
-    latestSeriess:allMarkdownRemark(
+    g_series:allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      limit:2,
-      skip:0,
       filter: {frontmatter: {templateKey: {eq: "series-page"}}}
     ) {
       edges {
         node {
-          excerpt(pruneLength: 20)
-          fields {
-            slug
-          }
           frontmatter {
             date
             title
@@ -97,6 +94,9 @@ export const seriesQuery = graphql`
             prize
             seriesImage
             currency
+            events{
+                startTime
+            }
           }
         }
       }

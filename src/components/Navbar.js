@@ -18,10 +18,8 @@ const Navbar = class extends React.Component {
             navBarActiveClass: '',
         }
 
-        console.log(11111111);
-        console.log(global);
-
         let paths = ['/', '/offline', '/blog', '/online', '/others/xsb', '/others/about', '/others/guide'];
+        // 该文件在编译阶段会执行，属于node环境，无法访问window变量
         let locationPath = global.location?.pathname || '';
         this.navBgs = {};
         paths.forEach(p => {

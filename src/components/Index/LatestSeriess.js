@@ -36,8 +36,8 @@ export default ({ data }) => {
         return ''
     }
 
-    const _renderItem = (edge, isLastItem) => {
-        let { date, prize, category, description, title, seriesImage, currency } = edge.node.frontmatter;
+    const _renderItem = (serie, isLastItem) => {
+        let { date, prize, category, description, title, seriesImage, currency } = serie;
         let flagStyle = isLastItem ? { right: 0, left: 'auto' } : {}
         return (
             <div className={`t-itemContainer animate__animated ${isShow ? 'animate__fadeIn' : ''}`}
@@ -75,7 +75,7 @@ export default ({ data }) => {
                     <img src={require('../../img/lastSeriesTitle.svg')}></img>
                 </div>
                 <ul style={{ listStyle: 'none' }}>
-                    {data && data.map((edge, i) => { return <li key={i}>{_renderItem(edge, data.length === i + 1)}</li> })}
+                    {data && data.map((s, i) => { return <li key={i}>{_renderItem(s, data.length === i + 1)}</li> })}
                 </ul>
             </div>
         </div>
