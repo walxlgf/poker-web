@@ -9,6 +9,7 @@ import eight from '../img/social/8.svg'
 import playButton from '../img/play-button.svg'
 import home from '../img/home.svg'
 
+
 const Navbar = class extends React.Component {
     constructor(props) {
         super(props)
@@ -17,8 +18,11 @@ const Navbar = class extends React.Component {
             navBarActiveClass: '',
         }
 
+        console.log(111);
+        console.log(global);
+
         let paths = ['/', '/offline', '/blog', '/online', '/others/xsb', '/others/about', '/others/guide'];
-        let locationPath = window?.location?.pathname || '';
+        let locationPath = window.location.pathname || '';
         this.navBgs = {};
         paths.forEach(p => {
             if (p === locationPath || (locationPath.includes('/offline') && p.includes('/offline'))) {
