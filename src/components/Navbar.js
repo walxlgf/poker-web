@@ -18,7 +18,7 @@ const Navbar = class extends React.Component {
         }
 
         let paths = ['/', '/offline', '/blog', '/online', '/others/xsb', '/others/about', '/others/guide'];
-        let locationPath = location.pathname;
+        let locationPath = window?.location?.pathname || '';
         this.navBgs = {};
         paths.forEach(p => {
             if (p === locationPath || (locationPath.includes('/offline') && p.includes('/offline'))) {
