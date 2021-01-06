@@ -50,6 +50,11 @@ export default ({ data }) => {
                     />
                     <List currency={curSerie.currency} payouts={payouts} />
                 </div>
+                <div className='bg-view-box'>
+                    <div className='item1'></div>
+                    <div className='item2'></div>
+                    <div className='item3'></div>
+                </div>
             </div>
         </Layout>
     )

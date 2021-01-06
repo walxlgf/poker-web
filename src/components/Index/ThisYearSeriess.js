@@ -86,7 +86,7 @@ export default ({ data }) => {
                         <img src={require('../../img/eye.png')}></img>
                     </div>
                 </div>
-                <p className='o-title'>{series.title}<br></br><p>{location.name}</p></p>
+                <div className='o-title'>{series.title}<br></br><p>{location.name}</p></div>
                 <p className='o-line' />
                 <p className="o-date">
                     <img src={require('../../img/calendar.png')}></img>

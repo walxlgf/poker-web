@@ -8,7 +8,7 @@ import Photos from "../components/Index/Photos"
 import BgAnimationViews from "../components/Index/BgAnimationViews"
 
 
-export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess, series, photos }) => {
+export const IndexPageTemplate = ({ bannerImage, latestSeriess, series, photos }) => {
     return (
         <div style={{ backgroundColor: 'black' }}>
             {bannerImage ? (
@@ -28,14 +28,13 @@ export const IndexPageTemplate = ({ bannerImage, latestSeriess, thisYearSeriess,
 
 export default ({ data }) => {
     const { index, g_series } = data;
-    const { thisYearSeriess, photos, bannerImage } = index.frontmatter;
+    const { photos, bannerImage } = index.frontmatter;
     let series = g_series.edges.map(edge => edge.node.frontmatter);
     let latestSeriess = series.slice(0, Math.min(series.length, 2));
     return (
         <Layout type='index'>
             <IndexPageTemplate
                 latestSeriess={latestSeriess}
-                thisYearSeriess={thisYearSeriess}
                 series={series}
                 photos={photos}
                 bannerImage={bannerImage}
@@ -63,19 +62,6 @@ export const seriesQuery = graphql`
           height
           name{
             relativePath
-          }
-        }
-        thisYearSeriess {
-          title
-          year
-          events {
-            address
-            name
-            subName
-            attention
-            state
-            startTime
-            endTime
           }
         }
       }
