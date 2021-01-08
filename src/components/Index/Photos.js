@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { navigate } from "gatsby"
-import { scrollAnimation, CommonButton } from '../../util/util'
+import { scrollAnimation, CommonButton, useImgLazyLoad } from '../../util/util'
 import '../../styles/index-page.scss'
 import Bus, { EVENTS } from '../../util/eventBus.js'
 import "animate.css";
 
+
 export default ({ photos }) => {
 
-    const [isShow, setIsShow] = useState(true)
+    const [isShow, setIsShow] = useState(true);
+    useImgLazyLoad('lazy-load');
+
     useEffect(() => {
         Bus.addListener(EVENTS.bgAnimationView, (index) => {
             if (index != 5) return; // 监听第六个色块的出现
@@ -35,8 +38,8 @@ export default ({ photos }) => {
                             return (
                                 <a key={index} className={classname}
                                     style={{ width: style.width, height: style.height, position: 'absolute', overflow: 'hidden' }}>
-                                    <img key={index} style={style} src={src} />
-                                    <div className='m-cover' style={{}} />
+                                    <img className='lazy-load' style={style} data-url={src} />
+                                    <div className='m-cover' />
                                 </a>
                             )
                         })

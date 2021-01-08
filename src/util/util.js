@@ -37,6 +37,36 @@ export const throttle = (fn, delay = 1000) => {
     };
 }
 
+/**    延迟加载非屏幕内的图片
+ *     使用：
+ *     useImgLazyLoad('lazy-img');
+ *     <img className='lazy-img' data-url={'xxx'} />
+ */
+export const useImgLazyLoad = (className) => {
+
+    useEffect(() => {
+        check();
+        window.addEventListener('scroll', throttle(check, 200))
+        return () => window.removeEventListener('scroll')
+    }, [])
+
+    function check() {
+        let images = document.querySelectorAll(`.${className}`);
+        [...images].forEach(img => {
+            if (isInnerWindow(img)) {
+                img.src = img.getAttribute('data-url');
+            }
+        })
+    }
+
+    // 页面滚动时当前图片是否进入了窗口
+    function isInnerWindow(img) {
+        const { clientHeight } = document.documentElement;
+        const bound = img.getBoundingClientRect(); // img位置
+        return bound.top <= clientHeight + 10;
+    }
+}
+
 export const formatMoney = (s) => {
     s = s + '';
     if (isNaN(parseFloat(s))) return s;
