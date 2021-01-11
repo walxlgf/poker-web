@@ -119,9 +119,9 @@ const EventDetailModal = forwardRef((props, ref) => {
 
     const show = (event) => {
         const { scrollTop } = document.documentElement;
-        // 禁止除了modal以外的滚动
+        // 固定背后的视图，防止其滚动
         document.body.style.position = 'fixed';
-        // antd中的Modal当弹出时，body会自动滚动到最顶部，这里采用设置top值防止默认的回滚行为
+        // 特定条件时，modal弹框会使body自动滚动到最顶部，这里采用设置top值防止默认的回滚行为
         document.body.style.top = `-${scrollTop}px`;
         setVisible(true);
         setData(event);
@@ -129,11 +129,9 @@ const EventDetailModal = forwardRef((props, ref) => {
 
     const hidden = () => {
         let originTop = document.body.style.top;
-        document.body.style.position = '';
-        document.body.style.top = ``;
+        document.body.style.position = ''; // 清除fixed
         originTop = originTop.replace('px', '')
-        // 防止默认的回回滚行为
-        window.scrollTo(0, Math.abs(originTop))
+        window.scrollTo(0, Math.abs(originTop))// modal关闭时防止默认的回回滚行为
         setVisible(false);
     }
 
