@@ -4,7 +4,7 @@ import '../../styles/offline-page.scss';
 import { Weeks, Months } from '../../util/consts'
 import { formatMoney } from '../../util/util';
 import SelectItem from './SelectItem'
-
+import { createPortal } from 'react-dom'
 
 const EventTypes = {
     all: '全部赛事',
@@ -114,6 +114,7 @@ const EventDetailModal = forwardRef((props, ref) => {
     const [data, setData] = useState(null);
     const [rounds, setRounds] = useState([]);
     const [visible, setVisible] = useState(false);
+    const portalContainer = useRef(null)
     useImperativeHandle(ref, () => ({ show, hidden }));
 
     const show = (event) => {
@@ -135,6 +136,13 @@ const EventDetailModal = forwardRef((props, ref) => {
         window.scrollTo(0, Math.abs(originTop))
         setVisible(false);
     }
+
+    useEffect(() => {
+        let container = document.createElement('div');
+        document.body.appendChild(container);
+        portalContainer.current = container;
+        return () => document.body.removeChild(container);
+    }, [])
 
     useEffect(() => {
         if (!data || !data.rounds) return;
@@ -172,52 +180,54 @@ const EventDetailModal = forwardRef((props, ref) => {
     ];
 
     return (
-        <div className='modal-box' onClick={hidden}>
-            <div className='m-content' onClick={(e) => { e.stopPropagation() }}>
-                <div className='header'>
-                    <p>賽事詳情</p>
-                    <a onClick={hidden}></a>
-                </div>
-                <h4 className='title'>{data.title}</h4>
-                {descItems.map((item, index) => {
-                    let isLastItem = index === descItems.length - 1;
-                    return (
-                        <div key={index} className='descItem' style={isLastItem ? { borderBottom: 'none' } : {}}>
-                            <div className='left'>
-                                <p className='key'>{item.left.key}</p>
-                                <p className='value'>{item.left.value}</p>
+        createPortal(
+            <div className='modal-box' onClick={hidden}>
+                <div className='m-content' onClick={(e) => { e.stopPropagation() }}>
+                    <div className='header'>
+                        <p>賽事詳情</p>
+                        <a onClick={hidden}></a>
+                    </div>
+                    <h4 className='title'>{data.title}</h4>
+                    {descItems.map((item, index) => {
+                        let isLastItem = index === descItems.length - 1;
+                        return (
+                            <div key={index} className='descItem' style={isLastItem ? { borderBottom: 'none' } : {}}>
+                                <div className='left'>
+                                    <p className='key'>{item.left.key}</p>
+                                    <p className='value'>{item.left.value}</p>
+                                </div>
+                                <div className='right'>
+                                    <p className='key'>{item.right.key}</p>
+                                    <p className='value'>{item.right.value}</p>
+                                </div>
                             </div>
-                            <div className='right'>
-                                <p className='key'>{item.right.key}</p>
-                                <p className='value'>{item.right.value}</p>
-                            </div>
-                        </div>
-                    )
-                })}
-                <table >
-                    <thead>
-                        <tr><th>級別</th><th>小盲注</th><th>大盲注</th><th>前注</th><th>時長</th></tr>
-                    </thead>
-                    <tbody>
-                        {rounds.map((round, i) => {
-                            let isLastItem = i === rounds.length - 1;
-                            return (
-                                <tr key={i} style={isLastItem ? { borderBottom: 'none' } : {}}>
-                                    {round.map((v, j) => {
-                                        if (j === round.length - 1) return null;
-                                        return <td key={j}>{formatMoney(v)}</td>
-                                    })}
-                                </tr>
-                            )
-                        })}
-                    </tbody>
-                </table>
-                <div className='m-bottom'>
-                    <a className='share'><i></i></a>
-                    <a className='download'><i></i></a>
+                        )
+                    })}
+                    <table >
+                        <thead>
+                            <tr><th>級別</th><th>小盲注</th><th>大盲注</th><th>前注</th><th>時長</th></tr>
+                        </thead>
+                        <tbody>
+                            {rounds.map((round, i) => {
+                                let isLastItem = i === rounds.length - 1;
+                                return (
+                                    <tr key={i} style={isLastItem ? { borderBottom: 'none' } : {}}>
+                                        {round.map((v, j) => {
+                                            if (j === round.length - 1) return null;
+                                            return <td key={j}>{formatMoney(v)}</td>
+                                        })}
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                    <div className='m-bottom'>
+                        <a className='share'><i></i></a>
+                        <a className='download'><i></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
+            , portalContainer.current)
     )
 })
 

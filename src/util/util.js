@@ -46,8 +46,9 @@ export const useImgLazyLoad = (className) => {
 
     useEffect(() => {
         check();
-        window.addEventListener('scroll', throttle(check, 200))
-        return () => window.removeEventListener('scroll')
+        let wrap = throttle(check, 200);
+        window.addEventListener('scroll', wrap)
+        return () => window.removeEventListener('scroll', wrap)
     }, [])
 
     function check() {
