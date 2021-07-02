@@ -31,3 +31,4 @@ jobs:
     - name: Start new Container
       continue-on-error: true
       run: docker run -d --name poker-web -p 80:80 --mount source=public,target=/usr/share/nginx/html poker-web:v1
+

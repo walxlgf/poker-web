@@ -4,16 +4,7 @@
 			"path": "."
 		},
 		{
-			"path": "C:\\MainWs\\poker\\documents"
-		},
-		{
-			"path": "C:\\MainWs\\poker\\admin4appNew"
-		},
-		{
-			"path": "C:\\MainWs\\poker\\parse4app"
-		},
-		{
-			"path": "C:\\MainWs\\poker\\admin4poker"
+			"path": "..\\..\\..\\MainWs\\poker\\documents"
 		}
 	],
 	"settings": {}
