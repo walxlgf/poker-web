@@ -123,6 +123,14 @@ export const pageQuery = graphql`
                   avatar
               }
             }
+            seriesImage {
+              relativePath
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
