@@ -92,6 +92,15 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
+            seriesImage {
+              relativePath
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            
             date(formatString: "MMMM DD, YYYY")
             title
             description
@@ -121,14 +130,6 @@ export const pageQuery = graphql`
                   nationality
                   name
                   avatar
-              }
-            }
-            seriesImage {
-              relativePath
-              childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
               }
             }
           }
