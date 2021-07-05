@@ -33,7 +33,7 @@ backend:
   name: github
   branch: master
   repo: walxlgf/poker-web
-  base_url: http://192.168.1.99:3000
+  base_url: http://118.194.229.52:3000
   auth_endpoint: auth
   
 
