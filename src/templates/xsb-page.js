@@ -127,7 +127,6 @@ const TopView = ({ series, firstPayout, curSerie, selectAction }) => {
     )
 }
 
-
 export const pageQuery = graphql`
   query xsbQuery {
     series:allMarkdownRemark(
