@@ -136,6 +136,7 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
+            seriesImage
             date(formatString: "MMMM DD, YYYY")
             title
             description
