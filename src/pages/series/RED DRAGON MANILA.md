@@ -7,7 +7,7 @@
   description: "马尼拉牛逼精彩赛事值得期待"
   currency: "PHP"
   prize: "2500000"
-  seriesImage: "http://localhost:1337/parse/files/app/cf6510a5f300ca13e8ecb1accf640764_bg.jpeg"
+  seriesImage: "http://118.194.229.52:1337/parse/files/app/cf6510a5f300ca13e8ecb1accf640764_bg.jpeg"
   objectId: "IHa3NbJnO7"
   events: 
     - 
@@ -54,21 +54,21 @@
           amount: 3148200
           nationality: "Philippines"
           name: "MARQUEZ RICHARD SERRANO"
-          avatar: "http://localhost:1337/parse/files/app/86d6533e8290680a65ce8c66697894f5_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/86d6533e8290680a65ce8c66697894f5_avatar.jpg"
         - 
           memberId: "Srj0p2LMSW"
           rank: 2
           amount: 3059900
           nationality: "China"
           name: "GUO MENG"
-          avatar: "http://localhost:1337/parse/files/app/36fee30ab30519f340b4542fd762c15d_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/36fee30ab30519f340b4542fd762c15d_avatar.jpg"
         - 
           memberId: "HtSUl7nK5v"
           rank: 3
           amount: 2937400
           nationality: "Viet Nam"
           name: "VU DUC TRUNG"
-          avatar: "http://localhost:1337/parse/files/app/92da94045dc546df48e8b8b09024a693_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/92da94045dc546df48e8b8b09024a693_avatar.jpg"
         - 
           memberId: "QKFoPDDh6g"
           rank: 4
@@ -371,21 +371,21 @@
           amount: 40000
           nationality: "Philippines"
           name: "BUEZA  MICHAEL "
-          avatar: "http://localhost:1337/parse/files/app/308f8b5c6b98f0c4d5272961d0971924_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/308f8b5c6b98f0c4d5272961d0971924_avatar.jpg"
         - 
           memberId: "3JCSEEkqnx"
           rank: 2
           amount: 40000
           nationality: "Philippines"
           name: "BOLIGOR ALFREDO"
-          avatar: "http://localhost:1337/parse/files/app/4c9da75dc6dd27cf193c09764971d3ad_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/4c9da75dc6dd27cf193c09764971d3ad_avatar.jpg"
         - 
           memberId: "jFegriaolm"
           rank: 3
           amount: 40000
           nationality: "South Korea"
           name: "IM CHANGJO "
-          avatar: "http://localhost:1337/parse/files/app/2b20bbd610fa4caf37813c2e648f6f34_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/2b20bbd610fa4caf37813c2e648f6f34_avatar.jpg"
         - 
           memberId: "ge6bCVsEAy"
           rank: 4
@@ -435,21 +435,21 @@
           amount: 50000
           nationality: "Philippines"
           name: "MARQUEZ RICHARD SERRANO"
-          avatar: "http://localhost:1337/parse/files/app/86d6533e8290680a65ce8c66697894f5_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/86d6533e8290680a65ce8c66697894f5_avatar.jpg"
         - 
           memberId: "GxN6R43mA3"
           rank: 2
           amount: 50000
           nationality: "Singapore"
           name: "LOW ZI CHENG"
-          avatar: "http://localhost:1337/parse/files/app/5d7a573e0081511e524605d11c131b59_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/5d7a573e0081511e524605d11c131b59_avatar.jpg"
         - 
           memberId: "qxaJ68r80E"
           rank: 3
           amount: 50000
           nationality: "United Kingdom"
           name: "NATHAN STEPHEN"
-          avatar: "http://localhost:1337/parse/files/app/f761e4bc9b118bfd2e1b74e0aab41703_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/f761e4bc9b118bfd2e1b74e0aab41703_avatar.jpg"
         - 
           memberId: "jOEuHW3qNC"
           rank: 4
@@ -506,21 +506,21 @@
           amount: 13815070
           nationality: "Philippines"
           name: "CAMPOMANES FLORENCIO"
-          avatar: "http://localhost:1337/parse/files/app/fc2fed5c2f1d0b4b29acc4a22d7d1c3d_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/fc2fed5c2f1d0b4b29acc4a22d7d1c3d_avatar.jpg"
         - 
           memberId: "h2sJEzK5TE"
           rank: 2
           amount: 8557000
           nationality: "Japan"
           name: "TOMITA TETSURO"
-          avatar: "http://localhost:1337/parse/files/app/2de0dabf76ec4214af23226b9b4b51a3_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/2de0dabf76ec4214af23226b9b4b51a3_avatar.jpg"
         - 
           memberId: "DOn5JTBzjt"
           rank: 3
           amount: 5300000
           nationality: "China"
           name: "SHEN ZEJIN"
-          avatar: "http://localhost:1337/parse/files/app/be71bc7f1d0174587285a6d053885c3a_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/be71bc7f1d0174587285a6d053885c3a_avatar.jpg"
         - 
           memberId: "7VRGXrpO3F"
           rank: 4
@@ -1014,21 +1014,21 @@
           amount: 1543400
           nationality: "Singapore"
           name: "CHONG YEOW CHUNG"
-          avatar: "http://localhost:1337/parse/files/app/8858dee5900c8641739809226a421390_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/8858dee5900c8641739809226a421390_avatar.jpg"
         - 
           memberId: "qxaJ68r80E"
           rank: 2
           amount: 1039000
           nationality: "United Kingdom"
           name: "NATHAN STEPHEN"
-          avatar: "http://localhost:1337/parse/files/app/f761e4bc9b118bfd2e1b74e0aab41703_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/f761e4bc9b118bfd2e1b74e0aab41703_avatar.jpg"
         - 
           memberId: "c5J2gHujUB"
           rank: 3
           amount: 683000
           nationality: "Viet Nam"
           name: "CAO NGOC ANH"
-          avatar: "http://localhost:1337/parse/files/app/d7ceb395bffe1ad9f2e7e9f4cc6ca4a1_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/d7ceb395bffe1ad9f2e7e9f4cc6ca4a1_avatar.jpg"
         - 
           memberId: "cRRf7uBvSR"
           rank: 4
@@ -1126,21 +1126,21 @@
           amount: 2197200
           nationality: "United Kingdom"
           name: "WILLIAM DANIEL "
-          avatar: "http://localhost:1337/parse/files/app/ce8d7cd472297f901d487fd8bd5bac07_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/ce8d7cd472297f901d487fd8bd5bac07_avatar.jpg"
         - 
           memberId: "qr69XQ1Wrg"
           rank: 2
           amount: 1518000
           nationality: "China"
           name: "CHEN DONG"
-          avatar: "http://localhost:1337/parse/files/app/91afce057bff42fbf16551b393126408_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/91afce057bff42fbf16551b393126408_avatar.jpg"
         - 
           memberId: "N7O9AGfrLp"
           rank: 3
           amount: 969000
           nationality: "India"
           name: "AGARWAL SAHIL"
-          avatar: "http://localhost:1337/parse/files/app/f8eba6ed9cda4a3feedc600732a2927d_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/f8eba6ed9cda4a3feedc600732a2927d_avatar.jpg"
         - 
           memberId: "qhNAM34vcv"
           rank: 4
@@ -1184,21 +1184,21 @@
           amount: 6112000
           nationality: "India"
           name: "AHUJA ANKIT"
-          avatar: "http://localhost:1337/parse/files/app/306f80dc5a9cc19b95f56ae5ad569af4_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/306f80dc5a9cc19b95f56ae5ad569af4_avatar.jpg"
         - 
           memberId: "Nc6AIf47ki"
           rank: 2
           amount: 4248000
           nationality: "Malaysia"
           name: "TEH SIEW PO NATALIE"
-          avatar: "http://localhost:1337/parse/files/app/9d601a108977e7ab01830ffe3bf18bdc_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/9d601a108977e7ab01830ffe3bf18bdc_avatar.jpg"
         - 
           memberId: "kewWGN2qT2"
           rank: 3
           amount: 2809000
           nationality: "Japan"
           name: "KUSAKABE SHIGEJI"
-          avatar: "http://localhost:1337/parse/files/app/9fbb0d66f12f86d5e015a255a1f9a6c3_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/9fbb0d66f12f86d5e015a255a1f9a6c3_avatar.jpg"
         - 
           memberId: "LkT0Voj2CQ"
           rank: 4
@@ -1303,21 +1303,21 @@
           amount: 974740
           nationality: "China"
           name: "ZHANG ZEYU"
-          avatar: "http://localhost:1337/parse/files/app/971ff10d451433b51aedb3534ada6539_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/971ff10d451433b51aedb3534ada6539_avatar.jpg"
         - 
           memberId: "eIpWYI1dhl"
           rank: 2
           amount: 650000
           nationality: "China"
           name: "PAN YUWEN"
-          avatar: "http://localhost:1337/parse/files/app/93692b57fc9ec7876c30dcce7f4b9492_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/93692b57fc9ec7876c30dcce7f4b9492_avatar.jpg"
         - 
           memberId: "t4ZkwrmQt1"
           rank: 3
           amount: 421000
           nationality: "Hong Kong"
           name: "FUNG HOU HIN GABRIEL"
-          avatar: "http://localhost:1337/parse/files/app/83826a248ce9585a5b437a551ba929a5_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/83826a248ce9585a5b437a551ba929a5_avatar.jpg"
         - 
           memberId: "MRrXhKxDyh"
           rank: 4
@@ -1452,21 +1452,21 @@
           amount: 110000
           nationality: "United Kingdom"
           name: "LIM ROBERT JR CABRAL"
-          avatar: "http://localhost:1337/parse/files/app/5dda6365f8193045db37b03cad6fafcc_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/5dda6365f8193045db37b03cad6fafcc_avatar.jpg"
         - 
           memberId: "Be8WXi5maA"
           rank: 2
           amount: 110000
           nationality: "China"
           name: "YANG XIAOTIAN"
-          avatar: "http://localhost:1337/parse/files/app/46f2bcd6b023d9cdd62ce873a5ae69f4_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/46f2bcd6b023d9cdd62ce873a5ae69f4_avatar.jpg"
         - 
           memberId: "9JW50YhjTf"
           rank: 3
           amount: 110000
           nationality: "Viet Nam"
           name: "NGUYEN DUY TUNG"
-          avatar: "http://localhost:1337/parse/files/app/6295014f3ac3c345600c4854b3b01af6_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/6295014f3ac3c345600c4854b3b01af6_avatar.jpg"
         - 
           memberId: "lI92wbP0Xm"
           rank: 4
@@ -1504,21 +1504,21 @@
           amount: 110000
           nationality: "Philippines"
           name: "AMBATA RICK JASON"
-          avatar: "http://localhost:1337/parse/files/app/29e73c28288ba3be6b4fca22fb12e449_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/29e73c28288ba3be6b4fca22fb12e449_avatar.jpg"
         - 
           memberId: "Q2o4Mepri6"
           rank: 2
           amount: 110000
           nationality: "Switzerland"
           name: "BOSSHARD JULIEN"
-          avatar: "http://localhost:1337/parse/files/app/a04c0575cb64104064f6a4b3ba485536_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/a04c0575cb64104064f6a4b3ba485536_avatar.jpg"
         - 
           memberId: "qonFal8nwC"
           rank: 3
           amount: 110000
           nationality: "Philippines"
           name: "GAVAN CHRISTOPHER "
-          avatar: "http://localhost:1337/parse/files/app/952e21c9c23224d1a168090cde14e662_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/952e21c9c23224d1a168090cde14e662_avatar.jpg"
         - 
           memberId: "a2UcmhkPly"
           rank: 4
@@ -1574,21 +1574,21 @@
           amount: 1667720
           nationality: "China"
           name: "TIAN HAO"
-          avatar: "http://localhost:1337/parse/files/app/24e22f6162649eae4aef9d55c7d21a74_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/24e22f6162649eae4aef9d55c7d21a74_avatar.jpg"
         - 
           memberId: "HQhy6Boguj"
           rank: 2
           amount: 1101000
           nationality: "China"
           name: "LUO XIXIANG"
-          avatar: "http://localhost:1337/parse/files/app/ea8771d2004a2146d524b0cc493c4207_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/ea8771d2004a2146d524b0cc493c4207_avatar.jpg"
         - 
           memberId: "c5J2gHujUB"
           rank: 3
           amount: 700000
           nationality: "Viet Nam"
           name: "CAO NGOC ANH"
-          avatar: "http://localhost:1337/parse/files/app/d7ceb395bffe1ad9f2e7e9f4cc6ca4a1_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/d7ceb395bffe1ad9f2e7e9f4cc6ca4a1_avatar.jpg"
         - 
           memberId: "8u6SzD1hJU"
           rank: 4
@@ -1722,21 +1722,21 @@
           amount: 250000
           nationality: "Philippines"
           name: "TORRES RICARDO"
-          avatar: "http://localhost:1337/parse/files/app/e2455a030c2af57e191561bf1eb90f88_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/e2455a030c2af57e191561bf1eb90f88_avatar.jpg"
         - 
           memberId: "I2PgDhQAiL"
           rank: 2
           amount: 250000
           nationality: "Korea, the Republic of"
           name: "SONG JUNYEOB"
-          avatar: "http://localhost:1337/parse/files/app/7a0eb63ad191ffd9e98921f03c114e38_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/7a0eb63ad191ffd9e98921f03c114e38_avatar.jpg"
         - 
           memberId: "2udPMHUJwB"
           rank: 3
           amount: 250000
           nationality: "Japan"
           name: "KIKUCHI MASAHIRO"
-          avatar: "http://localhost:1337/parse/files/app/4b829c602b98cd1b54bde6f6e9b192eb_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/4b829c602b98cd1b54bde6f6e9b192eb_avatar.jpg"
         - 
           memberId: "RkxbBHZ7gi"
           rank: 4
@@ -1768,21 +1768,21 @@
           amount: 110000
           nationality: "Korea, the Republic of"
           name: "JEON SEUNGSOO"
-          avatar: "http://localhost:1337/parse/files/app/eb14158d62d5d6680157cf0dd00eba2b_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/eb14158d62d5d6680157cf0dd00eba2b_avatar.jpg"
         - 
           memberId: "RQsnxES9xK"
           rank: 2
           amount: 110000
           nationality: "Japan"
           name: "TAKARABE KENICHI"
-          avatar: "http://localhost:1337/parse/files/app/57ed399e5b7fabafce1830867beb59b7_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/57ed399e5b7fabafce1830867beb59b7_avatar.jpg"
         - 
           memberId: "zJoE6bk9yH"
           rank: 3
           amount: 110000
           nationality: "Korea, the Republic of"
           name: "KIM KYOUNGHOI"
-          avatar: "http://localhost:1337/parse/files/app/7d1fd4dce9c7d1733e60b2ea7f4181f4_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/7d1fd4dce9c7d1733e60b2ea7f4181f4_avatar.jpg"
         - 
           memberId: "oAsxqvScrh"
           rank: 4
@@ -1826,21 +1826,21 @@
           amount: 346520
           nationality: "Hong Kong"
           name: "WONG FUK ON"
-          avatar: "http://localhost:1337/parse/files/app/b1def7fa5a8fa3b1d10f93897438f06e_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/b1def7fa5a8fa3b1d10f93897438f06e_avatar.jpg"
         - 
           memberId: "LjXZhCEiax"
           rank: 2
           amount: 297700
           nationality: "Korea, the Republic of"
           name: "SIM JAE KYUNG"
-          avatar: "http://localhost:1337/parse/files/app/c4763ff2bed2354e1bd0ecbb4f08078a_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/c4763ff2bed2354e1bd0ecbb4f08078a_avatar.jpg"
         - 
           memberId: "eIpWYI1dhl"
           rank: 3
           amount: 171800
           nationality: "China"
           name: "PAN YUWEN"
-          avatar: "http://localhost:1337/parse/files/app/93692b57fc9ec7876c30dcce7f4b9492_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/93692b57fc9ec7876c30dcce7f4b9492_avatar.jpg"
         - 
           memberId: "l8GoHkllOP"
           rank: 4
@@ -1908,21 +1908,21 @@
           amount: 311420
           nationality: "Viet Nam"
           name: "LE THAI LOC"
-          avatar: "http://localhost:1337/parse/files/app/60f9d719309ea514b802e2496ed15313_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/60f9d719309ea514b802e2496ed15313_avatar.jpg"
         - 
           memberId: "et3DH0GeCn"
           rank: 2
           amount: 100000
           nationality: "Korea, the Republic of"
           name: "JUNG AHYOON"
-          avatar: "http://localhost:1337/parse/files/app/765471d6e112f066bcbf850101c5ef03_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/765471d6e112f066bcbf850101c5ef03_avatar.jpg"
         - 
           memberId: "0HhWQYXOGW"
           rank: 3
           amount: 60000
           nationality: "China"
           name: "TIAN HAO"
-          avatar: "http://localhost:1337/parse/files/app/24e22f6162649eae4aef9d55c7d21a74_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/24e22f6162649eae4aef9d55c7d21a74_avatar.jpg"
     - 
       no: "22"
       title: "SuperStack - Single Re-entry"
@@ -1948,21 +1948,21 @@
           amount: 1671000
           nationality: "South Korea"
           name: "HWANG SANG-YEON"
-          avatar: "http://localhost:1337/parse/files/app/ed361c1adcc623a0a3bd27ce7ed3a016_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/ed361c1adcc623a0a3bd27ce7ed3a016_avatar.jpg"
         - 
           memberId: "CZS0h5EGLc"
           rank: 2
           amount: 1063000
           nationality: "China"
           name: "SUN XIJIE"
-          avatar: "http://localhost:1337/parse/files/app/6d99fc55222b18ee4db2bddaac31a7e1_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/6d99fc55222b18ee4db2bddaac31a7e1_avatar.jpg"
         - 
           memberId: "JxEncT0sLp"
           rank: 3
           amount: 709000
           nationality: "Philippines"
           name: "GONZAGA TERRY"
-          avatar: "http://localhost:1337/parse/files/app/80eb1df555da4b5888cd58d6f62a7f07_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/80eb1df555da4b5888cd58d6f62a7f07_avatar.jpg"
         - 
           memberId: "iTcuHZfmJU"
           rank: 4
@@ -2031,21 +2031,21 @@
           amount: 110000
           nationality: "United States"
           name: "BASSO KEITH MICHAEL "
-          avatar: "http://localhost:1337/parse/files/app/394eb460ccc53f0e9b957df47b43e52a_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/394eb460ccc53f0e9b957df47b43e52a_avatar.jpg"
         - 
           memberId: "I2PgDhQAiL"
           rank: 2
           amount: 110000
           nationality: "Korea, the Republic of"
           name: "SONG JUNYEOB"
-          avatar: "http://localhost:1337/parse/files/app/7a0eb63ad191ffd9e98921f03c114e38_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/7a0eb63ad191ffd9e98921f03c114e38_avatar.jpg"
         - 
           memberId: "y6d28boAKn"
           rank: 3
           amount: 110000
           nationality: "Indonesia"
           name: "SUWITO TJIAUW TITI"
-          avatar: "http://localhost:1337/parse/files/app/f9a3e5098acf1df91956f1bf33497689_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/f9a3e5098acf1df91956f1bf33497689_avatar.jpg"
         - 
           memberId: "mTH7Ch7d62"
           rank: 4
@@ -2101,21 +2101,21 @@
           amount: 5222000
           nationality: "Philippines"
           name: "EDOC LESTER"
-          avatar: "http://localhost:1337/parse/files/app/646aea52b4dca58eed88cc36189bb575_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/646aea52b4dca58eed88cc36189bb575_avatar.jpg"
         - 
           memberId: "pkiR5wVT25"
           rank: 2
           amount: 3599000
           nationality: "Philippines"
           name: "CAMPOMANES FLORENCIO"
-          avatar: "http://localhost:1337/parse/files/app/fc2fed5c2f1d0b4b29acc4a22d7d1c3d_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/fc2fed5c2f1d0b4b29acc4a22d7d1c3d_avatar.jpg"
         - 
           memberId: "oMerZ6cAEe"
           rank: 3
           amount: 2293000
           nationality: "Viet Nam"
           name: "NGUYEN NANG QUANG FLJ R"
-          avatar: "http://localhost:1337/parse/files/app/49882b6fcb16c4be834fa11c834e7b14_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/49882b6fcb16c4be834fa11c834e7b14_avatar.jpg"
         - 
           memberId: "7HjjquyWG5"
           rank: 4
@@ -2153,21 +2153,21 @@
           amount: 1575000
           nationality: "India"
           name: "AGARWAL SAHIL"
-          avatar: "http://localhost:1337/parse/files/app/f8eba6ed9cda4a3feedc600732a2927d_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/f8eba6ed9cda4a3feedc600732a2927d_avatar.jpg"
         - 
           memberId: "IkDPlM4cGI"
           rank: 2
           amount: 990000
           nationality: "Uzbekistan"
           name: "PAK VALERIY"
-          avatar: "http://localhost:1337/parse/files/app/2fb98eefe3d171670363fd6cc32e921c_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/2fb98eefe3d171670363fd6cc32e921c_avatar.jpg"
         - 
           memberId: "5qkHt9xJws"
           rank: 3
           amount: 614000
           nationality: "Viet Nam"
           name: "NGUYEN QUANG MINH"
-          avatar: "http://localhost:1337/parse/files/app/7136bc841310be33383bfa1ad98b1e37_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/7136bc841310be33383bfa1ad98b1e37_avatar.jpg"
         - 
           memberId: "WwYi2rCAHr"
           rank: 4
@@ -2463,21 +2463,21 @@
           amount: 433700
           nationality: "Taiwan"
           name: "CHEN YEN HAN"
-          avatar: "http://localhost:1337/parse/files/app/6ea6057c6d2b06e7b088d8c40150498b_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/6ea6057c6d2b06e7b088d8c40150498b_avatar.jpg"
         - 
           memberId: "9uTsgFzxFf"
           rank: 2
           amount: 289100
           nationality: "Philippines"
           name: "RUAYA  HAROLD NEAL "
-          avatar: "http://localhost:1337/parse/files/app/d0f2ea85974cf54cf48dc330c88b580a_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/d0f2ea85974cf54cf48dc330c88b580a_avatar.jpg"
         - 
           memberId: "mv58FdHxVX"
           rank: 3
           amount: 192800
           nationality: "China"
           name: "CHEN LEI"
-          avatar: "http://localhost:1337/parse/files/app/5bd19e2b450c9ebc91c4b365e9192404_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/5bd19e2b450c9ebc91c4b365e9192404_avatar.jpg"
         - 
           memberId: "97WfO77o6V"
           rank: 4
@@ -2545,21 +2545,21 @@
           amount: 60000
           nationality: "Philippines"
           name: "TY DELFINO TAN"
-          avatar: "http://localhost:1337/parse/files/app/05bcc9652573ff44200fd6aa47bec192_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/05bcc9652573ff44200fd6aa47bec192_avatar.jpg"
         - 
           memberId: "AyQOzKNRQz"
           rank: 2
           amount: 60000
           nationality: "Japan"
           name: "NOMURA YOZO"
-          avatar: "http://localhost:1337/parse/files/app/70fae115bf49733c2d546bb273f7c4a0_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/70fae115bf49733c2d546bb273f7c4a0_avatar.jpg"
         - 
           memberId: "FXVAVYnXNx"
           rank: 3
           amount: 60000
           nationality: "Philippines"
           name: "ORACION ROYLY EMIR"
-          avatar: "http://localhost:1337/parse/files/app/8af2b975f27688a7427038d13e4975b3_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/8af2b975f27688a7427038d13e4975b3_avatar.jpg"
         - 
           memberId: "mbg9kAb5oJ"
           rank: 4
@@ -2690,21 +2690,21 @@
           amount: 368880
           nationality: "Philippines"
           name: "BRUNI SANDRO"
-          avatar: "http://localhost:1337/parse/files/app/af0cf31c46374f79a38bc969c0683694_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/af0cf31c46374f79a38bc969c0683694_avatar.jpg"
         - 
           memberId: "GXafEX3Pfr"
           rank: 2
           amount: 245000
           nationality: "China"
           name: "WU YAKE"
-          avatar: "http://localhost:1337/parse/files/app/18556ef6b0c62b961a31abcc11cb18a6_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/18556ef6b0c62b961a31abcc11cb18a6_avatar.jpg"
         - 
           memberId: "FU8cybU2ro"
           rank: 3
           amount: 163000
           nationality: "Japan"
           name: "TAKAHASHI TAKESHI"
-          avatar: "http://localhost:1337/parse/files/app/9565d3fe5cad1a66c11326fba6a25637_avatar.jpg"
+          avatar: "http://118.194.229.52:1337/parse/files/app/9565d3fe5cad1a66c11326fba6a25637_avatar.jpg"
         - 
           memberId: "hdkTgD4nfz"
           rank: 4
