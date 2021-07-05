@@ -123,7 +123,7 @@ export const pageQuery = graphql`
                   avatar
               }
             }
-            bannerImage {
+            seriesImage {
               relativePath
               childImageSharp {
                 fluid(maxWidth: 2048, quality: 100) {
