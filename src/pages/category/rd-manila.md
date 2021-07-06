@@ -3,42 +3,24 @@
   templateKey: "category"
   categoryKey: "rd-manila"
   currency: "PHP"
-  title: "RED DRAGON MANILA"
-  address: "马尼拉 38 Sinhwayeoksa-ro 304 beon-gil,Andeok-myeon Seogwipo-si, Jeju, Korea"
-  others: "聯絡電話: (+82) 64 908 8888 | 酒店預計: (+82) 82 64 908 8800 | 服裝規定: 休閑 | 入場年齡限制: 19歲以上"
-  prize: "9999999"
-  date: "2020-12-10T08:16:40.574Z"
+  title: "RED DRAGON MANILA 2020"
+  address: "遭受跟"
+  others: "电话:69999999 | 服装:现鞥肺炎为"
+  prize: "1111"
+  date: "2021-07-06T02:17:31.378Z"
   mains: 
     - 
-      serieId: "IHa3NbJnO7"
+      serieId: "olSD7F3YYR"
       eventIds: 
-        - "jO014rzxjN"
-        - "NjDFxB3op1"
-        - "Z2ZxHodVAe"
+        - "5y7GDoZ0Bi"
+        - "0FdrzyW8gH"
+        - "8skSJFvTps"
   descs: 
     - 
-      key: "说明"
+      key: "2222"
       values: 
-        - "的地方方法"
-        - "力著動歷上遊,還說生你自因不位會，近力著動歷上遊"
+        - "fdfd"
     - 
-      key: "购买金额"
+      key: "11111"
       values: 
-        - "要什下務經人收價，而笑目光必具重行一行小費還說生你自因不位會，近力著動歷上遊,還說生你自因不位會，近力著動歷上遊,還說生你自因不位會，近力著動歷上遊；"
-        - "不能少于"
-    - 
-      key: "住宿资料"
-      values: 
-        - "酒店"
-        - "冰冠"
-    - 
-      key: "场地"
-      values: 
-        - "高大上"
-        - "你比puls"
-    - 
-      key: "交通"
-      values: 
-        - "便利"
-        - "繁华"
-        - "满大街"
+        - "2322"
